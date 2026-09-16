@@ -1,8 +1,10 @@
 {
+  "jupyter-lite-schema-version": 0,
   "jupyter-config-data": {
     "appName": "GeoLibre + GeoAI Lab",
     "appUrl": "./lab",
     "faviconUrl": "",
+    "contentsStorageName": "JupyterLite GeoLibre GeoAI Storage v2",
     "settingsOverrides": {
       "@jupyterlab/apputils-extension:themes": {
         "theme": "JupyterLab Light"
