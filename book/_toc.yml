@@ -1,11 +1,11 @@
 format: jb-book
 root: intro
 chapters:
-  - file: notebooks/00_geolibre_quickstart
-  - file: notebooks/01_worldpop_h3
-  - file: notebooks/02_census_geoai_counties
-  - file: notebooks/03_earth_observation_geoai
-  - file: notebooks/04_chirps_climate
-  - file: notebooks/05_h3_earthquake_geoai
-  - file: notebooks/06_geoai_compatibility
+  - file: notebooks/v2_00_geolibre_quickstart
+  - file: notebooks/v2_01_worldpop_h3
+  - file: notebooks/v2_02_census_geoai_counties
+  - file: notebooks/v2_03_earth_observation_geoai
+  - file: notebooks/v2_04_chirps_climate
+  - file: notebooks/v2_05_h3_earthquake_geoai
+  - file: notebooks/v2_06_geoai_compatibility
   - file: references
