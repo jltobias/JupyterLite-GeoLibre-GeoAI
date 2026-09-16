@@ -4,7 +4,7 @@
     "appName": "GeoLibre + GeoAI Lab",
     "appUrl": "./lab",
     "faviconUrl": "",
-    "contentsStorageName": "JupyterLite GeoLibre GeoAI Storage v2",
+    "contentsStorageName": "JupyterLite GeoLibre GeoAI Storage v3",
     "settingsOverrides": {
       "@jupyterlab/apputils-extension:themes": {
         "theme": "JupyterLab Light"
