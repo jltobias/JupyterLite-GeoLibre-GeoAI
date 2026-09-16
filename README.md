@@ -6,6 +6,8 @@ Browser-native geospatial notebooks that combine **[GeoLibre](https://geolibre.a
 [![GeoLibre](https://img.shields.io/badge/GeoLibre-3.0-blue)](https://geolibre.app/)
 [![GeoAI](https://img.shields.io/badge/GeoAI-opengeoai.org-green)](https://opengeoai.org/)
 
+**GeoLibre citation:** Wu, Q. (2026). *GeoLibre: A lightweight, cloud-native GIS platform for visualizing, exploring, and analyzing geospatial data.* Zenodo. [https://doi.org/10.5281/zenodo.20785400](https://doi.org/10.5281/zenodo.20785400)
+
 ## Live sites
 
 - **Jupyter Book:** <https://jltobias.github.io/JupyterLite-GeoLibre-GeoAI/>  
