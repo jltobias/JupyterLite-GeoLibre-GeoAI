@@ -6,14 +6,14 @@ This book is a set of **live, browser-native geospatial labs**. Each chapter can
 
 ## Notebook gallery
 
-The live links use versioned `v2_*.ipynb` paths so previously saved browser copies cannot shadow corrected notebooks.
+The live links use versioned notebook paths so previously saved browser copies cannot shadow corrected notebooks. Earth-observation lab 03 uses a `v3_` path because the earlier v2 filename may already exist in browser IndexedDB.
 
 | Lab | Focus | Launch |
 |---|---|---|
 | GeoLibre quickstart | GeoLibre map, GeoJSON, COG | [Open live](https://jltobias.github.io/JupyterLite-GeoLibre-GeoAI/lite/lab/index.html?path=v2_00_geolibre_quickstart.ipynb) |
 | WorldPop + H3 | Population, PMTiles, hex indexing | [Open live](https://jltobias.github.io/JupyterLite-GeoLibre-GeoAI/lite/lab/index.html?path=v2_01_worldpop_h3.ipynb) |
 | Census + GeoAI | Census polygons + browser clustering | [Open live](https://jltobias.github.io/JupyterLite-GeoLibre-GeoAI/lite/lab/index.html?path=v2_02_census_geoai_counties.ipynb) |
-| Earth observation GeoAI | Sentinel-2, DEM, WorldCover, raster ML | [Open live](https://jltobias.github.io/JupyterLite-GeoLibre-GeoAI/lite/lab/index.html?path=v2_03_earth_observation_geoai.ipynb) |
+| Earth observation GeoAI | Major TOM layers + NASA GIBS browser ML | [Open live](https://jltobias.github.io/JupyterLite-GeoLibre-GeoAI/lite/lab/index.html?path=v3_03_earth_observation_geoai.ipynb) |
 | CHIRPS climate | Daily rainfall COG | [Open live](https://jltobias.github.io/JupyterLite-GeoLibre-GeoAI/lite/lab/index.html?path=v2_04_chirps_climate.ipynb) |
 | H3 earthquake GeoAI | USGS feed + anomaly detection | [Open live](https://jltobias.github.io/JupyterLite-GeoLibre-GeoAI/lite/lab/index.html?path=v2_05_h3_earthquake_geoai.ipynb) |
 | GeoAI compatibility | Browser/full-stack boundary | [Open live](https://jltobias.github.io/JupyterLite-GeoLibre-GeoAI/lite/lab/index.html?path=v2_06_geoai_compatibility.ipynb) |
@@ -30,7 +30,7 @@ Use upstream `geolibre.Map` directly when running the notebooks in a full CPytho
 
 The full `geoai-py` package is designed for advanced workflows including deep-learning segmentation, detection, classification, change detection, and model training. Its dependency graph includes PyTorch and TorchGeo. JupyterLite runs CPython compiled to WebAssembly through Pyodide, so not every native/GPU dependency is available.
 
-These labs therefore use the **browser-native subset of the GeoAI workflow**: cloud data discovery, spatial feature engineering, H3 indexing, raster processing, scikit-learn modeling, anomaly detection, and interactive mapping in GeoLibre. The final chapter shows where to hand the same data and concepts to full GeoAI on a desktop, cloud VM, Binder/Hub, or GPU notebook.
+These labs therefore use the **browser-native subset of the GeoAI workflow**: cloud data discovery, spatial feature engineering, H3 indexing, raster processing, scikit-learn modeling, anomaly detection, and interactive mapping in GeoLibre. The Earth-observation lab keeps Major TOM COGs in GeoLibre but uses NASA GIBS JPEG imagery for Python-side clustering so Pyodide does not depend on a missing GDAL ZSTD codec. The final chapter shows where to hand the same data and concepts to full GeoAI on a desktop, cloud VM, Binder/Hub, or GPU notebook.
 
 ## Data ethics and reproducibility
 

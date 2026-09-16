@@ -11,7 +11,7 @@ Browser-native geospatial notebooks that combine **[GeoLibre](https://geolibre.a
 - **Jupyter Book:** <https://jltobias.github.io/JupyterLite-GeoLibre-GeoAI/>  
 - **JupyterLite Lab:** <https://jltobias.github.io/JupyterLite-GeoLibre-GeoAI/lite/lab/index.html>
 
-> The live links below use versioned `v2_*.ipynb` paths so older browser-saved JupyterLite copies cannot shadow corrected server notebooks.
+> The live links use versioned notebook paths so older browser-saved JupyterLite copies cannot shadow corrected server notebooks. Earth-observation lab 03 uses a `v3_` path because the earlier v2 filename may already exist in browser IndexedDB.
 
 ## Launch the notebooks
 
@@ -20,7 +20,7 @@ Browser-native geospatial notebooks that combine **[GeoLibre](https://geolibre.a
 | 00 — GeoLibre quickstart | Browser-safe GeoLibre embed, GeoJSON, COG raster, browser GIS | [Launch](https://jltobias.github.io/JupyterLite-GeoLibre-GeoAI/lite/lab/index.html?path=v2_00_geolibre_quickstart.ipynb) |
 | 01 — WorldPop + H3 | WorldPop population streamed as H3/PMTiles + H3 geometry | [Launch](https://jltobias.github.io/JupyterLite-GeoLibre-GeoAI/lite/lab/index.html?path=v2_01_worldpop_h3.ipynb) |
 | 02 — Census + GeoAI | U.S. Census county geometry, derived density features, K-Means clustering | [Launch](https://jltobias.github.io/JupyterLite-GeoLibre-GeoAI/lite/lab/index.html?path=v2_02_census_geoai_counties.ipynb) |
-| 03 — Earth observation GeoAI | Major TOM Sentinel-2 + Copernicus DEM + ESA WorldCover, browser K-Means segmentation | [Launch](https://jltobias.github.io/JupyterLite-GeoLibre-GeoAI/lite/lab/index.html?path=v2_03_earth_observation_geoai.ipynb) |
+| 03 — Earth observation GeoAI | Major TOM layers + browser-safe NASA GIBS K-Means workflow | [Launch](https://jltobias.github.io/JupyterLite-GeoLibre-GeoAI/lite/lab/index.html?path=v3_03_earth_observation_geoai.ipynb) |
 | 04 — CHIRPS climate | CHIRPS v3 daily precipitation COG + GeoLibre cloud raster visualization | [Launch](https://jltobias.github.io/JupyterLite-GeoLibre-GeoAI/lite/lab/index.html?path=v2_04_chirps_climate.ipynb) |
 | 05 — H3 earthquake GeoAI | Live USGS earthquakes, H3 aggregation, Isolation Forest anomaly scoring | [Launch](https://jltobias.github.io/JupyterLite-GeoLibre-GeoAI/lite/lab/index.html?path=v2_05_h3_earthquake_geoai.ipynb) |
 | 06 — GeoAI compatibility | JupyterLite/GeoLibre compatibility boundaries and full-CPython/GPU handoff | [Launch](https://jltobias.github.io/JupyterLite-GeoLibre-GeoAI/lite/lab/index.html?path=v2_06_geoai_compatibility.ipynb) |
@@ -63,7 +63,7 @@ Open <http://localhost:8000> for the book or <http://localhost:8000/lite/lab/ind
 
 Every notebook contains a **Data & software citations** section. A consolidated, auditable source register is in **[DATA_SOURCES.md](DATA_SOURCES.md)**. The examples intentionally favor public, cloud-native, browser-readable sources.
 
-Notable sources include WorldPop; U.S. Census Bureau TIGERweb; Copernicus Sentinel-2 and DEM through Major TOM; ESA WorldCover; CHIRPS v3 from the Climate Hazards Center/WFP mirror on Source Cooperative; USGS earthquake feeds; Uber H3; Source Cooperative; GeoLibre; and GeoAI.
+Notable sources include WorldPop; U.S. Census Bureau TIGERweb; Copernicus Sentinel-2 and DEM through Major TOM; ESA WorldCover; NASA GIBS; CHIRPS v3 from the Climate Hazards Center/WFP mirror on Source Cooperative; USGS earthquake feeds; Uber H3; Source Cooperative; GeoLibre; and GeoAI.
 
 ### Important source note
 
