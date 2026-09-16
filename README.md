@@ -17,19 +17,33 @@ Browser-native geospatial notebooks that combine **[GeoLibre](https://geolibre.a
 
 | Notebook | What it demonstrates | Live |
 |---|---|---|
-| 00 — GeoLibre quickstart | Full GeoLibre `anywidget`, GeoJSON, COG raster, browser GIS | [Launch](https://jltobias.github.io/JupyterLite-GeoLibre-GeoAI/lite/lab/index.html?path=00_geolibre_quickstart.ipynb) |
+| 00 — GeoLibre quickstart | Browser-safe GeoLibre embed, GeoJSON, COG raster, browser GIS | [Launch](https://jltobias.github.io/JupyterLite-GeoLibre-GeoAI/lite/lab/index.html?path=00_geolibre_quickstart.ipynb) |
 | 01 — WorldPop + H3 | WorldPop population streamed as H3/PMTiles + H3 geometry | [Launch](https://jltobias.github.io/JupyterLite-GeoLibre-GeoAI/lite/lab/index.html?path=01_worldpop_h3.ipynb) |
 | 02 — Census + GeoAI | U.S. Census county geometry, derived density features, K-Means clustering | [Launch](https://jltobias.github.io/JupyterLite-GeoLibre-GeoAI/lite/lab/index.html?path=02_census_geoai_counties.ipynb) |
 | 03 — Earth observation GeoAI | Major TOM Sentinel-2 + Copernicus DEM + ESA WorldCover, browser K-Means segmentation | [Launch](https://jltobias.github.io/JupyterLite-GeoLibre-GeoAI/lite/lab/index.html?path=03_earth_observation_geoai.ipynb) |
 | 04 — CHIRPS climate | CHIRPS v3 daily precipitation COG + GeoLibre cloud raster visualization | [Launch](https://jltobias.github.io/JupyterLite-GeoLibre-GeoAI/lite/lab/index.html?path=04_chirps_climate.ipynb) |
 | 05 — H3 earthquake GeoAI | Live USGS earthquakes, H3 aggregation, Isolation Forest anomaly scoring | [Launch](https://jltobias.github.io/JupyterLite-GeoLibre-GeoAI/lite/lab/index.html?path=05_h3_earthquake_geoai.ipynb) |
-| 06 — GeoAI compatibility | What runs in Pyodide today, what requires full CPython/GPU, handoff patterns | [Launch](https://jltobias.github.io/JupyterLite-GeoLibre-GeoAI/lite/lab/index.html?path=06_geoai_compatibility.ipynb) |
+| 06 — GeoAI compatibility | JupyterLite/GeoLibre compatibility boundaries and full-CPython/GPU handoff | [Launch](https://jltobias.github.io/JupyterLite-GeoLibre-GeoAI/lite/lab/index.html?path=06_geoai_compatibility.ipynb) |
 
 ## Why this architecture?
 
-GeoLibre's Python package embeds the complete GeoLibre application in Jupyter as an `anywidget`. The notebooks install the pinned `geolibre==3.0.0` wheel in the browser and then stream open datasets directly from CORS-enabled cloud hosts.
+### GeoLibre in JupyterLite
 
-The current `geoai-py` package includes PyTorch, TorchGeo, Transformers, rasterio, OpenCV, and other dependencies. Pyodide provides an unusually capable browser geospatial/scientific stack—including GeoPandas, rasterio, H3, scikit-learn, and scikit-image—but not PyTorch. Therefore these examples implement **GeoAI-style data preparation, feature engineering, unsupervised learning, anomaly detection, and raster classification directly in JupyterLite**, then provide a clear continuation path to the full GeoAI package for GPU/deep-learning workflows.
+The upstream `geolibre.Map` widget is designed for normal Jupyter kernels. It starts a loopback HTTP server to serve GeoLibre's bundled application. A standalone JupyterLite kernel runs inside Pyodide/WebAssembly and cannot bind a TCP socket, so directly constructing `geolibre.Map()` raises an `OSError` in the browser.
+
+The live notebooks therefore install `geolibre==3.0.0` but use **`book/notebooks/geolibre_lite.py`**. `LiteMap` is a small `anywidget` adapter that:
+
+1. uses GeoLibre's own Python project and layer builders;
+2. preserves GeoLibre project/layer schemas for GeoJSON, COG, PMTiles and graduated symbology;
+3. displays the project with GeoLibre's upstream hosted viewer (`https://web.geolibre.app/?embed=1`);
+4. uses the same `postMessage` project-loading protocol as GeoLibre's standalone HTML export; and
+5. never opens a localhost server or OS socket.
+
+In regular JupyterLab, VS Code, JupyterHub, Binder, or another full CPython environment where the kernel-side server/proxy is available, use upstream `geolibre.Map` directly.
+
+### GeoAI in JupyterLite
+
+The current `geoai-py` package includes PyTorch, TorchGeo, Transformers, rasterio, OpenCV, and other dependencies. Pyodide provides an unusually capable browser geospatial/scientific stack—including GeoPandas, rasterio, H3, scikit-learn, and scikit-image—but not the full PyTorch/TorchGeo stack. Therefore these examples implement **GeoAI-style data preparation, feature engineering, unsupervised learning, anomaly detection, and raster classification directly in JupyterLite**, then provide a clear continuation path to the full GeoAI package for GPU/deep-learning workflows.
 
 ## Build locally
 
@@ -61,6 +75,7 @@ Keep new examples browser-first:
 
 1. Prefer COG, PMTiles, GeoParquet, STAC, GeoJSON, or small downloadable assets.
 2. Verify CORS and HTTP range-request support.
-3. Avoid credentials when an open source exists; if credentials are unavoidable, prompt at runtime and never commit them.
-4. Add an entry to `DATA_SOURCES.md` and a citation cell in the notebook.
-5. Test both the rendered Jupyter Book page and the live JupyterLite notebook.
+3. Use `geolibre_lite.LiteMap` inside JupyterLite; reserve upstream `geolibre.Map` for full Python/Jupyter runtimes.
+4. Avoid credentials when an open source exists; if credentials are unavoidable, prompt at runtime and never commit them.
+5. Add an entry to `DATA_SOURCES.md` and a citation cell in the notebook.
+6. Test both the rendered Jupyter Book page and the live JupyterLite notebook.
