@@ -1,0 +1,12 @@
+{
+  "jupyter-config-data": {
+    "appName": "GeoLibre + GeoAI Lab",
+    "appUrl": "./lab",
+    "faviconUrl": "",
+    "settingsOverrides": {
+      "@jupyterlab/apputils-extension:themes": {
+        "theme": "JupyterLab Light"
+      }
+    }
+  }
+}
