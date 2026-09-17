@@ -8,4 +8,6 @@ chapters:
   - file: notebooks/04_chirps_climate
   - file: notebooks/05_h3_earthquake_geoai
   - file: notebooks/06_geoai_compatibility
+  - file: notebooks/07_stac_browser_catalogs
+  - file: notebooks/08_stac_geoai_footprints
   - file: references

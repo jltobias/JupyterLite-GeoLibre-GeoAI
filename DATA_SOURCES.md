@@ -101,6 +101,14 @@ This file is the consolidated citation and provenance register for the JupyterLi
 - Attribution: © OpenStreetMap contributors, https://www.openstreetmap.org/copyright
 - Role: contextual basemap.
 
+### STAC catalogs and browsers
+- STAC specification: https://stacspec.org/; STAC API specification: https://github.com/radiantearth/stac-api-spec.
+- UN Biodiversity Lab Browser: https://stac.unbiodiversitylab.org/?.language=en; public API root: `https://unbl-prod-stac.azurewebsites.net/`. Asset access may require a UNBL workspace/token.
+- Copernicus Data Space Browser: https://browser.stac.dataspace.copernicus.eu/; public API root: `https://stac.dataspace.copernicus.eu/v1/`.
+- USGS LandsatLook Browser: https://landsatlook.usgs.gov/stac-browser/?.language=en; public API root: `https://landsatlook.usgs.gov/stac-server/`.
+- WorldPop Browser: https://stac.worldpop.org/?.language=en; public API root: `https://api.stac.worldpop.org`.
+- Role: standards-based discovery of collections, items, footprints, temporal metadata, assets, and licensing information for the STAC notebooks.
+
 ### Source Cooperative
 - Platform: https://source.coop/
 - Operator: Radiant Earth.

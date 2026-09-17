@@ -26,6 +26,8 @@ Browser-native geospatial notebooks that combine **[GeoLibre](https://geolibre.a
 | 04 — CHIRPS climate | CHIRPS v3 daily precipitation COG + GeoLibre cloud raster visualization | [Launch](https://jltobias.github.io/JupyterLite-GeoLibre-GeoAI/lite/lab/index.html?path=04_chirps_climate.ipynb) |
 | 05 — H3 earthquake GeoAI | Live USGS earthquakes, H3 aggregation, Isolation Forest anomaly scoring | [Launch](https://jltobias.github.io/JupyterLite-GeoLibre-GeoAI/lite/lab/index.html?path=05_h3_earthquake_geoai.ipynb) |
 | 06 — GeoAI compatibility | JupyterLite/GeoLibre compatibility boundaries and full-CPython/GPU handoff | [Launch](https://jltobias.github.io/JupyterLite-GeoLibre-GeoAI/lite/lab/index.html?path=06_geoai_compatibility.ipynb) |
+| 07 — STAC Browser catalogs | Discover UN Biodiversity Lab, Copernicus, USGS, and WorldPop STAC APIs | [Launch](https://jltobias.github.io/JupyterLite-GeoLibre-GeoAI/lite/lab/index.html?path=07_stac_browser_catalogs.ipynb) |
+| 08 — STAC + GeoAI footprints | Search public STAC APIs, cluster metadata, and map item footprints in GeoLibre | [Launch](https://jltobias.github.io/JupyterLite-GeoLibre-GeoAI/lite/lab/index.html?path=08_stac_geoai_footprints.ipynb) |
 
 ## Why this architecture?
 
