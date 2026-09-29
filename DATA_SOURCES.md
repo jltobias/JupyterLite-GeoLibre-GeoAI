@@ -1,6 +1,6 @@
 # Data and software source register
 
-Last reviewed: **2026-09-16**.
+Last reviewed: **2026-09-29**.
 
 This file is the consolidated citation and provenance register for the JupyterLite/GeoLibre/GeoAI examples. Each notebook also contains a concise citation section.
 
@@ -108,6 +108,34 @@ This file is the consolidated citation and provenance register for the JupyterLi
 - USGS LandsatLook Browser: https://landsatlook.usgs.gov/stac-browser/?.language=en; public API root: `https://landsatlook.usgs.gov/stac-server/`.
 - WorldPop Browser: https://stac.worldpop.org/?.language=en; public API root: `https://api.stac.worldpop.org`.
 - Role: standards-based discovery of collections, items, footprints, temporal metadata, assets, and licensing information for the STAC notebooks.
+
+### GeoLibre Official Demos
+- Gallery: https://geolibre.app/gallery/
+- Collection: https://share.geolibre.app/giswqs/collections/official-demos
+- Portable project convention: `https://share.geolibre.app/giswqs/{slug}.geolibre.json`
+- Role: authored, portable examples that expose layer configuration, source attribution, inline GeoJSON, raster tile URLs, and visualization settings. Notebook 09 uses a compact, reviewed manifest of selected gallery descriptions; notebooks 10 and 11 read live project JSON directly.
+- Licensing: GeoLibre software is MIT licensed, but every demo can incorporate data under different terms. Read the project description and original-provider terms before reuse.
+
+### Sister Cities / Wikidata
+- GeoLibre project: https://share.geolibre.app/giswqs/sister-cities-of-major-world-cities
+- Project JSON: https://share.geolibre.app/giswqs/sister-cities-of-major-world-cities.geolibre.json
+- Original structured-data source identified by the demo: Wikidata, “twinned administrative body.”
+- Wikidata data access and CC0 statement: https://www.wikidata.org/wiki/Wikidata:Data_access
+- Role: 367 mapped cities and 1,108 sister-city relationships for graph feature engineering, clustering, and anomaly exploration.
+
+### NIFC WFIGS wildfire perimeters
+- GeoLibre project: https://share.geolibre.app/giswqs/us-wildfire-perimeters-2025
+- Project JSON: https://share.geolibre.app/giswqs/us-wildfire-perimeters-2025.geolibre.json
+- Source identified by the demo: NIFC WFIGS Interagency Fire Perimeters, National Interagency Fire Center.
+- Role: 2025 U.S. fire perimeters and attributes for spatial feature engineering and exploratory anomaly scoring.
+- Operational caveat: the notebook snapshot is educational and must not be used for emergency decisions.
+
+### Element 84 Earth Search / Sentinel-2
+- STAC API: https://earth-search.aws.element84.com/v1
+- Source/documentation: https://github.com/Element84/earth-search
+- Collection used: `sentinel-2-c1-l2a` (Copernicus Sentinel-2 Collection 1 Level-2A, exposed as cloud-optimized GeoTIFF assets).
+- Role: bbox/time/cloud-filtered scene discovery around a selected fire perimeter, metadata triage, footprint mapping, and direct streaming of the visual COG into GeoLibre.
+- Licensing: inspect the Earth Search STAC Collection and Copernicus terms for current attribution and reuse requirements.
 
 ### Source Cooperative
 - Platform: https://source.coop/

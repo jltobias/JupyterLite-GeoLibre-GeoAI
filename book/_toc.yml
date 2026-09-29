@@ -10,4 +10,7 @@ chapters:
   - file: notebooks/06_geoai_compatibility
   - file: notebooks/07_stac_browser_catalogs
   - file: notebooks/08_stac_geoai_footprints
+  - file: notebooks/09_geolibre_demo_recommender
+  - file: notebooks/10_sister_cities_graph_geoai
+  - file: notebooks/11_wildfire_stac_triage
   - file: references
