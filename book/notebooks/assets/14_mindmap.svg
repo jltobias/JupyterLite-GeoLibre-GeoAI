@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 550" role="img" aria-labelledby="title desc">
+<title id="title">Terrain: 2D, 3D and a profile tell one story concept map</title>
+<desc id="desc">Surface: An analytic terrain uses local metric axes. Derivatives: Slope follows elevation change per metre. 3D maps: GeoLibre extrusions and a rotatable surface. Astra: Compare views without inventing measured terrain</desc>
+<rect width="1200" height="550" rx="22" fill="#f1f5f9"/>
+<text x="42" y="49" font-family="sans-serif" font-size="25" font-weight="700" fill="#0f172a">Terrain: 2D, 3D and a profile tell one story</text>
+<text x="42" y="79" font-family="sans-serif" font-size="16" fill="#475569">Observe the evidence  /  connect the representations  /  test the explanation</text>
+<path d="M 600 285 Q 600 190 405 190" stroke="#2563eb" stroke-width="3" fill="none"/>
+<rect x="35" y="125" width="370" height="135" rx="15" fill="white" stroke="#2563eb" stroke-width="2"/>
+<text x="55" y="157" fill="#2563eb" font-family="sans-serif" font-size="21" font-weight="700">Surface</text>
+<text x="55" y="185" fill="#334155" font-family="sans-serif" font-size="17">An analytic terrain uses local</text>
+<text x="55" y="208" fill="#334155" font-family="sans-serif" font-size="17">metric axes</text>
+<path d="M 600 285 Q 600 190 795 190" stroke="#0f766e" stroke-width="3" fill="none"/>
+<rect x="795" y="125" width="370" height="135" rx="15" fill="white" stroke="#0f766e" stroke-width="2"/>
+<text x="815" y="157" fill="#0f766e" font-family="sans-serif" font-size="21" font-weight="700">Derivatives</text>
+<text x="815" y="185" fill="#334155" font-family="sans-serif" font-size="17">Slope follows elevation change per</text>
+<text x="815" y="208" fill="#334155" font-family="sans-serif" font-size="17">metre</text>
+<path d="M 600 285 Q 600 420 405 420" stroke="#9333ea" stroke-width="3" fill="none"/>
+<rect x="35" y="355" width="370" height="135" rx="15" fill="white" stroke="#9333ea" stroke-width="2"/>
+<text x="55" y="387" fill="#9333ea" font-family="sans-serif" font-size="21" font-weight="700">3D maps</text>
+<text x="55" y="415" fill="#334155" font-family="sans-serif" font-size="17">GeoLibre extrusions and a rotatable</text>
+<text x="55" y="438" fill="#334155" font-family="sans-serif" font-size="17">surface</text>
+<path d="M 600 285 Q 600 420 795 420" stroke="#b45309" stroke-width="3" fill="none"/>
+<rect x="795" y="355" width="370" height="135" rx="15" fill="white" stroke="#b45309" stroke-width="2"/>
+<text x="815" y="387" fill="#b45309" font-family="sans-serif" font-size="21" font-weight="700">Astra</text>
+<text x="815" y="415" fill="#334155" font-family="sans-serif" font-size="17">Compare views without inventing</text>
+<text x="815" y="438" fill="#334155" font-family="sans-serif" font-size="17">measured terrain</text>
+<rect x="435" y="225" width="330" height="120" rx="22" fill="#0f172a"/>
+<text x="600" y="274" text-anchor="middle" fill="white" font-family="sans-serif" font-size="24" font-weight="700">Spatial understanding</text>
+<text x="600" y="307" text-anchor="middle" fill="#cbd5e1" font-family="sans-serif" font-size="18">map + measure + question</text>
+</svg>

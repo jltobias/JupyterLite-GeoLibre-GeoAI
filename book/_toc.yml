@@ -13,4 +13,8 @@ chapters:
   - file: notebooks/09_geolibre_demo_recommender
   - file: notebooks/10_sister_cities_graph_geoai
   - file: notebooks/11_wildfire_stac_triage
+  - file: notebooks/12_astra_spatial_copilot
+  - file: notebooks/13_astra_vision_change
+  - file: notebooks/14_astra_terrain_3d
+  - file: notebooks/15_astra_network_accessibility
   - file: references

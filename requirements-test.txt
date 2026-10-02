@@ -1,0 +1,11 @@
+-r requirements.txt
+geolibre==3.0.0
+matplotlib>=3.9,<4
+numpy>=2,<3
+pandas>=2.2,<3
+scipy>=1.14,<2
+plotly==6.5.0
+pillow>=10
+ipykernel>=6
+nbclient>=0.10
+h3>=4,<5

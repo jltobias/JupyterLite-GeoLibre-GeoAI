@@ -3,3 +3,5 @@ book/_build/
 .ipynb_checkpoints/
 __pycache__/
 .DS_Store
+book/notebooks/exports/
+book/notebooks/astra_response*.json

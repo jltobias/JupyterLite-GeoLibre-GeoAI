@@ -32,6 +32,39 @@ Browser-native geospatial notebooks that combine **[GeoLibre](https://geolibre.a
 | 10 — Sister Cities graph GeoAI | Extract a live GeoLibre project, model its city network, and map unusual graph profiles | [Launch](https://jltobias.github.io/JupyterLite-GeoLibre-GeoAI/lite/lab/index.html?path=10_sister_cities_graph_geoai.ipynb) |
 | 11 — Wildfire + STAC triage | Score NIFC fire perimeters, search Sentinel-2 STAC, and stream a ranked COG to GeoLibre | [Launch](https://jltobias.github.io/JupyterLite-GeoLibre-GeoAI/lite/lab/index.html?path=11_wildfire_stac_triage.ipynb) |
 
+## New Astra learning labs
+
+| Notebook | Visual investigation | Live |
+|---|---|---|
+| 12 — Astra spatial copilot | Structured plans, map/scatter views, threshold sensitivity | [Launch](https://jltobias.github.io/JupyterLite-GeoLibre-GeoAI/lite/lab/index.html?path=12_astra_spatial_copilot.ipynb) |
+| 13 — Astra vision + change | Before/after imagery, masks, confusion matrix, image-grounded interpretation | [Launch](https://jltobias.github.io/JupyterLite-GeoLibre-GeoAI/lite/lab/index.html?path=13_astra_vision_change.ipynb) |
+| 14 — Astra + 3D terrain | Contours, slopes, profiles, rotatable surface, GeoLibre elevation extrusions | [Launch](https://jltobias.github.io/JupyterLite-GeoLibre-GeoAI/lite/lab/index.html?path=14_astra_terrain_3d.ipynb) |
+| 15 — Astra accessibility tools | Network graphs, bridge closure, travel-time sensitivity, function calling | [Launch](https://jltobias.github.io/JupyterLite-GeoLibre-GeoAI/lite/lab/index.html?path=15_astra_network_accessibility.ipynb) |
+
+Labs 00–08 and 12–15 include a concept map and a visual investigation with a **predict → run → compare → explain** exercise. Maps answer *where*, charts explain *how much*, network graphs expose *connections*, and 3D/profile views show *shape*. Bundled SVG concept diagrams remain visible without a kernel or diagram CDN.
+
+Start with **00 → 01 → 02** for spatial representations, **03 → 13** for imagery, **14** for terrain, or **12 → 15** for Astra-assisted analysis. Labs 12–15 have saved static figure outputs and deterministic synthetic datasets. Their analytical exercises do not depend on changing data APIs. Synthetic values are explicitly labeled; they are not measurements of the displayed real-world locations. GeoLibre's hosted viewer, basemaps, initial package installation, and interactive Plotly scripts still need internet access. Native map widgets appear when the notebook runs.
+
+## Using GPT-6 Astra
+
+The new labs use Astra's documented image inputs, structured outputs, and function calling to propose bounded operations and interpret supplied evidence. They do not claim a dedicated GIS engine or geospatial accuracy benchmark. Python computes the measurements, GeoLibre displays the geometry, and a full GeoAI runtime can supply heavier inference. See the [Astra model](https://developers.openai.com/api/docs/models/gpt-6-astra) and [Responses function-calling documentation](https://developers.openai.com/api/docs/guides/function-calling).
+
+The default **Run All makes no model calls**. Offline plans/tool arguments are hand-authored teaching examples, not claimed model outputs. Each new lab exports a Responses API request to `exports/`. To try Astra:
+
+1. Download a request JSON from JupyterLite. For lab 15 also download `accessibility_evidence.json`.
+2. Set `OPENAI_API_KEY` in a full CPython terminal outside JupyterLite. Never embed the key in browser code, a notebook, or a deployed static site.
+3. Preview or send the request from the repo root:
+
+   ```bash
+   python scripts/run_astra.py spatial_plan_request.json
+   python scripts/run_astra.py spatial_plan_request.json --send --output astra_response.json
+   python scripts/run_astra.py accessibility_request.json --evidence accessibility_evidence.json --send --output astra_response.json
+   ```
+
+4. Upload the response JSON into the notebook folder, set `RESPONSE_PATH`, and rerun the import cell. Review the answer against the computed evidence.
+
+Sending uses your API project's access and billing. The runner reports token usage, rejects incomplete/refused responses, and bounds the accessibility tool loop. No API SDK, API key, or server is required for the default teaching run. Live API access is separate from access to Astra in a chat application.
+
 ## Why this architecture?
 
 ### GeoLibre in JupyterLite
@@ -57,7 +90,7 @@ The current `geoai-py` package includes PyTorch, TorchGeo, Transformers, rasteri
 ```bash
 python -m pip install -r requirements.txt
 rm -rf site book/_build
-jupyter lite build --contents book/notebooks --output-dir site/lite
+python scripts/build_lite.py
 jupyter-book build book
 cp -a book/_build/html/. site/
 touch site/.nojekyll
@@ -65,6 +98,18 @@ python -m http.server -d site 8000
 ```
 
 Open <http://localhost:8000> for the book or <http://localhost:8000/lite/lab/index.html> for JupyterLite.
+
+`scripts/build_lite.py` explicitly includes the Pyodide kernel, Jupyter widget manager and anywidget extensions, including when Python packages were installed with `pip --user`. It verifies those extensions in the built site. Saved figures are generated in CPython; running the notebooks in JupyterLite creates fresh browser results.
+
+## Verify the learning labs
+
+```bash
+python -m pip install -r requirements-test.txt
+python -m unittest discover -s tests -v
+python scripts/validate_notebooks.py --execute
+```
+
+Validation checks all notebook schemas and Python syntax, then executes labs 12–15 in isolated temporary directories without data-service or model calls. Use `--execute --save-outputs` to refresh their saved figures. Older notebooks still query their documented public data services; CORS, availability and changing feeds must be checked in the browser. The book build intentionally does not execute those live queries.
 
 ## Citations, attribution, and licenses
 

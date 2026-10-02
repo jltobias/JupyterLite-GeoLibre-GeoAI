@@ -21,6 +21,28 @@ This book is a set of **live, browser-native geospatial labs**. Each chapter can
 | Sister Cities graph GeoAI | Network roles and unusual connectivity profiles | [Open live](https://jltobias.github.io/JupyterLite-GeoLibre-GeoAI/lite/lab/index.html?path=10_sister_cities_graph_geoai.ipynb) |
 | Wildfire + STAC triage | Fire-perimeter anomaly scoring and Sentinel-2 discovery | [Open live](https://jltobias.github.io/JupyterLite-GeoLibre-GeoAI/lite/lab/index.html?path=11_wildfire_stac_triage.ipynb) |
 
+## New visual reasoning labs
+
+| Lab | Focus | Launch |
+|---|---|---|
+| Astra spatial copilot | Question → validated plan → mapped selection | [Open live](https://jltobias.github.io/JupyterLite-GeoLibre-GeoAI/lite/lab/index.html?path=12_astra_spatial_copilot.ipynb) |
+| Astra vision + change | Image panels, masks and measured evidence | [Open live](https://jltobias.github.io/JupyterLite-GeoLibre-GeoAI/lite/lab/index.html?path=13_astra_vision_change.ipynb) |
+| Astra + 3D terrain | Contours, slopes, profiles and interactive 3D | [Open live](https://jltobias.github.io/JupyterLite-GeoLibre-GeoAI/lite/lab/index.html?path=14_astra_terrain_3d.ipynb) |
+| Astra accessibility tools | Networks, counterfactuals and sensitivity | [Open live](https://jltobias.github.io/JupyterLite-GeoLibre-GeoAI/lite/lab/index.html?path=15_astra_network_accessibility.ipynb) |
+
+![A concept map connects synthetic terrain, slope derivatives, 3D maps and evidence-grounded Astra interpretation.](notebooks/assets/14_mindmap.svg)
+
+The enhanced labs pair maps with concept diagrams, charts or graphs, followed by an experiment that changes an assumption. Read the static book for diagrams and saved Astra-lab figures; launch JupyterLite to manipulate data and create live GeoLibre maps. The new labs use deliberately synthetic teaching data so you can test an explanation against known values before applying the workflow to observations.
+
+| Your question | Suggested path | What to compare |
+|---|---|---|
+| How does location become an analytical feature? | 00 → 01 → 02 → 12 | Coordinate map, H3 scale, feature space, selected cells |
+| What changed in an image? | 03 → 08 → 13 | Appearance, footprints, masks, confusion counts |
+| What does terrain shape reveal? | 00 → 14 | Contours, slopes, profile, 3D perspective |
+| What happens when a connection disappears? | 12 → 15 | Graph topology, routes, cutoff and speed sensitivity |
+
+Labs 12–15 run their analysis without an API key. Optional Astra requests are exported as JSON and sent by the repository's CPython runner; credentials stay outside the static browser site. Each lab explains how to import and inspect a real response. Hand-authored offline examples are labeled, and geospatial measurements are calculated in code.
+
 ## GeoLibre's JupyterLite boundary
 
 The upstream `geolibre.Map` widget serves its bundled application from a kernel-side localhost HTTP server. That is appropriate in a normal Jupyter environment, but a Pyodide/WebAssembly kernel cannot bind the required TCP socket.
@@ -33,7 +55,7 @@ Use upstream `geolibre.Map` directly when running the notebooks in a full CPytho
 
 The full `geoai-py` package is designed for advanced workflows including deep-learning segmentation, detection, classification, change detection, and model training. Its dependency graph includes PyTorch and TorchGeo. JupyterLite runs CPython compiled to WebAssembly through Pyodide, so not every native/GPU dependency is available.
 
-These labs therefore use the **browser-native subset of the GeoAI workflow**: cloud data discovery, spatial feature engineering, H3 indexing, raster processing, scikit-learn modeling, anomaly detection, and interactive mapping in GeoLibre. The Earth-observation lab keeps Major TOM COGs in GeoLibre but uses NASA GIBS JPEG imagery for Python-side clustering so Pyodide does not depend on a missing GDAL ZSTD codec. The final chapter shows where to hand the same data and concepts to full GeoAI on a desktop, cloud VM, Binder/Hub, or GPU notebook.
+These labs therefore use the **browser-native subset of the GeoAI workflow**: cloud data discovery, spatial feature engineering, H3 indexing, raster processing, scikit-learn modeling, anomaly detection, and interactive mapping in GeoLibre. The Earth-observation lab keeps Major TOM COGs in GeoLibre but uses NASA GIBS JPEG imagery for Python-side clustering so Pyodide does not depend on a missing GDAL ZSTD codec. The compatibility chapter shows where to hand the same data and concepts to full GeoAI on a desktop, cloud VM, Binder/Hub, or GPU notebook.
 
 ## Data ethics and reproducibility
 

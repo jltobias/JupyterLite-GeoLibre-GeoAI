@@ -1,6 +1,6 @@
 # Data and software source register
 
-Last reviewed: **2026-09-29**.
+Original source register reviewed: **2026-09-29**. Visual learning labs and Astra references added: **2026-10-02**.
 
 This file is the consolidated citation and provenance register for the JupyterLite/GeoLibre/GeoAI examples. Each notebook also contains a concise citation section.
 
@@ -32,6 +32,22 @@ This file is the consolidated citation and provenance register for the JupyterLi
 - Role: in-browser Python/WebAssembly runtime.
 
 ## Data
+
+### Synthetic visual learning fixtures (labs 12–15 and rainfall exercise in 04)
+- Origin: deterministic functions and fixed-seed arrays authored in this repository, including `book/notebooks/cognition.py` and the notebook cells.
+- Fixtures: 8 × 8 invented temperature/canopy/population grid; paired 64 × 64 RGB scenes with a known change/cloud mask; analytic metric terrain; a 6 × 6 street network with two bridges; a fixed 30-day rainfall teaching series.
+- These are **not observed environmental, population, satellite, road, or service-access data**. The longitude/latitude anchor only demonstrates mapping and does not describe the real location beneath the basemap.
+- Cell areas and terrain derivatives are computed in local metric coordinates. The small-patch longitude/latitude conversion is a teaching approximation, not a surveyed projection or production georeferencing method.
+- No downloaded imagery is transmitted to Astra by default. Optional vision requests contain PNGs generated from the synthetic arrays and their numerical evidence.
+- Reproduction: run the cells in order. Lab 13 uses NumPy seed 42; other fixtures use fixed formulas or explicit values. Exports retain source labels.
+
+### Astra, plotting and concept diagrams
+- Model: `gpt-6-astra`, accessed optionally through the Responses API from full CPython, not locally installed in Pyodide.
+- Official sources checked 2026-10-02: [model](https://developers.openai.com/api/docs/models/gpt-6-astra), [structured outputs](https://developers.openai.com/api/docs/guides/structured-outputs), [image inputs](https://developers.openai.com/api/docs/guides/images-vision), [function calling](https://developers.openai.com/api/docs/guides/function-calling).
+- The examples demonstrate general reasoning, image interpretation and tool use applied to geospatial evidence. No dedicated geospatial performance guarantee is asserted. Offline plans and tool calls are hand-authored fixtures, not model-generated responses.
+- [Matplotlib](https://matplotlib.org/stable/) provides static charts. [Plotly](https://plotly.com/python/) (`plotly==6.5.0`) provides a rotatable surface, loading its matching JavaScript bundle from the Plotly CDN.
+- The SVG concept maps under `book/notebooks/assets/` are authored diagrams, include text alternatives, and use no external diagram renderer.
+- GeoLibre 3.0 native extrusion properties render the synthetic elevation columns. [Terrain controls](https://geolibre.app/user-guide/map-controls/) provide separate terrain context; loaded COGs do not automatically become that elevation source.
 
 ### GeoLibre hosted sample data
 - Hosted sample used by quickstart: `https://assets.geolibre.app/data/places.geojson`

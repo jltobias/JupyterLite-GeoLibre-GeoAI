@@ -13,6 +13,7 @@ notebooks in this repository.
 from __future__ import annotations
 
 import json
+import math
 from typing import Any
 
 import anywidget
@@ -312,6 +313,18 @@ class LiteMap(anywidget.AnyWidget):
     def to_project(self) -> dict[str, Any]:
         """Return a credential-redacted, detached GeoLibre project dict."""
         return _project.redact_credentials(self.project)
+
+    def set_view(self, *, pitch: float = 0, bearing: float = 0) -> None:
+        """Set the native GeoLibre camera without mutating a synced trait in place."""
+        if not math.isfinite(pitch) or not 0 <= pitch <= 85:
+            raise ValueError("pitch must be finite and between 0 and 85 degrees")
+        if not math.isfinite(bearing):
+            raise ValueError("bearing must be finite")
+        project = dict(self.project)
+        project["mapView"] = {
+            **project["mapView"], "pitch": float(pitch), "bearing": float(bearing) % 360,
+        }
+        self.project = project
 
 
 Map = LiteMap

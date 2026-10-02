@@ -29,8 +29,13 @@ jobs:
           python-version: "3.12"
           cache: pip
 
-      - name: Install site builders
-        run: python -m pip install -r requirements.txt
+      - name: Install site builders and notebook test dependencies
+        run: python -m pip install -r requirements-test.txt
+
+      - name: Validate and execute deterministic learning labs
+        run: |
+          python -m unittest discover -s tests -v
+          python scripts/validate_notebooks.py --execute
 
       - name: Validate JupyterLite GeoLibre compatibility
         run: |
@@ -43,7 +48,7 @@ jobs:
       - name: Build JupyterLite
         run: |
           rm -rf site book/_build
-          jupyter lite build --contents book/notebooks --output-dir site/lite
+          python scripts/build_lite.py
 
       - name: Build Jupyter Book
         run: |
