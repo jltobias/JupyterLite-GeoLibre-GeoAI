@@ -4,6 +4,14 @@ Original source register reviewed: **2026-09-29**. Visual learning labs and Astr
 
 This file is the consolidated citation and provenance register for the JupyterLite/GeoLibre/GeoAI examples. Each notebook also contains a concise citation section.
 
+## Visual learning edition (2026-10-09)
+
+- All 18 notebooks include newly authored teaching copy, a vector infographic, a vector cartoon, a PNG preview, and a silent 32-second MP4 storyboard with WebVTT captions and an HTML transcript. Sources: `scripts/learning_content.py` and `scripts/build_learning_media.py`; outputs: `book/notebooks/assets/learning/`.
+- These are original schematic illustrations of methods, not observed geographic datasets, measured hazard maps, screenshots of live results or captured model conversations. The diagrams and fictional dialogue must be read with the notebook's source-specific analytical outputs.
+- No stock artwork or third-party videos are redistributed. The user-supplied Six Thinking Hats artwork remains separate with its existing attribution below. The new generic cartoon figures do not depict real people.
+- Videos and posters are rendered from the same authored SVG/storyboard content. Transcripts also appear in notebook Markdown; static SVG alternatives remain available without video playback or a Python kernel.
+- Runtime, code and STAC explanations refer to the [Pyodide FAQ](https://pyodide.org/en/stable/usage/faq.html), [JupyterLite content documentation](https://jupyterlite.readthedocs.io/en/stable/howto/content/files.html), [scikit-learn clustering guide](https://scikit-learn.org/stable/modules/clustering.html#k-means), and [STAC specification overview](https://stacspec.org/en/about/stac-spec/), checked 2026-10-09.
+
 ## Software
 
 ### GeoLibre

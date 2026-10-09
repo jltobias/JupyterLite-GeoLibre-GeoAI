@@ -1,0 +1,17 @@
+WEBVTT
+
+1
+00:00:00.000 --> 00:00:08.000
+Measure. Describe historical fire area, perimeter, date and compactness.
+
+2
+00:00:08.000 --> 00:00:16.000
+Select. Flag unusual profiles, then choose a case using the explicit sorting rule.
+
+3
+00:00:16.000 --> 00:00:24.000
+Discover. Search Sentinel-2 near the case in a bounded date window.
+
+4
+00:00:24.000 --> 00:00:32.000
+Rank. Use an understandable preference rule and inspect the candidate over the fire.

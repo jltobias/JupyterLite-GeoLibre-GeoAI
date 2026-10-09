@@ -1,0 +1,17 @@
+WEBVTT
+
+1
+00:00:00.000 --> 00:00:08.000
+Fetch. A fixed date and bounding box anchor a compact image sample.
+
+2
+00:00:08.000 --> 00:00:16.000
+Reshape. Each pixel becomes a row with red, green and blue feature values.
+
+3
+00:00:16.000 --> 00:00:24.000
+Learn. Six clusters describe color similarity, with arbitrary IDs.
+
+4
+00:00:24.000 --> 00:00:32.000
+Map. Restore geographic position, then compare original image and grouped regions.

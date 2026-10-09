@@ -1,0 +1,17 @@
+WEBVTT
+
+1
+00:00:00.000 --> 00:00:08.000
+Describe. Combine each demo's title, tags and description into one document.
+
+2
+00:00:08.000 --> 00:00:16.000
+Encode. Turn distinctive words and pairs into numeric features.
+
+3
+00:00:16.000 --> 00:00:24.000
+Compare. Compare a question with every description using the same vocabulary.
+
+4
+00:00:24.000 --> 00:00:32.000
+Inspect. Read the suggested projects; a similarity score is not a correctness probability.

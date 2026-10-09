@@ -1,0 +1,17 @@
+WEBVTT
+
+1
+00:00:00.000 --> 00:00:08.000
+Collect. Read event coordinates, magnitudes and depths from a changing monthly feed.
+
+2
+00:00:08.000 --> 00:00:16.000
+Aggregate. Represent each occupied cell with event count, magnitude and depth summaries.
+
+3
+00:00:16.000 --> 00:00:24.000
+Score. Assign higher values to unusual feature combinations in this sample.
+
+4
+00:00:24.000 --> 00:00:32.000
+Challenge. Inspect time window, missingness and depth before interpreting a high score.

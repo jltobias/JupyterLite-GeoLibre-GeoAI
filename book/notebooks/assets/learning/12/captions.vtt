@@ -1,0 +1,17 @@
+WEBVTT
+
+1
+00:00:00.000 --> 00:00:08.000
+Ask. Start with a question that names a field, unit and threshold.
+
+2
+00:00:08.000 --> 00:00:16.000
+Validate. Allow only defined fields and comparisons rather than executing generated Python.
+
+3
+00:00:16.000 --> 00:00:24.000
+Inspect. Link the same selected records to map outlines and charts.
+
+4
+00:00:24.000 --> 00:00:32.000
+Challenge. Move a threshold and observe how sensitive the selection is to the question.

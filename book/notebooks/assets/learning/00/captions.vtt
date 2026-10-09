@@ -1,0 +1,17 @@
+WEBVTT
+
+1
+00:00:00.000 --> 00:00:08.000
+Locate. A coordinate pair tells the map where to look: longitude first, latitude second.
+
+2
+00:00:08.000 --> 00:00:16.000
+Layer. Vector places and raster elevations answer different questions about the same map.
+
+3
+00:00:16.000 --> 00:00:24.000
+Inspect. Display the map and compare a point with the raster beneath it.
+
+4
+00:00:24.000 --> 00:00:32.000
+Preserve. Keep the recipe so the source addresses and styling remain inspectable.

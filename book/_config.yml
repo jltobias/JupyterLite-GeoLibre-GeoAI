@@ -13,4 +13,4 @@ html:
   use_issues_button: true
   home_page_in_navbar: true
   extra_footer: |
-    <p>Interactive notebooks run entirely in the browser with JupyterLite/Pyodide. Data-source attribution is documented in each notebook and in DATA_SOURCES.md.</p>
+    <p>Notebook calculations run in JupyterLite/Pyodide; data services, hosted map rendering and optional external model workflows are identified in each lesson. Data-source attribution is documented in each notebook and in DATA_SOURCES.md.</p>

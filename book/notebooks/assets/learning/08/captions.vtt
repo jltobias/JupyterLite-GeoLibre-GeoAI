@@ -1,0 +1,17 @@
+WEBVTT
+
+1
+00:00:00.000 --> 00:00:08.000
+Search. Bound the geographic question and the maximum returned sample.
+
+2
+00:00:08.000 --> 00:00:16.000
+Normalize. Put different providers' metadata into a common set of columns.
+
+3
+00:00:16.000 --> 00:00:24.000
+Learn. Preserve unknown cloud values as missingness information before clustering.
+
+4
+00:00:24.000 --> 00:00:32.000
+Inspect. Map valid footprints and compare groups with provider counts and cloud metadata.

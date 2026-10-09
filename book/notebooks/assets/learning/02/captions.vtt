@@ -1,0 +1,17 @@
+WEBVTT
+
+1
+00:00:00.000 --> 00:00:08.000
+Measure. Use projected area to turn population counts into comparable densities.
+
+2
+00:00:08.000 --> 00:00:16.000
+Scale. Log transforms and standardization reduce domination by feature units and large values.
+
+3
+00:00:16.000 --> 00:00:24.000
+Learn. Group similar feature vectors; cluster numbers are category IDs.
+
+4
+00:00:24.000 --> 00:00:32.000
+Check. Compare maps, scatter and correlations before assigning meaning to groups.

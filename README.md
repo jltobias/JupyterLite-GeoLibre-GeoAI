@@ -43,7 +43,9 @@ Browser-native geospatial notebooks that combine **[GeoLibre](https://geolibre.a
 | 16 — Sea-level-rise SaTScan GeoAI | PBIX-derived top-10 clusters, 2D map, animated scenarios, 3D risk view, and story map | [Launch](https://jltobias.github.io/JupyterLite-GeoLibre-GeoAI/lite/lab/index.html?path=16_sea_level_rise_sat_scan_geoai.ipynb) |
 | 17 — Rewiring global health | Six perspectives, accountable GeoAI interpretation, and novice sense-making prompts | [Launch](https://jltobias.github.io/JupyterLite-GeoLibre-GeoAI/lite/lab/index.html?path=17_rewiring_global_health_six_hats.ipynb) |
 
-Labs 00–08 and 12–15 include a concept map and a visual investigation with a **predict → run → compare → explain** exercise. Maps answer *where*, charts explain *how much*, network graphs expose *connections*, and 3D/profile views show *shape*. Bundled SVG concept diagrams remain visible without a kernel or diagram CDN.
+All 18 notebooks include an original infographic, a three-panel teaching cartoon, a 32-second captioned video with a transcript, and an explanation before every code cell. The **predict → run → compare → explain** exercises connect Python syntax to geographic meaning. Start with the [beginner's guide](https://jltobias.github.io/JupyterLite-GeoLibre-GeoAI/learning-guide.html) or browse the [visual learning library](https://jltobias.github.io/JupyterLite-GeoLibre-GeoAI/lite/files/assets/learning/index.html).
+
+The media is bundled in `book/notebooks/assets/learning/`; videos have player controls, English captions and text alternatives, with no third-party video embeds. Original schematic graphics illustrate methods; analytical plots retain their data-source citations. The guides distinguish browser machine learning from spatial preparation, deterministic rules, existing statistical results and optional external model calls.
 
 Start with **00 → 01 → 02** for spatial representations, **03 → 13** for imagery, **14** for terrain, or **12 → 15** for Astra-assisted analysis. Labs 12–15 have saved static figure outputs and deterministic synthetic datasets. Their analytical exercises do not depend on changing data APIs. Synthetic values are explicitly labeled; they are not measurements of the displayed real-world locations. GeoLibre's hosted viewer, basemaps, initial package installation, and interactive Plotly scripts still need internet access. Native map widgets appear when the notebook runs.
 
@@ -112,6 +114,22 @@ python scripts/validate_notebooks.py --execute
 ```
 
 Validation checks all notebook schemas and Python syntax, then executes labs 12–15 in isolated temporary directories without data-service or model calls. Use `--execute --save-outputs` to refresh their saved figures. Older notebooks still query their documented public data services; CORS, availability and changing feeds must be checked in the browser. The book build intentionally does not execute those live queries.
+
+## Maintain the teaching materials
+
+Authored copy lives in `scripts/learning_content.py`. `scripts/build_learning_media.py` checks each explanation against its code-cell anchor, preserves executable code and outputs, and replaces only its marked teaching cells.
+
+```bash
+python scripts/build_learning_media.py --check
+# To edit/rebuild the learning edition:
+python scripts/build_learning_media.py
+# Optional, when changing video content:
+python -m pip install -r requirements-media.txt
+python -m playwright install chromium
+python scripts/build_learning_media.py --videos
+```
+
+Committed MP4/PNG/SVG/HTML/VTT assets are used directly by the site build; rendering tools are not installed into notebook kernels. Publish the book together with `site/lite` so the video companion links resolve. The first JupyterLite setup and live data still need network access; downloaded video files and their transcripts can be used offline.
 
 ## Citations, attribution, and licenses
 

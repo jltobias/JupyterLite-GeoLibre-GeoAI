@@ -4,6 +4,8 @@ This book is a set of **live, browser-native geospatial labs**. Each chapter can
 
 **Launch the lab:** [https://jltobias.github.io/JupyterLite-GeoLibre-GeoAI/lite/lab/index.html](https://jltobias.github.io/JupyterLite-GeoLibre-GeoAI/lite/lab/index.html)
 
+**New to Python or GeoAI?** Start with the [illustrated learning guide](learning-guide.md). Every notebook now includes an infographic, a short captioned video with a transcript, a teaching cartoon and a reading guide before each code cell. The [visual learning library](https://jltobias.github.io/JupyterLite-GeoLibre-GeoAI/lite/files/assets/learning/index.html) works without a Python kernel.
+
 ## Notebook gallery
 
 | Lab | Focus | Launch |
@@ -29,6 +31,8 @@ This book is a set of **live, browser-native geospatial labs**. Each chapter can
 | Astra vision + change | Image panels, masks and measured evidence | [Open live](https://jltobias.github.io/JupyterLite-GeoLibre-GeoAI/lite/lab/index.html?path=13_astra_vision_change.ipynb) |
 | Astra + 3D terrain | Contours, slopes, profiles and interactive 3D | [Open live](https://jltobias.github.io/JupyterLite-GeoLibre-GeoAI/lite/lab/index.html?path=14_astra_terrain_3d.ipynb) |
 | Astra accessibility tools | Networks, counterfactuals and sensitivity | [Open live](https://jltobias.github.io/JupyterLite-GeoLibre-GeoAI/lite/lab/index.html?path=15_astra_network_accessibility.ipynb) |
+| Sea-level-rise SaTScan evidence | Report-derived clusters, scenarios and 3D statistical views | [Open live](https://jltobias.github.io/JupyterLite-GeoLibre-GeoAI/lite/lab/index.html?path=16_sea_level_rise_sat_scan_geoai.ipynb) |
+| Rewiring global health | Six perspectives and purple synthesis for accountable interpretation | [Open live](https://jltobias.github.io/JupyterLite-GeoLibre-GeoAI/lite/lab/index.html?path=17_rewiring_global_health_six_hats.ipynb) |
 
 ![A concept map connects synthetic terrain, slope derivatives, 3D maps and evidence-grounded Astra interpretation.](notebooks/assets/14_mindmap.svg)
 

@@ -1,0 +1,17 @@
+WEBVTT
+
+1
+00:00:00.000 --> 00:00:08.000
+Connect. Represent travel possibilities as nodes, edges and minute costs.
+
+2
+00:00:08.000 --> 00:00:16.000
+Reroute. Remove one bridge and recompute routes to the same destination.
+
+3
+00:00:16.000 --> 00:00:24.000
+Compare. Show who gains travel time and how a threshold changes covered-node counts.
+
+4
+00:00:24.000 --> 00:00:32.000
+Test. Vary speed assumptions before asking an optional model to interpret computed evidence.

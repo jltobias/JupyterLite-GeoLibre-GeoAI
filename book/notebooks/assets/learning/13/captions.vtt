@@ -1,0 +1,17 @@
+WEBVTT
+
+1
+00:00:00.000 --> 00:00:08.000
+Compare. Calculate a per-pixel RGB difference between aligned invented scenes.
+
+2
+00:00:08.000 --> 00:00:16.000
+Mask. Exclude the known synthetic cloud and apply an explicit threshold.
+
+3
+00:00:16.000 --> 00:00:24.000
+Evaluate. Compare prediction with known change using error counts and overlap.
+
+4
+00:00:24.000 --> 00:00:32.000
+Explain. Use computed area and a labeled figure to support, then check, an explanation.

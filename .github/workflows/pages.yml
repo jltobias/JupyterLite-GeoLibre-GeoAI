@@ -35,6 +35,7 @@ jobs:
       - name: Validate and execute deterministic learning labs
         run: |
           python -m unittest discover -s tests -v
+          python scripts/build_learning_media.py --check
           python scripts/validate_notebooks.py --execute
 
       - name: Validate JupyterLite GeoLibre compatibility

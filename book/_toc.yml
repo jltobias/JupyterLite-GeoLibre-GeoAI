@@ -1,6 +1,7 @@
 format: jb-book
 root: intro
 chapters:
+  - file: learning-guide
   - file: notebooks/00_geolibre_quickstart
   - file: notebooks/01_worldpop_h3
   - file: notebooks/02_census_geoai_counties
