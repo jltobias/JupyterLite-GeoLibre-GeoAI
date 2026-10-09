@@ -40,6 +40,8 @@ Browser-native geospatial notebooks that combine **[GeoLibre](https://geolibre.a
 | 13 — Astra vision + change | Before/after imagery, masks, confusion matrix, image-grounded interpretation | [Launch](https://jltobias.github.io/JupyterLite-GeoLibre-GeoAI/lite/lab/index.html?path=13_astra_vision_change.ipynb) |
 | 14 — Astra + 3D terrain | Contours, slopes, profiles, rotatable surface, GeoLibre elevation extrusions | [Launch](https://jltobias.github.io/JupyterLite-GeoLibre-GeoAI/lite/lab/index.html?path=14_astra_terrain_3d.ipynb) |
 | 15 — Astra accessibility tools | Network graphs, bridge closure, travel-time sensitivity, function calling | [Launch](https://jltobias.github.io/JupyterLite-GeoLibre-GeoAI/lite/lab/index.html?path=15_astra_network_accessibility.ipynb) |
+| 16 — Sea-level-rise SaTScan GeoAI | PBIX-derived top-10 clusters, 2D map, animated scenarios, 3D risk view, and story map | [Launch](https://jltobias.github.io/JupyterLite-GeoLibre-GeoAI/lite/lab/index.html?path=16_sea_level_rise_sat_scan_geoai.ipynb) |
+| 17 — Rewiring global health | Six perspectives, accountable GeoAI interpretation, and novice sense-making prompts | [Launch](https://jltobias.github.io/JupyterLite-GeoLibre-GeoAI/lite/lab/index.html?path=17_rewiring_global_health_six_hats.ipynb) |
 
 Labs 00–08 and 12–15 include a concept map and a visual investigation with a **predict → run → compare → explain** exercise. Maps answer *where*, charts explain *how much*, network graphs expose *connections*, and 3D/profile views show *shape*. Bundled SVG concept diagrams remain visible without a kernel or diagram CDN.
 

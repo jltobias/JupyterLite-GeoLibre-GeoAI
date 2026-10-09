@@ -146,6 +146,17 @@ This file is the consolidated citation and provenance register for the JupyterLi
 - Role: 2025 U.S. fire perimeters and attributes for spatial feature engineering and exploratory anomaly scoring.
 - Operational caveat: the notebook snapshot is educational and must not be used for emergency decisions.
 
+### User-supplied Power BI report / SaTScan teaching derivative
+- Source report: `Prototype-July-8-2024.pbix`, supplied by the repository author.
+- Committed derivative: `book/notebooks/data/pbix_top10_sat_scan.csv` contains the top ten rows from the report's `ALLMODELS` table plus city coordinate, elevation, and scenario summaries aggregated from `Climate-Sites-w-coords`.
+- Role: reproducible teaching snapshot for notebook 16; it is not the complete report model and is not an independent reanalysis or operational hazard forecast.
+- Interpretation: preserve the report's original source citations, terms, scenario definitions, and limitations when reusing these values.
+
+### Rewiring Global Health / Six Thinking Hats
+- Conceptual reference: https://github.com/jltobias/JupyterLite-Rewiring-Global-Health
+- User-supplied artwork: `book/notebooks/assets/six-thinking-hats-global-health.png`, copied unchanged at the user's request.
+- Role: structured reflection and sense-making prompts for responsible GeoAI learning. Six Thinking Hats concepts are associated with Edward de Bono; third-party names, concepts, and quotations retain their respective rights.
+
 ### Element 84 Earth Search / Sentinel-2
 - STAC API: https://earth-search.aws.element84.com/v1
 - Source/documentation: https://github.com/Element84/earth-search
