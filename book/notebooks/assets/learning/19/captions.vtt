@@ -1,0 +1,17 @@
+WEBVTT
+
+1
+00:00:00.000 --> 00:00:08.000
+Ask. Request a small JSON plan from an explicitly selected local model.
+
+2
+00:00:08.000 --> 00:00:16.000
+Check. Reject extra fields, imaginary layers and invalid values.
+
+3
+00:00:16.000 --> 00:00:24.000
+Preview. Compute selection IDs without changing an existing map.
+
+4
+00:00:24.000 --> 00:00:32.000
+Approve. Apply only after comparing the proposal with the intended request.

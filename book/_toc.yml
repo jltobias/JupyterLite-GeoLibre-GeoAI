@@ -16,6 +16,7 @@ chapters:
   - file: visual-library
   - file: futures/digital-twins
   - file: futures/map-encryption
+  - file: advanced/ollama-assistant
   - file: notebooks/00_geolibre_quickstart
   - file: notebooks/01_worldpop_h3
   - file: notebooks/02_census_geoai_counties
@@ -34,4 +35,7 @@ chapters:
   - file: notebooks/15_astra_network_accessibility
   - file: notebooks/16_sea_level_rise_sat_scan_geoai
   - file: notebooks/17_rewiring_global_health_six_hats
+  - file: notebooks/18_ollama_geolibre_setup
+  - file: notebooks/19_ollama_chat_to_map
+  - file: notebooks/20_ollama_evidence_review
   - file: references

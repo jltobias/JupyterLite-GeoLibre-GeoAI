@@ -1,0 +1,537 @@
+{
+  "version": "0.1.0",
+  "name": "Synthetic heat cells — Ollama learning project",
+  "mapView": {
+    "center": [
+      25.9,
+      -24.665
+    ],
+    "zoom": 12.0,
+    "bearing": 0.0,
+    "pitch": 0.0
+  },
+  "basemapStyleUrl": "https://tiles.openfreemap.org/styles/liberty",
+  "basemapVisible": true,
+  "basemapOpacity": 1,
+  "layers": [
+    {
+      "id": "synthetic-heat-cells",
+      "name": "Synthetic heat cells — not observations",
+      "type": "geojson",
+      "visible": true,
+      "opacity": 1,
+      "style": {
+        "minZoom": 0,
+        "maxZoom": 24,
+        "fillColor": "#087f78",
+        "strokeColor": "#14283f",
+        "strokeWidth": 2,
+        "fillOpacity": 0.65,
+        "circleRadius": 6,
+        "textColor": "#111827",
+        "textHaloColor": "#ffffff",
+        "textHaloWidth": 2,
+        "textSize": 16,
+        "extrusionEnabled": false,
+        "extrusionColor": "#3b82f6",
+        "extrusionOpacity": 0.8,
+        "extrusionHeightProperty": "height",
+        "extrusionHeightScale": 1,
+        "extrusionBase": 0,
+        "extrusionAdvancedStyleEnabled": false,
+        "extrusionColorExpression": "",
+        "extrusionHeightExpression": "",
+        "vectorStyleMode": "single",
+        "vectorStyleProperty": "",
+        "vectorStyleClassCount": 5,
+        "vectorStyleColorRamp": "viridis",
+        "vectorStyleClassificationScheme": "equal-interval",
+        "vectorStyleStops": [
+          {
+            "value": 0,
+            "color": "#dbeafe"
+          },
+          {
+            "value": 1,
+            "color": "#2563eb"
+          }
+        ],
+        "vectorStyleExpression": "",
+        "pointRenderer": "single",
+        "heatmapRadius": 30,
+        "heatmapIntensity": 1,
+        "heatmapColorRamp": "turbo",
+        "heatmapWeightProperty": "",
+        "clusterRadius": 50,
+        "clusterMaxZoom": 14,
+        "rasterBrightnessMin": 0,
+        "rasterBrightnessMax": 1,
+        "rasterSaturation": 0,
+        "rasterContrast": 0,
+        "rasterHueRotate": 0,
+        "blendMode": "normal"
+      },
+      "metadata": {},
+      "source": {
+        "type": "geojson"
+      },
+      "geojson": {
+        "type": "FeatureCollection",
+        "features": [
+          {
+            "type": "Feature",
+            "id": "cell-0-0",
+            "properties": {
+              "cell_id": "cell-0-0",
+              "heat_proxy_c": 35,
+              "provenance": "invented teaching data; not observed heat or health risk"
+            },
+            "geometry": {
+              "type": "Polygon",
+              "coordinates": [
+                [
+                  [
+                    25.86,
+                    -24.7
+                  ],
+                  [
+                    25.878,
+                    -24.7
+                  ],
+                  [
+                    25.878,
+                    -24.682
+                  ],
+                  [
+                    25.86,
+                    -24.682
+                  ],
+                  [
+                    25.86,
+                    -24.7
+                  ]
+                ]
+              ]
+            }
+          },
+          {
+            "type": "Feature",
+            "id": "cell-0-1",
+            "properties": {
+              "cell_id": "cell-0-1",
+              "heat_proxy_c": 37,
+              "provenance": "invented teaching data; not observed heat or health risk"
+            },
+            "geometry": {
+              "type": "Polygon",
+              "coordinates": [
+                [
+                  [
+                    25.88,
+                    -24.7
+                  ],
+                  [
+                    25.898,
+                    -24.7
+                  ],
+                  [
+                    25.898,
+                    -24.682
+                  ],
+                  [
+                    25.88,
+                    -24.682
+                  ],
+                  [
+                    25.88,
+                    -24.7
+                  ]
+                ]
+              ]
+            }
+          },
+          {
+            "type": "Feature",
+            "id": "cell-0-2",
+            "properties": {
+              "cell_id": "cell-0-2",
+              "heat_proxy_c": 39,
+              "provenance": "invented teaching data; not observed heat or health risk"
+            },
+            "geometry": {
+              "type": "Polygon",
+              "coordinates": [
+                [
+                  [
+                    25.9,
+                    -24.7
+                  ],
+                  [
+                    25.918,
+                    -24.7
+                  ],
+                  [
+                    25.918,
+                    -24.682
+                  ],
+                  [
+                    25.9,
+                    -24.682
+                  ],
+                  [
+                    25.9,
+                    -24.7
+                  ]
+                ]
+              ]
+            }
+          },
+          {
+            "type": "Feature",
+            "id": "cell-0-3",
+            "properties": {
+              "cell_id": "cell-0-3",
+              "heat_proxy_c": 41,
+              "provenance": "invented teaching data; not observed heat or health risk"
+            },
+            "geometry": {
+              "type": "Polygon",
+              "coordinates": [
+                [
+                  [
+                    25.919999999999998,
+                    -24.7
+                  ],
+                  [
+                    25.938,
+                    -24.7
+                  ],
+                  [
+                    25.938,
+                    -24.682
+                  ],
+                  [
+                    25.919999999999998,
+                    -24.682
+                  ],
+                  [
+                    25.919999999999998,
+                    -24.7
+                  ]
+                ]
+              ]
+            }
+          },
+          {
+            "type": "Feature",
+            "id": "cell-1-0",
+            "properties": {
+              "cell_id": "cell-1-0",
+              "heat_proxy_c": 36,
+              "provenance": "invented teaching data; not observed heat or health risk"
+            },
+            "geometry": {
+              "type": "Polygon",
+              "coordinates": [
+                [
+                  [
+                    25.86,
+                    -24.68
+                  ],
+                  [
+                    25.878,
+                    -24.68
+                  ],
+                  [
+                    25.878,
+                    -24.662
+                  ],
+                  [
+                    25.86,
+                    -24.662
+                  ],
+                  [
+                    25.86,
+                    -24.68
+                  ]
+                ]
+              ]
+            }
+          },
+          {
+            "type": "Feature",
+            "id": "cell-1-1",
+            "properties": {
+              "cell_id": "cell-1-1",
+              "heat_proxy_c": 38,
+              "provenance": "invented teaching data; not observed heat or health risk"
+            },
+            "geometry": {
+              "type": "Polygon",
+              "coordinates": [
+                [
+                  [
+                    25.88,
+                    -24.68
+                  ],
+                  [
+                    25.898,
+                    -24.68
+                  ],
+                  [
+                    25.898,
+                    -24.662
+                  ],
+                  [
+                    25.88,
+                    -24.662
+                  ],
+                  [
+                    25.88,
+                    -24.68
+                  ]
+                ]
+              ]
+            }
+          },
+          {
+            "type": "Feature",
+            "id": "cell-1-2",
+            "properties": {
+              "cell_id": "cell-1-2",
+              "heat_proxy_c": 40,
+              "provenance": "invented teaching data; not observed heat or health risk"
+            },
+            "geometry": {
+              "type": "Polygon",
+              "coordinates": [
+                [
+                  [
+                    25.9,
+                    -24.68
+                  ],
+                  [
+                    25.918,
+                    -24.68
+                  ],
+                  [
+                    25.918,
+                    -24.662
+                  ],
+                  [
+                    25.9,
+                    -24.662
+                  ],
+                  [
+                    25.9,
+                    -24.68
+                  ]
+                ]
+              ]
+            }
+          },
+          {
+            "type": "Feature",
+            "id": "cell-1-3",
+            "properties": {
+              "cell_id": "cell-1-3",
+              "heat_proxy_c": 42,
+              "provenance": "invented teaching data; not observed heat or health risk"
+            },
+            "geometry": {
+              "type": "Polygon",
+              "coordinates": [
+                [
+                  [
+                    25.919999999999998,
+                    -24.68
+                  ],
+                  [
+                    25.938,
+                    -24.68
+                  ],
+                  [
+                    25.938,
+                    -24.662
+                  ],
+                  [
+                    25.919999999999998,
+                    -24.662
+                  ],
+                  [
+                    25.919999999999998,
+                    -24.68
+                  ]
+                ]
+              ]
+            }
+          },
+          {
+            "type": "Feature",
+            "id": "cell-2-0",
+            "properties": {
+              "cell_id": "cell-2-0",
+              "heat_proxy_c": 37,
+              "provenance": "invented teaching data; not observed heat or health risk"
+            },
+            "geometry": {
+              "type": "Polygon",
+              "coordinates": [
+                [
+                  [
+                    25.86,
+                    -24.66
+                  ],
+                  [
+                    25.878,
+                    -24.66
+                  ],
+                  [
+                    25.878,
+                    -24.642
+                  ],
+                  [
+                    25.86,
+                    -24.642
+                  ],
+                  [
+                    25.86,
+                    -24.66
+                  ]
+                ]
+              ]
+            }
+          },
+          {
+            "type": "Feature",
+            "id": "cell-2-1",
+            "properties": {
+              "cell_id": "cell-2-1",
+              "heat_proxy_c": 39,
+              "provenance": "invented teaching data; not observed heat or health risk"
+            },
+            "geometry": {
+              "type": "Polygon",
+              "coordinates": [
+                [
+                  [
+                    25.88,
+                    -24.66
+                  ],
+                  [
+                    25.898,
+                    -24.66
+                  ],
+                  [
+                    25.898,
+                    -24.642
+                  ],
+                  [
+                    25.88,
+                    -24.642
+                  ],
+                  [
+                    25.88,
+                    -24.66
+                  ]
+                ]
+              ]
+            }
+          },
+          {
+            "type": "Feature",
+            "id": "cell-2-2",
+            "properties": {
+              "cell_id": "cell-2-2",
+              "heat_proxy_c": 41,
+              "provenance": "invented teaching data; not observed heat or health risk"
+            },
+            "geometry": {
+              "type": "Polygon",
+              "coordinates": [
+                [
+                  [
+                    25.9,
+                    -24.66
+                  ],
+                  [
+                    25.918,
+                    -24.66
+                  ],
+                  [
+                    25.918,
+                    -24.642
+                  ],
+                  [
+                    25.9,
+                    -24.642
+                  ],
+                  [
+                    25.9,
+                    -24.66
+                  ]
+                ]
+              ]
+            }
+          },
+          {
+            "type": "Feature",
+            "id": "cell-2-3",
+            "properties": {
+              "cell_id": "cell-2-3",
+              "heat_proxy_c": 43,
+              "provenance": "invented teaching data; not observed heat or health risk"
+            },
+            "geometry": {
+              "type": "Polygon",
+              "coordinates": [
+                [
+                  [
+                    25.919999999999998,
+                    -24.66
+                  ],
+                  [
+                    25.938,
+                    -24.66
+                  ],
+                  [
+                    25.938,
+                    -24.642
+                  ],
+                  [
+                    25.919999999999998,
+                    -24.642
+                  ],
+                  [
+                    25.919999999999998,
+                    -24.66
+                  ]
+                ]
+              ]
+            }
+          }
+        ]
+      }
+    }
+  ],
+  "styles": {},
+  "preferences": {
+    "map": {
+      "restrictBounds": false,
+      "bounds": [
+        -180,
+        -85,
+        180,
+        85
+      ],
+      "minZoom": 0,
+      "maxZoom": 24,
+      "maxPitch": 85,
+      "renderWorldCopies": true
+    },
+    "environmentVariables": []
+  },
+  "metadata": {
+    "provenance": "Invented teaching grid; no measured heat or health data"
+  }
+}

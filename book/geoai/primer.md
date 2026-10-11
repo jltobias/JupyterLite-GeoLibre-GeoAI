@@ -67,6 +67,27 @@ For a proposed health-program pilot, ask whether a workflow reduces review time 
 
 This is useful for teaching, prototyping and explaining assumptions to program colleagues. It is **not evidence that a prototype is ready for sensitive operational data**. External map services can receive requests and supplied layer content; an exported notebook can retain outputs. Use public or synthetic examples in this public site, never patient addresses, line lists, HIV status or credentials.
 
+(toward-geospatial-intelligence)=
+## Toward geospatial intelligence
+
+**This book's framing:** GeoAI is part of the continuing convergence of GIS and AI toward useful **geospatial intelligence**—checked geographic knowledge that helps people understand a situation, choose an action and evaluate its consequences. This is a broad public-health teaching usage, not a claim to replace the established geospatial-intelligence profession or its specialized definitions. GIS remains essential; newer AI does not make coordinates, spatial operations, provenance or domain expertise obsolete.
+
+![A complementary progression connects GIS evidence, GeoAI methods, human judgment and accountable geospatial intelligence; a note distinguishes these lessons from learned world models.](../assets/assistant/geospatial-intelligence.svg)
+
+**Read the picture:** the arrows describe a reasoning chain, not an inevitable historical ladder. A transparent spatial query can support an excellent decision without AI. Conversely, a sophisticated model can produce poor intelligence when its data, assumptions or interpretation are wrong. “Intelligence” here is not a synonym for an attractive map, autonomous agent, or confident answer.
+
+Stanford HAI's **Zhang et al. (27 July 2026)** discuss *spatial intelligence* as understanding physical environments to guide action, and *world models* as one technical route involving representations that predict environmental change in response to actions. They emphasize the need to evaluate whether simulations are faithful enough for their intended use. That research/governance discussion is broader than georeferenced GIS and is **not interchangeable with GeoAI or geospatial intelligence**. [Stanford HAI, *The World Model and Spatial Intelligence Era: Governing AI Beyond Language*](https://hai.stanford.edu/policy/the-world-model-and-spatial-intelligence-era-governing-ai-beyond-language).
+
+Our notebooks teach building blocks—not a learned world model. Lab 14's invented surface, lab 16's scenario charts and labs 18–20's local chat-assisted mapping must not be mistaken for a validated physical simulation. See [digital twins](../futures/digital-twins.md) for a separate explanation of maintaining and testing a representation of a real system.
+
+![User-supplied infographic shows a global-health GIS professional surrounded by six thinking perspectives and a purple orchestration extension, connecting evidence and judgment to healthier and more equitable outcomes.](../notebooks/assets/six-thinking-hats-global-health.png)
+
+**Read the picture:** your graphic puts a person, not an algorithm, at the center. White checks evidence; red records concerns; black examines harms; yellow identifies benefits to test; green proposes alternatives; blue organizes review; purple synthesizes without erasing disagreement. These are useful questions along the chain from maps to decisions, not proof that seven AI agents have validated a result. [Lab 17](../notebooks/17_rewiring_global_health_six_hats.ipynb) develops the discussion; [lab 20](../notebooks/20_ollama_evidence_review.ipynb) applies it to an assistant's output.
+
+**Artwork attribution:** user-supplied *SIX-THINKING-HATS-GPT-output-example.png*, reproduced unchanged. Original designer/generation provenance has not been independently verified. The six-hat concept is associated with Edward de Bono; purple orchestration is this supplied artwork's extension, not an original seventh hat. No Stanford artwork is reproduced, and neither Stanford nor the source authors endorse this book's synthesis.
+
+**Try the next step:** the [advanced Ollama/GeoLibre chapter](../advanced/ollama-assistant.md) connects natural-language requests to map operations while keeping model proposals, computed evidence and human approval distinct.
+
 ## A two-minute teach-back
 
 Explain this sentence to a colleague: “We clustered geographic feature profiles, then mapped them.” What learned from data? What did the map add? What claim would go too far?

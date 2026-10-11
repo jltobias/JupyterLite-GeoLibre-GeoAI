@@ -14,7 +14,8 @@ import nbformat
 
 ROOT = Path(__file__).resolve().parents[1]
 NOTEBOOKS = ROOT / "book" / "notebooks"
-BUNDLED_LABS = {"16_sea_level_rise_sat_scan_geoai.ipynb", "17_rewiring_global_health_six_hats.ipynb"}
+BUNDLED_LABS = {"16_sea_level_rise_sat_scan_geoai.ipynb", "17_rewiring_global_health_six_hats.ipynb",
+                "18_ollama_geolibre_setup.ipynb", "19_ollama_chat_to_map.ipynb", "20_ollama_evidence_review.ipynb"}
 
 
 def executable_offline(path, nb):

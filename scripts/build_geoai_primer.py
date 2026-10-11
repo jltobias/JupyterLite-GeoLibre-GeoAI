@@ -187,12 +187,12 @@ def atlas_figure():
     rows=[("ORIENT","00 / 01 / 04 / 06 / 07","Maps, spatial scale, rainfall, runtime and catalogs"),
           ("LEARN PATTERNS","02 / 03 / 05 / 08 / 09 / 10 / 11","Clusters, anomalies, text similarity and graph roles"),
           ("TEST ASSUMPTIONS","12 / 13 / 14 / 15","Bounded plans, change, terrain and route scenarios"),
-          ("INTERPRET + DECIDE","16 / 17","Report-derived statistics, evidence and perspectives")]
+          ("INTERPRET + ASSIST","16 / 17 / 18 / 19 / 20","Evidence, human perspectives and local chat-assisted mapping")]
     for i,(title,ids,desc) in enumerate(rows):
         y=150+i*111; b+=box(40,y,1120,98,PALE[i])+txt(60,y+32,title,22,COLORS[i],True)
         b+=txt(385,y+32,ids,23,COLORS[i],True)+txt(60,y+72,desc,22)
     b+=strip(610,"Transfer the method to health only after adding suitable data, governance and validation.")
-    return frame("18 labs, one learning journey","Find the skill you need before choosing a model.",b)
+    return frame("21 labs, one learning journey","Find the skill you need before choosing a model.",b)
 
 
 def program_figures():

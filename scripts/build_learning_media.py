@@ -389,10 +389,13 @@ def media_digest(key,p):
 def main():
     parser=argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--videos",action="store_true")
+    parser.add_argument("--video-keys", nargs="*", help="Render only these lab IDs when --videos is supplied")
     parser.add_argument("--check",action="store_true")
     args=parser.parse_args()
     if args.check and args.videos:
         parser.error("--check does not regenerate videos")
+    if args.video_keys and (not args.videos or set(args.video_keys)-set(PROFILES)):
+        parser.error("--video-keys requires --videos and known lab IDs")
     paths=sorted(NOTEBOOKS.glob("*.ipynb"))
     if {p.name[:2] for p in paths}!=set(PROFILES) or set(PROFILES)!=set(LESSONS):
         raise ValueError("Every notebook must have an authored profile and cell guides")
@@ -412,13 +415,13 @@ def main():
             write_or_check(directory/"media-source.sha256",media_digest(key,profile)+"\n",True)
         cards.append(f'<article><p class="kicker">LAB {key}</p><h2><a href="{key}/watch.html">{esc(profile["title"])}</a></h2>'
                      f'<p>{esc(profile["question"])}</p><p>{esc(profile["role"])}</p></article>')
-    gallery=page("Browser GeoAI visual learning library",f'<nav><a href="{PUBLISHED}/visual-library.html">Maps, scenes and notebook directory</a><a href="{PUBLISHED}/intro.html">Book home</a></nav><p class="kicker">18 NOTEBOOKS · ONE QUESTION AT A TIME</p>'
+    gallery=page("Browser GeoAI visual learning library",f'<nav><a href="{PUBLISHED}/visual-library.html">Maps, scenes and notebook directory</a><a href="{PUBLISHED}/intro.html">Book home</a></nav><p class="kicker">{len(paths)} NOTEBOOKS · ONE QUESTION AT A TIME</p>'
                  '<h1>See what the code means</h1><p>Each lesson pairs an infographic and a teaching cartoon with a short, silent '
                  'captioned video, a transcript and a question to test your understanding. No Python kernel or third-party video service is needed.</p>'
                  '<div class="cards">'+"".join(cards)+'</div>')
     write_or_check(ASSETS/"index.html",gallery,args.check)
     if args.videos:
-        render_videos(PROFILES)
+        render_videos({k:p for k,p in PROFILES.items() if not args.video_keys or k in args.video_keys})
     print(f"{'Verified' if args.check else 'Updated'} {len(paths)} notebooks and {sum(map(len,LESSONS.values()))} code guides.")
 
 

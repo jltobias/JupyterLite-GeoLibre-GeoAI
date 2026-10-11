@@ -39,6 +39,8 @@ jobs:
           python scripts/build_resource_index.py --check
           python scripts/build_future_chapters.py --check
           python scripts/build_stac_discovery.py --check
+          python scripts/build_ollama_lessons.py --check
+          python scripts/build_assistant_visuals.py --check
           python scripts/build_geoai_primer.py --check
           python scripts/extract_platform_graphics.py --check
           python scripts/validate_notebooks.py --execute
@@ -72,6 +74,7 @@ jobs:
           trap 'kill "$SERVER_PID"' EXIT
           python scripts/check_learning_browser.py --base-url http://127.0.0.1:8765
           python scripts/check_visual_browser.py --base-url http://127.0.0.1:8765 --offline-js
+          python scripts/check_ollama_pyodide.py --base-url http://127.0.0.1:8765
 
       - name: Configure Pages
         if: github.event_name != 'pull_request'

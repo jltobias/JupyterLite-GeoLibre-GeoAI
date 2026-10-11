@@ -203,6 +203,14 @@ The two explanatory chapters in `book/futures/` paraphrase the user-supplied Gab
 
 The chapters' public references are NIST digital-twin guidance, Starsim documentation, Baker et al. (2023) on Kopanyo geospatial/genomic research, NIST SP 800-38D and W3C Web Cryptography security considerations. Full links appear in `book/references.md`. Four original SVG illustrations explain the proposed concepts; they are not outputs of a disease model, security test or copied presentation graphics. Existing GeoLibre creator attribution remains separate.
 
+## Local Ollama assistant lessons (18–20)
+
+`book/notebooks/ollama_mapping.py` constructs twelve **invented** polygon cells near Gaborone and values named `heat_proxy_c`. Neither coordinates nor values identify patients, clinics, observed temperature, measured exposure or actual risk. A cutoff of 39 selects seven cells; a cutoff of 41 selects four. No observational dataset, STAC asset or model training is hidden behind these outputs. `data/ollama-demo.geolibre.json` is a reproducible public map recipe for exactly this fixture.
+
+Default plans are authored examples, not captured model responses. An explicitly enabled live request calls the learner's local Ollama service; errors are not replaced with fixtures. Exported audit records can contain prompts and must be reviewed before sharing. Model weights are installed separately and are not in the repository.
+
+Attribution and integration references: [GeoLibre by Qiusheng Wu and contributors](https://geolibre.app/citation/), [its native assistant](https://geolibre.app/user-guide/ai-assistant/), [Ollama](https://docs.ollama.com/), [Qwen3:4b](https://ollama.com/library/qwen3:4b), and [Global Nature Watch Horizon](https://horizon.globalnaturewatch.org/) as interaction inspiration only. The GeoAI primer cites [Zhang et al., Stanford HAI (2026)](https://hai.stanford.edu/policy/the-world-model-and-spatial-intelligence-era-governing-ai-beyond-language) and separately labels the book's synthesis. Three original diagrams live in `book/assets/assistant/`. See `book/references.md` for full credits; accessed 11 October 2026.
+
 ## Additional high-value sources considered for future labs
 
 ### Copernicus C3S / Interactive Climate Atlas

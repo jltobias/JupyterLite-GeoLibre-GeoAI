@@ -77,6 +77,10 @@ Try a three-stage learning exercise:
 
 For global-health learning, this separation helps distinguish data, calculations and presentation. A proposed service-access map still needs appropriate population and service data, validation and local review. The [health field guide](../geoai/hiv-tb.md) explains those evidence boundaries. Do not put identifiable health records or credentials in shared map projects; review external destinations and the [GeoLibre privacy policy](https://geolibre.app/privacy/) before any sensitive use.
 
+## Advanced: a local AI assistant
+
+The [Ollama and GeoLibre chapter](../advanced/ollama-assistant.md) and labs 18–20 demonstrate native browser chat plus a separate, bounded notebook planner. Ollama inference runs on the learner's computer, not in JupyterLite's Python kernel. The default lessons use authored synthetic fixtures; live requests require explicit setup and opt-in.
+
 (geolibre-citation)=
 ## How to cite GeoLibre and these figures
 

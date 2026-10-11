@@ -685,3 +685,6 @@ PROFILES = {
     "What should purple synthesis do with a serious unresolved disagreement?",
     "Record the disagreement, its evidence and an owner for follow-up; synthesis should not erase it or invent consensus.", "hats"),
 }
+
+from ollama_learning_content import extend as _extend_ollama
+_extend_ollama(LESSONS, PROFILES, step, profile, SETUP)

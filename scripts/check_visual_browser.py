@@ -28,7 +28,8 @@ def main():
         page = browser.new_page(viewport={'width':1280,'height':900})
         from build_future_chapters import render_all
         from build_stac_discovery import render_all as render_discovery
-        for name, markup in {**render_all(), **render_discovery()}.items():
+        from build_assistant_visuals import render_all as render_assistant
+        for name, markup in {**render_all(), **render_discovery(), **render_assistant()}.items():
             page.set_content('<html><body style="margin:0">'+markup+'</body></html>')
             clipped = page.evaluate("""() => {
                 const bounds=document.querySelector('svg').getBoundingClientRect();
@@ -45,7 +46,7 @@ def main():
             bundle = get_plotlyjs()
             page.route('https://cdn.plot.ly/*.js', lambda route: route.fulfill(content_type='application/javascript',body=bundle))
         base = args.base_url.rstrip('/')
-        for chapter in ('futures/digital-twins','futures/map-encryption','platforms/stac-discovery'):
+        for chapter in ('futures/digital-twins','futures/map-encryption','platforms/stac-discovery','advanced/ollama-assistant'):
             page.goto(base + '/' + chapter + '.html')
             page.wait_for_function("[...document.querySelectorAll('article img')].every(i=>i.complete)")
             assert page.locator('article img').count() == 2
@@ -59,8 +60,9 @@ def main():
                     page.screenshot(path=str(args.screenshots/f'{chapter.split("/")[-1]}-{width}.png'),full_page=True,animations='disabled')
             page.set_viewport_size({'width':1280,'height':900})
         page.goto(base + '/visual-library.html')
-        assert page.locator('article a',has_text='Watch').count() == 18
-        assert page.locator('article a',has_text='Cartoon').count() == 18
+        notebook_count = len(list((ROOT/'book/notebooks').glob('*.ipynb')))
+        assert page.locator('article a',has_text='Watch').count() == notebook_count
+        assert page.locator('article a',has_text='Cartoon').count() == notebook_count
         for width in (1280,390):
             page.set_viewport_size({'width':width,'height':900})
             assert page.evaluate('document.documentElement.scrollWidth <= innerWidth+2')
@@ -137,7 +139,7 @@ def main():
         page.evaluate("disposeMap();updateMap('project',{name:'after-dispose'})")
         assert frame.evaluate('received.length') == 2
         browser.close()
-    print('Browser verified: 18 resource routes, rendered Plotly views, scenario selection, 3D camera, mobile layout and guarded map-message delivery')
+    print(f'Browser verified: {notebook_count} resource routes, rendered Plotly views, scenario selection, 3D camera, mobile layout and guarded map-message delivery')
 
 
 if __name__ == '__main__':

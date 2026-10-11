@@ -1,8 +1,8 @@
-# What do all 18 notebooks actually demonstrate?
+# What do all 21 notebooks actually demonstrate?
 
 Use this atlas to connect a program question to a method, then read the notebook's code guides. **The potential health uses below are transfer exercises, not health analyses already performed by these notebooks.** Adding disease names to a map does not validate a health application.
 
-![Four learning stages place all 18 notebooks into orientation, pattern learning, assumption testing and accountable interpretation.](../assets/geoai/notebook-atlas.svg)
+![Four learning stages place all 21 notebooks into orientation, pattern learning, assumption testing and accountable interpretation.](../assets/geoai/notebook-atlas.svg)
 
 **Read the picture:** this is a learning sequence, not a ranking of sophistication. A transparent route calculation can be more useful than an unsuitable AI model. The model-fitting labs use small browser-compatible methods; the optional external-model path is separate.
 
@@ -40,6 +40,16 @@ Use this atlas to connect a program question to a method, then read the notebook
 | [17 · Rewiring global health](../notebooks/17_rewiring_global_health_six_hats.ipynb) | Authored perspective prompts, tables and report summaries | Facilitate accountable discussion; these are not seven autonomous agents or independent model validation |
 
 Labs 12–15 also support optional exported model requests through a separate full-Python runner. Default offline examples are hand-authored; real responses, if requested and imported, must be examined as external-model outputs.
+
+## Local AI-assisted mapping: advanced extension
+
+| Notebook | What actually runs | Possible health transfer; missing evidence |
+|---|---|---|
+| [18 · Ollama / native GeoLibre setup](../notebooks/18_ollama_geolibre_setup.ipynb) | Synthetic project construction, optional local connection checks, then manual native-assistant practice | Make runtime and permission boundaries visible; this is not a privacy certification |
+| [19 · Chat to map](../notebooks/19_ollama_chat_to_map.ipynb) | Authored default plan or optional local inference, independent validation, dry run and approval | Make a proposed operation inspectable; filtering invented cells does not estimate health risk |
+| [20 · Evidence review](../notebooks/20_ollama_evidence_review.ipynb) | Optional local follow-up, deterministic comparisons, negative tests and a human-review card | Preserve evidence, uncertainty and dissent; no learned world model or autonomous clinical decision |
+
+Use the [advanced chapter](../advanced/ollama-assistant.md) for the full native GeoLibre assistant. The bounded notebook planner does not expose the native assistant's wider tool set.
 
 ## Choose a small learning route
 

@@ -15,13 +15,18 @@ def main():
     parser=argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--base-url",required=True)
     parser.add_argument("--screenshots",type=Path)
+    parser.add_argument("--keys", nargs="*", help="Check only these lab IDs; CI checks all by default")
     args=parser.parse_args()
+    if args.keys and set(args.keys)-set(PROFILES):
+        parser.error("Unknown lab ID in --keys")
     if args.screenshots:
         args.screenshots.mkdir(parents=True,exist_ok=True)
     with sync_playwright() as pw:
         browser=pw.chromium.launch()
         tab=browser.new_page(viewport={"width":1360,"height":1000})
         for key,p in PROFILES.items():
+            if args.keys and key not in args.keys:
+                continue
             graphics=[("infographic",(ASSETS/key/"infographic.svg").read_text(encoding="utf-8")),
                       ("cartoon",(ASSETS/key/"cartoon.svg").read_text(encoding="utf-8"))]
             graphics.extend((f"slide-{i}",slide(key,p,i)) for i in range(4))
@@ -47,7 +52,7 @@ def main():
                 }""",kind)
                 if overflow:
                     raise AssertionError(f"{key}/{kind} clipped text: {overflow}")
-                if args.screenshots and key in {"02","13","16"} and kind in {"infographic","cartoon"}:
+                if args.screenshots and key in {"02","13","16","18","19","20"} and kind in {"infographic","cartoon"}:
                     tab.locator("svg").screenshot(path=str(args.screenshots/f"{key}-{kind}.png"))
             tab.goto(args.base_url.rstrip('/')+f"/lite/files/assets/learning/{key}/watch.html")
             tab.locator("video").evaluate("v => {v.preload='auto'; if(!v.readyState) v.load();}")

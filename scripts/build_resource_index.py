@@ -35,7 +35,7 @@ def main():
     args = parser.parse_args()
     for path in (ROOT / "README.md", ROOT / "book/visual-library.md"):
         write_or_check(path, replace_index(path.read_text(encoding="utf-8")), args.check)
-    print("Verified" if args.check else "Updated", "README/Book links for all 18 notebooks")
+    print("Verified" if args.check else "Updated", f"README/Book links for all {len(PROFILES)} notebooks")
 
 
 if __name__ == "__main__":
