@@ -4,6 +4,26 @@ This book is a set of **live, browser-native geospatial labs**. Each chapter can
 
 **Launch the lab:** [https://jltobias.github.io/JupyterLite-GeoLibre-GeoAI/lite/lab/index.html](https://jltobias.github.io/JupyterLite-GeoLibre-GeoAI/lite/lab/index.html)
 
+## GeoAI for global health: a visual field guide
+
+**What is GeoAI, how does it work, and why might a health program use it?** Start with the [illustrated GeoAI primer](geoai/primer.md): seven connected chapters and **24 new original diagrams**, with plain-language reading guides, notebook links, exercises and evidence boundaries. No Python kernel is needed to read them.
+
+![GeoAI is a specialization of AI that combines geographic context with GIS and domain knowledge.](assets/geoai/what-is-geoai.svg)
+
+| Your question | Explore |
+|---|---|
+| How is GeoAI related to AI and GIS? | [What is GeoAI?](geoai/primer.md) |
+| How do maps become model inputs and trustworthy results? | [How GeoAI works](geoai/how-it-works.md) |
+| Which notebooks actually fit models? | [All 18 notebooks: method and interpretation atlas](geoai/notebook-atlas.md) |
+| How could PEPFAR, HIV and TB programs benefit? | [Service continuity, denominators and referral networks](geoai/hiv-tb.md) |
+| What about polio, malaria, Ebola and emergencies? | [Disease programs and response operations](geoai/outbreaks.md) |
+| How do heat, floods, food, water and air connect to health? | [Climate–health pathways](geoai/climate-health.md) |
+| What about vector shifts, migration, conflict and decisions? | [Social pathways and accountable interpretation](geoai/climate-society.md) |
+
+Health applications are **potential extensions requiring appropriate data and validation**, not claims that these educational notebooks already predict disease or demonstrate program impact. The guide distinguishes observations, fitted models, deterministic rules, synthetic examples and existing report results.
+
+## Learn through the code
+
 **New to Python or GeoAI?** Start with the [illustrated learning guide](learning-guide.md). Every notebook now includes an infographic, a short captioned video with a transcript, a teaching cartoon and a reading guide before each code cell. The [visual learning library](https://jltobias.github.io/JupyterLite-GeoLibre-GeoAI/lite/files/assets/learning/index.html) works without a Python kernel.
 
 ## Notebook gallery

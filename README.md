@@ -17,6 +17,10 @@ Browser-native geospatial notebooks that combine **[GeoLibre](https://geolibre.a
 
 ## Launch the notebooks
 
+New: the [GeoAI visual field guide](https://jltobias.github.io/JupyterLite-GeoLibre-GeoAI/geoai/primer.html) adds **seven chapters and 24 original infographics**. It explains GeoAI versus general AI/GIS, how models work, and what all 18 notebooks actually demonstrate. Program chapters cover PEPFAR/HIV/TB, polio, malaria, Ebola, emergency response, heat, coastal floods, food/water insecurity, air/water quality, vector shifts, migration and conflict. Every application separates a potential benefit from the data, validation and governance needed to establish it.
+
+The diagrams are accessible, locally bundled SVGs with plain-language reading guides. They complement the existing notebook videos and cartoons, preserve the supplied Six Thinking Hats artwork, and cite authoritative sources. Rebuild with `python scripts/build_geoai_primer.py`; check the committed assets with `python scripts/build_geoai_primer.py --check`. No image service or external package is needed to regenerate them.
+
 | Notebook | What it demonstrates | Live |
 |---|---|---|
 | 00 — GeoLibre quickstart | Browser-safe GeoLibre embed, GeoJSON, COG raster, browser GIS | [Launch](https://jltobias.github.io/JupyterLite-GeoLibre-GeoAI/lite/lab/index.html?path=00_geolibre_quickstart.ipynb) |

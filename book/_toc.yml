@@ -1,6 +1,14 @@
 format: jb-book
 root: intro
 chapters:
+  - file: geoai/primer
+    sections:
+      - file: geoai/how-it-works
+      - file: geoai/notebook-atlas
+      - file: geoai/hiv-tb
+      - file: geoai/outbreaks
+      - file: geoai/climate-health
+      - file: geoai/climate-society
   - file: learning-guide
   - file: notebooks/00_geolibre_quickstart
   - file: notebooks/01_worldpop_h3
