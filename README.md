@@ -33,7 +33,7 @@ The expanded [GeoAI → geospatial intelligence discussion](https://jltobias.git
 
 ## Explore maps, scenes and visual stories
 
-**Discover the inputs first:** [What is a STAC Browser?](https://jltobias.github.io/JupyterLite-GeoLibre-GeoAI/platforms/stac-discovery.html) connects the [companion STAC Explorer](https://jltobias.github.io/JupyterLite-STAC-Browser/explorer/) to labs 07, 08 and 11. It includes two original visuals, a metadata-suitability checklist, an offline Python inspection example, and guidance on search versus downloads/crops, access restrictions and reproducible exports.
+**Discover the inputs first:** [What is a STAC Browser?](https://jltobias.github.io/JupyterLite-GeoLibre-GeoAI/platforms/stac-discovery.html) now follows the GeoAI section and connects the [companion STAC Explorer](https://jltobias.github.io/JupyterLite-STAC-Browser/explorer/) to labs 07, 08 and 11. It introduces SpatioTemporal Asset Catalogs, includes a [live-captured Explorer screenshot](https://jltobias.github.io/JupyterLite-GeoLibre-GeoAI/_images/stac-explorer.png) with a search/results/metadata pane guide, and explains study-area filtering with a [bounding-box diagram](https://jltobias.github.io/JupyterLite-GeoLibre-GeoAI/_images/stac-bbox.svg). Three original teaching visuals, a metadata checklist and an offline Python example distinguish discovery from downloading, cropping and modeling.
 
 [Open the visual resource guide](https://jltobias.github.io/JupyterLite-GeoLibre-GeoAI/visual-library.html) for explanations of what each view represents and what requires running Python.
 

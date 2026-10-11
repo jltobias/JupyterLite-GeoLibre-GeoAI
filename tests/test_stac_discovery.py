@@ -1,10 +1,12 @@
 """Check the discovery chapter, original graphics and copyable Python example."""
 import contextlib
+import hashlib
 import io
 import json
 from pathlib import Path
 import re
 import sys
+import struct
 import unittest
 from unittest.mock import patch
 import xml.etree.ElementTree as ET
@@ -19,7 +21,7 @@ CHAPTER = ROOT/'book/platforms/stac-discovery.md'
 class StacDiscovery(unittest.TestCase):
     def test_diagrams_are_reproducible_and_accessible(self):
         graphics = render_all()
-        self.assertEqual(len(graphics), 2)
+        self.assertEqual(len(graphics), 3)
         for name, content in graphics.items():
             self.assertEqual((ASSETS/(name+'.svg')).read_text(encoding='utf-8'), content)
             root = ET.fromstring(content)
@@ -44,6 +46,32 @@ class StacDiscovery(unittest.TestCase):
                 self.assertGreater(len(label), 40)
             if not target.startswith(('https://', '#')):
                 self.assertTrue((CHAPTER.parent/target.split('#')[0]).is_file(), target)
+
+    def test_stac_follows_geoai_section(self):
+        import yaml
+        chapters = yaml.safe_load((ROOT/'book/_toc.yml').read_text())['chapters']
+        paths = [chapter['file'] for chapter in chapters]
+        self.assertEqual(paths.index('platforms/stac-discovery'), paths.index('geoai/primer')+1)
+        self.assertEqual(len(chapters[paths.index('geoai/primer')]['sections']), 6)
+
+    def test_live_screenshot_provenance_and_beginner_guide(self):
+        metadata = json.loads((ASSETS/'stac-explorer.provenance.json').read_text(encoding='utf-8'))
+        data = (ASSETS/metadata['file']).read_bytes()
+        self.assertEqual(data[:8], b'\x89PNG\r\n\x1a\n')
+        self.assertEqual(hashlib.sha256(data).hexdigest(), metadata['sha256'])
+        self.assertEqual(struct.unpack('>II', data[16:24]),
+                         (metadata['viewport']['width'], metadata['viewport']['height']))
+        self.assertEqual(metadata['query']['bbox'], [31.4, 0.1, 32.9, 0.8])
+        self.assertTrue(metadata['credits'])
+        chapter = CHAPTER.read_text(encoding='utf-8')
+        for content in ('SpatioTemporal Asset Catalog', 'stac-explorer.png',
+                        'stac-bbox.svg', 'Discovered items', 'Inspect & reuse',
+                        'OpenStreetMap contributors', 'Filtering is not clipping',
+                        'not an observation of future population',
+                        metadata['selected_item']['id']):
+            self.assertIn(content, chapter)
+        self.assertLess(chapter.index('First, what does STAC mean?'),
+                        chapter.index('A guided tour of the Explorer'))
 
     def run_example(self, item):
         code = re.findall(r'```python\n(.*?)\n```', CHAPTER.read_text(encoding='utf-8'), re.S)

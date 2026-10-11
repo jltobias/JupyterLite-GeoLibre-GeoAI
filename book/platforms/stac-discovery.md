@@ -1,12 +1,58 @@
 # What is a STAC Browser? Discover data before modeling
 
-**Before asking an AI model a question, ask what the data actually represents.** A STAC Browser helps you inspect geographic datasets through their metadata: descriptions, coverage, dates and links to files. Finding a promising record is a starting point, not proof of data quality or a GeoAI result.
+## First, what does STAC mean?
+
+**STAC stands for SpatioTemporal Asset Catalog** (plural: catalogs). Break that name into four questions: **spatial** = where? **temporal** = when? **asset** = which file? **catalog** = how do I find it? It is a shared way to describe geographic data, not one giant database and not an AI model. A **STAC Browser** is a visual interface to those descriptions and links. [STAC community introduction](https://stacspec.org/en).
+
+Think of a library: the **data** is the book; the **metadata** is its catalog record. For geospatial work, the data might be satellite-image pixels, a population grid, elevation measurements, land-cover classes or an environmental time series. STAC can also describe radar imagery, point clouds and other Earth-related assets; what is actually available depends on the provider. Metadata helps explain a file's location, time, contents, format and provenance. A preview is not the analytical data itself. [STAC specification overview](https://stacspec.org/en/about/stac-spec/).
+
+| You might discover… | Data you would eventually analyze | Metadata to inspect first |
+|---|---|---|
+| Satellite imagery | Measurements in image bands | Acquisition date, footprint, bands, processing level and quality information, when supplied |
+| Population products | Estimated people per cell or another declared population measure | Reference year, units, model/product version, resolution and license |
+| Terrain or environmental layers | Elevation, land-cover categories or a time-dependent variable | Coordinate system, units or class meanings, dates, valid coverage and processing method |
+
+These are examples, not promises that every browser has every layer or field. Some details live in extensions or linked provider documentation. **Before asking an AI model a question, ask what the data actually represents.** After the [GeoAI introduction](../geoai/primer.md), this chapter supplies the next practical step: find candidate inputs and inspect their suitability. Discovery is not itself an AI prediction or proof of data quality.
 
 Start with the companion **[JupyterLite STAC Browser Explorer](https://jltobias.github.io/JupyterLite-STAC-Browser/explorer/)**, its [field guide](https://jltobias.github.io/JupyterLite-STAC-Browser/book/), or its [source repository](https://github.com/jltobias/JupyterLite-STAC-Browser). It is a separate project: this chapter connects its discovery workflow to our GeoLibre/GeoAI lessons without embedding another application or copying its client code.
 
+## A guided tour of the Explorer
+
+![Actual STAC Browser Explorer with WorldPop selected: search controls in the left pane, a small purple study box near Kampala within larger Uganda footprints in the central map, ten discovered Items below the map, and the selected population Item's description and asset controls in the right metadata pane.](../assets/discovery/stac-explorer.png)
+
+**Screenshot:** live companion Explorer, 11 October 2026; WorldPop `UGA`, bounding box `31.4,0.1,32.9,0.8`, no date filter, ten Items loaded. Selected: `uga_pop_2030_CN_100m_R2025A_v1`. This is a discovery view of a **2030 population estimate**, not an observation of future population and not a population-density map. No raster was downloaded. Software: JupyterLite-STAC-Browser contributors; metadata: WorldPop; basemap: © [OpenStreetMap contributors](https://www.openstreetmap.org/copyright), displayed with Leaflet. [Open the full-size screenshot](../assets/discovery/stac-explorer.png) or [open the live Explorer](https://jltobias.github.io/JupyterLite-STAC-Browser/explorer/). The live page starts a new session; it does not restore this screenshot's query.
+
+| Look here in the screenshot | What you can do | How to read the result |
+|---|---|---|
+| **Left — “01 / Connect & discover”** | Choose a catalog and collection; set dates, spatial filter, bounding box and page size; press **Search this area** | You are specifying which metadata records to retrieve. Changing settings alone does not rerun the search. |
+| **Center — “02 / Explore the footprints”** | Draw a rectangle, use the current map extent, or edit the study area | Purple marks your search area. The collection outline and Item footprints describe coverage, not measured values. Selecting an Item highlights its footprint. |
+| **Bottom, below the map — “Discovered items”** | Select a result card, load another page, or export **GeoJSON** and **Search JSON** | The displayed count is the number of loaded Items, not necessarily all matches. Several products or years can have the same footprint. |
+| **Right — “03 / Inspect & reuse”** | Inspect the selected Item, its file choices and metadata; scroll down for identifiers, dates, license, source links and original JSON | **Download item metadata (.json)** saves a record; a dataset link refers to a separate file. Do not mistake either action for the other. |
+
+The screenshot preserves the actual interface, including its on-map credits; the table is the reading guide, not an altered UI. On a narrow screen the live Explorer rearranges these panels. For control details, see the companion [exploration guide](https://github.com/jltobias/JupyterLite-STAC-Browser/blob/563ed599a42188a4b476cfec44173e97fa06e3cc/book/exploration.md).
+
+## From global holdings to your study area: the bounding box
+
+A **bounding box**, or **bbox**, is a rectangle around a place of interest. In this Explorer it uses WGS84 longitude/latitude in **west, south, east, north** order — longitude first, in degrees, not meters. For example, `31.4,0.1,32.9,0.8` spans a small area around Kampala: west 31.4°E, south 0.1°N, east 32.9°E, north 0.8°N. It is a teaching rectangle, **not an administrative boundary**.
+
+![Schematic bounding-box search: Item A lies inside the purple study rectangle and Item B crosses its edge, so both are candidates. Item C is outside and excluded. The original A and B footprints and files remain unchanged; the search does not crop pixels.](../assets/discovery/stac-bbox.svg)
+
+**Read the diagram:** A and B overlap the study area; C does not. A search can narrow a provider's global holdings to overlapping records, combined with your collection and date filters. It does **not** require every matching footprint to fit inside the box. A countrywide or global raster may still match a tiny study area, so a smaller bbox does not always reduce the result count. [STAC API Item Search specification](https://github.com/radiantearth/stac-api-spec/blob/main/item-search/README.md).
+
+[Open the full-size bounding-box diagram](../assets/discovery/stac-bbox.svg).
+
+Try it in the live Explorer:
+
+1. Choose a collection. Use **Draw rectangle**, or zoom/pan and click **Use map extent**. Simply zooming does not redefine the study box.
+2. Confirm **Bounding box** mode and check the four coordinate values. Add a useful date interval and start with ten results per page.
+3. Press **Search this area**. Compare the small purple rectangle with the returned footprints and the **Discovered items** list.
+4. Open a result in the right pane. Check time, units and asset roles before downloading anything. Save the completed query and loaded metadata for reproducibility.
+
+**Filtering is not clipping.** A bbox filters the metadata search; it does not crop a raster, mask it to your district, calculate population totals or prove usable pixels exist everywhere inside. The Explorer's separate **Clip study bbox → GeoTIFF** action is an explicit raster operation with format, access and size limits. **Exact polygon** mode instead searches for intersecting footprints using your drawn shape, where the service supports it; it still does not clip pixels. The Explorer requires separate searches for areas crossing the antimeridian (the ±180° longitude seam). See its [study-area and clipping guidance](https://github.com/jltobias/JupyterLite-STAC-Browser/blob/563ed599a42188a4b476cfec44173e97fa06e3cc/book/exploration.md).
+
 ## Read the catalog, not just the map
 
-STAC means **SpatioTemporal Asset Catalog**. The standard describes data in JSON, a structured text format. A browser presents those records for people; a notebook can inspect the same fields programmatically. [STAC specification overview](https://stacspec.org/en/about/stac-spec/).
+The standard describes assets in **JSON**, a structured text format. A browser presents those records for people; a notebook can inspect the same fields programmatically. [STAC specification overview](https://stacspec.org/en/about/stac-spec/).
 
 ![A common discovery route links a catalog to collection context, then an Item's place and time, then several possible assets. An asset can be a data file, thumbnail or metadata sidecar.](../assets/discovery/stac-route.svg)
 
@@ -111,6 +157,7 @@ The companion offers multiple presets and a STAC Index directory. These are disc
 
 - **Companion software:** *JupyterLite STAC Browser: STAC Field Guide*, **JupyterLite-STAC-Browser contributors**, as named in its [CITATION.cff](https://github.com/jltobias/JupyterLite-STAC-Browser/blob/563ed599a42188a4b476cfec44173e97fa06e3cc/CITATION.cff). Reviewed revision `563ed599a42188a4b476cfec44173e97fa06e3cc`, 11 October 2026. Its MIT software license does not replace dataset terms.
 - **Standards and upstream tools:** [STAC community](https://stacspec.org/en/about/stac-spec/), [STAC API contributors](https://github.com/radiantearth/stac-api-spec), and the distinct [STAC Browser project maintained in `radiantearth/stac-browser`](https://github.com/radiantearth/stac-browser). Do not conflate the standard, that upstream browser and Tobias's companion repository. [GeoLibre](geolibre.md) is the separate visualization project by Qiusheng Wu and contributors.
-- **Figures:** two original SVG teaching illustrations generated by `scripts/build_stac_discovery.py`. They are not screenshots of a provider response or copied dataset imagery. Provider data, basemaps and third-party software retain their own credits and terms.
+- **Screenshot:** unaltered browser capture of the [companion Explorer](https://jltobias.github.io/JupyterLite-STAC-Browser/explorer/) on 11 October 2026, using live public metadata, not mock responses. Source/reproduction details and the image checksum are in the [screenshot provenance record](https://github.com/jltobias/JupyterLite-GeoLibre-GeoAI/blob/main/book/assets/discovery/stac-explorer.provenance.json). WorldPop's selected Item advertises **CC-BY-4.0** and [dataset DOI 10.5258/SOTON/WP00839](https://doi.org/10.5258/SOTON/WP00839); consult its release documentation before analytical use. The map retains **Leaflet / © OpenStreetMap contributors** attribution. No endorsement by these projects or providers is implied.
+- **Teaching diagrams:** three original SVG illustrations generated by `scripts/build_stac_discovery.py`, including the schematic bounding-box example. These are not provider responses or measured maps. Provider data, basemaps and third-party software retain their own credits and terms.
 
 **Try it:** compare two candidate layers using the passport, record one reason to reject a layer, and identify which missing fact you would resolve before running a model.

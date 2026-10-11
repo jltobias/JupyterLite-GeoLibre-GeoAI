@@ -46,10 +46,13 @@ def main():
             bundle = get_plotlyjs()
             page.route('https://cdn.plot.ly/*.js', lambda route: route.fulfill(content_type='application/javascript',body=bundle))
         base = args.base_url.rstrip('/')
-        for chapter in ('futures/digital-twins','futures/map-encryption','platforms/stac-discovery','advanced/ollama-assistant'):
+        for chapter, expected_images in {
+            'futures/digital-twins': 2, 'futures/map-encryption': 2,
+            'platforms/stac-discovery': 4, 'advanced/ollama-assistant': 2,
+        }.items():
             page.goto(base + '/' + chapter + '.html')
             page.wait_for_function("[...document.querySelectorAll('article img')].every(i=>i.complete)")
-            assert page.locator('article img').count() == 2
+            assert page.locator('article img').count() == expected_images, chapter
             assert page.evaluate("[...document.querySelectorAll('article img')].every(i=>i.naturalWidth && i.alt)")
             for width in (1280,390):
                 page.set_viewport_size({'width':width,'height':900})

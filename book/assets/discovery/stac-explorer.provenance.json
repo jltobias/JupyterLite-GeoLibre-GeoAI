@@ -1,0 +1,42 @@
+{
+  "file": "stac-explorer.png",
+  "sha256": "840c6e7888a446d47bebcf6821aed048e70f962231dedd777425801e48790c02",
+  "kind": "unaltered live browser viewport screenshot",
+  "captured_on": "2026-10-11",
+  "source_url": "https://jltobias.github.io/JupyterLite-STAC-Browser/explorer/",
+  "companion_repository": "https://github.com/jltobias/JupyterLite-STAC-Browser",
+  "reviewed_companion_revision": "563ed599a42188a4b476cfec44173e97fa06e3cc",
+  "viewport": {"width": 1560, "height": 1320, "device_scale_factor": 1},
+  "query": {
+    "catalog": "https://api.stac.worldpop.org/",
+    "collection": "UGA",
+    "spatial_mode": "bbox",
+    "bbox": [31.4, 0.1, 32.9, 0.8],
+    "date_filter": null,
+    "limit": 10,
+    "loaded_items": 10,
+    "more_results_available": true
+  },
+  "selected_item": {
+    "id": "uga_pop_2030_CN_100m_R2025A_v1",
+    "title": "Uganda, Spatial Distribution of Population in 2030 at 100m",
+    "datetime": "2025-01-01T00:00:00Z",
+    "reference_year": 2030,
+    "license_advertised": "CC-BY-4.0",
+    "doi": "https://doi.org/10.5258/SOTON/WP00839"
+  },
+  "credits": [
+    "JupyterLite-STAC-Browser contributors: Explorer interface (MIT software license)",
+    "WorldPop: selected population estimate and catalog metadata; consult dataset terms and release documentation",
+    "OpenStreetMap contributors: basemap, https://www.openstreetmap.org/copyright",
+    "Leaflet: map display, https://leafletjs.com/"
+  ],
+  "capture_command": "python scripts/capture_stac_explorer.py --output book/assets/discovery/stac-explorer.png",
+  "limitations": [
+    "Real network responses, not fixtures; no DOM restyling or image editing.",
+    "Metadata search and basemap display only; no analytical asset downloaded and no pixel statistics computed.",
+    "The right pane continues below this viewport; scroll the live page for full metadata and source links.",
+    "Future-year estimates are not observations of future population.",
+    "Provider records, ordering, counts and interface can change; recapture is not byte-reproducible. Review the image and update this record together."
+  ]
+}

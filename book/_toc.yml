@@ -3,7 +3,6 @@ root: intro
 chapters:
   - file: platforms/jupyterlite
   - file: platforms/geolibre
-  - file: platforms/stac-discovery
   - file: geoai/primer
     sections:
       - file: geoai/how-it-works
@@ -12,6 +11,7 @@ chapters:
       - file: geoai/outbreaks
       - file: geoai/climate-health
       - file: geoai/climate-society
+  - file: platforms/stac-discovery
   - file: learning-guide
   - file: visual-library
   - file: futures/digital-twins
