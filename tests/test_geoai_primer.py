@@ -53,6 +53,24 @@ class GeoAIPrimer(unittest.TestCase):
         for notebook in notebooks:
             self.assertIn(f"../notebooks/{notebook.name}",atlas)
 
+    def test_esri_attribution_and_teaching_boundaries(self):
+        url="https://www.esri.com/en-us/capabilities/geoai/overview"
+        primer=(ROOT/"book/geoai/primer.md").read_text(encoding="utf-8")
+        references=(ROOT/"book/references.md").read_text(encoding="utf-8")
+        register=(ROOT/"DATA_SOURCES.md").read_text(encoding="utf-8")
+        for source in (primer,references,register):
+            self.assertIn(url,source)
+        section=primer.split("## What Esri's overview adds\n",1)[1].split("\n## ",1)[0]
+        self.assertIn("this book's teaching interpretation",section)
+        self.assertIn("not affiliated with or endorsed by Esri",section)
+        self.assertIn("No Esri graphics, videos or text passages are reproduced",section)
+        self.assertIn("not validated forecasts",section)
+        self.assertIn("11 October 2026",section)
+        self.assertIn("Esri. (n.d.).",references)
+        # Refer readers to the original source; don't silently embed its assets.
+        self.assertNotIn("![",section)
+        self.assertNotIn("<iframe",section)
+
     def test_explanatory_arithmetic(self):
         # Protect the explicitly invented cohort illustration from misleading ratios.
         self.assertEqual(6000/8000,0.75)
