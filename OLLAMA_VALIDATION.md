@@ -4,7 +4,7 @@ Checked 11 October 2026. These results concern teaching software, not a clinical
 
 ## Reproducible checks
 
-- 50 unit tests cover existing lessons plus plan types/ranges, strict JSON, local-only URLs, missing/remote models, no silent fixture fallback, approval, deterministic feature counts, map project structure, attribution and graphics.
+- 51 unit tests cover existing lessons plus plan types/ranges, strict JSON, local-only URLs, missing/remote models, no silent fixture fallback, approval, deterministic feature counts, map project structure, attribution, graphics and Book links that also work from Lite.
 - All 21 notebooks pass schema/syntax validation. Offline labs 12–20 execute in ordinary Python; labs 18–20 save static figures and labeled fixture outputs without contacting Ollama. The earlier labs' committed outputs are preserved.
 - Every notebook has matching Book/Lite sources and code guides. Labs 18–20 add 14 guides, three original infographics, three cartoons and three 32-second captioned storyboards. These videos are not recordings of a live assistant session.
 - `scripts/build_ollama_lessons.py --check` verifies authored lessons and the public twelve-cell project; `scripts/build_assistant_visuals.py --check` verifies three original chapter diagrams.

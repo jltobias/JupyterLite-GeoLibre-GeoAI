@@ -33,7 +33,7 @@ CREDIT = '''
 
 The polygons and Celsius-like `heat_proxy_c` values are **invented teaching data**, not measured heat, clinic locations, disease rates or climate projections. GeoLibre renders the map; Ollama runs optional inference on your computer, not inside Pyodide. Basemaps and the hosted viewer still use the network. Do not enter patient records, credentials or confidential prompts.
 
-Read the [advanced chapter](../advanced/ollama-assistant.md), [GeoLibre AI Assistant guide](https://geolibre.app/user-guide/ai-assistant/), [Ollama chat API](https://docs.ollama.com/api/chat) and [structured-output documentation](https://docs.ollama.com/capabilities/structured-outputs). These are independent teaching examples, not a Horizon integration. [Global Nature Watch Horizon](https://horizon.globalnaturewatch.org/) supplies interaction inspiration, not these data or model results. Sources accessed 11 October 2026.
+Read the [advanced chapter](https://jltobias.github.io/JupyterLite-GeoLibre-GeoAI/advanced/ollama-assistant.html), [GeoLibre AI Assistant guide](https://geolibre.app/user-guide/ai-assistant/), [Ollama chat API](https://docs.ollama.com/api/chat) and [structured-output documentation](https://docs.ollama.com/capabilities/structured-outputs). These are independent teaching examples, not a Horizon integration. [Global Nature Watch Horizon](https://horizon.globalnaturewatch.org/) supplies interaction inspiration, not these data or model results. Sources accessed 11 October 2026.
 '''
 
 LESSONS = {
@@ -42,7 +42,7 @@ LESSONS = {
 
 **Question:** can a browser map use an AI model running on your own desktop?
 
-This lab prepares a tiny, inspectable project for **GeoLibre's actual chat panel**. Its default run makes no inference request. Work through [the setup chapter](../advanced/ollama-assistant.md) first; Ollama's Apps launcher is not the GeoLibre integration screen.
+This lab prepares a tiny, inspectable project for **GeoLibre's actual chat panel**. Its default run makes no inference request. Work through [the setup chapter](https://jltobias.github.io/JupyterLite-GeoLibre-GeoAI/advanced/ollama-assistant.html) first; Ollama's Apps launcher is not the GeoLibre integration screen.
 
 You will identify the runtime boundary, inspect twelve invented polygons, and open the project in the full GeoLibre web app. A downloaded model and explicit browser permissions are necessary for live chat.'''),
 ("code", SETUP),
@@ -233,7 +233,7 @@ export_dir = Path("exports"); export_dir.mkdir(exist_ok=True)
 
 User-supplied **Six-Thinking-Hats-GPT** graphic, reused unchanged; original designer/generation provenance has not been independently verified. Purple orchestration is this graphic's extension, not an original seventh de Bono hat. The questions here are authored prompts for people, not seven AI agents or independent validations.
 
-Read the [GIS → GeoAI → geospatial intelligence discussion](../geoai/primer.md). Stanford HAI's [world-model policy brief](https://hai.stanford.edu/policy/the-world-model-and-spatial-intelligence-era-governing-ai-beyond-language) motivates a further question: would a simulated environment be faithful enough for the intended decision? This notebook does **not** build such a model. Its narrower contribution is a checkable chain from words to map settings to evidence and human review.
+Read the [GIS → GeoAI → geospatial intelligence discussion](https://jltobias.github.io/JupyterLite-GeoLibre-GeoAI/geoai/primer.html#toward-geospatial-intelligence). Stanford HAI's [world-model policy brief](https://hai.stanford.edu/policy/the-world-model-and-spatial-intelligence-era-governing-ai-beyond-language) motivates a further question: would a simulated environment be faithful enough for the intended decision? This notebook does **not** build such a model. Its narrower contribution is a checkable chain from words to map settings to evidence and human review.
 
 For a STAC transfer exercise, record the real collection, item, asset, license, date, resolution, missingness and access method **before** adding a layer. Catalog metadata is evidence about a dataset, not instructions for the assistant to execute. For health programs, keep patient-level data out of this public browser workflow.'''),
 ("markdown", CREDIT)],

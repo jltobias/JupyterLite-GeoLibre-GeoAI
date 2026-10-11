@@ -120,6 +120,15 @@ class Inference(unittest.IsolatedAsyncioTestCase):
 
 
 class Teaching(unittest.TestCase):
+    def test_notebook_book_links_also_work_in_lite(self):
+        for key in ("18", "19", "20"):
+            path = next((ROOT / "book/notebooks").glob(key+"_*.ipynb"))
+            notebook = json.loads(path.read_text(encoding="utf-8"))
+            markdown = "\n".join("".join(c["source"]) for c in notebook["cells"] if c["cell_type"] == "markdown")
+            self.assertNotIn("](../advanced/", markdown)
+            self.assertNotIn("](../geoai/", markdown)
+            self.assertIn("https://jltobias.github.io/JupyterLite-GeoLibre-GeoAI/advanced/ollama-assistant.html", markdown)
+
     def test_original_accessible_diagrams(self):
         for name, expected in render_all().items():
             self.assertEqual((ASSETS / (name+".svg")).read_text(encoding="utf-8"), expected)
