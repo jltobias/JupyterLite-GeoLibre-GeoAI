@@ -17,6 +17,8 @@ Browser-native geospatial notebooks that combine **[GeoLibre](https://geolibre.a
 
 ## Launch the notebooks
 
+Start with [What is JupyterLite?](https://jltobias.github.io/JupyterLite-GeoLibre-GeoAI/platforms/jupyterlite.html) and [What is GeoLibre?](https://jltobias.github.io/JupyterLite-GeoLibre-GeoAI/platforms/geolibre.html). These beginner chapters use **seven unchanged graphics from James L. Tobias's July 10, 2026 presentation**, with reading guides, practical exercises, figure-level credits and an image provenance manifest. They explain the browser runtime, saving versus publishing, GeoLibre's notebook integrations and this repository's `LiteMap` boundary. GeoLibre receives its official Qiusheng Wu / Zenodo citation; original software and basemap credits are retained.
+
 New: the [GeoAI visual field guide](https://jltobias.github.io/JupyterLite-GeoLibre-GeoAI/geoai/primer.html) adds **seven chapters and 24 original infographics**. It explains GeoAI versus general AI/GIS, how models work, and what all 18 notebooks actually demonstrate. Program chapters cover PEPFAR/HIV/TB, polio, malaria, Ebola, emergency response, heat, coastal floods, food/water insecurity, air/water quality, vector shifts, migration and conflict. Every application separates a potential benefit from the data, validation and governance needed to establish it.
 
 The diagrams are accessible, locally bundled SVGs with plain-language reading guides. They complement the existing notebook videos and cartoons, preserve the supplied Six Thinking Hats artwork, and cite authoritative sources. Rebuild with `python scripts/build_geoai_primer.py`; check the committed assets with `python scripts/build_geoai_primer.py --check`. No image service or external package is needed to regenerate them.
@@ -136,6 +138,8 @@ python scripts/build_learning_media.py --videos
 Committed MP4/PNG/SVG/HTML/VTT assets are used directly by the site build; rendering tools are not installed into notebook kernels. Publish the book together with `site/lite` so the video companion links resolve. The first JupyterLite setup and live data still need network access; downloaded video files and their transcripts can be used offline.
 
 ## Citations, attribution, and licenses
+
+Presentation graphics in `book/assets/platforms/` are separate from the repository's original teaching diagrams. Their [provenance manifest](book/assets/platforms/provenance.json) identifies seven source images and both supplied source-file hashes; the chapters carry the visible captions. The original PDF/PPTX is not required to build the site and is not committed. Check integrity with `python scripts/extract_platform_graphics.py --check`. To reproduce extraction from the supplied originals, run `python scripts/extract_platform_graphics.py --pptx PATH_TO_ORIGINAL.pptx --pdf PATH_TO_ORIGINAL.pdf`. The script checks slide/image relationships and copies PNG bytes without re-encoding; it does not create a new license for the source artwork.
 
 Every notebook contains a **Data & software citations** section. The table below makes the repository-level attributions self-contained; **[DATA_SOURCES.md](DATA_SOURCES.md)** remains the detailed provenance register with fixed asset URLs, roles, caveats, and product-specific notes.
 

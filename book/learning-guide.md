@@ -1,5 +1,7 @@
 # First steps: read the code, see the idea
 
+New to the tools themselves? Read [What is JupyterLite?](platforms/jupyterlite.md) for the notebook interface and saving your work, and [What is GeoLibre?](platforms/geolibre.md) for map layers and the browser integration. Both use attributed graphics from the supplied July 2026 presentation.
+
 For the bigger picture, begin with [What is GeoAI?](geoai/primer.md), the [18-notebook method atlas](geoai/notebook-atlas.md), and the illustrated applications for [HIV/TB](geoai/hiv-tb.md), [outbreaks](geoai/outbreaks.md) and [climate–health](geoai/climate-health.md). They explain why the code matters before introducing Python syntax.
 
 You can learn from these notebooks before writing Python from scratch. Start with the question, read the visual field guide, then run one code cell at a time. Each of the 18 notebooks has a captioned mini-video, an infographic, a teaching cartoon and a reading guide before every code cell.

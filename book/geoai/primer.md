@@ -1,5 +1,7 @@
 # What is GeoAI?
 
+Looking for the tools rather than the methods? [What is JupyterLite?](../platforms/jupyterlite.md) introduces the browser workbench; [What is GeoLibre?](../platforms/geolibre.md) introduces the mapping workspace. GeoAI is the analytical idea, not another name for either application.
+
 **GeoAI uses artificial-intelligence methods with geographic data and reasoning.** It asks not only “what pattern is present?” but also “where, when, at what scale, and connected to what?” Geography changes the inputs, interpretation and testing of a model. This introduction follows the broad definition used in [USGS GeoAI research](https://www.usgs.gov/publications/geoai-us-geological-survey-topographic-mapping).
 
 This visual field guide answers the questions behind the code. Start here without installing Python or running a notebook. All 24 new diagrams are original teaching schematics, not measured health outcomes; the surrounding text provides their reading guide. Open any diagram in a new tab to enlarge it.

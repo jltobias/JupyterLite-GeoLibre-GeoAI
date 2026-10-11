@@ -1,0 +1,127 @@
+{
+  "schema_version": 1,
+  "presentation": {
+    "title": "JupyterLite: Geospatial Data Science and Global Health",
+    "author": "James L. Tobias, MS, GISP",
+    "presentation_date": "2026-07-10",
+    "source_basename": "Jim-Tobias-Peraton-JupyterLite-Geospatial-Data-Science-and-Global-Health-7102026"
+  },
+  "source_files": {
+    "pptx": {
+      "name": "Jim-Tobias-Peraton-JupyterLite-Geospatial-Data-Science-and-Global-Health-7102026.pptx",
+      "sha256": "74687ab43c522b672a2b4f63e0c30f383c2be0a7c6421b0c4b167e733fa1df6e"
+    },
+    "pdf": {
+      "name": "Jim-Tobias-Peraton-JupyterLite-Geospatial-Data-Science-and-Global-Health-7102026.pdf",
+      "sha256": "e49816eb508f0e31dcd5ff743dc59476c74a7177c8a25e9846e3ba5decccf486"
+    }
+  },
+  "rights_note": "Supplied presentation material is not relicensed as original repository artwork. Software, documentation, logos, basemaps and gallery projects retain their respective rights; see chapter figure captions and linked upstream licenses.",
+  "figures": [
+    {
+      "file": "jupyterlite-interface.png",
+      "chapter": "jupyterlite",
+      "slide": 11,
+      "pptx_member": "ppt/media/image25.png",
+      "sha256": "01ef8445803ca036b2fe936b88c7844ed43432724f8f5203362746ce7b64c43f",
+      "bytes": 220401,
+      "dimensions": [
+        1596,
+        898
+      ],
+      "attribution": "JupyterLite Contributors; interface and documentation screenshot.",
+      "source_url": "https://jupyterlite.readthedocs.io/en/stable/",
+      "transformation": "none; original PNG bytes"
+    },
+    {
+      "file": "jupyterlite-deployment.png",
+      "chapter": "jupyterlite",
+      "slide": 17,
+      "pptx_member": "ppt/media/image31.png",
+      "sha256": "381c0c9b6434bd82b8a1ffe1cf1b75994daf854df6e31c3bdaaca699d4fa4bad",
+      "bytes": 246888,
+      "dimensions": [
+        1769,
+        1377
+      ],
+      "attribution": "JupyterLite Contributors; GitHub interface and incidental advertisement retain their respective credits. No endorsement implied.",
+      "source_url": "https://jupyterlite.readthedocs.io/en/stable/quickstart/deploy.html",
+      "transformation": "none; original PNG bytes"
+    },
+    {
+      "file": "jupyterlite-ecosystem.png",
+      "chapter": "jupyterlite",
+      "slide": 19,
+      "pptx_member": "ppt/media/image33.png",
+      "sha256": "ff28a2609600fd39d0cf60e4a52f8515828d025bfd23028a28d1090007972d0c",
+      "bytes": 962803,
+      "dimensions": [
+        1080,
+        720
+      ],
+      "attribution": "Graphic supplied in Tobias's presentation; separate illustrator and reuse license not specified. Project names and logos belong to their respective projects.",
+      "source_url": null,
+      "transformation": "none; original PNG bytes"
+    },
+    {
+      "file": "geolibre-workspace.png",
+      "chapter": "geolibre",
+      "slide": 38,
+      "pptx_member": "ppt/media/image52.png",
+      "sha256": "1da2e8774ce71a75770711bbb5761866ac15ec55b202b18c1e31cd322a7ceeaa",
+      "bytes": 1366713,
+      "dimensions": [
+        2045,
+        1392
+      ],
+      "attribution": "GeoLibre: Qiusheng Wu and contributors. Basemap credits visible in the source: OpenFreeMap, OpenMapTiles, OpenStreetMap contributors.",
+      "source_url": "https://web.geolibre.app/",
+      "transformation": "none; original PNG bytes"
+    },
+    {
+      "file": "geolibre-notebook-panel.png",
+      "chapter": "geolibre",
+      "slide": 39,
+      "pptx_member": "ppt/media/image54.png",
+      "sha256": "d26b6e8959308126df164a26d56b5231e32df718abe49bfff8c2987547466268",
+      "bytes": 416298,
+      "dimensions": [
+        2045,
+        1392
+      ],
+      "attribution": "GeoLibre documentation: Qiusheng Wu and contributors; JupyterLite and JupyterLab belong to their respective contributors.",
+      "source_url": "https://geolibre.app/notebook/",
+      "transformation": "none; original PNG bytes"
+    },
+    {
+      "file": "geolibre-python.png",
+      "chapter": "geolibre",
+      "slide": 41,
+      "pptx_member": "ppt/media/image58.png",
+      "sha256": "b42ceb0bcc62c227922d39e2e1834e45e457f782d04654f692eedab339896531",
+      "bytes": 349106,
+      "dimensions": [
+        1719,
+        1392
+      ],
+      "attribution": "GeoLibre Python documentation: Qiusheng Wu and contributors. Historical screenshot, not this site's browser adapter API.",
+      "source_url": "https://geolibre.app/python/",
+      "transformation": "none; original PNG bytes"
+    },
+    {
+      "file": "geolibre-gallery.png",
+      "chapter": "geolibre",
+      "slide": 42,
+      "pptx_member": "ppt/media/image59.png",
+      "sha256": "13e67739d4925ff51374e9116df350cfde2c9fe6d9b33a21b180e17a7c42dc39",
+      "bytes": 869123,
+      "dimensions": [
+        1719,
+        1392
+      ],
+      "attribution": "GeoLibre gallery: Qiusheng Wu and contributors. Visible projects credit spatialthoughts and giswqs; each project and dataset retains its own terms.",
+      "source_url": "https://share.geolibre.app/",
+      "transformation": "none; original PNG bytes"
+    }
+  ]
+}

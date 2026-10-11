@@ -1,5 +1,16 @@
 # References and data-source register
 
+## JupyterLite and GeoLibre platform introductions
+
+The illustrated [JupyterLite](platforms/jupyterlite.md) and [GeoLibre](platforms/geolibre.md) chapters contain figure-level credits and official documentation links, checked **11 October 2026**. Their seven PNGs were extracted unchanged from **Tobias, J. L. (2026, July 10). *JupyterLite: Geospatial Data Science and Global Health* [Presentation]**, supplied as PPTX and PDF. Slides 11, 17 and 19 support the JupyterLite chapter; slides 38, 39, 41 and 42 support GeoLibre. The original presentation date is distinct from this book's update date.
+
+The [asset provenance manifest](assets/platforms/provenance.json) records slide numbers, original PPTX members, hashes and source credits. The full presentation is not redistributed. The ecosystem graphic's separate creator/license is unspecified; it is identified as supplied artwork, not an original illustration made for this repository. Software licenses do not relicense the presentation, logos or third-party datasets.
+
+- **JupyterLite:** JupyterLite Contributors; [documentation](https://jupyterlite.readthedocs.io/en/stable/) and [BSD 3-Clause notice](assets/platforms/JUPYTERLITE-LICENSE.txt).
+- **Python runtime:** Pyodide contributors; [Pyodide documentation](https://pyodide.org/en/stable/).
+- **GeoLibre:** Qiusheng Wu and contributors; [recommended citation and DOI guidance](platforms/geolibre.md), [upstream citation page](https://geolibre.app/citation/) and [MIT notice](assets/platforms/GEOLIBRE-LICENSE.txt).
+- **Dependencies and map data:** [GeoLibre acknowledgements](https://geolibre.app/acknowledgements/); preserve the pictured OpenFreeMap, OpenMapTiles and OpenStreetMap credits, and each gallery project's authorship and data terms.
+
 ## Illustrated GeoAI and global-health guide
 
 The seven [visual field-guide chapters](geoai/primer.md) cite sources next to the claims they support. Sources were consulted on **11 October 2026**; dates within historical reports remain their original dates. Potential health applications are the book's teaching proposals, not claims that these organizations have validated the notebooks.

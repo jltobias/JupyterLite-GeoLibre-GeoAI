@@ -4,6 +4,16 @@ This book is a set of **live, browser-native geospatial labs**. Each chapter can
 
 **Launch the lab:** [https://jltobias.github.io/JupyterLite-GeoLibre-GeoAI/lite/lab/index.html](https://jltobias.github.io/JupyterLite-GeoLibre-GeoAI/lite/lab/index.html)
 
+## Start with the three ideas
+
+| Your question | Plain-language answer | Illustrated introduction |
+|---|---|---|
+| What is JupyterLite? | The browser notebook workbench where you read and run Python | [JupyterLite: interface, runtime and saving your work](platforms/jupyterlite.md) |
+| What is GeoLibre? | The mapping workspace used to explore geographic layers | [GeoLibre: maps, notebook integration and attribution](platforms/geolibre.md) |
+| What is GeoAI? | Analytical methods that combine AI with geographic context | [GeoAI: methods, evidence and interpretation](geoai/primer.md) |
+
+The two platform introductions use **seven graphics from James L. Tobias's July 10, 2026 presentation**, with reading guides, slide-level provenance and upstream credits. They distinguish historical screenshots from this repository's current browser workflow. GeoLibre is credited to **Qiusheng Wu and contributors**, with its recommended software citation and separate basemap/data acknowledgements.
+
 ## GeoAI for global health: a visual field guide
 
 **What is GeoAI, how does it work, and why might a health program use it?** Start with the [illustrated GeoAI primer](geoai/primer.md): seven connected chapters and **24 new original diagrams**, with plain-language reading guides, notebook links, exercises and evidence boundaries. No Python kernel is needed to read them.
