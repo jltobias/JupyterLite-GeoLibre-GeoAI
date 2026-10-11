@@ -37,7 +37,7 @@ def grid_features(values, *, field="value", cell_m=200, origin=(-122.3, 37.9)):
     """Map a south-to-north array onto closed GeoJSON polygons (lon, lat)."""
     import numpy as np
     values = np.asarray(values, dtype=float)
-    if values.ndim != 2 or not np.isfinite(values).all() or cell_m <= 0:
+    if values.ndim != 2 or not np.isfinite(values).all() or not math.isfinite(cell_m) or cell_m <= 0:
         raise ValueError("Use a finite 2D array and positive cell_m")
     features = []
     for row in range(values.shape[0]):
@@ -67,16 +67,16 @@ def teaching_city(n=8):
     return pd.DataFrame([f["properties"] for f in fc["features"]]), fc
 
 
-def plotly_view(figure, *, height=520):
+def plotly_view(figure, *, height=520, title="Interactive chart: drag to rotate, scroll to zoom"):
     """Isolate Plotly JS in an iframe; works without a Plotly widget extension.
 
     Needs the Plotly CDN for interactive rendering. Pair it with a saved static
     figure in the book. It neither fetches data nor exposes kernel state.
     """
     from IPython.display import HTML
-    page = figure.to_html(include_plotlyjs="cdn", full_html=True,
+    page = figure.to_html(include_plotlyjs="cdn", full_html=True, auto_play=False,
                           config={"responsive": True, "displaylogo": False})
-    return HTML(f'<iframe title="Interactive chart: drag to rotate, scroll to zoom" '
+    return HTML(f'<iframe title="{html.escape(title, quote=True)}" '
                 f'sandbox="allow-scripts" style="width:100%;height:{int(height)}px;border:0" '
                 f'srcdoc="{html.escape(page, quote=True)}"></iframe>')
 

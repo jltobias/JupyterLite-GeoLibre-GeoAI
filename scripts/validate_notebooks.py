@@ -1,4 +1,4 @@
-"""Validate every notebook; optionally execute the deterministic Astra labs.
+"""Validate every notebook; optionally execute synthetic and bundled-data labs.
 
 python scripts/validate_notebooks.py --execute
 Add --save-outputs when intentionally refreshing the book's static figures.
@@ -7,12 +7,19 @@ import argparse
 import ast
 import json
 from pathlib import Path
+import shutil
 import tempfile
 
 import nbformat
 
 ROOT = Path(__file__).resolve().parents[1]
 NOTEBOOKS = ROOT / "book" / "notebooks"
+BUNDLED_LABS = {"16_sea_level_rise_sat_scan_geoai.ipynb", "17_rewiring_global_health_six_hats.ipynb"}
+
+
+def executable_offline(path, nb):
+    """Explicit allowlist: a report derivative is not synthetic training data."""
+    return nb.metadata.get("cognition", {}).get("synthetic", False) or path.name in BUNDLED_LABS
 
 
 def main():
@@ -36,16 +43,31 @@ def main():
     from nbclient import NotebookClient
     for path in paths:
         nb = nbformat.read(path, as_version=4)
-        if not nb.metadata.get("cognition", {}).get("synthetic", False):
+        if not executable_offline(path, nb):
             continue
         # Use a temporary notebook directory so exported fixture files never
         # pollute the distributed contents or overwrite a user's exports.
         with tempfile.TemporaryDirectory(prefix="geolibre-lab-") as temp:
             for helper in NOTEBOOKS.glob("*.py"):
                 Path(temp, helper.name).write_bytes(helper.read_bytes())
+            if path.name in BUNDLED_LABS:
+                shutil.copytree(NOTEBOOKS / "data", Path(temp, "data"))
+            if path.name.startswith("16_"):
+                nb.cells.append(nbformat.v4.new_code_cell("""
+assert len(risk) == 10 and len(long) == 30
+assert [frame.name for frame in fig.frames] == ['A', 'B', 'C']
+assert all(set(frame.data[0].ids) == set(risk.city_label) for frame in fig.frames)
+assert len({frame.data[0].marker.sizeref for frame in fig.frames}) == 1
+assert fig.layout.coloraxis.cmin == 0
+assert fig.layout.coloraxis.cmax == float(long.scenario_indicator.max())
+np.testing.assert_allclose(fig3d.data[0].z, risk.relative_risk)
+np.testing.assert_allclose(scenario_table['C'], risk.flood_c_mean)
+"""))
             client = NotebookClient(nb, timeout=180, kernel_name="python3",
                                     resources={"metadata": {"path": temp}})
             client.execute()
+            if path.name.startswith("16_"):
+                nb.cells.pop()  # test-only consumer assertions are not teaching cells
             artifacts = sorted(Path(temp, "exports").glob("*.json"))
             for artifact in artifacts:
                 json.loads(artifact.read_text(encoding="utf-8"),

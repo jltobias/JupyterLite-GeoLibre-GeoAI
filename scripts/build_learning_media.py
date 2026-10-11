@@ -240,7 +240,7 @@ def page(title,body):
 def watch_page(key,p,filename):
     transcript="".join(f'<li><strong>{i*8:02d}–{(i+1)*8:02d}s · {esc(label)}</strong><p>{esc(explanation)}</p>'
                        f'<code>{esc(code)}</code></li>' for i,(label,code,explanation) in enumerate(p["stages"]))
-    body=(f'<nav><a href="../index.html">All visual lessons</a><a href="../../../../lab/index.html?path={filename}">Run this notebook</a></nav>'
+    body=(f'<nav><a href="../index.html">All visual lessons</a><a href="{PUBLISHED}/notebooks/{Path(filename).stem}.html">Read this chapter</a><a href="../../../../lab/index.html?path={filename}">Run this notebook</a></nav>'
           f'<p class="kicker">LAB {key} · 32-SECOND VISUAL WALKTHROUGH</p><h1>{esc(p["title"])}</h1>'
           f'<p>{esc(p["question"])}</p><video controls playsinline preload="none" poster="poster.png" '
           f'aria-label="Captioned walkthrough: {esc(p["title"])}"><source src="walkthrough.mp4" type="video/mp4">'
@@ -287,6 +287,7 @@ def intro(key,p,filename):
             f"### Watch the idea unfold\n\n[![Preview: {p['title']} — 32-second captioned walkthrough]({base}/poster.png)]({movie})\n\n"
             f"[▶ Watch the captioned mini-video and read its transcript]({movie}) · "
             f"[Launch this notebook]({PUBLISHED}/lite/lab/index.html?path={filename}) · "
+            f"[Read this Book chapter]({PUBLISHED}/notebooks/{Path(filename).stem}.html) · "
             f"[Python and browser learning guide]({PUBLISHED}/learning-guide.html)\n\n"
             "The video is a silent four-step teaching storyboard with player controls and captions. "
             "Open the companion page to play, pause, seek or download it. "
@@ -335,6 +336,17 @@ def transform(nb,key,filename):
         "All new teaching illustrations are original schematics. Their marks and fictional dialogue are explanatory, "
         "not observations, fitted predictions or captured AI conversations. The existing citation cells identify the analytical data.\n",
         f"learn-{key}-reflection"))
+    result.append(md_cell(
+        "## GeoLibre creator and software attribution\n\n"
+        "GeoLibre is developed by **Qiusheng Wu and contributors**. Recommended citation: "
+        "Wu, Q. (2026). *GeoLibre: A lightweight, cloud-native GIS platform for visualizing, exploring, "
+        "and analyzing geospatial data.* Zenodo. [doi:10.5281/zenodo.20785400](https://doi.org/10.5281/zenodo.20785400). "
+        "See [the official citation guidance](https://geolibre.app/citation/) and "
+        "[source and MIT license](https://github.com/opengeos/GeoLibre). These browser lessons pin "
+        "the Python builders to `geolibre==3.0.0`; the independently hosted viewer may change. "
+        "This repository supplies the JupyterLite adapter and teaching materials, not the upstream GIS. "
+        "Keep the original dataset, demo-author and basemap credits when sharing a result.\n",
+        f"learn-{key}-geolibre-credit"))
     nb={**nb,"cells":result}
     nb["metadata"]={**nb.get("metadata",{}),"learning_edition":{"version":1,"guide_count":number,
         "media":f"assets/learning/{key}/watch.html"}}
@@ -400,7 +412,7 @@ def main():
             write_or_check(directory/"media-source.sha256",media_digest(key,profile)+"\n",True)
         cards.append(f'<article><p class="kicker">LAB {key}</p><h2><a href="{key}/watch.html">{esc(profile["title"])}</a></h2>'
                      f'<p>{esc(profile["question"])}</p><p>{esc(profile["role"])}</p></article>')
-    gallery=page("Browser GeoAI visual learning library",'<p class="kicker">18 NOTEBOOKS · ONE QUESTION AT A TIME</p>'
+    gallery=page("Browser GeoAI visual learning library",f'<nav><a href="{PUBLISHED}/visual-library.html">Maps, scenes and notebook directory</a><a href="{PUBLISHED}/intro.html">Book home</a></nav><p class="kicker">18 NOTEBOOKS · ONE QUESTION AT A TIME</p>'
                  '<h1>See what the code means</h1><p>Each lesson pairs an infographic and a teaching cartoon with a short, silent '
                  'captioned video, a transcript and a question to test your understanding. No Python kernel or third-party video service is needed.</p>'
                  '<div class="cards">'+"".join(cards)+'</div>')

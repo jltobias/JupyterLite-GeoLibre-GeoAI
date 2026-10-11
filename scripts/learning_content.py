@@ -170,9 +170,9 @@ LESSONS = {
          "One anomaly score per occupied H3 cell, relative to this feed and these features.",
          "Compare a high-score cell with its count and depth. Unusual does not mean a future earthquake is more likely."),
     step("Attach scores to map geometry", "ring.append(ring[0])",
-         "`itertuples` visits the aggregate rows. The H3 boundary is reordered into GeoJSON coordinates and closed. "
+         "`itertuples` visits the aggregate rows. The H3 boundary is reordered into GeoJSON coordinates, closed, and split at the date line when necessary. "
          "Explicit `float` and `int` conversions make values serializable; `None` preserves missing properties as JSON null.",
-         "A FeatureCollection with one polygon and a set of model attributes per cell.",
+         "A FeatureCollection with one Polygon or MultiPolygon and a set of model attributes per cell. Pole-enclosing cells fail with an explicit GIS-conversion message.",
          "Identify the line that preserves a missing magnitude instead of inventing a measurement."),
     step("Separate event density from anomaly score", "m.add_heatmap",
          "The choropleth colors modeled cell scores. The heatmap uses each event with equal weight because `weight_field` is empty. "

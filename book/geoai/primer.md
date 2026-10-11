@@ -21,24 +21,6 @@ This visual field guide answers the questions behind the code. Start here withou
 
 “Traditional AI” is a broad phrase, not a precise opposing category. A standard K-Means algorithm can be part of GeoAI when applied to geospatial features. A chatbot mentioning a city is not automatically doing spatial analysis. The **field of GeoAI** is also broader than the particular **`geoai-py` software package**: these browser lessons teach selected methods, not the entire package's deep-learning stack.
 
-## What Esri's overview adds
-
-Esri's [GeoAI overview](https://www.esri.com/en-us/capabilities/geoai/overview) emphasizes two complementary tasks: **extracting geographic information** from sources such as imagery, video, point clouds and text, and **using spatial machine learning** to investigate patterns or make predictions. It also describes starting with pretrained models, adapting models, and integrating other models into ArcGIS workflows. These are Esri platform examples, not a requirement to use ArcGIS for GeoAI.
-
-The connections below are **this book's teaching interpretation**, not Esri's documentation or evaluation of these notebooks:
-
-| A beginner's question | Explore in this book | Keep the claim within the evidence |
-|---|---|---|
-| How can an image become information? | [Lab 03](../notebooks/03_earth_observation_geoai.ipynb) groups RGB pixels; [lab 13](../notebooks/13_astra_vision_change.ipynb) measures changes in invented images | Neither runs Esri's pretrained feature-extraction models; a color group is not a verified object label |
-| What patterns can a model reveal? | [Lab 02](../notebooks/02_census_geoai_counties.ipynb) groups county profiles; [lab 05](../notebooks/05_h3_earthquake_geoai.ipynb) scores unusual earthquake profiles | Exploratory groups and anomaly scores are not validated forecasts |
-| Could the result inform a decision? | [Lab 15](../notebooks/15_astra_network_accessibility.ipynb) compares routes after a bridge closure | This is a synthetic, deterministic accessibility exercise, not learned AI or measured health impact |
-
-Esri presents automation, faster situational awareness and geographically informed decisions as organizational benefits. Treat those as **benefits to test**, not measured outcomes of these browser lessons. [Source: Esri's overview, value discussion](https://www.esri.com/en-us/capabilities/geoai/overview).
-
-For a proposed health-program pilot, ask whether a workflow reduces review time **without increasing missed problems or unequal performance across places**. Compare with the current process and review errors with local practitioners. This is the book's suggested evaluation question; see [how GeoAI works](how-it-works.md) for validation and governance, not an Esri finding about a health program.
-
-**Attribution:** ideas above are paraphrased from **Esri's GeoAI overview**, accessed **11 October 2026**; the [reference register](../references.md) provides the citation. No Esri graphics, videos or text passages are reproduced. This independent book is not affiliated with or endorsed by Esri, and the comparison does not add ArcGIS software or an Esri model to the notebooks.
-
 ## Why does place matter?
 
 ![Two invented communities have the same straight-line distance to a clinic, but a closed bridge forces a longer route.](../assets/geoai/spatial-context.svg)
@@ -58,6 +40,24 @@ Three other geographic traps deserve names:
 **Read the picture:** a project can benefit from all four families. Only some steps learn from data. For example, `fit_predict(...)` in a clustering lab learns group assignments from features; a threshold such as `temperature >= 30` applies a rule chosen by its author. A map renders the result of either operation but does not turn a rule into a trained model.
 
 The [18-notebook atlas](notebook-atlas.md) identifies exactly what each lesson does. In particular, labs 12–15 run deterministic, synthetic exercises by default; optional external-model requests are separate. Lab 16 visualizes pre-existing SaTScan report results. Lab 17 structures human discussion. Neither performs a new AI analysis of disease burden.
+
+## What Esri's overview adds
+
+Esri's [GeoAI overview](https://www.esri.com/en-us/capabilities/geoai/overview) emphasizes two complementary tasks: **extracting geographic information** from sources such as imagery, video, point clouds and text, and **using spatial machine learning** to investigate patterns or make predictions. It also describes starting with pretrained models, adapting models, and integrating other models into ArcGIS workflows. These are Esri platform examples, not a requirement to use ArcGIS for GeoAI.
+
+The connections below are **this book's teaching interpretation**, not Esri's documentation or evaluation of these notebooks:
+
+| A beginner's question | Explore in this book | Keep the claim within the evidence |
+|---|---|---|
+| How can an image become information? | [Lab 03](../notebooks/03_earth_observation_geoai.ipynb) groups RGB pixels; [lab 13](../notebooks/13_astra_vision_change.ipynb) measures changes in invented images | Neither runs Esri's pretrained feature-extraction models; a color group is not a verified object label |
+| What patterns can a model reveal? | [Lab 02](../notebooks/02_census_geoai_counties.ipynb) groups county profiles; [lab 05](../notebooks/05_h3_earthquake_geoai.ipynb) scores unusual earthquake profiles | Exploratory groups and anomaly scores are not validated forecasts |
+| Could the result inform a decision? | [Lab 15](../notebooks/15_astra_network_accessibility.ipynb) compares routes after a bridge closure | This is a synthetic, deterministic accessibility exercise, not learned AI or measured health impact |
+
+Esri presents automation, faster situational awareness and geographically informed decisions as organizational benefits. Treat those as **benefits to test**, not measured outcomes of these browser lessons. [Source: Esri's overview, value discussion](https://www.esri.com/en-us/capabilities/geoai/overview).
+
+For a proposed health-program pilot, ask whether a workflow reduces review time **without increasing missed problems or unequal performance across places**. Compare with the current process and review errors with local practitioners. This is the book's suggested evaluation question; see [how GeoAI works](how-it-works.md) for validation and governance, not an Esri finding about a health program.
+
+**Attribution:** ideas above are paraphrased from **Esri's GeoAI overview**, accessed **11 October 2026**; the [reference register](../references.md) provides the citation. No Esri graphics, videos or text passages are reproduced. This independent book is not affiliated with or endorsed by Esri, and the comparison does not add ArcGIS software or an Esri model to the notebooks.
 
 ## Why demonstrate this in a browser?
 

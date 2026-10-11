@@ -30,6 +30,7 @@ function render({ model, el }) {
   el.innerHTML = "";
 
   const frame = document.createElement("iframe");
+  frame.title = "Interactive GeoLibre map — pan, zoom and inspect layers";
   frame.style.width = "100%";
   frame.style.height = model.get("height") || "700px";
   frame.style.border = "0";
@@ -234,7 +235,7 @@ class LiteMap(anywidget.AnyWidget):
     ) -> str:
         fc = _feature_collection(data)
         values = [
-            feature.get("properties", {}).get(column)
+            (feature.get("properties") or {}).get(column)
             for feature in fc.get("features", [])
             if isinstance(feature, dict)
         ]

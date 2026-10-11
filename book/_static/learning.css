@@ -1,0 +1,10 @@
+/* Long source filenames and URLs must not push mobile reading pages sideways.
+   Keep executable code blocks and scrollable data tables unchanged. */
+article p, article li {
+  overflow-wrap: anywhere;
+}
+article :not(pre) > code,
+article :not(pre) > code span.pre {
+  white-space: normal;
+  overflow-wrap: anywhere;
+}

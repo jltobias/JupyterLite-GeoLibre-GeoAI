@@ -12,6 +12,9 @@ chapters:
       - file: geoai/climate-health
       - file: geoai/climate-society
   - file: learning-guide
+  - file: visual-library
+  - file: futures/digital-twins
+  - file: futures/map-encryption
   - file: notebooks/00_geolibre_quickstart
   - file: notebooks/01_worldpop_h3
   - file: notebooks/02_census_geoai_counties

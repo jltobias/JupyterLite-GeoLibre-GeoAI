@@ -197,6 +197,12 @@ This file is the consolidated citation and provenance register for the JupyterLi
 - The program applications are proposed transfers of notebook methods. They do not claim that WHO, CDC, UNAIDS, GPEI, NASA, NOAA, FEWS NET or IPCC endorses or has validated these notebooks.
 - The supplied Six Thinking Hats artwork is unchanged. The purple-synthesis discussion and evidence-to-decision framing connect to the companion Rewiring Global Health repository; no new individual-level health data or external model calls were introduced.
 
+## Digital twins and map-encryption presentations
+
+The two explanatory chapters in `book/futures/` paraphrase the user-supplied Gaborone TB presentation (cover date 2026-08-27) and Map Encryption presentation (cover date 2026-09-21; PDF export 2026-10-04). `book/assets/futures/provenance.json` records filenames, SHA-256 checksums, cover credits, page counts and relevant PDF page numbers. The original PDFs and separately hosted implementations are not included. No new clinical data or secret keys are introduced.
+
+The chapters' public references are NIST digital-twin guidance, Starsim documentation, Baker et al. (2023) on Kopanyo geospatial/genomic research, NIST SP 800-38D and W3C Web Cryptography security considerations. Full links appear in `book/references.md`. Four original SVG illustrations explain the proposed concepts; they are not outputs of a disease model, security test or copied presentation graphics. Existing GeoLibre creator attribution remains separate.
+
 ## Additional high-value sources considered for future labs
 
 ### Copernicus C3S / Interactive Climate Atlas

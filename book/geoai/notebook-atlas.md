@@ -12,7 +12,7 @@ Use this atlas to connect a program question to a method, then read the notebook
 |---|---|---|
 | [00 · GeoLibre quickstart](../notebooks/00_geolibre_quickstart.ipynb) | Vector and raster layers in a browser-safe map; no fitted model | Explain where services and hazards overlap; verify service status and layer dates |
 | [01 · WorldPop + H3](../notebooks/01_worldpop_h3.ipynb) | Streamed population layer plus hex indexing and neighborhood geometry; no fitted model | Discuss denominators and aggregation scale; an H3 cell does not automatically contain a population count |
-| [04 · CHIRPS climate](../notebooks/04_chirps_climate.ipynb) | Real daily rainfall layer plus a separate synthetic rolling-rainfall exercise | Learn seasonality and aggregation; need an observed time series and health data for warning models |
+| [04 · CHIRPS climate](../notebooks/04_chirps_climate.ipynb) | Real daily rainfall layer plus a separate synthetic rolling-rainfall exercise | Learn daily variability and rolling totals; need an observed time series and health data for warning models |
 | [06 · Compatibility](../notebooks/06_geoai_compatibility.ipynb) | Package checks and browser/full-Python boundary; no model | Choose a feasible teaching or production environment; this is not a security certification |
 | [07 · STAC catalogs](../notebooks/07_stac_browser_catalogs.ipynb) | Catalog links, guarded discovery and statuses; browser API probing is deliberately limited | Locate imagery and population metadata; a catalog search is neither pixel analysis nor guaranteed browser access |
 

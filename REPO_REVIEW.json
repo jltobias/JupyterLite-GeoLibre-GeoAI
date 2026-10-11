@@ -1,0 +1,284 @@
+[
+  {
+    "lens": "adversarial",
+    "location": "book/notebooks/10_sister_cities_graph_geoai.ipynb:340",
+    "trigger_condition": "Point styles use unsupported pointColor/pointRadius/pointOpacity names.",
+    "guard_snippet": "Use fillColor/circleRadius/fillOpacity; test project styles.",
+    "potential_consequence": "Groups and outliers lose their intended distinctions.",
+    "disposition": "Fixed in lab 10; lab 16 radius also corrected."
+  },
+  {
+    "lens": "adversarial",
+    "location": "book/notebooks/05_h3_earthquake_geoai.ipynb:443",
+    "trigger_condition": "H3 cells crossing ±180 are emitted as unsplit polygons.",
+    "guard_snippet": "Cut small non-polar rings at the antimeridian; preserve feature properties.",
+    "potential_consequence": "Small cells can draw as world-spanning bands.",
+    "disposition": "Fixed with tested geometry helper; pole-enclosing rings fail explicitly."
+  },
+  {
+    "lens": "adversarial",
+    "location": "book/_config.yml:6; notebooks 08–11, 16–17",
+    "trigger_condition": "Book execution is off and these chapters have no saved analytical outputs.",
+    "guard_snippet": "Save representative results and distinguish live-only views.",
+    "potential_consequence": "Readable chapters omit their computed results.",
+    "disposition": "Partly fixed: 16–17 now have saved results; 08–11 remain run-required."
+  },
+  {
+    "lens": "adversarial",
+    "location": "scripts/validate_notebooks.py:39",
+    "trigger_condition": "Execution gate excludes nonsynthetic bundled-data lessons.",
+    "guard_snippet": "Allowlist bundled labs and copy their data into temporary execution directories.",
+    "potential_consequence": "Report calculations/rendering regress without detection.",
+    "disposition": "Fixed for 16–17; deterministic lab 09 execution remains a follow-up."
+  },
+  {
+    "lens": "adversarial",
+    "location": "DATA_SOURCES.md:167",
+    "trigger_condition": "PBIX derivative lacks extraction recipe, join keys, scenario definitions and transformation provenance.",
+    "guard_snippet": "Obtain and document the exact derivation and field dictionary.",
+    "potential_consequence": "CSV charts reproduce but the derivative and scenario interpretation cannot be independently reconstructed.",
+    "disposition": "Open evidence requirement; definitions are now visibly marked unverified."
+  },
+  {
+    "lens": "adversarial",
+    "location": "README.md — notebook galleries",
+    "trigger_condition": "Only Launch links are provided per notebook.",
+    "guard_snippet": "Provide Read/Run/Watch/Infographic/Cartoon links and visual-type guidance.",
+    "potential_consequence": "Existing visual resources are hard to discover.",
+    "disposition": "Fixed with generated directory and visual preview."
+  },
+  {
+    "lens": "adversarial",
+    "location": "Notebook citation cells",
+    "trigger_condition": "Most standalone notebooks omit the creator and GeoLibre DOI.",
+    "guard_snippet": "Include Qiusheng Wu, DOI, license/source and pinned builder version in every downloadable notebook.",
+    "potential_consequence": "Downloaded lessons lose the site's attribution.",
+    "disposition": "Fixed in all 18 notebooks."
+  },
+  {
+    "lens": "adversarial",
+    "location": "scripts/build_learning_media.py:278",
+    "trigger_condition": "Generated links hardcode the production hostname.",
+    "guard_snippet": "Support a configurable base and same-deployment routing.",
+    "potential_consequence": "Local builds and forks can open a different deployment/revision.",
+    "disposition": "Open portability improvement; current production links are intentional and checked."
+  },
+  {
+    "lens": "adversarial",
+    "location": "book/notebooks/13_astra_vision_change.ipynb:266",
+    "trigger_condition": "Confusion counts are only rendered inside an image.",
+    "guard_snippet": "Provide the counts as an HTML/plain-text table and improve analytical image alternatives.",
+    "potential_consequence": "Screen-reader users cannot recover the numerical evidence.",
+    "disposition": "Partly fixed: accessible confusion table added; richer figure alternatives remain useful."
+  },
+  {
+    "lens": "adversarial",
+    "location": "book/notebooks/geolibre_lite.py:32",
+    "trigger_condition": "Map iframe has no accessible name.",
+    "guard_snippet": "Set a descriptive iframe title.",
+    "potential_consequence": "Assistive technology cannot identify the map frame.",
+    "disposition": "Fixed."
+  },
+  {
+    "lens": "adversarial",
+    "location": "README.md:49; notebook 17 linked-view discussion",
+    "trigger_condition": "Independent views are described as a story map or linked-view experience.",
+    "guard_snippet": "Describe a narrative notebook or implement shared selection/story navigation.",
+    "potential_consequence": "Learners expect coordinated interactions or an exported story application.",
+    "disposition": "Fixed labels; coordinated standalone story-map app remains future work."
+  },
+  {
+    "lens": "edge-case-hunter",
+    "location": "book/notebooks/10_sister_cities_graph_geoai.ipynb:340–343",
+    "trigger_condition": "Role and anomaly rendering uses ignored style keys.",
+    "guard_snippet": "Use fillColor, circleRadius and fillOpacity.",
+    "potential_consequence": "Categorical colors and emphasis disappear.",
+    "disposition": "Fixed; overlaps adversarial style finding."
+  },
+  {
+    "lens": "edge-case-hunter",
+    "location": "book/_config.yml:6; scripts/validate_notebooks.py:39",
+    "trigger_condition": "Read-only chapters have empty outputs.",
+    "guard_snippet": "Preserve results and assert required saved figures/tables.",
+    "potential_consequence": "Book omits the promised analytical views.",
+    "disposition": "Partly fixed for 16–17; saved-output presence guards added for 12–17."
+  },
+  {
+    "lens": "edge-case-hunter",
+    "location": "scripts/build_learning_media.py:278–290",
+    "trigger_condition": "Opening a local build or fork follows production links.",
+    "guard_snippet": "Make the deployment base configurable.",
+    "potential_consequence": "Reader leaves the current revision.",
+    "disposition": "Open; overlaps adversarial portability finding."
+  },
+  {
+    "lens": "edge-case-hunter",
+    "location": "book/notebooks/08_stac_geoai_footprints.ipynb:188",
+    "trigger_condition": "A STAC bbox has six coordinates including elevation.",
+    "guard_snippet": "Use horizontal_bbox to select horizontal axes and validate bounds.",
+    "potential_consequence": "Elevation contaminates width/height clustering features.",
+    "disposition": "Fixed with 2D/3D/date-line regression fixtures."
+  },
+  {
+    "lens": "edge-case-hunter",
+    "location": "book/notebooks/11_wildfire_stac_triage.ipynb:333–337",
+    "trigger_condition": "Discovery timestamps have UTC offsets while acquisitions are made naive.",
+    "guard_snippet": "Normalize both dates to UTC before subtraction.",
+    "potential_consequence": "TypeError stops scene ranking.",
+    "disposition": "Fixed."
+  },
+  {
+    "lens": "edge-case-hunter",
+    "location": "book/notebooks/05_h3_earthquake_geoai.ipynb:217",
+    "trigger_condition": "Earthquake feed has no records.",
+    "guard_snippet": "Stop with an explicit empty-feed message before constructing columns.",
+    "potential_consequence": "AttributeError hides the actual empty-data condition.",
+    "disposition": "Fixed."
+  },
+  {
+    "lens": "edge-case-hunter",
+    "location": "book/notebooks/geolibre_lite.py:235",
+    "trigger_condition": "GeoJSON feature has properties:null.",
+    "guard_snippet": "Use (feature.get('properties') or {}).get(column).",
+    "potential_consequence": "One empty property object prevents the choropleth.",
+    "disposition": "Fixed with builder regression test."
+  },
+  {
+    "lens": "edge-case-hunter",
+    "location": "book/notebooks/cognition.py:40",
+    "trigger_condition": "cell_m is NaN or infinity.",
+    "guard_snippet": "Require a finite positive grid size.",
+    "potential_consequence": "Invalid geometry reaches JSON export or display.",
+    "disposition": "Fixed with regression tests."
+  },
+  {
+    "lens": "edge-case-hunter",
+    "location": "book/notebooks/geolibre_lite.py:32",
+    "trigger_condition": "Screen reader enters unnamed iframe.",
+    "guard_snippet": "Give the map frame a descriptive title.",
+    "potential_consequence": "Map purpose is unavailable.",
+    "disposition": "Fixed; overlaps adversarial accessibility finding."
+  },
+  {
+    "lens": "edge-case-hunter",
+    "location": "DATA_SOURCES.md:167–171",
+    "trigger_condition": "Attempting to reconstruct or interpret PBIX aggregates.",
+    "guard_snippet": "Record exact transformation, keys, denominators and scenario definitions.",
+    "potential_consequence": "Derivative provenance cannot be verified.",
+    "disposition": "Open evidence requirement; overlaps adversarial provenance finding."
+  },
+  {
+    "lens": "verification-gap",
+    "location": "book/notebooks/geolibre_lite.py:55",
+    "trigger_condition": "Project message delivery breaks while Python dictionaries still pass tests.",
+    "guard_snippet": "Test frontend ready/load/update handling, origin/source guards and disposal.",
+    "potential_consequence": "Maps and elevation scenes can stop displaying data.",
+    "gap_shape": "regression-gap",
+    "consumer": "Lab 14 terrain_map display",
+    "evidence": "Replacing geolibre:load-project with an invalid name passed the baseline Python camera test; existing browser scripts did not exercise the widget.",
+    "disposition": "Fixed protocol harness; upstream service and full Pyodide E2E remain separate checks."
+  },
+  {
+    "lens": "verification-gap",
+    "location": "scripts/validate_notebooks.py:39",
+    "trigger_condition": "Bundled CSV schema changes outside the synthetic execution gate.",
+    "guard_snippet": "Execute 16–17 with their CSV and inspect frame/city identities and 3D risk values.",
+    "potential_consequence": "Report animation or discussion notebook breaks despite schema-only validation.",
+    "gap_shape": "broken-verification-gap",
+    "consumer": "Lab 16 risk.melt and lab 17 CSV read",
+    "evidence": "Removing flood_c_mean caused a KeyError; baseline execution copied only Python helpers and skipped both labs.",
+    "disposition": "Fixed."
+  },
+  {
+    "lens": "verification-gap",
+    "location": "scripts/validate_notebooks.py:54",
+    "trigger_condition": "Committed outputs are missing or stale while new test outputs are discarded.",
+    "guard_snippet": "Guard saved results and test the rendered analytical views.",
+    "potential_consequence": "Readable Book omits results available after execution.",
+    "gap_shape": "regression-gap",
+    "consumer": "Book with execute_notebooks off",
+    "evidence": "Clearing lab 14 outputs still passed baseline schema/guide checks; lab 16 had no outputs.",
+    "disposition": "Partly fixed: presence and browser checks; full deterministic output freshness hashing remains open."
+  },
+  {
+    "lens": "verification-gap",
+    "location": "tests/test_learning_content.py:70",
+    "trigger_condition": "MP4 container markers survive a truncated, undecodable video.",
+    "guard_snippet": "Run real playback, seeking and caption checks in deployment.",
+    "potential_consequence": "Unplayable media can publish.",
+    "gap_shape": "broken-verification-gap",
+    "consumer": "Generated watch.html video players",
+    "evidence": "Truncating the lab 16 MP4 preserved the baseline ftyp/moov assertions but decoding failed.",
+    "disposition": "Fixed: all-18 browser media check added to CI."
+  },
+  {
+    "lens": "structure",
+    "location": "README galleries",
+    "original_text": "Two launch-only galleries",
+    "revised_text": "One generated Read/Run/Watch/Infographic/Cartoon directory",
+    "changes": "Applied; adds direct visual discovery."
+  },
+  {
+    "lens": "structure",
+    "location": "README / Book intro",
+    "original_text": "Labs 12–17 grouped as Astra/synthetic",
+    "revised_text": "12–15 synthetic optional-model labs; 16 report interpretation; 17 discussion",
+    "changes": "Applied; scope clarified."
+  },
+  {
+    "lens": "structure",
+    "location": "Book lab 16",
+    "original_text": "No saved analytical results",
+    "revised_text": "Saved tables and static counterparts beside interactive results",
+    "changes": "Applied; results readable without a kernel."
+  },
+  {
+    "lens": "structure",
+    "location": "book/geoai/primer.md",
+    "original_text": "Esri section before foundational geographic concepts",
+    "revised_text": "Move Esri comparison after place and method explanations",
+    "changes": "Applied; 0 words cut from attributed section."
+  },
+  {
+    "lens": "structure",
+    "location": "GeoLibre attribution / learning guide",
+    "original_text": "Creator and figure credits; repeated interpretation guidance",
+    "revised_text": "Preserve contextual repetitions",
+    "changes": "Preserved; 376 words identified for retention."
+  },
+  {
+    "lens": "prose",
+    "location": "book/intro.md:3",
+    "original_text": "Each chapter can be launched",
+    "revised_text": "Each notebook chapter can be launched",
+    "changes": "Applied; conceptual chapters are not runnable notebooks."
+  },
+  {
+    "lens": "prose",
+    "location": "README.md external-model instructions",
+    "original_text": "Run All makes no model calls",
+    "revised_text": "Run All makes no external model API calls",
+    "changes": "Applied; scoped to labs 12–15."
+  },
+  {
+    "lens": "prose",
+    "location": "README / book/geoai/climate-health.md",
+    "original_text": "Story map and 3D columns",
+    "revised_text": "Narrative notebook and 3D points encoding reported relative risk",
+    "changes": "Applied; matches actual outputs."
+  },
+  {
+    "lens": "prose",
+    "location": "book/intro.md:60",
+    "original_text": "Question → validated plan → mapped selection",
+    "revised_text": "Question → plan checked for allowed operations → mapped selection",
+    "changes": "Original gallery removed; no unsupported validation claim retained there."
+  },
+  {
+    "lens": "prose",
+    "location": "book/geoai/notebook-atlas.md:15",
+    "original_text": "Learn seasonality and aggregation",
+    "revised_text": "Learn daily variability and rolling totals",
+    "changes": "Applied; 30 invented daily values are not seasonal evidence."
+  }
+]

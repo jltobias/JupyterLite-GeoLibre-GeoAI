@@ -1,6 +1,6 @@
 # GeoLibre + GeoAI in JupyterLite
 
-This book is a set of **live, browser-native geospatial labs**. Each chapter can be read as documentation or launched into a writable JupyterLite session with no local Python installation.
+This book is a set of **live, browser-native geospatial labs**. Each notebook chapter can be read as documentation or launched into a writable JupyterLite session with no local Python installation.
 
 **Launch the lab:** [https://jltobias.github.io/JupyterLite-GeoLibre-GeoAI/lite/lab/index.html](https://jltobias.github.io/JupyterLite-GeoLibre-GeoAI/lite/lab/index.html)
 
@@ -32,41 +32,23 @@ The two platform introductions use **seven graphics from James L. Tobias's July 
 
 Health applications are **potential extensions requiring appropriate data and validation**, not claims that these educational notebooks already predict disease or demonstrate program impact. The guide distinguishes observations, fitted models, deterministic rules, synthetic examples and existing report results.
 
+## Explore future directions
+
+Two presentation-informed chapters connect the lessons to [digital twins and agent-based simulation](futures/digital-twins.md) and [map encryption and geoprivacy](futures/map-encryption.md). Four original visuals explain the model-update loop and privacy boundaries. These are potential extensions, not claims that this repository implements the separate Gaborone TB or encryption projects.
+
 ## Learn through the code
 
 **New to Python or GeoAI?** Start with the [illustrated learning guide](learning-guide.md). Every notebook now includes an infographic, a short captioned video with a transcript, a teaching cartoon and a reading guide before each code cell. The [visual learning library](https://jltobias.github.io/JupyterLite-GeoLibre-GeoAI/lite/files/assets/learning/index.html) works without a Python kernel.
 
-## Notebook gallery
+## Choose a notebook or visual
 
-| Lab | Focus | Launch |
-|---|---|---|
-| GeoLibre quickstart | GeoLibre map, GeoJSON, COG | [Open live](https://jltobias.github.io/JupyterLite-GeoLibre-GeoAI/lite/lab/index.html?path=00_geolibre_quickstart.ipynb) |
-| WorldPop + H3 | Population, PMTiles, hex indexing | [Open live](https://jltobias.github.io/JupyterLite-GeoLibre-GeoAI/lite/lab/index.html?path=01_worldpop_h3.ipynb) |
-| Census + GeoAI | Census polygons + browser clustering | [Open live](https://jltobias.github.io/JupyterLite-GeoLibre-GeoAI/lite/lab/index.html?path=02_census_geoai_counties.ipynb) |
-| Earth observation GeoAI | Major TOM layers + NASA GIBS browser ML | [Open live](https://jltobias.github.io/JupyterLite-GeoLibre-GeoAI/lite/lab/index.html?path=03_earth_observation_geoai.ipynb) |
-| CHIRPS climate | Daily rainfall COG | [Open live](https://jltobias.github.io/JupyterLite-GeoLibre-GeoAI/lite/lab/index.html?path=04_chirps_climate.ipynb) |
-| H3 earthquake GeoAI | USGS feed + anomaly detection | [Open live](https://jltobias.github.io/JupyterLite-GeoLibre-GeoAI/lite/lab/index.html?path=05_h3_earthquake_geoai.ipynb) |
-| GeoAI compatibility | Browser/full-stack boundary | [Open live](https://jltobias.github.io/JupyterLite-GeoLibre-GeoAI/lite/lab/index.html?path=06_geoai_compatibility.ipynb) |
-| STAC Browser catalogs | Four public browsers and their machine-readable APIs | [Open live](https://jltobias.github.io/JupyterLite-GeoLibre-GeoAI/lite/lab/index.html?path=07_stac_browser_catalogs.ipynb) |
-| STAC + GeoAI footprints | Cross-catalog metadata features, clustering, and footprints | [Open live](https://jltobias.github.io/JupyterLite-GeoLibre-GeoAI/lite/lab/index.html?path=08_stac_geoai_footprints.ipynb) |
-| GeoLibre demo recommender | Explainable text similarity over official demo themes | [Open live](https://jltobias.github.io/JupyterLite-GeoLibre-GeoAI/lite/lab/index.html?path=09_geolibre_demo_recommender.ipynb) |
-| Sister Cities graph GeoAI | Network roles and unusual connectivity profiles | [Open live](https://jltobias.github.io/JupyterLite-GeoLibre-GeoAI/lite/lab/index.html?path=10_sister_cities_graph_geoai.ipynb) |
-| Wildfire + STAC triage | Fire-perimeter anomaly scoring and Sentinel-2 discovery | [Open live](https://jltobias.github.io/JupyterLite-GeoLibre-GeoAI/lite/lab/index.html?path=11_wildfire_stac_triage.ipynb) |
+The [visual resource guide](visual-library.md) pairs **Read / Run / Watch / Infographic / Cartoon** links for all 18 notebooks. It also indexes 2D maps, 3D terrain, scenario animation, time-series charts and story-led interpretation, with clear evidence limits.
 
-## New visual reasoning labs
-
-| Lab | Focus | Launch |
-|---|---|---|
-| Astra spatial copilot | Question → validated plan → mapped selection | [Open live](https://jltobias.github.io/JupyterLite-GeoLibre-GeoAI/lite/lab/index.html?path=12_astra_spatial_copilot.ipynb) |
-| Astra vision + change | Image panels, masks and measured evidence | [Open live](https://jltobias.github.io/JupyterLite-GeoLibre-GeoAI/lite/lab/index.html?path=13_astra_vision_change.ipynb) |
-| Astra + 3D terrain | Contours, slopes, profiles and interactive 3D | [Open live](https://jltobias.github.io/JupyterLite-GeoLibre-GeoAI/lite/lab/index.html?path=14_astra_terrain_3d.ipynb) |
-| Astra accessibility tools | Networks, counterfactuals and sensitivity | [Open live](https://jltobias.github.io/JupyterLite-GeoLibre-GeoAI/lite/lab/index.html?path=15_astra_network_accessibility.ipynb) |
-| Sea-level-rise SaTScan evidence | Report-derived clusters, scenarios and 3D statistical views | [Open live](https://jltobias.github.io/JupyterLite-GeoLibre-GeoAI/lite/lab/index.html?path=16_sea_level_rise_sat_scan_geoai.ipynb) |
-| Rewiring global health | Six perspectives and purple synthesis for accountable interpretation | [Open live](https://jltobias.github.io/JupyterLite-GeoLibre-GeoAI/lite/lab/index.html?path=17_rewiring_global_health_six_hats.ipynb) |
+Start with **00 → 01 → 02** for maps and clustering; **03 → 13** for imagery; **14** for terrain; **12 → 15** for synthetic experiments with optional Astra assistance; **16** for report interpretation; and **17** for a facilitated discussion.
 
 ![A concept map connects synthetic terrain, slope derivatives, 3D maps and evidence-grounded Astra interpretation.](notebooks/assets/14_mindmap.svg)
 
-The enhanced labs pair maps with concept diagrams, charts or graphs, followed by an experiment that changes an assumption. Read the static book for diagrams and saved Astra-lab figures; launch JupyterLite to manipulate data and create live GeoLibre maps. The new labs use deliberately synthetic teaching data so you can test an explanation against known values before applying the workflow to observations.
+The enhanced labs pair maps with concept diagrams, charts or graphs, followed by an experiment that changes an assumption. Read the Book for diagrams and saved analytical figures; launch JupyterLite to manipulate data and create live GeoLibre maps. **Labs 12–15** use deliberately synthetic teaching data. **Lab 16** interprets a bundled PBIX-derived cluster summary, with saved charts and tables; **lab 17** supports human discussion. Neither is a new trained model or a validated health-impact study.
 
 | Your question | Suggested path | What to compare |
 |---|---|---|

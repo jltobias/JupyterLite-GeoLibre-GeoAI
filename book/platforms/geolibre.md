@@ -80,6 +80,8 @@ For global-health learning, this separation helps distinguish data, calculations
 (geolibre-citation)=
 ## How to cite GeoLibre and these figures
 
+**Creator and related work:** [Qiusheng Wu (giswqs)](https://github.com/giswqs) develops open-source geospatial tools. Alongside GeoLibre, his work includes the **GeoAI Python package**, documented in Wu, Q. (2026), *GeoAI: A Python package for integrating artificial intelligence with geospatial data analysis and visualization*, **Journal of Open Source Software, 11(118), 9605**, [doi:10.21105/joss.09605](https://joss.theoj.org/papers/10.21105/joss.09605). Explore his [GeoLibre tutorials](https://geolibre.app/tutorials/), [project gallery](https://geolibre.app/gallery/) and [open-source profile](https://github.com/giswqs) for his software and teaching work. Those upstream resources are separate from Tobias's adaptation into these browser lessons.
+
 Use the software's [recommended citation](https://geolibre.app/citation/):
 
 > Wu, Q. (2026). *GeoLibre: A lightweight, cloud-native GIS platform for visualizing, exploring, and analyzing geospatial data.* Zenodo. [https://doi.org/10.5281/zenodo.20785400](https://doi.org/10.5281/zenodo.20785400).
