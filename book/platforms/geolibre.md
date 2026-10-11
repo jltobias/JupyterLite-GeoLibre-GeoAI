@@ -73,7 +73,7 @@ Try a three-stage learning exercise:
 
 1. **Inspect a layer** in [lab 00](../notebooks/00_geolibre_quickstart.ipynb). Toggle it and locate its source. This is GIS exploration.
 2. **Inspect a learned grouping** in [lab 02](../notebooks/02_census_geoai_counties.ipynb). Read which features enter K-Means. The algorithm forms groups; GeoLibre shows their geography. Group labels are not diagnoses or established risk categories.
-3. **Change an assumption** in [lab 14](../notebooks/14_astra_terrain_3d.ipynb) or [lab 16](../notebooks/16_sea_level_rise_sat_scan_geoai.ipynb). Ask what a 3D height or animation represents. Lab 14 uses synthetic terrain; lab 16's statistical columns and scenarios are not simulated flood depths.
+3. **Change an assumption** in [lab 14](../notebooks/14_astra_terrain_3d.ipynb) or [lab 16](../notebooks/16_sea_level_rise_sat_scan_geoai.ipynb). Ask what a 3D height or animation represents. Lab 14 uses synthetic terrain; lab 16's 3D risk points and scenarios are not simulated flood depths.
 
 For global-health learning, this separation helps distinguish data, calculations and presentation. A proposed service-access map still needs appropriate population and service data, validation and local review. The [health field guide](../geoai/hiv-tb.md) explains those evidence boundaries. Do not put identifiable health records or credentials in shared map projects; review external destinations and the [GeoLibre privacy policy](https://geolibre.app/privacy/) before any sensitive use.
 
