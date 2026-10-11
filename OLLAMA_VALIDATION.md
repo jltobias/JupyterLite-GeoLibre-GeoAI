@@ -8,7 +8,7 @@ Checked 11 October 2026. These results concern teaching software, not a clinical
 - All 21 notebooks pass schema/syntax validation. Offline labs 12–20 execute in ordinary Python; labs 18–20 save static figures and labeled fixture outputs without contacting Ollama. The earlier labs' committed outputs are preserved.
 - Every notebook has matching Book/Lite sources and code guides. Labs 18–20 add 14 guides, three original infographics, three cartoons and three 32-second captioned storyboards. These videos are not recordings of a live assistant session.
 - `scripts/build_ollama_lessons.py --check` verifies authored lessons and the public twelve-cell project; `scripts/build_assistant_visuals.py --check` verifies three original chapter diagrams.
-- `scripts/check_ollama_pyodide.py` ran the real browser/Pyodide HTTP branch with intercepted **mock** Ollama responses and an aborted Fetch request. It verified the seven-cell selection and a truthful failed-connection diagnostic under Python 3.12.7. This validates the helper's browser runtime path, not access to the user's model from the published origin. No browser protections are disabled by this test.
+- `scripts/check_ollama_pyodide.py` ran the real browser/Pyodide HTTP branch with intercepted **mock** Ollama responses and an aborted Fetch request. It verified the seven-cell selection and a truthful failed-connection diagnostic under Python **3.12.7 and 3.14.2** (Pyodide 0.27.6 and 314.0.6). The test supports both classic `.js` and modern `.mjs` loaders; the latter corrected a CI-only loader mismatch. This validates the helper's browser runtime path, not access to the user's model from the published origin. No browser protections are disabled by this test.
 
 ## Live local inference
 

@@ -15,9 +15,10 @@ def main():
     from playwright.sync_api import sync_playwright
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--base-url", required=True, help="Locally served built site")
+    parser.add_argument("--runtime-url", help="Optional official Pyodide entry point for cross-version testing")
     args = parser.parse_args()
     schema = json.loads((ROOT / "site/lite/extensions/@jupyterlite/pyodide-kernel-extension/static/schema/kernel.v0.schema.json").read_text())
-    runtime_url = schema["properties"]["pyodideUrl"]["default"]
+    runtime_url = args.runtime_url or schema["properties"]["pyodideUrl"]["default"]
     source = (ROOT / "book/notebooks/ollama_mapping.py").read_text(encoding="utf-8")
     calls = []
     with sync_playwright() as pw:
@@ -47,8 +48,14 @@ def main():
             route.fulfill(status=200, headers=headers, content_type="application/json", body=json.dumps(payload))
         page.route("http://127.0.0.1:11434/**", mocked)
         page.goto(args.base_url.rstrip("/") + "/intro.html")
-        page.add_script_tag(url=runtime_url)
-        page.evaluate("async () => { window.runtime = await loadPyodide(); }")
+        if runtime_url.endswith(".mjs"):
+            page.evaluate("""async url => {
+                const {loadPyodide} = await import(url);
+                window.runtime = await loadPyodide();
+            }""", runtime_url)
+        else:
+            page.add_script_tag(url=runtime_url)
+            page.evaluate("async () => { window.runtime = await loadPyodide(); }")
         page.evaluate("source => runtime.FS.writeFile('/home/pyodide/ollama_mapping.py',source)", source)
         result = page.evaluate("""async () => await runtime.runPythonAsync(`
 import json, sys
@@ -75,4 +82,11 @@ json.dumps(failure)
 
 
 if __name__ == "__main__":
-    main()
+    try:
+        main()
+    except Exception as error:
+        # Surface a short actionable failure in public CI annotations as well
+        # as the detailed traceback; no credentials are used by this test.
+        message = f"Pyodide smoke test: {type(error).__name__}: {error}"
+        print("::error::" + message.replace("%", "%25").replace("\r", "%0D").replace("\n", "%0A")[:2500])
+        raise

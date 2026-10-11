@@ -72,9 +72,9 @@ jobs:
           python -m http.server 8765 --directory site > /tmp/geoai-site.log 2>&1 &
           SERVER_PID=$!
           trap 'kill "$SERVER_PID"' EXIT
-          python scripts/check_learning_browser.py --base-url http://127.0.0.1:8765
-          python scripts/check_visual_browser.py --base-url http://127.0.0.1:8765 --offline-js
           python scripts/check_ollama_pyodide.py --base-url http://127.0.0.1:8765
+          python scripts/check_visual_browser.py --base-url http://127.0.0.1:8765 --offline-js
+          python scripts/check_learning_browser.py --base-url http://127.0.0.1:8765
 
       - name: Configure Pages
         if: github.event_name != 'pull_request'
