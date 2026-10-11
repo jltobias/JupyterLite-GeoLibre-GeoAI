@@ -38,6 +38,7 @@ jobs:
           python scripts/build_learning_media.py --check
           python scripts/build_resource_index.py --check
           python scripts/build_future_chapters.py --check
+          python scripts/build_stac_discovery.py --check
           python scripts/build_geoai_primer.py --check
           python scripts/extract_platform_graphics.py --check
           python scripts/validate_notebooks.py --execute

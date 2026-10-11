@@ -3,6 +3,7 @@ root: intro
 chapters:
   - file: platforms/jupyterlite
   - file: platforms/geolibre
+  - file: platforms/stac-discovery
   - file: geoai/primer
     sections:
       - file: geoai/how-it-works

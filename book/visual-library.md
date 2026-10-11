@@ -6,6 +6,7 @@ Start with a question, not a display type. **Read** opens the Book chapter; **Ru
 
 | Explore | Starting point | What the view actually represents |
 |---|---|---|
+| Data and metadata discovery | [STAC Browser field guide](platforms/stac-discovery.md) | Two teaching graphics, a metadata passport and an offline Python exercise; discovery is not a model result |
 | 2D maps and layers | [GeoLibre quickstart](notebooks/00_geolibre_quickstart.ipynb), [STAC footprints](notebooks/08_stac_geoai_footprints.ipynb), [report city locations](notebooks/16_sea_level_rise_sat_scan_geoai.ipynb) | Geographic layers; live GeoLibre widgets require running the notebook |
 | 3D maps and scenes | [Terrain lab 14](notebooks/14_astra_terrain_3d.ipynb) | A rotatable synthetic surface and GeoLibre elevation extrusions; not measured terrain at the displayed location |
 | 3D statistical views | [Report lab 16](notebooks/16_sea_level_rise_sat_scan_geoai.ipynb) | Longitude × latitude × relative risk; height is **not water depth** |

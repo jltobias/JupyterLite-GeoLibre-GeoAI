@@ -25,6 +25,8 @@ The diagrams are accessible, locally bundled SVGs with plain-language reading gu
 
 ## Explore maps, scenes and visual stories
 
+**Discover the inputs first:** [What is a STAC Browser?](https://jltobias.github.io/JupyterLite-GeoLibre-GeoAI/platforms/stac-discovery.html) connects the [companion STAC Explorer](https://jltobias.github.io/JupyterLite-STAC-Browser/explorer/) to labs 07, 08 and 11. It includes two original visuals, a metadata-suitability checklist, an offline Python inspection example, and guidance on search versus downloads/crops, access restrictions and reproducible exports.
+
 [Open the visual resource guide](https://jltobias.github.io/JupyterLite-GeoLibre-GeoAI/visual-library.html) for explanations of what each view represents and what requires running Python.
 
 | Resource | Live destination | Read the evidence correctly |

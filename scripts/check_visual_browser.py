@@ -27,7 +27,8 @@ def main():
         browser = pw.chromium.launch()
         page = browser.new_page(viewport={'width':1280,'height':900})
         from build_future_chapters import render_all
-        for name, markup in render_all().items():
+        from build_stac_discovery import render_all as render_discovery
+        for name, markup in {**render_all(), **render_discovery()}.items():
             page.set_content('<html><body style="margin:0">'+markup+'</body></html>')
             clipped = page.evaluate("""() => {
                 const bounds=document.querySelector('svg').getBoundingClientRect();
@@ -44,16 +45,18 @@ def main():
             bundle = get_plotlyjs()
             page.route('https://cdn.plot.ly/*.js', lambda route: route.fulfill(content_type='application/javascript',body=bundle))
         base = args.base_url.rstrip('/')
-        for chapter in ('digital-twins','map-encryption'):
-            page.goto(base + '/futures/' + chapter + '.html')
+        for chapter in ('futures/digital-twins','futures/map-encryption','platforms/stac-discovery'):
+            page.goto(base + '/' + chapter + '.html')
             page.wait_for_function("[...document.querySelectorAll('article img')].every(i=>i.complete)")
             assert page.locator('article img').count() == 2
             assert page.evaluate("[...document.querySelectorAll('article img')].every(i=>i.naturalWidth && i.alt)")
             for width in (1280,390):
                 page.set_viewport_size({'width':width,'height':900})
+                if width == 390:
+                    page.wait_for_function("document.querySelector('article').getBoundingClientRect().width >= innerWidth-32")
                 assert page.evaluate('document.documentElement.scrollWidth <= innerWidth+2'), chapter
                 if args.screenshots:
-                    page.screenshot(path=str(args.screenshots/f'{chapter}-{width}.png'),full_page=True)
+                    page.screenshot(path=str(args.screenshots/f'{chapter.split("/")[-1]}-{width}.png'),full_page=True,animations='disabled')
             page.set_viewport_size({'width':1280,'height':900})
         page.goto(base + '/visual-library.html')
         assert page.locator('article a',has_text='Watch').count() == 18

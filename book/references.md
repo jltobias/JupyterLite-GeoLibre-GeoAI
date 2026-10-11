@@ -38,6 +38,8 @@ The [source register](assets/futures/provenance.json) identifies the exact suppl
 
 ## Software
 
+The [STAC discovery chapter](platforms/stac-discovery.md) connects the [JupyterLite STAC Browser companion](https://github.com/jltobias/JupyterLite-STAC-Browser), credited to its contributors in [CITATION.cff](https://github.com/jltobias/JupyterLite-STAC-Browser/blob/563ed599a42188a4b476cfec44173e97fa06e3cc/CITATION.cff), with [STAC](https://stacspec.org/en/about/stac-spec/), [Item Search](https://github.com/radiantearth/stac-api-spec/blob/main/item-search/README.md) and the separate [upstream STAC Browser](https://github.com/radiantearth/stac-browser). Companion revision reviewed: `563ed599a42188a4b476cfec44173e97fa06e3cc`, 11 October 2026. Two original diagrams/cartoons live in `assets/discovery/`; no companion client code or provider imagery is copied.
+
 - **GeoLibre** — open-source, browser/desktop/Jupyter GIS: https://geolibre.app/ and https://github.com/opengeos/GeoLibre
 - **GeoAI** — Wu, Q. (2026). *GeoAI: A Python package for integrating artificial intelligence with geospatial data analysis and visualization.* Journal of Open Source Software, 11(118), 9605. https://doi.org/10.21105/joss.09605
 - **JupyterLite** — https://jupyterlite.readthedocs.io/

@@ -32,6 +32,10 @@ The two platform introductions use **seven graphics from James L. Tobias's July 
 
 Health applications are **potential extensions requiring appropriate data and validation**, not claims that these educational notebooks already predict disease or demonstrate program impact. The guide distinguishes observations, fitted models, deterministic rules, synthetic examples and existing report results.
 
+## Discover data before choosing a model
+
+Before choosing inputs, read [What is a STAC Browser?](platforms/stac-discovery.md). Follow a guided discovery exercise in the companion STAC Field Guide, inspect metadata with Python, and distinguish footprints, previews, downloads and GeoAI-ready evidence.
+
 ## Explore future directions
 
 Two presentation-informed chapters connect the lessons to [digital twins and agent-based simulation](futures/digital-twins.md) and [map encryption and geoprivacy](futures/map-encryption.md). Four original visuals explain the model-update loop and privacy boundaries. These are potential extensions, not claims that this repository implements the separate Gaborone TB or encryption projects.
