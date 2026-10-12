@@ -4,7 +4,37 @@ Looking for the tools rather than the methods? [What is JupyterLite?](../platfor
 
 **GeoAI uses artificial-intelligence methods with geographic data and reasoning.** It asks not only “what pattern is present?” but also “where, when, at what scale, and connected to what?” Geography changes the inputs, interpretation and testing of a model. This introduction follows the broad definition used in [USGS GeoAI research](https://www.usgs.gov/publications/geoai-us-geological-survey-topographic-mapping).
 
-This visual field guide answers the questions behind the code. Start here without installing Python or running a notebook. All 24 new diagrams are original teaching schematics, not measured health outcomes; the surrounding text provides their reading guide. Open any diagram in a new tab to enlarge it.
+This visual field guide answers the questions behind the code. Start here without installing Python or running a notebook. The guide's 24 original teaching schematics are distinct from the two credited Esri diagrams below and the supplied artwork later in this chapter. None of these conceptual illustrations is evidence of measured health outcomes; the surrounding text provides a reading guide.
+
+(esri-geoai-diagrams)=
+## Start with Esri's two diagrams
+
+One picture shows **where GeoAI fits**; the other unpacks **the methods involved**. Both images below come from Esri's [ArcGIS Pro 3.6 documentation, *GeoAI*](https://pro.arcgis.com/en/pro-app/3.6/help/analysis/ai/geoai.htm). Esri's [GeoAI overview](https://www.esri.com/en-us/capabilities/geoai/overview) provides related application context, rather than the source of these image files.
+
+### 1. GeoAI connects AI and spatial analysis
+
+![Esri Venn diagram: Artificial Intelligence and Spatial Analysis are overlapping circles, with GeoAI labeled in their intersection.](../assets/esri/esri-geoai-overlap.png)
+
+*Figure 1. GeoAI at the intersection.* **Image credit: Esri.** Reproduced unchanged. [Source: ArcGIS Pro 3.6, GeoAI — Key concepts](https://pro.arcgis.com/en/pro-app/3.6/help/analysis/ai/geoai.htm); [original Esri image](https://pro.arcgis.com/en/pro-app/3.6/help/analysis/ai/GUID-CCB3D3D4-4101-4D26-9404-C91B2F3D6BF5-web.png). <a href="../_images/esri-geoai-overlap.png" target="_blank" rel="noopener">Open Figure 1 at its original size</a>.
+
+**Read the picture:** the overlap is the key—GeoAI brings AI methods together with spatial analysis. The circles describe a conceptual relationship, not percentages of a dataset or evidence that every GIS operation is AI.
+
+### 2. AI has method families; spatial analysis has many tools
+
+![Esri diagram: Deep Learning sits inside Machine Learning, which sits inside Artificial Intelligence. A separate Spatial Analysis circle lists vector, image and raster, spatiotemporal, modeling, 3D, network and real-time analysis.](../assets/esri/esri-ai-spatial-analysis.png)
+
+*Figure 2. AI categories and spatial-analysis methods.* **Image credit: Esri.** Reproduced unchanged. [Source: ArcGIS Pro 3.6, GeoAI — Key concepts](https://pro.arcgis.com/en/pro-app/3.6/help/analysis/ai/geoai.htm); [original Esri image](https://pro.arcgis.com/en/pro-app/3.6/help/analysis/ai/GUID-1428ADD5-61AC-48B5-A6DD-3F6353705DE1-web.png). <a href="../_images/esri-ai-spatial-analysis.png" target="_blank" rel="noopener">Open Figure 2 at its original size</a>.
+
+**Read the picture:** on the left, deep learning is inside machine learning, which is inside AI. On the right are ways to examine geographic data and relationships. This second image is a **nested-category and method-family diagram**, not another overlap diagram. Read it alongside Figure 1: the separate circles do not mean the fields cannot work together.
+
+**Connect the pictures to the code — our teaching examples:**
+
+- [Cholera lab 21](../notebooks/21_cholera_geoai_first_steps.ipynb) uses DBSCAN to group recorded locations by geographic distance. This is a small machine-learning example, **not deep learning**, and its groups do not establish the cause of an outbreak.
+- [Network lab 15](../notebooks/15_astra_network_accessibility.ipynb) computes routes after an invented bridge closure. This is useful **spatial analysis without a fitted AI model**.
+
+**Teach-back:** can you explain why the clustering example combines the two circles, while drawing a map alone does not? The diagrams are Esri's; the reading guides and notebook comparisons are this book's interpretation, not an Esri evaluation of these lessons.
+
+**Attribution:** © Esri. Images accessed **12 October 2026**, retained locally without alteration so the figures do not depend on live image requests to Esri. Their copyright remains with Esri; they are not original repository artwork or relicensed under this project's software license. No affiliation or endorsement is implied. See the {ref}`Esri diagram reference <esri-geoai-diagram-reference>` and [image provenance record](../assets/esri/provenance.json).
 
 ## Is GeoAI different from “traditional AI”?
 
@@ -57,7 +87,7 @@ Esri presents automation, faster situational awareness and geographically inform
 
 For a proposed health-program pilot, ask whether a workflow reduces review time **without increasing missed problems or unequal performance across places**. Compare with the current process and review errors with local practitioners. This is the book's suggested evaluation question; see [how GeoAI works](how-it-works.md) for validation and governance, not an Esri finding about a health program.
 
-**Attribution:** ideas above are paraphrased from **Esri's GeoAI overview**, accessed **11 October 2026**; the [reference register](../references.md) provides the citation. No Esri graphics, videos or text passages are reproduced. This independent book is not affiliated with or endorsed by Esri, and the comparison does not add ArcGIS software or an Esri model to the notebooks.
+**Attribution:** ideas above are paraphrased from **Esri's GeoAI overview**, accessed **11 October 2026** and rechecked **12 October 2026**; the [reference register](../references.md) provides the citation. The {ref}`two Esri diagrams earlier in this chapter <esri-geoai-diagrams>` are reproduced separately from the ArcGIS Pro documentation with image-level credits. No Esri videos or text passages are reproduced. This independent book is not affiliated with or endorsed by Esri, and the comparison does not add ArcGIS software or an Esri model to the notebooks.
 
 (aws-geoai-perspective)=
 ## What AWS's overview adds

@@ -52,6 +52,28 @@ def main():
                 failures.extend(f"{chapter.name}@{width}: missing image/alt {src}" for src in bad)
                 overflow=page.evaluate("document.documentElement.scrollWidth > innerWidth+2")
                 if overflow: failures.append(f"{chapter.name}@{width}: horizontal page overflow")
+                if chapter.stem=="primer":
+                    # The two requested Esri figures must render with credits and working zoom links.
+                    for filename in ("esri-geoai-overlap.png","esri-ai-spatial-analysis.png"):
+                        figure=page.locator(f'article img[src="../_images/{filename}"]')
+                        if figure.count()!=1:
+                            failures.append(f"primer@{width}: missing Esri figure {filename}")
+                            continue
+                        if not figure.get_attribute("alt").startswith("Esri"):
+                            failures.append(f"primer@{width}: missing Esri alternative text")
+                        paragraph=figure.locator("xpath=..").locator("xpath=following-sibling::p[1]")
+                        if "Image credit: Esri." not in paragraph.inner_text():
+                            failures.append(f"primer@{width}: missing figure-level credit")
+                        link=paragraph.locator(f'a[href="../_images/{filename}"]')
+                        with page.expect_popup() as popup_info:
+                            link.click()
+                        popup=popup_info.value
+                        popup.wait_for_load_state()
+                        if popup.locator("img").evaluate("i=>i.naturalWidth")<400:
+                            failures.append(f"primer@{width}: original-size figure failed")
+                        popup.close()
+                        figure.scroll_into_view_if_needed()
+                        page.screenshot(path=str(args.output/f"{filename[:-4]}-{width}.png"))
                 if chapter.stem in {"primer","climate-health","hiv-tb"}:
                     page.screenshot(path=str(args.output/f"page-{chapter.stem}-{width}.png"),full_page=True)
         browser.close()

@@ -66,13 +66,49 @@ class GeoAIPrimer(unittest.TestCase):
         section=primer.split("## What Esri's overview adds\n",1)[1].split("\n## ",1)[0]
         self.assertIn("this book's teaching interpretation",section)
         self.assertIn("not affiliated with or endorsed by Esri",section)
-        self.assertIn("No Esri graphics, videos or text passages are reproduced",section)
+        self.assertIn("No Esri videos or text passages are reproduced",section)
+        self.assertIn("<esri-geoai-diagrams>",section)
         self.assertIn("not validated forecasts",section)
         self.assertIn("11 October 2026",section)
         self.assertIn("Esri. (n.d.).",references)
-        # Refer readers to the original source; don't silently embed its assets.
+        # The overview discussion is a paraphrase; separately credited images come from the docs.
         self.assertNotIn("![",section)
         self.assertNotIn("<iframe",section)
+
+    def test_esri_diagrams_have_unchanged_assets_and_figure_level_sources(self):
+        assets=ROOT/"book/assets/esri"
+        metadata=json.loads((assets/"provenance.json").read_text(encoding="utf-8"))
+        primer=(ROOT/"book/geoai/primer.md").read_text(encoding="utf-8")
+        references=(ROOT/"book/references.md").read_text(encoding="utf-8")
+        register=(ROOT/"DATA_SOURCES.md").read_text(encoding="utf-8")
+        self.assertEqual(metadata["creator"],"Esri")
+        self.assertEqual(len(metadata["images"]),2)
+        self.assertEqual({p.name for p in assets.glob("*.png")},
+                         {item["file"] for item in metadata["images"]})
+        section=primer.split("## Start with Esri's two diagrams\n",1)[1].split("\n## ",1)[0]
+        self.assertEqual(section.count("**Image credit: Esri.**"),2)
+        for item in metadata["images"]:
+            with self.subTest(image=item["file"]):
+                data=(assets/item["file"]).read_bytes()
+                self.assertEqual(data[:8],b"\x89PNG\r\n\x1a\n")
+                self.assertEqual(hashlib.sha256(data).hexdigest(),item["sha256"])
+                self.assertEqual(struct.unpack(">II",data[16:24]),(item["width"],item["height"]))
+                self.assertIn(f'](../assets/esri/{item["file"]})',section)
+                self.assertIn(f'href="../_images/{item["file"]}" target="_blank" rel="noopener"',section)
+                self.assertIn(item["source_url"],section)
+                self.assertIn(item["source_url"],references)
+        for source in (primer,references,register):
+            self.assertIn(metadata["source_page"],source)
+            self.assertIn(metadata["related_overview"],source)
+            self.assertNotIn("No Esri graphics, videos or text passages are reproduced",source)
+            self.assertNotIn("No Esri media or text passages are reproduced",source)
+        self.assertIn("not deep learning",section)
+        self.assertIn("spatial analysis without a fitted AI model",section)
+        self.assertIn("not an Esri evaluation",section)
+        self.assertIn("12 October 2026",section)
+        self.assertIn("(esri-geoai-diagram-reference)=",references)
+        self.assertIn("<esri-geoai-diagram-reference>",section)
+        self.assertLess(primer.index("(esri-geoai-diagrams)="),primer.index("## Is GeoAI different"))
 
     def test_aws_attribution_and_browser_teaching_boundaries(self):
         url="https://aws.amazon.com/what-is/geospatial-artificial-intelligence/"
