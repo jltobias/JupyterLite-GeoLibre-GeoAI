@@ -1,0 +1,17 @@
+{
+  "asset": "rewiring-global-health.png",
+  "title": "Rewiring Global Health for the Age of AI",
+  "supplier": "James L. Tobias",
+  "original_designer": "Not independently verified",
+  "source_repository": "https://github.com/jltobias/JupyterLite-Rewiring-Global-Health",
+  "source_revision": "84bf945de91ad5ae3c8b2f67e9bd3e4781cf88b9",
+  "source_path": "assets/rewiring-global-health.png",
+  "source_register": "https://github.com/jltobias/JupyterLite-Rewiring-Global-Health/blob/84bf945de91ad5ae3c8b2f67e9bd3e4781cf88b9/DATA_SOURCES.md",
+  "sha256": "b03860f523d5c0f75278f85a7e8564df9aea3c92f4c273d586d5aa74d6c47a4d",
+  "width": 1672,
+  "height": 941,
+  "copied_on": "2026-10-12",
+  "transformation": "None; copied byte-for-byte at the user's request",
+  "rights": "Supplied project artwork; third-party elements, names and quotations retain their respective rights. No blanket media license is asserted.",
+  "interpretation": "Conceptual project overview, not analytical data, measured health outcomes or a verified verbatim literary quotation. Pictured controls are static and lab numbering belongs to the companion artwork."
+}

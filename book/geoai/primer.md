@@ -86,6 +86,26 @@ Amazon Web Services (AWS) describes GeoAI as combining geographically referenced
 
 This is useful for teaching, prototyping and explaining assumptions to program colleagues. It is **not evidence that a prototype is ready for sensitive operational data**. External map services can receive requests and supplied layer content; an exported notebook can retain outputs. Use public or synthetic examples in this public site, never patient addresses, line lists, HIV status or credentials.
 
+(spatial-intelligence)=
+## What is spatial intelligence?
+
+**Stanford HAI describes spatial intelligence as understanding and reasoning about the three-dimensional physical world:** the arrangement of objects, their motion and their interactions. In AI, that involves interpreting physical surroundings and using relationships such as depth, geometry and physics to navigate them. Stanford gives robotics, autonomous vehicles and augmented reality as examples. [Source: Stanford HAI, *What is Spatial Intelligence?*](https://hai.stanford.edu/ai-definitions/what-is-spatial-intelligence).
+
+**How does that connect to GeoAI?** Both can use spatial relationships, but they are not synonyms. GeoAI centers AI methods on geographic information; spatial intelligence can concern a room or an object without using a geographic coordinate system. Not every GeoAI task requires a 3D representation or reasoning about physical interactions. The following comparison is **this book's teaching interpretation**, not a classification supplied by Stanford:
+
+| Idea | A simple question to remember |
+|---|---|
+| **GIS and mapping** | Where are the roads, buildings and services, and how are they connected? |
+| **GeoAI** | What patterns can an AI method learn from geographic observations? |
+| **Spatial intelligence** | How are things arranged, and what movements or interactions are possible? |
+| **Geospatial intelligence**, as used in this book | What checked geographic evidence helps people choose and evaluate an action? |
+
+These ideas overlap; they are **not a ranking of increasingly capable products**. A GIS calculation may answer a question without AI, and an AI result still needs interpretation and validation.
+
+**Try the distinction in the browser:** [cholera lab 21](../notebooks/21_cholera_geoai_first_steps.ipynb) fits a model to geographic distances; it does not learn how disease spreads through a physical environment. [Lab 14](../notebooks/14_astra_terrain_3d.ipynb) displays an invented 3D surface; **a 3D map is not by itself spatial intelligence**. [Lab 15](../notebooks/15_astra_network_accessibility.ipynb) shows why a closed bridge changes access, but computes routes using authored rules rather than a learned understanding of the physical world. Together they make the distinction between displaying, calculating and learning inspectable.
+
+**Attribution:** the opening paragraph is a paraphrase of Stanford HAI's glossary entry, accessed **12 October 2026**; see the [reference register](../references.md). The notebook comparisons are ours. The definition describes a capability, not evidence that these notebooks achieve human-level physical reasoning. No Stanford artwork or text passage is reproduced.
+
 (toward-geospatial-intelligence)=
 ## Toward geospatial intelligence
 
@@ -99,11 +119,37 @@ Stanford HAI's **Zhang et al. (27 July 2026)** discuss *spatial intelligence* as
 
 Our notebooks teach building blocks—not a learned world model. Lab 14's invented surface, lab 16's scenario charts and labs 18–20's local chat-assisted mapping must not be mistaken for a validated physical simulation. See [digital twins](../futures/digital-twins.md) for a separate explanation of maintaining and testing a representation of a real system.
 
+(six-thinking-hats-infographic)=
+### Read the infographic: people connect evidence to decisions
+
 ![User-supplied infographic shows a global-health GIS professional surrounded by six thinking perspectives and a purple orchestration extension, connecting evidence and judgment to healthier and more equitable outcomes.](../notebooks/assets/six-thinking-hats-global-health.png)
+
+*Supplied artwork: a global-health GIS professional in the age of AI.* <a href="../_images/six-thinking-hats-global-health.png" target="_blank" rel="noopener">Open the full-resolution infographic</a> to read the small text; the summary below is available without enlarging the image.
 
 **Read the picture:** your graphic puts a person, not an algorithm, at the center. White checks evidence; red records concerns; black examines harms; yellow identifies benefits to test; green proposes alternatives; blue organizes review; purple synthesizes without erasing disagreement. These are useful questions along the chain from maps to decisions, not proof that seven AI agents have validated a result. [Lab 17](../notebooks/17_rewiring_global_health_six_hats.ipynb) develops the discussion; [lab 20](../notebooks/20_ollama_evidence_review.ipynb) applies it to an assistant's output.
 
-**Artwork attribution:** user-supplied *SIX-THINKING-HATS-GPT-output-example.png*, reproduced unchanged. Original designer/generation provenance has not been independently verified. The six-hat concept is associated with Edward de Bono; purple orchestration is this supplied artwork's extension, not an original seventh hat. No Stanford artwork is reproduced, and neither Stanford nor the source authors endorse this book's synthesis.
+**Artwork attribution:** user-supplied *SIX-THINKING-HATS-GPT-output-example.png*, reproduced unchanged. Original designer/generation provenance has not been independently verified. The conceptual reference is **Edward de Bono, *Six Thinking Hats*** ([Goodreads book listing](https://www.goodreads.com/en/book/show/97030.Six_Thinking_Hats); {ref}`edition and reference details <six-thinking-hats-reference>`). Purple orchestration is this supplied artwork's extension, not an original seventh hat. No Stanford artwork is reproduced, and neither Stanford nor the source authors endorse this book's synthesis.
+
+These are **thinking modes, not fixed personality types**. In de Bono's group method, participants can examine the same question in the same mode together, then switch; blue already manages the thinking process. This graphic's purple synthesis is an additional teaching device, not a replacement for that role. [Source: de Bono's official Six Thinking Hats summary](https://www.debono.com/_files/ugd/acf405_0ec0d7f959d7424fad5a9f9e9ec581e7.pdf).
+
+(rewiring-global-health-infographic)=
+### Rewiring global health: connect people, not only technologies
+
+![User-supplied Rewiring Global Health infographic connects browser notebooks, geographic data, climate information, AI, privacy and collaboration; its eight illustrated lab themes and health-outcome goals describe the companion project rather than measured results here.](../assets/rewiring/rewiring-global-health.png)
+
+*Supplied project artwork: Rewiring Global Health for the Age of AI.* <a href="../_images/rewiring-global-health.png" target="_blank" rel="noopener">Open the full-resolution graphic</a>. Its pictured buttons are part of a static image, not working controls. Explore the [companion Jupyter Book](https://jltobias.github.io/JupyterLite-Rewiring-Global-Health/) or [its source repository](https://github.com/jltobias/JupyterLite-Rewiring-Global-Health) using these live links.
+
+**Read the picture:** follow three connections:
+
+1. **Tools and evidence:** the upper strip connects browser notebooks, geographic methods and environmental data. Tools make exploration possible; they do not establish the quality of the evidence.
+2. **Questions and experiments:** the illustrated lab cards suggest ways to explore places, change and uncertainty. Their numbering belongs to the companion artwork; use [this book's notebook atlas](notebook-atlas.md) for the actual lessons here.
+3. **People and accountability:** privacy, collaboration and ethics connect analysis to decisions. The bottom line is a conceptual aspiration, **not a mathematical equation or proof of improved health outcomes**. A map, world model or digital twin needs evaluation for its intended use.
+
+**Related reading:** Ethan Zuckerman's *Rewire: Digital Cosmopolitans in the Age of Connection* (2013) argues that the ability to communicate online does not automatically create understanding across cultures. His account emphasizes people who bridge communities, translation and encounters beyond familiar circles. [Author's description](https://ethanzuckerman.com/books/rewire/); [requested Goodreads listing](https://www.goodreads.com/en/book/show/16233761-rewire); {ref}`full book reference <rewire-reference>`.
+
+**Our GeoAI teaching connection:** ask whose places, languages and lived experience are absent from a dataset or model review. Invite those perspectives before treating a geographic pattern as useful intelligence. This is our application of the book's themes, not a GeoAI method or health finding reported by Zuckerman.
+
+**Artwork attribution and limits:** supplied by **James L. Tobias** and copied unchanged from the companion repository's [recorded source revision](https://github.com/jltobias/JupyterLite-Rewiring-Global-Health/blob/84bf945de91ad5ae3c8b2f67e9bd3e4781cf88b9/assets/rewiring-global-health.png). Its composite imagery is not analytical data, and the wording attributed to Zuckerman inside the graphic has **not been verified as a verbatim quotation**; use the paraphrase and book reference above. The pictured “no servers required” language concerns browser computation, not the absence of hosting or external data/model services. Third-party elements retain their respective rights; no author endorsement is implied. See the [asset provenance record](../assets/rewiring/provenance.json).
 
 **Try the next step:** the [advanced Ollama/GeoLibre chapter](../advanced/ollama-assistant.md) connects natural-language requests to map operations while keeping model proposals, computed evidence and human approval distinct.
 

@@ -1,6 +1,9 @@
 """Keep the field guide reproducible, linked and accessible without live services."""
 from pathlib import Path
+import hashlib
+import json
 import re
+import struct
 import sys
 import unittest
 import xml.etree.ElementTree as ET
@@ -92,6 +95,64 @@ class GeoAIPrimer(unittest.TestCase):
         self.assertIn("{ref}`AWS perspective in the primer <aws-geoai-perspective>`",references)
         self.assertNotIn("![",section)
         self.assertNotIn("<iframe",section)
+
+    def test_spatial_intelligence_definition_and_notebook_boundaries(self):
+        url="https://hai.stanford.edu/ai-definitions/what-is-spatial-intelligence"
+        primer=(ROOT/"book/geoai/primer.md").read_text(encoding="utf-8")
+        references=(ROOT/"book/references.md").read_text(encoding="utf-8")
+        register=(ROOT/"DATA_SOURCES.md").read_text(encoding="utf-8")
+        for source in (primer,references,register):
+            self.assertIn(url,source)
+        self.assertIn("(spatial-intelligence)=",primer)
+        section=primer.split("## What is spatial intelligence?\n",1)[1].split("\n## ",1)[0]
+        for boundary in ("this book's teaching interpretation", "not synonyms",
+                         "a 3D map is not by itself spatial intelligence",
+                         "12 October 2026", "No Stanford artwork or text passage is reproduced"):
+            self.assertIn(boundary,section)
+        for notebook in ("21_cholera_geoai_first_steps", "14_astra_terrain_3d", "15_astra_network_accessibility"):
+            self.assertIn(f"../notebooks/{notebook}.ipynb",section)
+        self.assertIn("{ref}`spatial-intelligence introduction <spatial-intelligence>`",references)
+
+    def test_thinking_and_connection_book_references(self):
+        primer=(ROOT/"book/geoai/primer.md").read_text(encoding="utf-8")
+        references=(ROOT/"book/references.md").read_text(encoding="utf-8")
+        register=(ROOT/"DATA_SOURCES.md").read_text(encoding="utf-8")
+        for url in ("https://www.goodreads.com/en/book/show/97030.Six_Thinking_Hats",
+                    "https://www.goodreads.com/en/book/show/16233761-rewire",
+                    "https://ethanzuckerman.com/books/rewire/"):
+            for source in (primer,references,register):
+                self.assertIn(url,source)
+        for label in ("six-thinking-hats-reference", "rewire-reference"):
+            self.assertIn(f"({label})=",references)
+            self.assertIn(f"<{label}>`",primer)
+        for entry in ("de Bono, E. (2000)", "Zuckerman, E. (2013)",
+                      "9780140296662", "9780393082838", "Penguin Books", "W. W. Norton"):
+            self.assertIn(entry,references)
+        self.assertIn("not an original seventh",primer)
+        self.assertIn("not fixed personality types",primer)
+        self.assertIn("not been verified as a verbatim quotation",primer)
+        self.assertIn("not a mathematical equation or proof of improved health outcomes",primer)
+
+    def test_supplied_infographics_preserve_provenance_and_enlargement_links(self):
+        primer=(ROOT/"book/geoai/primer.md").read_text(encoding="utf-8")
+        assets=ROOT/"book/assets/rewiring"
+        metadata=json.loads((assets/"provenance.json").read_text(encoding="utf-8"))
+        data=(assets/metadata["asset"]).read_bytes()
+        self.assertEqual(hashlib.sha256(data).hexdigest(),metadata["sha256"])
+        self.assertEqual(data[:8],b"\x89PNG\r\n\x1a\n")
+        self.assertEqual(struct.unpack(">II",data[16:24]),(metadata["width"],metadata["height"]))
+        self.assertIn(metadata["source_revision"],primer)
+        hats=ROOT/"book/notebooks/assets/six-thinking-hats-global-health.png"
+        self.assertEqual(hashlib.sha256(hats.read_bytes()).hexdigest(),
+                         "979853bfd774236a6a807d00a826e0cc6fccfc982e21f9fc3b8aa6c2a09a33bf")
+        for target in ("../notebooks/assets/six-thinking-hats-global-health.png",
+                       "../assets/rewiring/rewiring-global-health.png"):
+            self.assertEqual(primer.count(f"]({target})"),1)
+            # HTML links open Sphinx's image asset; Markdown file links force a download.
+            self.assertIn(f'href="../_images/{Path(target).name}" target="_blank" rel="noopener"',primer)
+        self.assertIn("Its pictured buttons are part of a static image",primer)
+        self.assertIn("interpretation",metadata)
+        self.assertIn("rights",metadata)
 
     def test_explanatory_arithmetic(self):
         # Protect the explicitly invented cohort illustration from misleading ratios.
