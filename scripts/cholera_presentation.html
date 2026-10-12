@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>From John Snow’s map to GeoAI — saved-results presentation</title>
+<style>
+:root{color-scheme:light;font-family:system-ui,sans-serif;color:#14283f;background:#f8fafc}
+*{box-sizing:border-box}body{margin:0;padding:clamp(12px,3vw,28px)}main{max-width:1200px;margin:auto}
+h1{font-size:clamp(1.6rem,4vw,2.5rem);margin:0 0 .4em}p{line-height:1.55;margin:.5em 0}
+.eyebrow{color:#515b70;font-size:.9rem}nav,.controls{display:flex;gap:12px;flex-wrap:wrap;margin:16px 0;align-items:center}
+button,select{font:inherit;padding:12px 16px;border:2px solid #456589;border-radius:8px;background:white;color:#14283f;cursor:pointer}
+button[aria-pressed=true]{background:#173f76;color:white}button:focus-visible,select:focus-visible,a:focus-visible{outline:4px solid #d98c00;outline-offset:3px}
+select:disabled{cursor:default;opacity:.6}.status{padding:12px 16px;background:#e7effb;border-left:5px solid #2459b8;border-radius:4px;min-height:3em}
+figure{margin:12px 0}img{width:100%;height:auto;display:block}figcaption,.small{font-size:.9rem;color:#45576c}
+.boundary{border:1px solid #b9cce2;background:white;padding:16px;border-radius:10px}a{color:#154b98;text-underline-offset:3px;overflow-wrap:anywhere}
+footer{margin-top:18px;font-size:.85rem}h2{font-size:1.3rem;margin:18px 0 6px}[hidden]{display:none!important}
+@media(min-width:900px){img{max-height:calc(100vh - 340px);object-fit:contain}h1{font-size:2rem}.eyebrow{margin-top:0}nav,.controls{margin:10px 0}button,select{padding:9px 13px}}
+</style>
+</head>
+<body><main>
+<p class="eyebrow">Five-minute GeoAI lesson · Historical teaching data · No account needed</p>
+<h1>From John Snow’s map to GeoAI</h1>
+<p>Map the observations. Find geographic groups. Reveal context. Ask what evidence is missing.</p>
+<p class="small"><strong>Saved DBSCAN results:</strong> these controls switch between results already computed from the bundled data. Python is not running on this page. The runnable notebook recomputes the model in your browser.</p>
+<nav aria-label="Lesson steps">
+<button type="button" data-stage="map" aria-pressed="true">1 · Map locations</button>
+<button type="button" data-stage="groups" aria-pressed="false">2 · Find groups</button>
+<button type="button" data-stage="pumps" aria-pressed="false">3 · Reveal pumps</button>
+</nav>
+<div class="controls"><label for="radius">Neighborhood distance</label><select id="radius" disabled><option value="25">25 meters</option><option value="50" selected>50 meters</option><option value="100">100 meters</option></select><span class="small">Minimum: five locations, including the location itself.</span></div>
+<p id="status" class="status" role="status" aria-live="polite">250 locations · 489 recorded deaths · No groups fitted in this view.</p>
+<figure><img id="map-image" src="map.svg" width="1200" height="830" alt="Geographic point map of 250 recorded death locations; no groups or pumps shown."><figcaption id="caption">One dot represents a recorded location, not a person. These files are not a complete outbreak record. No street basemap is needed.</figcaption></figure>
+<section class="boundary"><h2 id="question">What do you notice?</h2><p id="explanation">A map displays the observations. It has not learned a pattern or identified a cause. Ask the audience where they see groups, then select “Find groups”.</p><p><strong>Keep the boundary:</strong> groups are not risk categories. Pumps never enter the model. There are no population denominators, individual water-use observations or causal labels in these CSVs. No contaminated pump, safe location or intervention effect is inferred.</p></section>
+<p><a href="https://jltobias.github.io/JupyterLite-GeoLibre-GeoAI/lite/lab/index.html?path=21_cholera_geoai_first_steps.ipynb" target="_blank" rel="noopener">Run notebook 21</a> · <a href="https://jltobias.github.io/JupyterLite-GeoLibre-GeoAI/presentations/cholera-five-minutes.html" target="_blank" rel="noopener">Presenter’s walkthrough</a> · <a href="https://web.geolibre.app/?url=https%3A%2F%2Fjltobias.github.io%2FJupyterLite-GeoLibre-GeoAI%2Flite%2Ffiles%2Fdata%2Fcholera-demo.geolibre.json" target="_blank" rel="noopener">Open saved 50-meter project in GeoLibre</a></p>
+<p class="small">The optional GeoLibre link opens a network-based viewer with pumps visible; it does not follow these controls. GeoLibre: Qiusheng Wu and contributors, <a href="https://doi.org/10.5281/zenodo.20785400" target="_blank" rel="noopener">citation</a>.</p>
+<noscript><p>JavaScript is disabled. Open the saved <a href="map.svg">location map</a>, <a href="groups-50.svg">50-meter groups</a> and <a href="pumps-50.svg">pump reveal</a>.</p></noscript>
+<footer>Data and inspiration: <a href="https://github.com/PHI-Case-Studies/Jupyterlite-1854-Cholera-Basic/tree/476f6dd5a8430e6eb823e79614fda1d7e12a78fb" target="_blank" rel="noopener">PHI-Case-Studies contributors</a>. Unchanged source CSVs: <a href="../../data/cholera/LICENSE">GPL-3.0 notice</a> and <a href="../../data/cholera/provenance.json">provenance</a>. New analytical views, not Snow’s original map. Method: <a href="https://scikit-learn.org/stable/modules/generated/sklearn.cluster.DBSCAN.html" target="_blank" rel="noopener">scikit-learn DBSCAN</a>. Historical interpretation: <a href="https://www.cdc.gov/Mmwr/preview/mmwrhtml/mm5334a1.htm" target="_blank" rel="noopener">CDC (2004)</a>. Snow used investigation, not AI.</footer>
+</main>
+<script>
+"use strict";
+const snapshot = /* SNAPSHOT_DATA */;
+let stage = "map";
+const radius = document.getElementById("radius");
+const image = document.getElementById("map-image");
+function update() {
+  const raw = stage === "map", meters = radius.value, result = snapshot.scenarios[meters];
+  radius.disabled = raw;
+  document.querySelectorAll("[data-stage]").forEach(button => button.setAttribute("aria-pressed",String(button.dataset.stage === stage)));
+  image.src = raw ? "map.svg" : `${stage}-${meters}.svg`;
+  image.alt = raw ? "Geographic point map of 250 recorded death locations; no groups or pumps shown." : `${result.groups} DBSCAN group(s) and ${result.unassigned} unassigned locations at ${meters} meters. Pumps ${stage === "pumps" ? "visible as diamonds P1 to P8" : "hidden"}. Colors are not disease risk.`;
+  document.getElementById("status").textContent = raw ? "250 locations · 489 recorded deaths · No groups fitted in this view." : `${meters} meters · ${result.groups} group(s) · ${result.unassigned} unassigned locations · Saved result, not a live fit`;
+  const questions = {map:"What do you notice?",groups:"What did the model add?",pumps:"What would you investigate next?"};
+  const explanations = {
+    map:"A map displays the observations. It has not learned a pattern or identified a cause. Ask the audience where they see groups, then select “Find groups”.",
+    groups:"DBSCAN groups nearby locations without being told the right groups or pump locations. Try 50 → 25 → 100 meters. Almost everything merging into one group may be a poor investigation aid. This is a geographic use of machine learning, not a claim of cause.",
+    pumps:"The same labels are shown with eight pumps added as context. P1 is the source table’s Broadwick Street record. A nearby cluster is a lead to investigate, not proof of contaminated water. Ask about water use, comparison households, timing and missing observations."
+  };
+  document.getElementById("question").textContent = questions[stage];
+  document.getElementById("explanation").textContent = explanations[stage];
+  document.getElementById("caption").textContent = raw ? "One dot represents a recorded location, not a person. These files are not a complete outbreak record. No street basemap is needed." : "Haversine geographic distance; locations are unweighted. Gray = unassigned, not safe or erroneous. Colors and group numbers have no stable meaning across settings. Neighborhood distance is not maximum group diameter.";
+}
+document.querySelectorAll("[data-stage]").forEach(button => button.addEventListener("click",()=>{stage=button.dataset.stage;update();}));
+radius.addEventListener("change",update);
+update();
+</script></body></html>

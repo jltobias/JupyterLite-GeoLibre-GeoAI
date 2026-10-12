@@ -4,7 +4,7 @@ New to the tools themselves? Read [What is JupyterLite?](platforms/jupyterlite.m
 
 For the bigger picture, begin with [What is GeoAI?](geoai/primer.md), the [21-notebook method atlas](geoai/notebook-atlas.md), and the illustrated applications for [HIV/TB](geoai/hiv-tb.md), [outbreaks](geoai/outbreaks.md) and [climate–health](geoai/climate-health.md). They explain why the code matters before introducing Python syntax.
 
-You can learn from these notebooks before writing Python from scratch. Start with the question, read the visual field guide, then run one code cell at a time. Each of the 21 notebooks has a captioned mini-video, an infographic, a teaching cartoon and a reading guide before every code cell.
+You can learn from these notebooks before writing Python from scratch. Start with the question, read the visual field guide, then run one code cell at a time. Each of the 22 notebooks has a captioned mini-video, an infographic, a teaching cartoon and a reading guide before every code cell. For a first presentation, use [the five-minute cholera walkthrough](presentations/cholera-five-minutes.md), then run notebook 21.
 
 [Open the visual learning library](https://jltobias.github.io/JupyterLite-GeoLibre-GeoAI/lite/files/assets/learning/index.html) or [launch JupyterLite](https://jltobias.github.io/JupyterLite-GeoLibre-GeoAI/lite/lab/index.html). Videos are 32-second silent storyboards with pause/seek controls, English captions and full text transcripts. They explain the method rather than replaying a live model run. The illustrations are original schematics; analytical plots in the notebooks use the sources identified in their citation cells.
 

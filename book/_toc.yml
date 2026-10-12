@@ -12,6 +12,7 @@ chapters:
       - file: geoai/climate-health
       - file: geoai/climate-society
   - file: platforms/stac-discovery
+  - file: presentations/cholera-five-minutes
   - file: learning-guide
   - file: visual-library
   - file: futures/digital-twins
@@ -38,4 +39,5 @@ chapters:
   - file: notebooks/18_ollama_geolibre_setup
   - file: notebooks/19_ollama_chat_to_map
   - file: notebooks/20_ollama_evidence_review
+  - file: notebooks/21_cholera_geoai_first_steps
   - file: references

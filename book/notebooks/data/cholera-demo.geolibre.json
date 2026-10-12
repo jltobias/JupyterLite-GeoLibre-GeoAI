@@ -1,0 +1,4879 @@
+{
+  "version": "0.1.0",
+  "name": "Historical cholera: 50 m location groups, not disease risk",
+  "mapView": {
+    "center": [
+      -0.136,
+      51.513
+    ],
+    "zoom": 15.8,
+    "bearing": 0,
+    "pitch": 0
+  },
+  "basemapStyleUrl": "https://tiles.openfreemap.org/styles/liberty",
+  "basemapVisible": true,
+  "basemapOpacity": 1,
+  "layers": [
+    {
+      "id": "cholera-layer-0",
+      "name": "Unassigned locations",
+      "type": "geojson",
+      "visible": true,
+      "opacity": 1,
+      "style": {
+        "minZoom": 0,
+        "maxZoom": 24,
+        "fillColor": "#71717a",
+        "strokeColor": "#ffffff",
+        "strokeWidth": 0.3,
+        "fillOpacity": 0.85,
+        "circleRadius": 5,
+        "textColor": "#111827",
+        "textHaloColor": "#ffffff",
+        "textHaloWidth": 2,
+        "textSize": 16,
+        "extrusionEnabled": false,
+        "extrusionColor": "#3b82f6",
+        "extrusionOpacity": 0.8,
+        "extrusionHeightProperty": "height",
+        "extrusionHeightScale": 1,
+        "extrusionBase": 0,
+        "extrusionAdvancedStyleEnabled": false,
+        "extrusionColorExpression": "",
+        "extrusionHeightExpression": "",
+        "vectorStyleMode": "single",
+        "vectorStyleProperty": "",
+        "vectorStyleClassCount": 5,
+        "vectorStyleColorRamp": "viridis",
+        "vectorStyleClassificationScheme": "equal-interval",
+        "vectorStyleStops": [
+          {
+            "value": 0,
+            "color": "#dbeafe"
+          },
+          {
+            "value": 1,
+            "color": "#2563eb"
+          }
+        ],
+        "vectorStyleExpression": "",
+        "pointRenderer": "single",
+        "heatmapRadius": 30,
+        "heatmapIntensity": 1,
+        "heatmapColorRamp": "turbo",
+        "heatmapWeightProperty": "",
+        "clusterRadius": 50,
+        "clusterMaxZoom": 14,
+        "rasterBrightnessMin": 0,
+        "rasterBrightnessMax": 1,
+        "rasterSaturation": 0,
+        "rasterContrast": 0,
+        "rasterHueRotate": 0,
+        "blendMode": "normal"
+      },
+      "metadata": {},
+      "source": {
+        "type": "geojson"
+      },
+      "geojson": {
+        "type": "FeatureCollection",
+        "features": [
+          {
+            "type": "Feature",
+            "id": 143,
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                -0.133483,
+                51.513137
+              ]
+            },
+            "properties": {
+              "source_FID": 143,
+              "recorded_deaths": 1,
+              "group": -1,
+              "neighbor_radius_m": 50,
+              "interpretation": "Exploratory location group, not estimated disease risk"
+            }
+          },
+          {
+            "type": "Feature",
+            "id": 144,
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                -0.133265,
+                51.513228
+              ]
+            },
+            "properties": {
+              "source_FID": 144,
+              "recorded_deaths": 1,
+              "group": -1,
+              "neighbor_radius_m": 50,
+              "interpretation": "Exploratory location group, not estimated disease risk"
+            }
+          },
+          {
+            "type": "Feature",
+            "id": 145,
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                -0.133296,
+                51.513152
+              ]
+            },
+            "properties": {
+              "source_FID": 145,
+              "recorded_deaths": 2,
+              "group": -1,
+              "neighbor_radius_m": 50,
+              "interpretation": "Exploratory location group, not estimated disease risk"
+            }
+          },
+          {
+            "type": "Feature",
+            "id": 146,
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                -0.132933,
+                51.513258
+              ]
+            },
+            "properties": {
+              "source_FID": 146,
+              "recorded_deaths": 1,
+              "group": -1,
+              "neighbor_radius_m": 50,
+              "interpretation": "Exploratory location group, not estimated disease risk"
+            }
+          },
+          {
+            "type": "Feature",
+            "id": 178,
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                -0.134474,
+                51.515834
+              ]
+            },
+            "properties": {
+              "source_FID": 178,
+              "recorded_deaths": 1,
+              "group": -1,
+              "neighbor_radius_m": 50,
+              "interpretation": "Exploratory location group, not estimated disease risk"
+            }
+          },
+          {
+            "type": "Feature",
+            "id": 179,
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                -0.135259,
+                51.515195
+              ]
+            },
+            "properties": {
+              "source_FID": 179,
+              "recorded_deaths": 1,
+              "group": -1,
+              "neighbor_radius_m": 50,
+              "interpretation": "Exploratory location group, not estimated disease risk"
+            }
+          },
+          {
+            "type": "Feature",
+            "id": 243,
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                -0.137912,
+                51.514748
+              ]
+            },
+            "properties": {
+              "source_FID": 243,
+              "recorded_deaths": 3,
+              "group": -1,
+              "neighbor_radius_m": 50,
+              "interpretation": "Exploratory location group, not estimated disease risk"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "cholera-layer-1",
+      "name": "Group 0",
+      "type": "geojson",
+      "visible": true,
+      "opacity": 1,
+      "style": {
+        "minZoom": 0,
+        "maxZoom": 24,
+        "fillColor": "#6b46c1",
+        "strokeColor": "#ffffff",
+        "strokeWidth": 0.3,
+        "fillOpacity": 0.85,
+        "circleRadius": 5,
+        "textColor": "#111827",
+        "textHaloColor": "#ffffff",
+        "textHaloWidth": 2,
+        "textSize": 16,
+        "extrusionEnabled": false,
+        "extrusionColor": "#3b82f6",
+        "extrusionOpacity": 0.8,
+        "extrusionHeightProperty": "height",
+        "extrusionHeightScale": 1,
+        "extrusionBase": 0,
+        "extrusionAdvancedStyleEnabled": false,
+        "extrusionColorExpression": "",
+        "extrusionHeightExpression": "",
+        "vectorStyleMode": "single",
+        "vectorStyleProperty": "",
+        "vectorStyleClassCount": 5,
+        "vectorStyleColorRamp": "viridis",
+        "vectorStyleClassificationScheme": "equal-interval",
+        "vectorStyleStops": [
+          {
+            "value": 0,
+            "color": "#dbeafe"
+          },
+          {
+            "value": 1,
+            "color": "#2563eb"
+          }
+        ],
+        "vectorStyleExpression": "",
+        "pointRenderer": "single",
+        "heatmapRadius": 30,
+        "heatmapIntensity": 1,
+        "heatmapColorRamp": "turbo",
+        "heatmapWeightProperty": "",
+        "clusterRadius": 50,
+        "clusterMaxZoom": 14,
+        "rasterBrightnessMin": 0,
+        "rasterBrightnessMax": 1,
+        "rasterSaturation": 0,
+        "rasterContrast": 0,
+        "rasterHueRotate": 0,
+        "blendMode": "normal"
+      },
+      "metadata": {},
+      "source": {
+        "type": "geojson"
+      },
+      "geojson": {
+        "type": "FeatureCollection",
+        "features": [
+          {
+            "type": "Feature",
+            "id": 0,
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                -0.13793,
+                51.513418
+              ]
+            },
+            "properties": {
+              "source_FID": 0,
+              "recorded_deaths": 3,
+              "group": 0,
+              "neighbor_radius_m": 50,
+              "interpretation": "Exploratory location group, not estimated disease risk"
+            }
+          },
+          {
+            "type": "Feature",
+            "id": 1,
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                -0.137883,
+                51.513361
+              ]
+            },
+            "properties": {
+              "source_FID": 1,
+              "recorded_deaths": 2,
+              "group": 0,
+              "neighbor_radius_m": 50,
+              "interpretation": "Exploratory location group, not estimated disease risk"
+            }
+          },
+          {
+            "type": "Feature",
+            "id": 2,
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                -0.137853,
+                51.513317
+              ]
+            },
+            "properties": {
+              "source_FID": 2,
+              "recorded_deaths": 1,
+              "group": 0,
+              "neighbor_radius_m": 50,
+              "interpretation": "Exploratory location group, not estimated disease risk"
+            }
+          },
+          {
+            "type": "Feature",
+            "id": 3,
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                -0.137812,
+                51.513262
+              ]
+            },
+            "properties": {
+              "source_FID": 3,
+              "recorded_deaths": 1,
+              "group": 0,
+              "neighbor_radius_m": 50,
+              "interpretation": "Exploratory location group, not estimated disease risk"
+            }
+          },
+          {
+            "type": "Feature",
+            "id": 4,
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                -0.137767,
+                51.513204
+              ]
+            },
+            "properties": {
+              "source_FID": 4,
+              "recorded_deaths": 4,
+              "group": 0,
+              "neighbor_radius_m": 50,
+              "interpretation": "Exploratory location group, not estimated disease risk"
+            }
+          },
+          {
+            "type": "Feature",
+            "id": 5,
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                -0.137537,
+                51.513184
+              ]
+            },
+            "properties": {
+              "source_FID": 5,
+              "recorded_deaths": 2,
+              "group": 0,
+              "neighbor_radius_m": 50,
+              "interpretation": "Exploratory location group, not estimated disease risk"
+            }
+          },
+          {
+            "type": "Feature",
+            "id": 6,
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                -0.1382,
+                51.513359
+              ]
+            },
+            "properties": {
+              "source_FID": 6,
+              "recorded_deaths": 2,
+              "group": 0,
+              "neighbor_radius_m": 50,
+              "interpretation": "Exploratory location group, not estimated disease risk"
+            }
+          },
+          {
+            "type": "Feature",
+            "id": 7,
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                -0.138045,
+                51.513328
+              ]
+            },
+            "properties": {
+              "source_FID": 7,
+              "recorded_deaths": 2,
+              "group": 0,
+              "neighbor_radius_m": 50,
+              "interpretation": "Exploratory location group, not estimated disease risk"
+            }
+          },
+          {
+            "type": "Feature",
+            "id": 8,
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                -0.138276,
+                51.513323
+              ]
+            },
+            "properties": {
+              "source_FID": 8,
+              "recorded_deaths": 3,
+              "group": 0,
+              "neighbor_radius_m": 50,
+              "interpretation": "Exploratory location group, not estimated disease risk"
+            }
+          },
+          {
+            "type": "Feature",
+            "id": 9,
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                -0.138223,
+                51.513427
+              ]
+            },
+            "properties": {
+              "source_FID": 9,
+              "recorded_deaths": 2,
+              "group": 0,
+              "neighbor_radius_m": 50,
+              "interpretation": "Exploratory location group, not estimated disease risk"
+            }
+          },
+          {
+            "type": "Feature",
+            "id": 10,
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                -0.138337,
+                51.513381
+              ]
+            },
+            "properties": {
+              "source_FID": 10,
+              "recorded_deaths": 2,
+              "group": 0,
+              "neighbor_radius_m": 50,
+              "interpretation": "Exploratory location group, not estimated disease risk"
+            }
+          },
+          {
+            "type": "Feature",
+            "id": 11,
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                -0.138563,
+                51.513462
+              ]
+            },
+            "properties": {
+              "source_FID": 11,
+              "recorded_deaths": 1,
+              "group": 0,
+              "neighbor_radius_m": 50,
+              "interpretation": "Exploratory location group, not estimated disease risk"
+            }
+          },
+          {
+            "type": "Feature",
+            "id": 12,
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                -0.138426,
+                51.513216
+              ]
+            },
+            "properties": {
+              "source_FID": 12,
+              "recorded_deaths": 3,
+              "group": 0,
+              "neighbor_radius_m": 50,
+              "interpretation": "Exploratory location group, not estimated disease risk"
+            }
+          },
+          {
+            "type": "Feature",
+            "id": 13,
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                -0.138378,
+                51.513169
+              ]
+            },
+            "properties": {
+              "source_FID": 13,
+              "recorded_deaths": 1,
+              "group": 0,
+              "neighbor_radius_m": 50,
+              "interpretation": "Exploratory location group, not estimated disease risk"
+            }
+          },
+          {
+            "type": "Feature",
+            "id": 14,
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                -0.138337,
+                51.513116
+              ]
+            },
+            "properties": {
+              "source_FID": 14,
+              "recorded_deaths": 4,
+              "group": 0,
+              "neighbor_radius_m": 50,
+              "interpretation": "Exploratory location group, not estimated disease risk"
+            }
+          },
+          {
+            "type": "Feature",
+            "id": 15,
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                -0.138645,
+                51.51324
+              ]
+            },
+            "properties": {
+              "source_FID": 15,
+              "recorded_deaths": 1,
+              "group": 0,
+              "neighbor_radius_m": 50,
+              "interpretation": "Exploratory location group, not estimated disease risk"
+            }
+          },
+          {
+            "type": "Feature",
+            "id": 16,
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                -0.138698,
+                51.513164
+              ]
+            },
+            "properties": {
+              "source_FID": 16,
+              "recorded_deaths": 1,
+              "group": 0,
+              "neighbor_radius_m": 50,
+              "interpretation": "Exploratory location group, not estimated disease risk"
+            }
+          },
+          {
+            "type": "Feature",
+            "id": 17,
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                -0.137924,
+                51.513178
+              ]
+            },
+            "properties": {
+              "source_FID": 17,
+              "recorded_deaths": 1,
+              "group": 0,
+              "neighbor_radius_m": 50,
+              "interpretation": "Exploratory location group, not estimated disease risk"
+            }
+          },
+          {
+            "type": "Feature",
+            "id": 18,
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                -0.137865,
+                51.513111
+              ]
+            },
+            "properties": {
+              "source_FID": 18,
+              "recorded_deaths": 4,
+              "group": 0,
+              "neighbor_radius_m": 50,
+              "interpretation": "Exploratory location group, not estimated disease risk"
+            }
+          },
+          {
+            "type": "Feature",
+            "id": 19,
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                -0.137811,
+                51.513055
+              ]
+            },
+            "properties": {
+              "source_FID": 19,
+              "recorded_deaths": 3,
+              "group": 0,
+              "neighbor_radius_m": 50,
+              "interpretation": "Exploratory location group, not estimated disease risk"
+            }
+          },
+          {
+            "type": "Feature",
+            "id": 20,
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                -0.138762,
+                51.513441
+              ]
+            },
+            "properties": {
+              "source_FID": 20,
+              "recorded_deaths": 2,
+              "group": 0,
+              "neighbor_radius_m": 50,
+              "interpretation": "Exploratory location group, not estimated disease risk"
+            }
+          },
+          {
+            "type": "Feature",
+            "id": 21,
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                -0.138799,
+                51.513592
+              ]
+            },
+            "properties": {
+              "source_FID": 21,
+              "recorded_deaths": 1,
+              "group": 0,
+              "neighbor_radius_m": 50,
+              "interpretation": "Exploratory location group, not estimated disease risk"
+            }
+          },
+          {
+            "type": "Feature",
+            "id": 22,
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                -0.139045,
+                51.513402
+              ]
+            },
+            "properties": {
+              "source_FID": 22,
+              "recorded_deaths": 2,
+              "group": 0,
+              "neighbor_radius_m": 50,
+              "interpretation": "Exploratory location group, not estimated disease risk"
+            }
+          },
+          {
+            "type": "Feature",
+            "id": 23,
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                -0.13897,
+                51.51338
+              ]
+            },
+            "properties": {
+              "source_FID": 23,
+              "recorded_deaths": 2,
+              "group": 0,
+              "neighbor_radius_m": 50,
+              "interpretation": "Exploratory location group, not estimated disease risk"
+            }
+          },
+          {
+            "type": "Feature",
+            "id": 24,
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                -0.138863,
+                51.513411
+              ]
+            },
+            "properties": {
+              "source_FID": 24,
+              "recorded_deaths": 2,
+              "group": 0,
+              "neighbor_radius_m": 50,
+              "interpretation": "Exploratory location group, not estimated disease risk"
+            }
+          },
+          {
+            "type": "Feature",
+            "id": 25,
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                -0.138752,
+                51.513641
+              ]
+            },
+            "properties": {
+              "source_FID": 25,
+              "recorded_deaths": 1,
+              "group": 0,
+              "neighbor_radius_m": 50,
+              "interpretation": "Exploratory location group, not estimated disease risk"
+            }
+          },
+          {
+            "type": "Feature",
+            "id": 26,
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                -0.138808,
+                51.513693
+              ]
+            },
+            "properties": {
+              "source_FID": 26,
+              "recorded_deaths": 1,
+              "group": 0,
+              "neighbor_radius_m": 50,
+              "interpretation": "Exploratory location group, not estimated disease risk"
+            }
+          },
+          {
+            "type": "Feature",
+            "id": 27,
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                -0.138856,
+                51.513745
+              ]
+            },
+            "properties": {
+              "source_FID": 27,
+              "recorded_deaths": 3,
+              "group": 0,
+              "neighbor_radius_m": 50,
+              "interpretation": "Exploratory location group, not estimated disease risk"
+            }
+          },
+          {
+            "type": "Feature",
+            "id": 28,
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                -0.138887,
+                51.513676
+              ]
+            },
+            "properties": {
+              "source_FID": 28,
+              "recorded_deaths": 1,
+              "group": 0,
+              "neighbor_radius_m": 50,
+              "interpretation": "Exploratory location group, not estimated disease risk"
+            }
+          },
+          {
+            "type": "Feature",
+            "id": 29,
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                -0.139239,
+                51.51359
+              ]
+            },
+            "properties": {
+              "source_FID": 29,
+              "recorded_deaths": 1,
+              "group": 0,
+              "neighbor_radius_m": 50,
+              "interpretation": "Exploratory location group, not estimated disease risk"
+            }
+          },
+          {
+            "type": "Feature",
+            "id": 30,
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                -0.139321,
+                51.513663
+              ]
+            },
+            "properties": {
+              "source_FID": 30,
+              "recorded_deaths": 1,
+              "group": 0,
+              "neighbor_radius_m": 50,
+              "interpretation": "Exploratory location group, not estimated disease risk"
+            }
+          },
+          {
+            "type": "Feature",
+            "id": 31,
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                -0.139316,
+                51.513502
+              ]
+            },
+            "properties": {
+              "source_FID": 31,
+              "recorded_deaths": 1,
+              "group": 0,
+              "neighbor_radius_m": 50,
+              "interpretation": "Exploratory location group, not estimated disease risk"
+            }
+          },
+          {
+            "type": "Feature",
+            "id": 32,
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                -0.139616,
+                51.513583
+              ]
+            },
+            "properties": {
+              "source_FID": 32,
+              "recorded_deaths": 2,
+              "group": 0,
+              "neighbor_radius_m": 50,
+              "interpretation": "Exploratory location group, not estimated disease risk"
+            }
+          },
+          {
+            "type": "Feature",
+            "id": 33,
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                -0.139719,
+                51.513541
+              ]
+            },
+            "properties": {
+              "source_FID": 33,
+              "recorded_deaths": 2,
+              "group": 0,
+              "neighbor_radius_m": 50,
+              "interpretation": "Exploratory location group, not estimated disease risk"
+            }
+          },
+          {
+            "type": "Feature",
+            "id": 34,
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                -0.140074,
+                51.513298
+              ]
+            },
+            "properties": {
+              "source_FID": 34,
+              "recorded_deaths": 1,
+              "group": 0,
+              "neighbor_radius_m": 50,
+              "interpretation": "Exploratory location group, not estimated disease risk"
+            }
+          },
+          {
+            "type": "Feature",
+            "id": 35,
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                -0.139094,
+                51.513291
+              ]
+            },
+            "properties": {
+              "source_FID": 35,
+              "recorded_deaths": 1,
+              "group": 0,
+              "neighbor_radius_m": 50,
+              "interpretation": "Exploratory location group, not estimated disease risk"
+            }
+          },
+          {
+            "type": "Feature",
+            "id": 36,
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                -0.139697,
+                51.513013
+              ]
+            },
+            "properties": {
+              "source_FID": 36,
+              "recorded_deaths": 1,
+              "group": 0,
+              "neighbor_radius_m": 50,
+              "interpretation": "Exploratory location group, not estimated disease risk"
+            }
+          },
+          {
+            "type": "Feature",
+            "id": 37,
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                -0.139327,
+                51.512965
+              ]
+            },
+            "properties": {
+              "source_FID": 37,
+              "recorded_deaths": 1,
+              "group": 0,
+              "neighbor_radius_m": 50,
+              "interpretation": "Exploratory location group, not estimated disease risk"
+            }
+          },
+          {
+            "type": "Feature",
+            "id": 38,
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                -0.139317,
+                51.512893
+              ]
+            },
+            "properties": {
+              "source_FID": 38,
+              "recorded_deaths": 2,
+              "group": 0,
+              "neighbor_radius_m": 50,
+              "interpretation": "Exploratory location group, not estimated disease risk"
+            }
+          },
+          {
+            "type": "Feature",
+            "id": 39,
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                -0.139187,
+                51.512964
+              ]
+            },
+            "properties": {
+              "source_FID": 39,
+              "recorded_deaths": 8,
+              "group": 0,
+              "neighbor_radius_m": 50,
+              "interpretation": "Exploratory location group, not estimated disease risk"
+            }
+          },
+          {
+            "type": "Feature",
+            "id": 40,
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                -0.139036,
+                51.513025
+              ]
+            },
+            "properties": {
+              "source_FID": 40,
+              "recorded_deaths": 2,
+              "group": 0,
+              "neighbor_radius_m": 50,
+              "interpretation": "Exploratory location group, not estimated disease risk"
+            }
+          },
+          {
+            "type": "Feature",
+            "id": 41,
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                -0.139209,
+                51.513027
+              ]
+            },
+            "properties": {
+              "source_FID": 41,
+              "recorded_deaths": 1,
+              "group": 0,
+              "neighbor_radius_m": 50,
+              "interpretation": "Exploratory location group, not estimated disease risk"
+            }
+          },
+          {
+            "type": "Feature",
+            "id": 42,
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                -0.138427,
+                51.512831
+              ]
+            },
+            "properties": {
+              "source_FID": 42,
+              "recorded_deaths": 1,
+              "group": 0,
+              "neighbor_radius_m": 50,
+              "interpretation": "Exploratory location group, not estimated disease risk"
+            }
+          },
+          {
+            "type": "Feature",
+            "id": 43,
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                -0.138624,
+                51.512885
+              ]
+            },
+            "properties": {
+              "source_FID": 43,
+              "recorded_deaths": 1,
+              "group": 0,
+              "neighbor_radius_m": 50,
+              "interpretation": "Exploratory location group, not estimated disease risk"
+            }
+          },
+          {
+            "type": "Feature",
+            "id": 44,
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                -0.138096,
+                51.512526
+              ]
+            },
+            "properties": {
+              "source_FID": 44,
+              "recorded_deaths": 1,
+              "group": 0,
+              "neighbor_radius_m": 50,
+              "interpretation": "Exploratory location group, not estimated disease risk"
+            }
+          },
+          {
+            "type": "Feature",
+            "id": 45,
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                -0.138035,
+                51.512465
+              ]
+            },
+            "properties": {
+              "source_FID": 45,
+              "recorded_deaths": 1,
+              "group": 0,
+              "neighbor_radius_m": 50,
+              "interpretation": "Exploratory location group, not estimated disease risk"
+            }
+          },
+          {
+            "type": "Feature",
+            "id": 46,
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                -0.137984,
+                51.512428
+              ]
+            },
+            "properties": {
+              "source_FID": 46,
+              "recorded_deaths": 4,
+              "group": 0,
+              "neighbor_radius_m": 50,
+              "interpretation": "Exploratory location group, not estimated disease risk"
+            }
+          },
+          {
+            "type": "Feature",
+            "id": 47,
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                -0.138065,
+                51.512415
+              ]
+            },
+            "properties": {
+              "source_FID": 47,
+              "recorded_deaths": 1,
+              "group": 0,
+              "neighbor_radius_m": 50,
+              "interpretation": "Exploratory location group, not estimated disease risk"
+            }
+          },
+          {
+            "type": "Feature",
+            "id": 48,
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                -0.138194,
+                51.51251
+              ]
+            },
+            "properties": {
+              "source_FID": 48,
+              "recorded_deaths": 1,
+              "group": 0,
+              "neighbor_radius_m": 50,
+              "interpretation": "Exploratory location group, not estimated disease risk"
+            }
+          },
+          {
+            "type": "Feature",
+            "id": 49,
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                -0.137818,
+                51.512378
+              ]
+            },
+            "properties": {
+              "source_FID": 49,
+              "recorded_deaths": 1,
+              "group": 0,
+              "neighbor_radius_m": 50,
+              "interpretation": "Exploratory location group, not estimated disease risk"
+            }
+          },
+          {
+            "type": "Feature",
+            "id": 50,
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                -0.137656,
+                51.512447
+              ]
+            },
+            "properties": {
+              "source_FID": 50,
+              "recorded_deaths": 1,
+              "group": 0,
+              "neighbor_radius_m": 50,
+              "interpretation": "Exploratory location group, not estimated disease risk"
+            }
+          },
+          {
+            "type": "Feature",
+            "id": 51,
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                -0.137584,
+                51.512491
+              ]
+            },
+            "properties": {
+              "source_FID": 51,
+              "recorded_deaths": 4,
+              "group": 0,
+              "neighbor_radius_m": 50,
+              "interpretation": "Exploratory location group, not estimated disease risk"
+            }
+          },
+          {
+            "type": "Feature",
+            "id": 52,
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                -0.13765,
+                51.512374
+              ]
+            },
+            "properties": {
+              "source_FID": 52,
+              "recorded_deaths": 1,
+              "group": 0,
+              "neighbor_radius_m": 50,
+              "interpretation": "Exploratory location group, not estimated disease risk"
+            }
+          },
+          {
+            "type": "Feature",
+            "id": 53,
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                -0.13745,
+                51.512339
+              ]
+            },
+            "properties": {
+              "source_FID": 53,
+              "recorded_deaths": 1,
+              "group": 0,
+              "neighbor_radius_m": 50,
+              "interpretation": "Exploratory location group, not estimated disease risk"
+            }
+          },
+          {
+            "type": "Feature",
+            "id": 54,
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                -0.137376,
+                51.512364
+              ]
+            },
+            "properties": {
+              "source_FID": 54,
+              "recorded_deaths": 1,
+              "group": 0,
+              "neighbor_radius_m": 50,
+              "interpretation": "Exploratory location group, not estimated disease risk"
+            }
+          },
+          {
+            "type": "Feature",
+            "id": 55,
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                -0.137327,
+                51.512319
+              ]
+            },
+            "properties": {
+              "source_FID": 55,
+              "recorded_deaths": 1,
+              "group": 0,
+              "neighbor_radius_m": 50,
+              "interpretation": "Exploratory location group, not estimated disease risk"
+            }
+          },
+          {
+            "type": "Feature",
+            "id": 56,
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                -0.13698,
+                51.51254
+              ]
+            },
+            "properties": {
+              "source_FID": 56,
+              "recorded_deaths": 1,
+              "group": 0,
+              "neighbor_radius_m": 50,
+              "interpretation": "Exploratory location group, not estimated disease risk"
+            }
+          },
+          {
+            "type": "Feature",
+            "id": 57,
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                -0.13718,
+                51.512649
+              ]
+            },
+            "properties": {
+              "source_FID": 57,
+              "recorded_deaths": 2,
+              "group": 0,
+              "neighbor_radius_m": 50,
+              "interpretation": "Exploratory location group, not estimated disease risk"
+            }
+          },
+          {
+            "type": "Feature",
+            "id": 58,
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                -0.137052,
+                51.512692
+              ]
+            },
+            "properties": {
+              "source_FID": 58,
+              "recorded_deaths": 1,
+              "group": 0,
+              "neighbor_radius_m": 50,
+              "interpretation": "Exploratory location group, not estimated disease risk"
+            }
+          },
+          {
+            "type": "Feature",
+            "id": 59,
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                -0.137695,
+                51.512957
+              ]
+            },
+            "properties": {
+              "source_FID": 59,
+              "recorded_deaths": 1,
+              "group": 0,
+              "neighbor_radius_m": 50,
+              "interpretation": "Exploratory location group, not estimated disease risk"
+            }
+          },
+          {
+            "type": "Feature",
+            "id": 60,
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                -0.137533,
+                51.512765
+              ]
+            },
+            "properties": {
+              "source_FID": 60,
+              "recorded_deaths": 1,
+              "group": 0,
+              "neighbor_radius_m": 50,
+              "interpretation": "Exploratory location group, not estimated disease risk"
+            }
+          },
+          {
+            "type": "Feature",
+            "id": 61,
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                -0.137419,
+                51.51278
+              ]
+            },
+            "properties": {
+              "source_FID": 61,
+              "recorded_deaths": 2,
+              "group": 0,
+              "neighbor_radius_m": 50,
+              "interpretation": "Exploratory location group, not estimated disease risk"
+            }
+          },
+          {
+            "type": "Feature",
+            "id": 62,
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                -0.137368,
+                51.512726
+              ]
+            },
+            "properties": {
+              "source_FID": 62,
+              "recorded_deaths": 1,
+              "group": 0,
+              "neighbor_radius_m": 50,
+              "interpretation": "Exploratory location group, not estimated disease risk"
+            }
+          },
+          {
+            "type": "Feature",
+            "id": 63,
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                -0.137325,
+                51.512681
+              ]
+            },
+            "properties": {
+              "source_FID": 63,
+              "recorded_deaths": 1,
+              "group": 0,
+              "neighbor_radius_m": 50,
+              "interpretation": "Exploratory location group, not estimated disease risk"
+            }
+          },
+          {
+            "type": "Feature",
+            "id": 64,
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                -0.137531,
+                51.512914
+              ]
+            },
+            "properties": {
+              "source_FID": 64,
+              "recorded_deaths": 2,
+              "group": 0,
+              "neighbor_radius_m": 50,
+              "interpretation": "Exploratory location group, not estimated disease risk"
+            }
+          },
+          {
+            "type": "Feature",
+            "id": 65,
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                -0.137562,
+                51.513046
+              ]
+            },
+            "properties": {
+              "source_FID": 65,
+              "recorded_deaths": 2,
+              "group": 0,
+              "neighbor_radius_m": 50,
+              "interpretation": "Exploratory location group, not estimated disease risk"
+            }
+          },
+          {
+            "type": "Feature",
+            "id": 66,
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                -0.137466,
+                51.513074
+              ]
+            },
+            "properties": {
+              "source_FID": 66,
+              "recorded_deaths": 1,
+              "group": 0,
+              "neighbor_radius_m": 50,
+              "interpretation": "Exploratory location group, not estimated disease risk"
+            }
+          },
+          {
+            "type": "Feature",
+            "id": 67,
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                -0.137386,
+                51.513087
+              ]
+            },
+            "properties": {
+              "source_FID": 67,
+              "recorded_deaths": 2,
+              "group": 0,
+              "neighbor_radius_m": 50,
+              "interpretation": "Exploratory location group, not estimated disease risk"
+            }
+          },
+          {
+            "type": "Feature",
+            "id": 68,
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                -0.137306,
+                51.513122
+              ]
+            },
+            "properties": {
+              "source_FID": 68,
+              "recorded_deaths": 3,
+              "group": 0,
+              "neighbor_radius_m": 50,
+              "interpretation": "Exploratory location group, not estimated disease risk"
+            }
+          },
+          {
+            "type": "Feature",
+            "id": 69,
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                -0.137089,
+                51.513187
+              ]
+            },
+            "properties": {
+              "source_FID": 69,
+              "recorded_deaths": 1,
+              "group": 0,
+              "neighbor_radius_m": 50,
+              "interpretation": "Exploratory location group, not estimated disease risk"
+            }
+          },
+          {
+            "type": "Feature",
+            "id": 70,
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                -0.136996,
+                51.513214
+              ]
+            },
+            "properties": {
+              "source_FID": 70,
+              "recorded_deaths": 4,
+              "group": 0,
+              "neighbor_radius_m": 50,
+              "interpretation": "Exploratory location group, not estimated disease risk"
+            }
+          },
+          {
+            "type": "Feature",
+            "id": 71,
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                -0.136859,
+                51.513249
+              ]
+            },
+            "properties": {
+              "source_FID": 71,
+              "recorded_deaths": 15,
+              "group": 0,
+              "neighbor_radius_m": 50,
+              "interpretation": "Exploratory location group, not estimated disease risk"
+            }
+          },
+          {
+            "type": "Feature",
+            "id": 72,
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                -0.136778,
+                51.513271
+              ]
+            },
+            "properties": {
+              "source_FID": 72,
+              "recorded_deaths": 3,
+              "group": 0,
+              "neighbor_radius_m": 50,
+              "interpretation": "Exploratory location group, not estimated disease risk"
+            }
+          },
+          {
+            "type": "Feature",
+            "id": 73,
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                -0.136705,
+                51.5133
+              ]
+            },
+            "properties": {
+              "source_FID": 73,
+              "recorded_deaths": 4,
+              "group": 0,
+              "neighbor_radius_m": 50,
+              "interpretation": "Exploratory location group, not estimated disease risk"
+            }
+          },
+          {
+            "type": "Feature",
+            "id": 74,
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                -0.136493,
+                51.51316
+              ]
+            },
+            "properties": {
+              "source_FID": 74,
+              "recorded_deaths": 5,
+              "group": 0,
+              "neighbor_radius_m": 50,
+              "interpretation": "Exploratory location group, not estimated disease risk"
+            }
+          },
+          {
+            "type": "Feature",
+            "id": 75,
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                -0.13633,
+                51.513016
+              ]
+            },
+            "properties": {
+              "source_FID": 75,
+              "recorded_deaths": 2,
+              "group": 0,
+              "neighbor_radius_m": 50,
+              "interpretation": "Exploratory location group, not estimated disease risk"
+            }
+          },
+          {
+            "type": "Feature",
+            "id": 76,
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                -0.136424,
+                51.512921
+              ]
+            },
+            "properties": {
+              "source_FID": 76,
+              "recorded_deaths": 1,
+              "group": 0,
+              "neighbor_radius_m": 50,
+              "interpretation": "Exploratory location group, not estimated disease risk"
+            }
+          },
+          {
+            "type": "Feature",
+            "id": 77,
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                -0.136523,
+                51.51289
+              ]
+            },
+            "properties": {
+              "source_FID": 77,
+              "recorded_deaths": 2,
+              "group": 0,
+              "neighbor_radius_m": 50,
+              "interpretation": "Exploratory location group, not estimated disease risk"
+            }
+          },
+          {
+            "type": "Feature",
+            "id": 78,
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                -0.136599,
+                51.512859
+              ]
+            },
+            "properties": {
+              "source_FID": 78,
+              "recorded_deaths": 1,
+              "group": 0,
+              "neighbor_radius_m": 50,
+              "interpretation": "Exploratory location group, not estimated disease risk"
+            }
+          },
+          {
+            "type": "Feature",
+            "id": 79,
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                -0.136699,
+                51.51283
+              ]
+            },
+            "properties": {
+              "source_FID": 79,
+              "recorded_deaths": 1,
+              "group": 0,
+              "neighbor_radius_m": 50,
+              "interpretation": "Exploratory location group, not estimated disease risk"
+            }
+          },
+          {
+            "type": "Feature",
+            "id": 80,
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                -0.136819,
+                51.512782
+              ]
+            },
+            "properties": {
+              "source_FID": 80,
+              "recorded_deaths": 1,
+              "group": 0,
+              "neighbor_radius_m": 50,
+              "interpretation": "Exploratory location group, not estimated disease risk"
+            }
+          },
+          {
+            "type": "Feature",
+            "id": 81,
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                -0.136973,
+                51.512729
+              ]
+            },
+            "properties": {
+              "source_FID": 81,
+              "recorded_deaths": 1,
+              "group": 0,
+              "neighbor_radius_m": 50,
+              "interpretation": "Exploratory location group, not estimated disease risk"
+            }
+          },
+          {
+            "type": "Feature",
+            "id": 82,
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                -0.136358,
+                51.512868
+              ]
+            },
+            "properties": {
+              "source_FID": 82,
+              "recorded_deaths": 1,
+              "group": 0,
+              "neighbor_radius_m": 50,
+              "interpretation": "Exploratory location group, not estimated disease risk"
+            }
+          },
+          {
+            "type": "Feature",
+            "id": 83,
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                -0.13663,
+                51.512723
+              ]
+            },
+            "properties": {
+              "source_FID": 83,
+              "recorded_deaths": 1,
+              "group": 0,
+              "neighbor_radius_m": 50,
+              "interpretation": "Exploratory location group, not estimated disease risk"
+            }
+          },
+          {
+            "type": "Feature",
+            "id": 84,
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                -0.136584,
+                51.512654
+              ]
+            },
+            "properties": {
+              "source_FID": 84,
+              "recorded_deaths": 1,
+              "group": 0,
+              "neighbor_radius_m": 50,
+              "interpretation": "Exploratory location group, not estimated disease risk"
+            }
+          },
+          {
+            "type": "Feature",
+            "id": 85,
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                -0.136423,
+                51.512713
+              ]
+            },
+            "properties": {
+              "source_FID": 85,
+              "recorded_deaths": 1,
+              "group": 0,
+              "neighbor_radius_m": 50,
+              "interpretation": "Exploratory location group, not estimated disease risk"
+            }
+          },
+          {
+            "type": "Feature",
+            "id": 86,
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                -0.136345,
+                51.512615
+              ]
+            },
+            "properties": {
+              "source_FID": 86,
+              "recorded_deaths": 1,
+              "group": 0,
+              "neighbor_radius_m": 50,
+              "interpretation": "Exploratory location group, not estimated disease risk"
+            }
+          },
+          {
+            "type": "Feature",
+            "id": 87,
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                -0.136437,
+                51.512491
+              ]
+            },
+            "properties": {
+              "source_FID": 87,
+              "recorded_deaths": 1,
+              "group": 0,
+              "neighbor_radius_m": 50,
+              "interpretation": "Exploratory location group, not estimated disease risk"
+            }
+          },
+          {
+            "type": "Feature",
+            "id": 88,
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                -0.136377,
+                51.512449
+              ]
+            },
+            "properties": {
+              "source_FID": 88,
+              "recorded_deaths": 1,
+              "group": 0,
+              "neighbor_radius_m": 50,
+              "interpretation": "Exploratory location group, not estimated disease risk"
+            }
+          },
+          {
+            "type": "Feature",
+            "id": 89,
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                -0.136197,
+                51.512465
+              ]
+            },
+            "properties": {
+              "source_FID": 89,
+              "recorded_deaths": 1,
+              "group": 0,
+              "neighbor_radius_m": 50,
+              "interpretation": "Exploratory location group, not estimated disease risk"
+            }
+          },
+          {
+            "type": "Feature",
+            "id": 90,
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                -0.136142,
+                51.512413
+              ]
+            },
+            "properties": {
+              "source_FID": 90,
+              "recorded_deaths": 1,
+              "group": 0,
+              "neighbor_radius_m": 50,
+              "interpretation": "Exploratory location group, not estimated disease risk"
+            }
+          },
+          {
+            "type": "Feature",
+            "id": 91,
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                -0.136102,
+                51.512358
+              ]
+            },
+            "properties": {
+              "source_FID": 91,
+              "recorded_deaths": 2,
+              "group": 0,
+              "neighbor_radius_m": 50,
+              "interpretation": "Exploratory location group, not estimated disease risk"
+            }
+          },
+          {
+            "type": "Feature",
+            "id": 92,
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                -0.13603,
+                51.512271
+              ]
+            },
+            "properties": {
+              "source_FID": 92,
+              "recorded_deaths": 1,
+              "group": 0,
+              "neighbor_radius_m": 50,
+              "interpretation": "Exploratory location group, not estimated disease risk"
+            }
+          },
+          {
+            "type": "Feature",
+            "id": 93,
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                -0.13631,
+                51.512355
+              ]
+            },
+            "properties": {
+              "source_FID": 93,
+              "recorded_deaths": 1,
+              "group": 0,
+              "neighbor_radius_m": 50,
+              "interpretation": "Exploratory location group, not estimated disease risk"
+            }
+          },
+          {
+            "type": "Feature",
+            "id": 94,
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                -0.13594,
+                51.511991
+              ]
+            },
+            "properties": {
+              "source_FID": 94,
+              "recorded_deaths": 4,
+              "group": 0,
+              "neighbor_radius_m": 50,
+              "interpretation": "Exploratory location group, not estimated disease risk"
+            }
+          },
+          {
+            "type": "Feature",
+            "id": 95,
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                -0.135858,
+                51.512083
+              ]
+            },
+            "properties": {
+              "source_FID": 95,
+              "recorded_deaths": 2,
+              "group": 0,
+              "neighbor_radius_m": 50,
+              "interpretation": "Exploratory location group, not estimated disease risk"
+            }
+          },
+          {
+            "type": "Feature",
+            "id": 96,
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                -0.1358,
+                51.512031
+              ]
+            },
+            "properties": {
+              "source_FID": 96,
+              "recorded_deaths": 1,
+              "group": 0,
+              "neighbor_radius_m": 50,
+              "interpretation": "Exploratory location group, not estimated disease risk"
+            }
+          },
+          {
+            "type": "Feature",
+            "id": 97,
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                -0.135717,
+                51.51197
+              ]
+            },
+            "properties": {
+              "source_FID": 97,
+              "recorded_deaths": 4,
+              "group": 0,
+              "neighbor_radius_m": 50,
+              "interpretation": "Exploratory location group, not estimated disease risk"
+            }
+          },
+          {
+            "type": "Feature",
+            "id": 98,
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                -0.135119,
+                51.511882
+              ]
+            },
+            "properties": {
+              "source_FID": 98,
+              "recorded_deaths": 4,
+              "group": 0,
+              "neighbor_radius_m": 50,
+              "interpretation": "Exploratory location group, not estimated disease risk"
+            }
+          },
+          {
+            "type": "Feature",
+            "id": 99,
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                -0.135144,
+                51.51205
+              ]
+            },
+            "properties": {
+              "source_FID": 99,
+              "recorded_deaths": 1,
+              "group": 0,
+              "neighbor_radius_m": 50,
+              "interpretation": "Exploratory location group, not estimated disease risk"
+            }
+          },
+          {
+            "type": "Feature",
+            "id": 100,
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                -0.135394,
+                51.51225
+              ]
+            },
+            "properties": {
+              "source_FID": 100,
+              "recorded_deaths": 4,
+              "group": 0,
+              "neighbor_radius_m": 50,
+              "interpretation": "Exploratory location group, not estimated disease risk"
+            }
+          },
+          {
+            "type": "Feature",
+            "id": 101,
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                -0.135409,
+                51.512162
+              ]
+            },
+            "properties": {
+              "source_FID": 101,
+              "recorded_deaths": 1,
+              "group": 0,
+              "neighbor_radius_m": 50,
+              "interpretation": "Exploratory location group, not estimated disease risk"
+            }
+          },
+          {
+            "type": "Feature",
+            "id": 102,
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                -0.135472,
+                51.512212
+              ]
+            },
+            "properties": {
+              "source_FID": 102,
+              "recorded_deaths": 1,
+              "group": 0,
+              "neighbor_radius_m": 50,
+              "interpretation": "Exploratory location group, not estimated disease risk"
+            }
+          },
+          {
+            "type": "Feature",
+            "id": 103,
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                -0.135765,
+                51.512573
+              ]
+            },
+            "properties": {
+              "source_FID": 103,
+              "recorded_deaths": 2,
+              "group": 0,
+              "neighbor_radius_m": 50,
+              "interpretation": "Exploratory location group, not estimated disease risk"
+            }
+          },
+          {
+            "type": "Feature",
+            "id": 104,
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                -0.135871,
+                51.512575
+              ]
+            },
+            "properties": {
+              "source_FID": 104,
+              "recorded_deaths": 1,
+              "group": 0,
+              "neighbor_radius_m": 50,
+              "interpretation": "Exploratory location group, not estimated disease risk"
+            }
+          },
+          {
+            "type": "Feature",
+            "id": 105,
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                -0.135976,
+                51.512672
+              ]
+            },
+            "properties": {
+              "source_FID": 105,
+              "recorded_deaths": 2,
+              "group": 0,
+              "neighbor_radius_m": 50,
+              "interpretation": "Exploratory location group, not estimated disease risk"
+            }
+          },
+          {
+            "type": "Feature",
+            "id": 106,
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                -0.136033,
+                51.512727
+              ]
+            },
+            "properties": {
+              "source_FID": 106,
+              "recorded_deaths": 3,
+              "group": 0,
+              "neighbor_radius_m": 50,
+              "interpretation": "Exploratory location group, not estimated disease risk"
+            }
+          },
+          {
+            "type": "Feature",
+            "id": 107,
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                -0.136115,
+                51.512794
+              ]
+            },
+            "properties": {
+              "source_FID": 107,
+              "recorded_deaths": 1,
+              "group": 0,
+              "neighbor_radius_m": 50,
+              "interpretation": "Exploratory location group, not estimated disease risk"
+            }
+          },
+          {
+            "type": "Feature",
+            "id": 108,
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                -0.13618,
+                51.512846
+              ]
+            },
+            "properties": {
+              "source_FID": 108,
+              "recorded_deaths": 4,
+              "group": 0,
+              "neighbor_radius_m": 50,
+              "interpretation": "Exploratory location group, not estimated disease risk"
+            }
+          },
+          {
+            "type": "Feature",
+            "id": 109,
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                -0.136083,
+                51.512879
+              ]
+            },
+            "properties": {
+              "source_FID": 109,
+              "recorded_deaths": 1,
+              "group": 0,
+              "neighbor_radius_m": 50,
+              "interpretation": "Exploratory location group, not estimated disease risk"
+            }
+          },
+          {
+            "type": "Feature",
+            "id": 110,
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                -0.136139,
+                51.512939
+              ]
+            },
+            "properties": {
+              "source_FID": 110,
+              "recorded_deaths": 1,
+              "group": 0,
+              "neighbor_radius_m": 50,
+              "interpretation": "Exploratory location group, not estimated disease risk"
+            }
+          },
+          {
+            "type": "Feature",
+            "id": 111,
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                -0.135329,
+                51.512765
+              ]
+            },
+            "properties": {
+              "source_FID": 111,
+              "recorded_deaths": 7,
+              "group": 0,
+              "neighbor_radius_m": 50,
+              "interpretation": "Exploratory location group, not estimated disease risk"
+            }
+          },
+          {
+            "type": "Feature",
+            "id": 112,
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                -0.135122,
+                51.512844
+              ]
+            },
+            "properties": {
+              "source_FID": 112,
+              "recorded_deaths": 3,
+              "group": 0,
+              "neighbor_radius_m": 50,
+              "interpretation": "Exploratory location group, not estimated disease risk"
+            }
+          },
+          {
+            "type": "Feature",
+            "id": 113,
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                -0.134645,
+                51.512532
+              ]
+            },
+            "properties": {
+              "source_FID": 113,
+              "recorded_deaths": 8,
+              "group": 0,
+              "neighbor_radius_m": 50,
+              "interpretation": "Exploratory location group, not estimated disease risk"
+            }
+          },
+          {
+            "type": "Feature",
+            "id": 114,
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                -0.134522,
+                51.512198
+              ]
+            },
+            "properties": {
+              "source_FID": 114,
+              "recorded_deaths": 1,
+              "group": 0,
+              "neighbor_radius_m": 50,
+              "interpretation": "Exploratory location group, not estimated disease risk"
+            }
+          },
+          {
+            "type": "Feature",
+            "id": 115,
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                -0.134967,
+                51.512215
+              ]
+            },
+            "properties": {
+              "source_FID": 115,
+              "recorded_deaths": 1,
+              "group": 0,
+              "neighbor_radius_m": 50,
+              "interpretation": "Exploratory location group, not estimated disease risk"
+            }
+          },
+          {
+            "type": "Feature",
+            "id": 116,
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                -0.135098,
+                51.513154
+              ]
+            },
+            "properties": {
+              "source_FID": 116,
+              "recorded_deaths": 5,
+              "group": 0,
+              "neighbor_radius_m": 50,
+              "interpretation": "Exploratory location group, not estimated disease risk"
+            }
+          },
+          {
+            "type": "Feature",
+            "id": 117,
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                -0.134394,
+                51.513056
+              ]
+            },
+            "properties": {
+              "source_FID": 117,
+              "recorded_deaths": 8,
+              "group": 0,
+              "neighbor_radius_m": 50,
+              "interpretation": "Exploratory location group, not estimated disease risk"
+            }
+          },
+          {
+            "type": "Feature",
+            "id": 118,
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                -0.134505,
+                51.513165
+              ]
+            },
+            "properties": {
+              "source_FID": 118,
+              "recorded_deaths": 2,
+              "group": 0,
+              "neighbor_radius_m": 50,
+              "interpretation": "Exploratory location group, not estimated disease risk"
+            }
+          },
+          {
+            "type": "Feature",
+            "id": 119,
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                -0.134437,
+                51.513098
+              ]
+            },
+            "properties": {
+              "source_FID": 119,
+              "recorded_deaths": 1,
+              "group": 0,
+              "neighbor_radius_m": 50,
+              "interpretation": "Exploratory location group, not estimated disease risk"
+            }
+          },
+          {
+            "type": "Feature",
+            "id": 120,
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                -0.134594,
+                51.513238
+              ]
+            },
+            "properties": {
+              "source_FID": 120,
+              "recorded_deaths": 1,
+              "group": 0,
+              "neighbor_radius_m": 50,
+              "interpretation": "Exploratory location group, not estimated disease risk"
+            }
+          },
+          {
+            "type": "Feature",
+            "id": 121,
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                -0.13464,
+                51.513293
+              ]
+            },
+            "properties": {
+              "source_FID": 121,
+              "recorded_deaths": 2,
+              "group": 0,
+              "neighbor_radius_m": 50,
+              "interpretation": "Exploratory location group, not estimated disease risk"
+            }
+          },
+          {
+            "type": "Feature",
+            "id": 122,
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                -0.134709,
+                51.513379
+              ]
+            },
+            "properties": {
+              "source_FID": 122,
+              "recorded_deaths": 1,
+              "group": 0,
+              "neighbor_radius_m": 50,
+              "interpretation": "Exploratory location group, not estimated disease risk"
+            }
+          },
+          {
+            "type": "Feature",
+            "id": 123,
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                -0.134756,
+                51.513431
+              ]
+            },
+            "properties": {
+              "source_FID": 123,
+              "recorded_deaths": 2,
+              "group": 0,
+              "neighbor_radius_m": 50,
+              "interpretation": "Exploratory location group, not estimated disease risk"
+            }
+          },
+          {
+            "type": "Feature",
+            "id": 124,
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                -0.135244,
+                51.513475
+              ]
+            },
+            "properties": {
+              "source_FID": 124,
+              "recorded_deaths": 2,
+              "group": 0,
+              "neighbor_radius_m": 50,
+              "interpretation": "Exploratory location group, not estimated disease risk"
+            }
+          },
+          {
+            "type": "Feature",
+            "id": 125,
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                -0.134897,
+                51.513422
+              ]
+            },
+            "properties": {
+              "source_FID": 125,
+              "recorded_deaths": 3,
+              "group": 0,
+              "neighbor_radius_m": 50,
+              "interpretation": "Exploratory location group, not estimated disease risk"
+            }
+          },
+          {
+            "type": "Feature",
+            "id": 126,
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                -0.135158,
+                51.513528
+              ]
+            },
+            "properties": {
+              "source_FID": 126,
+              "recorded_deaths": 1,
+              "group": 0,
+              "neighbor_radius_m": 50,
+              "interpretation": "Exploratory location group, not estimated disease risk"
+            }
+          },
+          {
+            "type": "Feature",
+            "id": 127,
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                -0.135344,
+                51.513481
+              ]
+            },
+            "properties": {
+              "source_FID": 127,
+              "recorded_deaths": 2,
+              "group": 0,
+              "neighbor_radius_m": 50,
+              "interpretation": "Exploratory location group, not estimated disease risk"
+            }
+          },
+          {
+            "type": "Feature",
+            "id": 128,
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                -0.135063,
+                51.513594
+              ]
+            },
+            "properties": {
+              "source_FID": 128,
+              "recorded_deaths": 2,
+              "group": 0,
+              "neighbor_radius_m": 50,
+              "interpretation": "Exploratory location group, not estimated disease risk"
+            }
+          },
+          {
+            "type": "Feature",
+            "id": 129,
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                -0.135801,
+                51.513227
+              ]
+            },
+            "properties": {
+              "source_FID": 129,
+              "recorded_deaths": 3,
+              "group": 0,
+              "neighbor_radius_m": 50,
+              "interpretation": "Exploratory location group, not estimated disease risk"
+            }
+          },
+          {
+            "type": "Feature",
+            "id": 130,
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                -0.135762,
+                51.51318
+              ]
+            },
+            "properties": {
+              "source_FID": 130,
+              "recorded_deaths": 1,
+              "group": 0,
+              "neighbor_radius_m": 50,
+              "interpretation": "Exploratory location group, not estimated disease risk"
+            }
+          },
+          {
+            "type": "Feature",
+            "id": 131,
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                -0.13574,
+                51.513132
+              ]
+            },
+            "properties": {
+              "source_FID": 131,
+              "recorded_deaths": 2,
+              "group": 0,
+              "neighbor_radius_m": 50,
+              "interpretation": "Exploratory location group, not estimated disease risk"
+            }
+          },
+          {
+            "type": "Feature",
+            "id": 132,
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                -0.135645,
+                51.513048
+              ]
+            },
+            "properties": {
+              "source_FID": 132,
+              "recorded_deaths": 1,
+              "group": 0,
+              "neighbor_radius_m": 50,
+              "interpretation": "Exploratory location group, not estimated disease risk"
+            }
+          },
+          {
+            "type": "Feature",
+            "id": 133,
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                -0.135602,
+                51.513006
+              ]
+            },
+            "properties": {
+              "source_FID": 133,
+              "recorded_deaths": 1,
+              "group": 0,
+              "neighbor_radius_m": 50,
+              "interpretation": "Exploratory location group, not estimated disease risk"
+            }
+          },
+          {
+            "type": "Feature",
+            "id": 134,
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                -0.135501,
+                51.512883
+              ]
+            },
+            "properties": {
+              "source_FID": 134,
+              "recorded_deaths": 1,
+              "group": 0,
+              "neighbor_radius_m": 50,
+              "interpretation": "Exploratory location group, not estimated disease risk"
+            }
+          },
+          {
+            "type": "Feature",
+            "id": 135,
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                -0.135832,
+                51.51327
+              ]
+            },
+            "properties": {
+              "source_FID": 135,
+              "recorded_deaths": 1,
+              "group": 0,
+              "neighbor_radius_m": 50,
+              "interpretation": "Exploratory location group, not estimated disease risk"
+            }
+          },
+          {
+            "type": "Feature",
+            "id": 136,
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                -0.136049,
+                51.513459
+              ]
+            },
+            "properties": {
+              "source_FID": 136,
+              "recorded_deaths": 3,
+              "group": 0,
+              "neighbor_radius_m": 50,
+              "interpretation": "Exploratory location group, not estimated disease risk"
+            }
+          },
+          {
+            "type": "Feature",
+            "id": 137,
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                -0.13614,
+                51.513431
+              ]
+            },
+            "properties": {
+              "source_FID": 137,
+              "recorded_deaths": 3,
+              "group": 0,
+              "neighbor_radius_m": 50,
+              "interpretation": "Exploratory location group, not estimated disease risk"
+            }
+          },
+          {
+            "type": "Feature",
+            "id": 138,
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                -0.136228,
+                51.513402
+              ]
+            },
+            "properties": {
+              "source_FID": 138,
+              "recorded_deaths": 3,
+              "group": 0,
+              "neighbor_radius_m": 50,
+              "interpretation": "Exploratory location group, not estimated disease risk"
+            }
+          },
+          {
+            "type": "Feature",
+            "id": 139,
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                -0.134999,
+                51.512593
+              ]
+            },
+            "properties": {
+              "source_FID": 139,
+              "recorded_deaths": 3,
+              "group": 0,
+              "neighbor_radius_m": 50,
+              "interpretation": "Exploratory location group, not estimated disease risk"
+            }
+          },
+          {
+            "type": "Feature",
+            "id": 140,
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                -0.134793,
+                51.512585
+              ]
+            },
+            "properties": {
+              "source_FID": 140,
+              "recorded_deaths": 1,
+              "group": 0,
+              "neighbor_radius_m": 50,
+              "interpretation": "Exploratory location group, not estimated disease risk"
+            }
+          },
+          {
+            "type": "Feature",
+            "id": 141,
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                -0.134896,
+                51.512555
+              ]
+            },
+            "properties": {
+              "source_FID": 141,
+              "recorded_deaths": 2,
+              "group": 0,
+              "neighbor_radius_m": 50,
+              "interpretation": "Exploratory location group, not estimated disease risk"
+            }
+          },
+          {
+            "type": "Feature",
+            "id": 142,
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                -0.135,
+                51.512521
+              ]
+            },
+            "properties": {
+              "source_FID": 142,
+              "recorded_deaths": 1,
+              "group": 0,
+              "neighbor_radius_m": 50,
+              "interpretation": "Exploratory location group, not estimated disease risk"
+            }
+          },
+          {
+            "type": "Feature",
+            "id": 147,
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                -0.133998,
+                51.513544
+              ]
+            },
+            "properties": {
+              "source_FID": 147,
+              "recorded_deaths": 1,
+              "group": 0,
+              "neighbor_radius_m": 50,
+              "interpretation": "Exploratory location group, not estimated disease risk"
+            }
+          },
+          {
+            "type": "Feature",
+            "id": 148,
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                -0.134042,
+                51.513626
+              ]
+            },
+            "properties": {
+              "source_FID": 148,
+              "recorded_deaths": 1,
+              "group": 0,
+              "neighbor_radius_m": 50,
+              "interpretation": "Exploratory location group, not estimated disease risk"
+            }
+          },
+          {
+            "type": "Feature",
+            "id": 149,
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                -0.134156,
+                51.513637
+              ]
+            },
+            "properties": {
+              "source_FID": 149,
+              "recorded_deaths": 2,
+              "group": 0,
+              "neighbor_radius_m": 50,
+              "interpretation": "Exploratory location group, not estimated disease risk"
+            }
+          },
+          {
+            "type": "Feature",
+            "id": 150,
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                -0.134091,
+                51.513524
+              ]
+            },
+            "properties": {
+              "source_FID": 150,
+              "recorded_deaths": 2,
+              "group": 0,
+              "neighbor_radius_m": 50,
+              "interpretation": "Exploratory location group, not estimated disease risk"
+            }
+          },
+          {
+            "type": "Feature",
+            "id": 151,
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                -0.134272,
+                51.51382
+              ]
+            },
+            "properties": {
+              "source_FID": 151,
+              "recorded_deaths": 1,
+              "group": 0,
+              "neighbor_radius_m": 50,
+              "interpretation": "Exploratory location group, not estimated disease risk"
+            }
+          },
+          {
+            "type": "Feature",
+            "id": 152,
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                -0.13422,
+                51.513724
+              ]
+            },
+            "properties": {
+              "source_FID": 152,
+              "recorded_deaths": 1,
+              "group": 0,
+              "neighbor_radius_m": 50,
+              "interpretation": "Exploratory location group, not estimated disease risk"
+            }
+          },
+          {
+            "type": "Feature",
+            "id": 153,
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                -0.134704,
+                51.513704
+              ]
+            },
+            "properties": {
+              "source_FID": 153,
+              "recorded_deaths": 1,
+              "group": 0,
+              "neighbor_radius_m": 50,
+              "interpretation": "Exploratory location group, not estimated disease risk"
+            }
+          },
+          {
+            "type": "Feature",
+            "id": 154,
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                -0.134782,
+                51.513831
+              ]
+            },
+            "properties": {
+              "source_FID": 154,
+              "recorded_deaths": 1,
+              "group": 0,
+              "neighbor_radius_m": 50,
+              "interpretation": "Exploratory location group, not estimated disease risk"
+            }
+          },
+          {
+            "type": "Feature",
+            "id": 155,
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                -0.13501,
+                51.513915
+              ]
+            },
+            "properties": {
+              "source_FID": 155,
+              "recorded_deaths": 1,
+              "group": 0,
+              "neighbor_radius_m": 50,
+              "interpretation": "Exploratory location group, not estimated disease risk"
+            }
+          },
+          {
+            "type": "Feature",
+            "id": 156,
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                -0.134923,
+                51.513597
+              ]
+            },
+            "properties": {
+              "source_FID": 156,
+              "recorded_deaths": 1,
+              "group": 0,
+              "neighbor_radius_m": 50,
+              "interpretation": "Exploratory location group, not estimated disease risk"
+            }
+          },
+          {
+            "type": "Feature",
+            "id": 157,
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                -0.134885,
+                51.514032
+              ]
+            },
+            "properties": {
+              "source_FID": 157,
+              "recorded_deaths": 1,
+              "group": 0,
+              "neighbor_radius_m": 50,
+              "interpretation": "Exploratory location group, not estimated disease risk"
+            }
+          },
+          {
+            "type": "Feature",
+            "id": 158,
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                -0.134212,
+                51.513891
+              ]
+            },
+            "properties": {
+              "source_FID": 158,
+              "recorded_deaths": 5,
+              "group": 0,
+              "neighbor_radius_m": 50,
+              "interpretation": "Exploratory location group, not estimated disease risk"
+            }
+          },
+          {
+            "type": "Feature",
+            "id": 159,
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                -0.134135,
+                51.513758
+              ]
+            },
+            "properties": {
+              "source_FID": 159,
+              "recorded_deaths": 1,
+              "group": 0,
+              "neighbor_radius_m": 50,
+              "interpretation": "Exploratory location group, not estimated disease risk"
+            }
+          },
+          {
+            "type": "Feature",
+            "id": 160,
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                -0.134364,
+                51.514065
+              ]
+            },
+            "properties": {
+              "source_FID": 160,
+              "recorded_deaths": 1,
+              "group": 0,
+              "neighbor_radius_m": 50,
+              "interpretation": "Exploratory location group, not estimated disease risk"
+            }
+          },
+          {
+            "type": "Feature",
+            "id": 161,
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                -0.134447,
+                51.514146
+              ]
+            },
+            "properties": {
+              "source_FID": 161,
+              "recorded_deaths": 2,
+              "group": 0,
+              "neighbor_radius_m": 50,
+              "interpretation": "Exploratory location group, not estimated disease risk"
+            }
+          },
+          {
+            "type": "Feature",
+            "id": 162,
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                -0.134479,
+                51.514201
+              ]
+            },
+            "properties": {
+              "source_FID": 162,
+              "recorded_deaths": 2,
+              "group": 0,
+              "neighbor_radius_m": 50,
+              "interpretation": "Exploratory location group, not estimated disease risk"
+            }
+          },
+          {
+            "type": "Feature",
+            "id": 163,
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                -0.134658,
+                51.51423
+              ]
+            },
+            "properties": {
+              "source_FID": 163,
+              "recorded_deaths": 1,
+              "group": 0,
+              "neighbor_radius_m": 50,
+              "interpretation": "Exploratory location group, not estimated disease risk"
+            }
+          },
+          {
+            "type": "Feature",
+            "id": 164,
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                -0.134367,
+                51.514319
+              ]
+            },
+            "properties": {
+              "source_FID": 164,
+              "recorded_deaths": 1,
+              "group": 0,
+              "neighbor_radius_m": 50,
+              "interpretation": "Exploratory location group, not estimated disease risk"
+            }
+          },
+          {
+            "type": "Feature",
+            "id": 165,
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                -0.134179,
+                51.514377
+              ]
+            },
+            "properties": {
+              "source_FID": 165,
+              "recorded_deaths": 1,
+              "group": 0,
+              "neighbor_radius_m": 50,
+              "interpretation": "Exploratory location group, not estimated disease risk"
+            }
+          },
+          {
+            "type": "Feature",
+            "id": 166,
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                -0.13416,
+                51.514357
+              ]
+            },
+            "properties": {
+              "source_FID": 166,
+              "recorded_deaths": 1,
+              "group": 0,
+              "neighbor_radius_m": 50,
+              "interpretation": "Exploratory location group, not estimated disease risk"
+            }
+          },
+          {
+            "type": "Feature",
+            "id": 167,
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                -0.134069,
+                51.514382
+              ]
+            },
+            "properties": {
+              "source_FID": 167,
+              "recorded_deaths": 2,
+              "group": 0,
+              "neighbor_radius_m": 50,
+              "interpretation": "Exploratory location group, not estimated disease risk"
+            }
+          },
+          {
+            "type": "Feature",
+            "id": 168,
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                -0.134085,
+                51.514402
+              ]
+            },
+            "properties": {
+              "source_FID": 168,
+              "recorded_deaths": 2,
+              "group": 0,
+              "neighbor_radius_m": 50,
+              "interpretation": "Exploratory location group, not estimated disease risk"
+            }
+          },
+          {
+            "type": "Feature",
+            "id": 169,
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                -0.133821,
+                51.514522
+              ]
+            },
+            "properties": {
+              "source_FID": 169,
+              "recorded_deaths": 5,
+              "group": 0,
+              "neighbor_radius_m": 50,
+              "interpretation": "Exploratory location group, not estimated disease risk"
+            }
+          },
+          {
+            "type": "Feature",
+            "id": 170,
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                -0.133922,
+                51.514497
+              ]
+            },
+            "properties": {
+              "source_FID": 170,
+              "recorded_deaths": 1,
+              "group": 0,
+              "neighbor_radius_m": 50,
+              "interpretation": "Exploratory location group, not estimated disease risk"
+            }
+          },
+          {
+            "type": "Feature",
+            "id": 171,
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                -0.13385,
+                51.514472
+              ]
+            },
+            "properties": {
+              "source_FID": 171,
+              "recorded_deaths": 1,
+              "group": 0,
+              "neighbor_radius_m": 50,
+              "interpretation": "Exploratory location group, not estimated disease risk"
+            }
+          },
+          {
+            "type": "Feature",
+            "id": 172,
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                -0.133725,
+                51.514504
+              ]
+            },
+            "properties": {
+              "source_FID": 172,
+              "recorded_deaths": 1,
+              "group": 0,
+              "neighbor_radius_m": 50,
+              "interpretation": "Exploratory location group, not estimated disease risk"
+            }
+          },
+          {
+            "type": "Feature",
+            "id": 173,
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                -0.133745,
+                51.514546
+              ]
+            },
+            "properties": {
+              "source_FID": 173,
+              "recorded_deaths": 1,
+              "group": 0,
+              "neighbor_radius_m": 50,
+              "interpretation": "Exploratory location group, not estimated disease risk"
+            }
+          },
+          {
+            "type": "Feature",
+            "id": 174,
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                -0.133676,
+                51.514561
+              ]
+            },
+            "properties": {
+              "source_FID": 174,
+              "recorded_deaths": 4,
+              "group": 0,
+              "neighbor_radius_m": 50,
+              "interpretation": "Exploratory location group, not estimated disease risk"
+            }
+          },
+          {
+            "type": "Feature",
+            "id": 175,
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                -0.133563,
+                51.514594
+              ]
+            },
+            "properties": {
+              "source_FID": 175,
+              "recorded_deaths": 1,
+              "group": 0,
+              "neighbor_radius_m": 50,
+              "interpretation": "Exploratory location group, not estimated disease risk"
+            }
+          },
+          {
+            "type": "Feature",
+            "id": 176,
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                -0.133467,
+                51.514581
+              ]
+            },
+            "properties": {
+              "source_FID": 176,
+              "recorded_deaths": 2,
+              "group": 0,
+              "neighbor_radius_m": 50,
+              "interpretation": "Exploratory location group, not estimated disease risk"
+            }
+          },
+          {
+            "type": "Feature",
+            "id": 177,
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                -0.133393,
+                51.514606
+              ]
+            },
+            "properties": {
+              "source_FID": 177,
+              "recorded_deaths": 1,
+              "group": 0,
+              "neighbor_radius_m": 50,
+              "interpretation": "Exploratory location group, not estimated disease risk"
+            }
+          },
+          {
+            "type": "Feature",
+            "id": 180,
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                -0.135395,
+                51.515149
+              ]
+            },
+            "properties": {
+              "source_FID": 180,
+              "recorded_deaths": 1,
+              "group": 0,
+              "neighbor_radius_m": 50,
+              "interpretation": "Exploratory location group, not estimated disease risk"
+            }
+          },
+          {
+            "type": "Feature",
+            "id": 181,
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                -0.136022,
+                51.514818
+              ]
+            },
+            "properties": {
+              "source_FID": 181,
+              "recorded_deaths": 1,
+              "group": 0,
+              "neighbor_radius_m": 50,
+              "interpretation": "Exploratory location group, not estimated disease risk"
+            }
+          },
+          {
+            "type": "Feature",
+            "id": 182,
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                -0.136804,
+                51.514843
+              ]
+            },
+            "properties": {
+              "source_FID": 182,
+              "recorded_deaths": 3,
+              "group": 0,
+              "neighbor_radius_m": 50,
+              "interpretation": "Exploratory location group, not estimated disease risk"
+            }
+          },
+          {
+            "type": "Feature",
+            "id": 183,
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                -0.136583,
+                51.514914
+              ]
+            },
+            "properties": {
+              "source_FID": 183,
+              "recorded_deaths": 1,
+              "group": 0,
+              "neighbor_radius_m": 50,
+              "interpretation": "Exploratory location group, not estimated disease risk"
+            }
+          },
+          {
+            "type": "Feature",
+            "id": 184,
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                -0.135653,
+                51.514496
+              ]
+            },
+            "properties": {
+              "source_FID": 184,
+              "recorded_deaths": 1,
+              "group": 0,
+              "neighbor_radius_m": 50,
+              "interpretation": "Exploratory location group, not estimated disease risk"
+            }
+          },
+          {
+            "type": "Feature",
+            "id": 185,
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                -0.135578,
+                51.514743
+              ]
+            },
+            "properties": {
+              "source_FID": 185,
+              "recorded_deaths": 2,
+              "group": 0,
+              "neighbor_radius_m": 50,
+              "interpretation": "Exploratory location group, not estimated disease risk"
+            }
+          },
+          {
+            "type": "Feature",
+            "id": 186,
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                -0.13486,
+                51.514467
+              ]
+            },
+            "properties": {
+              "source_FID": 186,
+              "recorded_deaths": 1,
+              "group": 0,
+              "neighbor_radius_m": 50,
+              "interpretation": "Exploratory location group, not estimated disease risk"
+            }
+          },
+          {
+            "type": "Feature",
+            "id": 187,
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                -0.13469,
+                51.514453
+              ]
+            },
+            "properties": {
+              "source_FID": 187,
+              "recorded_deaths": 1,
+              "group": 0,
+              "neighbor_radius_m": 50,
+              "interpretation": "Exploratory location group, not estimated disease risk"
+            }
+          },
+          {
+            "type": "Feature",
+            "id": 188,
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                -0.134818,
+                51.514845
+              ]
+            },
+            "properties": {
+              "source_FID": 188,
+              "recorded_deaths": 1,
+              "group": 0,
+              "neighbor_radius_m": 50,
+              "interpretation": "Exploratory location group, not estimated disease risk"
+            }
+          },
+          {
+            "type": "Feature",
+            "id": 189,
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                -0.135704,
+                51.514389
+              ]
+            },
+            "properties": {
+              "source_FID": 189,
+              "recorded_deaths": 1,
+              "group": 0,
+              "neighbor_radius_m": 50,
+              "interpretation": "Exploratory location group, not estimated disease risk"
+            }
+          },
+          {
+            "type": "Feature",
+            "id": 190,
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                -0.135561,
+                51.514399
+              ]
+            },
+            "properties": {
+              "source_FID": 190,
+              "recorded_deaths": 1,
+              "group": 0,
+              "neighbor_radius_m": 50,
+              "interpretation": "Exploratory location group, not estimated disease risk"
+            }
+          },
+          {
+            "type": "Feature",
+            "id": 191,
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                -0.135649,
+                51.514335
+              ]
+            },
+            "properties": {
+              "source_FID": 191,
+              "recorded_deaths": 2,
+              "group": 0,
+              "neighbor_radius_m": 50,
+              "interpretation": "Exploratory location group, not estimated disease risk"
+            }
+          },
+          {
+            "type": "Feature",
+            "id": 192,
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                -0.135415,
+                51.514224
+              ]
+            },
+            "properties": {
+              "source_FID": 192,
+              "recorded_deaths": 1,
+              "group": 0,
+              "neighbor_radius_m": 50,
+              "interpretation": "Exploratory location group, not estimated disease risk"
+            }
+          },
+          {
+            "type": "Feature",
+            "id": 193,
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                -0.135576,
+                51.51422
+              ]
+            },
+            "properties": {
+              "source_FID": 193,
+              "recorded_deaths": 1,
+              "group": 0,
+              "neighbor_radius_m": 50,
+              "interpretation": "Exploratory location group, not estimated disease risk"
+            }
+          },
+          {
+            "type": "Feature",
+            "id": 194,
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                -0.135357,
+                51.514145
+              ]
+            },
+            "properties": {
+              "source_FID": 194,
+              "recorded_deaths": 2,
+              "group": 0,
+              "neighbor_radius_m": 50,
+              "interpretation": "Exploratory location group, not estimated disease risk"
+            }
+          },
+          {
+            "type": "Feature",
+            "id": 195,
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                -0.135475,
+                51.514108
+              ]
+            },
+            "properties": {
+              "source_FID": 195,
+              "recorded_deaths": 3,
+              "group": 0,
+              "neighbor_radius_m": 50,
+              "interpretation": "Exploratory location group, not estimated disease risk"
+            }
+          },
+          {
+            "type": "Feature",
+            "id": 196,
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                -0.136226,
+                51.514359
+              ]
+            },
+            "properties": {
+              "source_FID": 196,
+              "recorded_deaths": 2,
+              "group": 0,
+              "neighbor_radius_m": 50,
+              "interpretation": "Exploratory location group, not estimated disease risk"
+            }
+          },
+          {
+            "type": "Feature",
+            "id": 197,
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                -0.136328,
+                51.514326
+              ]
+            },
+            "properties": {
+              "source_FID": 197,
+              "recorded_deaths": 1,
+              "group": 0,
+              "neighbor_radius_m": 50,
+              "interpretation": "Exploratory location group, not estimated disease risk"
+            }
+          },
+          {
+            "type": "Feature",
+            "id": 198,
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                -0.136222,
+                51.514544
+              ]
+            },
+            "properties": {
+              "source_FID": 198,
+              "recorded_deaths": 1,
+              "group": 0,
+              "neighbor_radius_m": 50,
+              "interpretation": "Exploratory location group, not estimated disease risk"
+            }
+          },
+          {
+            "type": "Feature",
+            "id": 199,
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                -0.136117,
+                51.514569
+              ]
+            },
+            "properties": {
+              "source_FID": 199,
+              "recorded_deaths": 1,
+              "group": 0,
+              "neighbor_radius_m": 50,
+              "interpretation": "Exploratory location group, not estimated disease risk"
+            }
+          },
+          {
+            "type": "Feature",
+            "id": 200,
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                -0.13603,
+                51.514586
+              ]
+            },
+            "properties": {
+              "source_FID": 200,
+              "recorded_deaths": 1,
+              "group": 0,
+              "neighbor_radius_m": 50,
+              "interpretation": "Exploratory location group, not estimated disease risk"
+            }
+          },
+          {
+            "type": "Feature",
+            "id": 201,
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                -0.136266,
+                51.514612
+              ]
+            },
+            "properties": {
+              "source_FID": 201,
+              "recorded_deaths": 1,
+              "group": 0,
+              "neighbor_radius_m": 50,
+              "interpretation": "Exploratory location group, not estimated disease risk"
+            }
+          },
+          {
+            "type": "Feature",
+            "id": 202,
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                -0.136421,
+                51.514575
+              ]
+            },
+            "properties": {
+              "source_FID": 202,
+              "recorded_deaths": 2,
+              "group": 0,
+              "neighbor_radius_m": 50,
+              "interpretation": "Exploratory location group, not estimated disease risk"
+            }
+          },
+          {
+            "type": "Feature",
+            "id": 203,
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                -0.136935,
+                51.514507
+              ]
+            },
+            "properties": {
+              "source_FID": 203,
+              "recorded_deaths": 3,
+              "group": 0,
+              "neighbor_radius_m": 50,
+              "interpretation": "Exploratory location group, not estimated disease risk"
+            }
+          },
+          {
+            "type": "Feature",
+            "id": 204,
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                -0.136931,
+                51.514274
+              ]
+            },
+            "properties": {
+              "source_FID": 204,
+              "recorded_deaths": 3,
+              "group": 0,
+              "neighbor_radius_m": 50,
+              "interpretation": "Exploratory location group, not estimated disease risk"
+            }
+          },
+          {
+            "type": "Feature",
+            "id": 205,
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                -0.136799,
+                51.514293
+              ]
+            },
+            "properties": {
+              "source_FID": 205,
+              "recorded_deaths": 1,
+              "group": 0,
+              "neighbor_radius_m": 50,
+              "interpretation": "Exploratory location group, not estimated disease risk"
+            }
+          },
+          {
+            "type": "Feature",
+            "id": 206,
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                -0.13678,
+                51.514058
+              ]
+            },
+            "properties": {
+              "source_FID": 206,
+              "recorded_deaths": 1,
+              "group": 0,
+              "neighbor_radius_m": 50,
+              "interpretation": "Exploratory location group, not estimated disease risk"
+            }
+          },
+          {
+            "type": "Feature",
+            "id": 207,
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                -0.136696,
+                51.514148
+              ]
+            },
+            "properties": {
+              "source_FID": 207,
+              "recorded_deaths": 3,
+              "group": 0,
+              "neighbor_radius_m": 50,
+              "interpretation": "Exploratory location group, not estimated disease risk"
+            }
+          },
+          {
+            "type": "Feature",
+            "id": 208,
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                -0.136712,
+                51.513961
+              ]
+            },
+            "properties": {
+              "source_FID": 208,
+              "recorded_deaths": 1,
+              "group": 0,
+              "neighbor_radius_m": 50,
+              "interpretation": "Exploratory location group, not estimated disease risk"
+            }
+          },
+          {
+            "type": "Feature",
+            "id": 209,
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                -0.136123,
+                51.514027
+              ]
+            },
+            "properties": {
+              "source_FID": 209,
+              "recorded_deaths": 1,
+              "group": 0,
+              "neighbor_radius_m": 50,
+              "interpretation": "Exploratory location group, not estimated disease risk"
+            }
+          },
+          {
+            "type": "Feature",
+            "id": 210,
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                -0.135958,
+                51.514076
+              ]
+            },
+            "properties": {
+              "source_FID": 210,
+              "recorded_deaths": 1,
+              "group": 0,
+              "neighbor_radius_m": 50,
+              "interpretation": "Exploratory location group, not estimated disease risk"
+            }
+          },
+          {
+            "type": "Feature",
+            "id": 211,
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                -0.135883,
+                51.514096
+              ]
+            },
+            "properties": {
+              "source_FID": 211,
+              "recorded_deaths": 1,
+              "group": 0,
+              "neighbor_radius_m": 50,
+              "interpretation": "Exploratory location group, not estimated disease risk"
+            }
+          },
+          {
+            "type": "Feature",
+            "id": 212,
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                -0.135788,
+                51.514134
+              ]
+            },
+            "properties": {
+              "source_FID": 212,
+              "recorded_deaths": 2,
+              "group": 0,
+              "neighbor_radius_m": 50,
+              "interpretation": "Exploratory location group, not estimated disease risk"
+            }
+          },
+          {
+            "type": "Feature",
+            "id": 213,
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                -0.135849,
+                51.514033
+              ]
+            },
+            "properties": {
+              "source_FID": 213,
+              "recorded_deaths": 2,
+              "group": 0,
+              "neighbor_radius_m": 50,
+              "interpretation": "Exploratory location group, not estimated disease risk"
+            }
+          },
+          {
+            "type": "Feature",
+            "id": 214,
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                -0.136008,
+                51.513996
+              ]
+            },
+            "properties": {
+              "source_FID": 214,
+              "recorded_deaths": 4,
+              "group": 0,
+              "neighbor_radius_m": 50,
+              "interpretation": "Exploratory location group, not estimated disease risk"
+            }
+          },
+          {
+            "type": "Feature",
+            "id": 215,
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                -0.136099,
+                51.51396
+              ]
+            },
+            "properties": {
+              "source_FID": 215,
+              "recorded_deaths": 5,
+              "group": 0,
+              "neighbor_radius_m": 50,
+              "interpretation": "Exploratory location group, not estimated disease risk"
+            }
+          },
+          {
+            "type": "Feature",
+            "id": 216,
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                -0.13617,
+                51.513945
+              ]
+            },
+            "properties": {
+              "source_FID": 216,
+              "recorded_deaths": 2,
+              "group": 0,
+              "neighbor_radius_m": 50,
+              "interpretation": "Exploratory location group, not estimated disease risk"
+            }
+          },
+          {
+            "type": "Feature",
+            "id": 217,
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                -0.135485,
+                51.513821
+              ]
+            },
+            "properties": {
+              "source_FID": 217,
+              "recorded_deaths": 5,
+              "group": 0,
+              "neighbor_radius_m": 50,
+              "interpretation": "Exploratory location group, not estimated disease risk"
+            }
+          },
+          {
+            "type": "Feature",
+            "id": 218,
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                -0.135374,
+                51.513999
+              ]
+            },
+            "properties": {
+              "source_FID": 218,
+              "recorded_deaths": 5,
+              "group": 0,
+              "neighbor_radius_m": 50,
+              "interpretation": "Exploratory location group, not estimated disease risk"
+            }
+          },
+          {
+            "type": "Feature",
+            "id": 219,
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                -0.135582,
+                51.513795
+              ]
+            },
+            "properties": {
+              "source_FID": 219,
+              "recorded_deaths": 3,
+              "group": 0,
+              "neighbor_radius_m": 50,
+              "interpretation": "Exploratory location group, not estimated disease risk"
+            }
+          },
+          {
+            "type": "Feature",
+            "id": 220,
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                -0.135679,
+                51.513766
+              ]
+            },
+            "properties": {
+              "source_FID": 220,
+              "recorded_deaths": 3,
+              "group": 0,
+              "neighbor_radius_m": 50,
+              "interpretation": "Exploratory location group, not estimated disease risk"
+            }
+          },
+          {
+            "type": "Feature",
+            "id": 221,
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                -0.135814,
+                51.513726
+              ]
+            },
+            "properties": {
+              "source_FID": 221,
+              "recorded_deaths": 1,
+              "group": 0,
+              "neighbor_radius_m": 50,
+              "interpretation": "Exploratory location group, not estimated disease risk"
+            }
+          },
+          {
+            "type": "Feature",
+            "id": 222,
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                -0.135905,
+                51.513692
+              ]
+            },
+            "properties": {
+              "source_FID": 222,
+              "recorded_deaths": 5,
+              "group": 0,
+              "neighbor_radius_m": 50,
+              "interpretation": "Exploratory location group, not estimated disease risk"
+            }
+          },
+          {
+            "type": "Feature",
+            "id": 223,
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                -0.135992,
+                51.513672
+              ]
+            },
+            "properties": {
+              "source_FID": 223,
+              "recorded_deaths": 4,
+              "group": 0,
+              "neighbor_radius_m": 50,
+              "interpretation": "Exploratory location group, not estimated disease risk"
+            }
+          },
+          {
+            "type": "Feature",
+            "id": 224,
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                -0.136217,
+                51.513603
+              ]
+            },
+            "properties": {
+              "source_FID": 224,
+              "recorded_deaths": 4,
+              "group": 0,
+              "neighbor_radius_m": 50,
+              "interpretation": "Exploratory location group, not estimated disease risk"
+            }
+          },
+          {
+            "type": "Feature",
+            "id": 225,
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                -0.136579,
+                51.513482
+              ]
+            },
+            "properties": {
+              "source_FID": 225,
+              "recorded_deaths": 1,
+              "group": 0,
+              "neighbor_radius_m": 50,
+              "interpretation": "Exploratory location group, not estimated disease risk"
+            }
+          },
+          {
+            "type": "Feature",
+            "id": 226,
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                -0.136675,
+                51.513458
+              ]
+            },
+            "properties": {
+              "source_FID": 226,
+              "recorded_deaths": 4,
+              "group": 0,
+              "neighbor_radius_m": 50,
+              "interpretation": "Exploratory location group, not estimated disease risk"
+            }
+          },
+          {
+            "type": "Feature",
+            "id": 227,
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                -0.136764,
+                51.513429
+              ]
+            },
+            "properties": {
+              "source_FID": 227,
+              "recorded_deaths": 1,
+              "group": 0,
+              "neighbor_radius_m": 50,
+              "interpretation": "Exploratory location group, not estimated disease risk"
+            }
+          },
+          {
+            "type": "Feature",
+            "id": 228,
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                -0.136877,
+                51.513404
+              ]
+            },
+            "properties": {
+              "source_FID": 228,
+              "recorded_deaths": 3,
+              "group": 0,
+              "neighbor_radius_m": 50,
+              "interpretation": "Exploratory location group, not estimated disease risk"
+            }
+          },
+          {
+            "type": "Feature",
+            "id": 229,
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                -0.136953,
+                51.513359
+              ]
+            },
+            "properties": {
+              "source_FID": 229,
+              "recorded_deaths": 2,
+              "group": 0,
+              "neighbor_radius_m": 50,
+              "interpretation": "Exploratory location group, not estimated disease risk"
+            }
+          },
+          {
+            "type": "Feature",
+            "id": 230,
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                -0.13723,
+                51.513378
+              ]
+            },
+            "properties": {
+              "source_FID": 230,
+              "recorded_deaths": 1,
+              "group": 0,
+              "neighbor_radius_m": 50,
+              "interpretation": "Exploratory location group, not estimated disease risk"
+            }
+          },
+          {
+            "type": "Feature",
+            "id": 231,
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                -0.136651,
+                51.513855
+              ]
+            },
+            "properties": {
+              "source_FID": 231,
+              "recorded_deaths": 2,
+              "group": 0,
+              "neighbor_radius_m": 50,
+              "interpretation": "Exploratory location group, not estimated disease risk"
+            }
+          },
+          {
+            "type": "Feature",
+            "id": 232,
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                -0.136503,
+                51.513875
+              ]
+            },
+            "properties": {
+              "source_FID": 232,
+              "recorded_deaths": 1,
+              "group": 0,
+              "neighbor_radius_m": 50,
+              "interpretation": "Exploratory location group, not estimated disease risk"
+            }
+          },
+          {
+            "type": "Feature",
+            "id": 233,
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                -0.137367,
+                51.513565
+              ]
+            },
+            "properties": {
+              "source_FID": 233,
+              "recorded_deaths": 1,
+              "group": 0,
+              "neighbor_radius_m": 50,
+              "interpretation": "Exploratory location group, not estimated disease risk"
+            }
+          },
+          {
+            "type": "Feature",
+            "id": 234,
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                -0.137422,
+                51.513616
+              ]
+            },
+            "properties": {
+              "source_FID": 234,
+              "recorded_deaths": 2,
+              "group": 0,
+              "neighbor_radius_m": 50,
+              "interpretation": "Exploratory location group, not estimated disease risk"
+            }
+          },
+          {
+            "type": "Feature",
+            "id": 235,
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                -0.137472,
+                51.513742
+              ]
+            },
+            "properties": {
+              "source_FID": 235,
+              "recorded_deaths": 3,
+              "group": 0,
+              "neighbor_radius_m": 50,
+              "interpretation": "Exploratory location group, not estimated disease risk"
+            }
+          },
+          {
+            "type": "Feature",
+            "id": 236,
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                -0.1383,
+                51.513918
+              ]
+            },
+            "properties": {
+              "source_FID": 236,
+              "recorded_deaths": 1,
+              "group": 0,
+              "neighbor_radius_m": 50,
+              "interpretation": "Exploratory location group, not estimated disease risk"
+            }
+          },
+          {
+            "type": "Feature",
+            "id": 237,
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                -0.137363,
+                51.513772
+              ]
+            },
+            "properties": {
+              "source_FID": 237,
+              "recorded_deaths": 1,
+              "group": 0,
+              "neighbor_radius_m": 50,
+              "interpretation": "Exploratory location group, not estimated disease risk"
+            }
+          },
+          {
+            "type": "Feature",
+            "id": 238,
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                -0.137995,
+                51.513502
+              ]
+            },
+            "properties": {
+              "source_FID": 238,
+              "recorded_deaths": 4,
+              "group": 0,
+              "neighbor_radius_m": 50,
+              "interpretation": "Exploratory location group, not estimated disease risk"
+            }
+          },
+          {
+            "type": "Feature",
+            "id": 239,
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                -0.138139,
+                51.513712
+              ]
+            },
+            "properties": {
+              "source_FID": 239,
+              "recorded_deaths": 2,
+              "group": 0,
+              "neighbor_radius_m": 50,
+              "interpretation": "Exploratory location group, not estimated disease risk"
+            }
+          },
+          {
+            "type": "Feature",
+            "id": 240,
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                -0.138239,
+                51.513644
+              ]
+            },
+            "properties": {
+              "source_FID": 240,
+              "recorded_deaths": 2,
+              "group": 0,
+              "neighbor_radius_m": 50,
+              "interpretation": "Exploratory location group, not estimated disease risk"
+            }
+          },
+          {
+            "type": "Feature",
+            "id": 241,
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                -0.138272,
+                51.513711
+              ]
+            },
+            "properties": {
+              "source_FID": 241,
+              "recorded_deaths": 1,
+              "group": 0,
+              "neighbor_radius_m": 50,
+              "interpretation": "Exploratory location group, not estimated disease risk"
+            }
+          },
+          {
+            "type": "Feature",
+            "id": 242,
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                -0.138083,
+                51.514061
+              ]
+            },
+            "properties": {
+              "source_FID": 242,
+              "recorded_deaths": 5,
+              "group": 0,
+              "neighbor_radius_m": 50,
+              "interpretation": "Exploratory location group, not estimated disease risk"
+            }
+          },
+          {
+            "type": "Feature",
+            "id": 244,
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                -0.137707,
+                51.514794
+              ]
+            },
+            "properties": {
+              "source_FID": 244,
+              "recorded_deaths": 2,
+              "group": 0,
+              "neighbor_radius_m": 50,
+              "interpretation": "Exploratory location group, not estimated disease risk"
+            }
+          },
+          {
+            "type": "Feature",
+            "id": 245,
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                -0.137108,
+                51.514526
+              ]
+            },
+            "properties": {
+              "source_FID": 245,
+              "recorded_deaths": 3,
+              "group": 0,
+              "neighbor_radius_m": 50,
+              "interpretation": "Exploratory location group, not estimated disease risk"
+            }
+          },
+          {
+            "type": "Feature",
+            "id": 246,
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                -0.137065,
+                51.514706
+              ]
+            },
+            "properties": {
+              "source_FID": 246,
+              "recorded_deaths": 2,
+              "group": 0,
+              "neighbor_radius_m": 50,
+              "interpretation": "Exploratory location group, not estimated disease risk"
+            }
+          },
+          {
+            "type": "Feature",
+            "id": 247,
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                -0.138474,
+                51.512311
+              ]
+            },
+            "properties": {
+              "source_FID": 247,
+              "recorded_deaths": 1,
+              "group": 0,
+              "neighbor_radius_m": 50,
+              "interpretation": "Exploratory location group, not estimated disease risk"
+            }
+          },
+          {
+            "type": "Feature",
+            "id": 248,
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                -0.138123,
+                51.511998
+              ]
+            },
+            "properties": {
+              "source_FID": 248,
+              "recorded_deaths": 1,
+              "group": 0,
+              "neighbor_radius_m": 50,
+              "interpretation": "Exploratory location group, not estimated disease risk"
+            }
+          },
+          {
+            "type": "Feature",
+            "id": 249,
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                -0.137762,
+                51.511856
+              ]
+            },
+            "properties": {
+              "source_FID": 249,
+              "recorded_deaths": 1,
+              "group": 0,
+              "neighbor_radius_m": 50,
+              "interpretation": "Exploratory location group, not estimated disease risk"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "cholera-layer-2",
+      "name": "Water pumps \u2014 context only",
+      "type": "geojson",
+      "visible": true,
+      "opacity": 1,
+      "style": {
+        "minZoom": 0,
+        "maxZoom": 24,
+        "fillColor": "#b45309",
+        "strokeColor": "#ffffff",
+        "strokeWidth": 2,
+        "fillOpacity": 0.6,
+        "circleRadius": 9,
+        "textColor": "#111827",
+        "textHaloColor": "#ffffff",
+        "textHaloWidth": 2,
+        "textSize": 16,
+        "extrusionEnabled": false,
+        "extrusionColor": "#3b82f6",
+        "extrusionOpacity": 0.8,
+        "extrusionHeightProperty": "height",
+        "extrusionHeightScale": 1,
+        "extrusionBase": 0,
+        "extrusionAdvancedStyleEnabled": false,
+        "extrusionColorExpression": "",
+        "extrusionHeightExpression": "",
+        "vectorStyleMode": "single",
+        "vectorStyleProperty": "",
+        "vectorStyleClassCount": 5,
+        "vectorStyleColorRamp": "viridis",
+        "vectorStyleClassificationScheme": "equal-interval",
+        "vectorStyleStops": [
+          {
+            "value": 0,
+            "color": "#dbeafe"
+          },
+          {
+            "value": 1,
+            "color": "#2563eb"
+          }
+        ],
+        "vectorStyleExpression": "",
+        "pointRenderer": "single",
+        "heatmapRadius": 30,
+        "heatmapIntensity": 1,
+        "heatmapColorRamp": "turbo",
+        "heatmapWeightProperty": "",
+        "clusterRadius": 50,
+        "clusterMaxZoom": 14,
+        "rasterBrightnessMin": 0,
+        "rasterBrightnessMax": 1,
+        "rasterSaturation": 0,
+        "rasterContrast": 0,
+        "rasterHueRotate": 0,
+        "blendMode": "normal"
+      },
+      "metadata": {},
+      "source": {
+        "type": "geojson"
+      },
+      "geojson": {
+        "type": "FeatureCollection",
+        "features": [
+          {
+            "type": "Feature",
+            "id": 250,
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                -0.136668,
+                51.513341
+              ]
+            },
+            "properties": {
+              "source_FID": 250,
+              "source_street": "Broadwick Street",
+              "label": "P1",
+              "role": "Context only; not supplied to DBSCAN"
+            }
+          },
+          {
+            "type": "Feature",
+            "id": 251,
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                -0.139586,
+                51.513876
+              ]
+            },
+            "properties": {
+              "source_FID": 251,
+              "source_street": "Kingly Street",
+              "label": "P2",
+              "role": "Context only; not supplied to DBSCAN"
+            }
+          },
+          {
+            "type": "Feature",
+            "id": 252,
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                -0.139671,
+                51.514906
+              ]
+            },
+            "properties": {
+              "source_FID": 252,
+              "source_street": "Ramillies Place",
+              "label": "P3",
+              "role": "Context only; not supplied to DBSCAN"
+            }
+          },
+          {
+            "type": "Feature",
+            "id": 253,
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                -0.13163,
+                51.512354
+              ]
+            },
+            "properties": {
+              "source_FID": 253,
+              "source_street": "Dean Street",
+              "label": "P4",
+              "role": "Context only; not supplied to DBSCAN"
+            }
+          },
+          {
+            "type": "Feature",
+            "id": 254,
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                -0.133594,
+                51.512139
+              ]
+            },
+            "properties": {
+              "source_FID": 254,
+              "source_street": "Rupert Street",
+              "label": "P5",
+              "role": "Context only; not supplied to DBSCAN"
+            }
+          },
+          {
+            "type": "Feature",
+            "id": 255,
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                -0.135919,
+                51.511542
+              ]
+            },
+            "properties": {
+              "source_FID": 255,
+              "source_street": "Bridle Lane",
+              "label": "P6",
+              "role": "Context only; not supplied to DBSCAN"
+            }
+          },
+          {
+            "type": "Feature",
+            "id": 256,
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                -0.133962,
+                51.510019
+              ]
+            },
+            "properties": {
+              "source_FID": 256,
+              "source_street": "Regent Street",
+              "label": "P7",
+              "role": "Context only; not supplied to DBSCAN"
+            }
+          },
+          {
+            "type": "Feature",
+            "id": 257,
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                -0.138199,
+                51.511295
+              ]
+            },
+            "properties": {
+              "source_FID": 257,
+              "source_street": "Warwick Street",
+              "label": "P8",
+              "role": "Context only; not supplied to DBSCAN"
+            }
+          }
+        ]
+      }
+    }
+  ],
+  "styles": {},
+  "preferences": {
+    "map": {
+      "restrictBounds": false,
+      "bounds": [
+        -180,
+        -85,
+        180,
+        85
+      ],
+      "minZoom": 0,
+      "maxZoom": 24,
+      "maxPitch": 85,
+      "renderWorldCopies": true
+    },
+    "environmentVariables": []
+  },
+  "metadata": {
+    "source": "PHI-Case-Studies/Jupyterlite-1854-Cholera-Basic",
+    "revision": "476f6dd5a8430e6eb823e79614fda1d7e12a78fb",
+    "license_notice": "GPL-3.0; retain data/cholera/LICENSE and provenance",
+    "model": "DBSCAN; haversine; 50 m neighbors; min_samples=5; locations unweighted",
+    "limits": "Exploratory recorded-location groups, not causal evidence or disease-risk estimates"
+  }
+}

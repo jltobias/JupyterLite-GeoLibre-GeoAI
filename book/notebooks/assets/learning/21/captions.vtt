@@ -1,0 +1,17 @@
+WEBVTT
+
+1
+00:00:00.000 --> 00:00:08.000
+Map. Inspect 250 historical locations before fitting any model.
+
+2
+00:00:08.000 --> 00:00:16.000
+Group. Find location groups using a geographic distance and a chosen neighborhood size.
+
+3
+00:00:16.000 --> 00:00:24.000
+Reveal. Add pumps as context after fitting; they were not model inputs.
+
+4
+00:00:24.000 --> 00:00:32.000
+Question. Change the distance and ask what additional evidence an investigation needs.

@@ -1,0 +1,4 @@
+# Preserve the upstream historical-data and license bytes for provenance checks.
+book/notebooks/data/cholera/cholera_deaths.csv -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
+book/notebooks/data/cholera/pumps.csv -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
+book/notebooks/data/cholera/LICENSE -text

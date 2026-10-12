@@ -211,6 +211,14 @@ Default plans are authored examples, not captured model responses. An explicitly
 
 Attribution and integration references: [GeoLibre by Qiusheng Wu and contributors](https://geolibre.app/citation/), [its native assistant](https://geolibre.app/user-guide/ai-assistant/), [Ollama](https://docs.ollama.com/), [Qwen3:4b](https://ollama.com/library/qwen3:4b), and [Global Nature Watch Horizon](https://horizon.globalnaturewatch.org/) as interaction inspiration only. The GeoAI primer cites [Zhang et al., Stanford HAI (2026)](https://hai.stanford.edu/policy/the-world-model-and-spatial-intelligence-era-governing-ai-beyond-language) and separately labels the book's synthesis. Three original diagrams live in `book/assets/assistant/`. See `book/references.md` for full credits; accessed 11 October 2026.
 
+## Historical cholera lesson (21)
+
+The unchanged `cholera_deaths.csv` and `pumps.csv` come from [PHI-Case-Studies/Jupyterlite-1854-Cholera-Basic, revision 476f6dd5a8430e6eb823e79614fda1d7e12a78fb](https://github.com/PHI-Case-Studies/Jupyterlite-1854-Cholera-Basic/tree/476f6dd5a8430e6eb823e79614fda1d7e12a78fb). Credit: PHI-Case-Studies contributors. Their repository's GPL-3.0 license is retained verbatim in `book/notebooks/data/cholera/LICENSE`; the adjacent provenance manifest records source paths and SHA-256 checksums. No upstream notebook code or media was copied. Original digitization and completeness are not independently verified.
+
+The files contain 250 locations, 489 recorded deaths and eight pumps, not a claim about the complete outbreak. DBSCAN fits latitude/longitude coordinates only, using haversine distance and equal location weights. Death counts are descriptive totals; pumps are revealed only as context. Missing denominators, dates, water-use evidence and controls prevent disease-rate, temporal or causal inference. Seven original analytical SVGs, fitted-label snapshots and a GeoLibre project are rebuilt with `python scripts/build_cholera_lesson.py`. The Book presentation switches these **saved results**; notebook 21 performs live fits. This lesson uses scikit-learn, not the separate GeoAI deep-learning package.
+
+Method: [scikit-learn DBSCAN](https://scikit-learn.org/stable/modules/generated/sklearn.cluster.DBSCAN.html). Historical interpretation: [CDC (2004), 150th Anniversary of John Snow and the Pump Handle](https://www.cdc.gov/Mmwr/preview/mmwrhtml/mm5334a1.htm). Runtime: [Pyodide package loading](https://pyodide.org/en/stable/usage/loading-packages.html). GeoLibre: Qiusheng Wu and contributors, [doi:10.5281/zenodo.20785400](https://doi.org/10.5281/zenodo.20785400). Accessed 11 October 2026.
+
 ## Additional high-value sources considered for future labs
 
 ### Copernicus C3S / Interactive Climate Atlas

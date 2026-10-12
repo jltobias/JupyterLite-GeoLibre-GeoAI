@@ -39,7 +39,7 @@ Three other geographic traps deserve names:
 
 **Read the picture:** a project can benefit from all four families. Only some steps learn from data. For example, `fit_predict(...)` in a clustering lab learns group assignments from features; a threshold such as `temperature >= 30` applies a rule chosen by its author. A map renders the result of either operation but does not turn a rule into a trained model.
 
-The [18-notebook atlas](notebook-atlas.md) identifies exactly what each lesson does. In particular, labs 12–15 run deterministic, synthetic exercises by default; optional external-model requests are separate. Lab 16 visualizes pre-existing SaTScan report results. Lab 17 structures human discussion. Neither performs a new AI analysis of disease burden.
+The [22-notebook atlas](notebook-atlas.md) identifies exactly what each lesson does. For an introductory presentation, try [five minutes: from John Snow’s map to GeoAI](../presentations/cholera-five-minutes.md), then [run the historical-data clustering lesson](../notebooks/21_cholera_geoai_first_steps.ipynb). It contrasts a map, an actual fitted model and human investigation without inferring a cause from a cluster. In particular, labs 12–15 run deterministic, synthetic exercises by default; optional external-model requests are separate. Lab 16 visualizes pre-existing SaTScan report results. Lab 17 structures human discussion. Neither performs a new AI analysis of disease burden.
 
 ## What Esri's overview adds
 

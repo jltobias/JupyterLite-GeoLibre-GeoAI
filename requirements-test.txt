@@ -9,3 +9,4 @@ pillow>=10
 ipykernel>=6
 nbclient>=0.10
 h3>=4,<5
+scikit-learn>=1.5,<2

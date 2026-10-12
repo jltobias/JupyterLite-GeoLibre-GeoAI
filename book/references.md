@@ -59,6 +59,8 @@ The [STAC discovery chapter](platforms/stac-discovery.md) connects the [JupyterL
 
 ## Data
 
+**Historical cholera demonstration:** PHI-Case-Studies contributors, [*Jupyterlite-1854-Cholera-Basic*, revision 476f6dd](https://github.com/PHI-Case-Studies/Jupyterlite-1854-Cholera-Basic/tree/476f6dd5a8430e6eb823e79614fda1d7e12a78fb). Unchanged CSVs, upstream GPL-3.0 notice and checksum manifest accompany notebook 21. The [five-minute walkthrough](presentations/cholera-five-minutes.md) is a new extension, not a reproduction of upstream notebook code or of Snow's reasoning. Method: [scikit-learn DBSCAN](https://scikit-learn.org/stable/modules/generated/sklearn.cluster.DBSCAN.html). Historical context: CDC (2004), [*150th Anniversary of John Snow and the Pump Handle*](https://www.cdc.gov/Mmwr/preview/mmwrhtml/mm5334a1.htm). Sources accessed 11 October 2026. Newly generated maps show exploratory recorded-location groups, not disease risk or causal attribution.
+
 See the per-notebook citation cells and `DATA_SOURCES.md` for WorldPop, Census/TIGERweb, Major TOM, Sentinel-2, Copernicus DEM, ESA WorldCover, CHIRPS, USGS earthquake feeds, Source Cooperative, and OpenStreetMap attribution.
 
 Labs 12–15 use synthetic teaching fixtures authored in the repository. The additional rainfall series in lab 04 is also synthetic and is not extracted CHIRPS data. Model plans and tool arguments shown in the default runs are hand-authored examples, not captured Astra responses. Real-data transfer exercises specify the metadata and validation needed before substituting observations.

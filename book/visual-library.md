@@ -1,6 +1,8 @@
 # Visual library: read, run, watch and compare
 
-Start with a question, not a display type. **Read** opens the Book chapter; **Run** opens its editable notebook; **Watch** plays a 32-second silent storyboard with captions and a transcript. **Infographic** and **Cartoon** open full-size teaching illustrations. All 21 lessons share these routes and the same canonical notebook sources.
+Start with a question, not a display type. **Read** opens the Book chapter; **Run** opens its editable notebook; **Watch** plays a 32-second silent storyboard with captions and a transcript. **Infographic** and **Cartoon** open full-size teaching illustrations. All 22 lessons share these routes and the same canonical notebook sources.
+
+**For a first presentation:** [from John Snow’s map to GeoAI](presentations/cholera-five-minutes.md) offers a five-minute script, seven analytical point maps, saved-results controls and notebook 21 for actual browser-based fitting.
 
 ## Choose a visual investigation
 
@@ -21,7 +23,7 @@ Start with a question, not a display type. **Read** opens the Book chapter; **Ru
 
 **Read the picture:** lab 14 begins with known, invented terrain. Derivatives and profiles provide measurements against which to check the 3D display. A perspective view adds context, not extra evidence.
 
-## All 21 notebooks and their companions
+## All 22 notebooks and their companions
 
 <!-- BEGIN NOTEBOOK RESOURCES -->
 
@@ -48,6 +50,7 @@ Start with a question, not a display type. **Read** opens the Book chapter; **Ru
 | 18 — Local AI, browser map | [Read](https://jltobias.github.io/JupyterLite-GeoLibre-GeoAI/notebooks/18_ollama_geolibre_setup.html) · [Run](https://jltobias.github.io/JupyterLite-GeoLibre-GeoAI/lite/lab/index.html?path=18_ollama_geolibre_setup.ipynb) | [Watch](https://jltobias.github.io/JupyterLite-GeoLibre-GeoAI/lite/files/assets/learning/18/watch.html) · [Infographic](https://jltobias.github.io/JupyterLite-GeoLibre-GeoAI/lite/files/assets/learning/18/infographic.svg) · [Cartoon](https://jltobias.github.io/JupyterLite-GeoLibre-GeoAI/lite/files/assets/learning/18/cartoon.svg) |
 | 19 — A chat request becomes a plan | [Read](https://jltobias.github.io/JupyterLite-GeoLibre-GeoAI/notebooks/19_ollama_chat_to_map.html) · [Run](https://jltobias.github.io/JupyterLite-GeoLibre-GeoAI/lite/lab/index.html?path=19_ollama_chat_to_map.ipynb) | [Watch](https://jltobias.github.io/JupyterLite-GeoLibre-GeoAI/lite/files/assets/learning/19/watch.html) · [Infographic](https://jltobias.github.io/JupyterLite-GeoLibre-GeoAI/lite/files/assets/learning/19/infographic.svg) · [Cartoon](https://jltobias.github.io/JupyterLite-GeoLibre-GeoAI/lite/files/assets/learning/19/cartoon.svg) |
 | 20 — From chat to checked evidence | [Read](https://jltobias.github.io/JupyterLite-GeoLibre-GeoAI/notebooks/20_ollama_evidence_review.html) · [Run](https://jltobias.github.io/JupyterLite-GeoLibre-GeoAI/lite/lab/index.html?path=20_ollama_evidence_review.ipynb) | [Watch](https://jltobias.github.io/JupyterLite-GeoLibre-GeoAI/lite/files/assets/learning/20/watch.html) · [Infographic](https://jltobias.github.io/JupyterLite-GeoLibre-GeoAI/lite/files/assets/learning/20/infographic.svg) · [Cartoon](https://jltobias.github.io/JupyterLite-GeoLibre-GeoAI/lite/files/assets/learning/20/cartoon.svg) |
+| 21 — From John Snow’s map to GeoAI | [Read](https://jltobias.github.io/JupyterLite-GeoLibre-GeoAI/notebooks/21_cholera_geoai_first_steps.html) · [Run](https://jltobias.github.io/JupyterLite-GeoLibre-GeoAI/lite/lab/index.html?path=21_cholera_geoai_first_steps.ipynb) | [Watch](https://jltobias.github.io/JupyterLite-GeoLibre-GeoAI/lite/files/assets/learning/21/watch.html) · [Infographic](https://jltobias.github.io/JupyterLite-GeoLibre-GeoAI/lite/files/assets/learning/21/infographic.svg) · [Cartoon](https://jltobias.github.io/JupyterLite-GeoLibre-GeoAI/lite/files/assets/learning/21/cartoon.svg) |
 
 <!-- END NOTEBOOK RESOURCES -->
 

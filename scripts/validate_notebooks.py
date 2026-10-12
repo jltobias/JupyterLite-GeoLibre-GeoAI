@@ -15,7 +15,8 @@ import nbformat
 ROOT = Path(__file__).resolve().parents[1]
 NOTEBOOKS = ROOT / "book" / "notebooks"
 BUNDLED_LABS = {"16_sea_level_rise_sat_scan_geoai.ipynb", "17_rewiring_global_health_six_hats.ipynb",
-                "18_ollama_geolibre_setup.ipynb", "19_ollama_chat_to_map.ipynb", "20_ollama_evidence_review.ipynb"}
+                "18_ollama_geolibre_setup.ipynb", "19_ollama_chat_to_map.ipynb", "20_ollama_evidence_review.ipynb",
+                "21_cholera_geoai_first_steps.ipynb"}
 
 
 def executable_offline(path, nb):
@@ -27,10 +28,13 @@ def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--execute", action="store_true")
     parser.add_argument("--save-outputs", action="store_true")
+    parser.add_argument("--keys", nargs="+", help="Execute/save only these two-digit notebook prefixes; still validate all")
     args = parser.parse_args()
     if args.save_outputs and not args.execute:
         parser.error("--save-outputs requires --execute")
     paths = sorted(NOTEBOOKS.glob("*.ipynb"))
+    if args.keys and (not args.execute or set(args.keys) - {p.name[:2] for p in paths}):
+        parser.error("--keys requires --execute and existing two-digit notebook prefixes")
     for path in paths:
         nb = nbformat.read(path, as_version=4)
         nbformat.validate(nb)
@@ -43,6 +47,8 @@ def main():
         return
     from nbclient import NotebookClient
     for path in paths:
+        if args.keys and path.name[:2] not in args.keys:
+            continue
         nb = nbformat.read(path, as_version=4)
         if not executable_offline(path, nb):
             continue

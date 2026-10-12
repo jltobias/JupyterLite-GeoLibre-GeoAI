@@ -219,6 +219,16 @@ The follow-up request also adds two presentation-informed chapters on digital tw
 | structure | book/geoai/primer.md: Esri section before foundational geographic concepts | Move Esri comparison after place and method explanations | Applied; 0 words cut from attributed section. |
 | structure | GeoLibre attribution / learning guide: Creator and figure credits; repeated interpretation guidance | Preserve contextual repetitions | Preserved; 376 words identified for retention. |
 
+## Cholera beginner extension — validation addendum, 2026-10-11
+
+Notebook 21 and `presentations/cholera-five-minutes` add an explicitly fitted, historical-data DBSCAN lesson. Nine new tests cover unchanged source checksums/license, coordinate order and units, model counts, equal location weighting, invalid inputs, pump-context separation, supported GeoLibre styles and reproducible saved views. The full suite now has 62 tests. Both Book/Lite copies remain aligned with the canonical notebooks; there are 22 notebooks and 214 Lite content files at this revision.
+
+`check_cholera_browser.py --pyodide` executes all six authored code cells in a real browser Pyodide runtime, then exercises the distance and pump-control callbacks. All 750 labels across 25/50/100 meters matched the committed snapshots in Pyodide 0.27.6 (Python 3.12.7) and 314.0.6 (Python 3.14.2). Pump toggles did not refit. This is a real calculation with real bundled data, not mocked model results. The test does not certify the JupyterLab widget manager or an external GeoLibre service. The default optional-map cell makes no map-service call; GeoLibre project content and styles are tested separately.
+
+The same check validates seven analytical SVG text bounds, saved-result controls, Book iframe integration and desktop/mobile overflow. Lesson 21's media passes playback, caption, graphic and mobile checks. The existing Book 1 / sphinx-thebe duplicate `THEBE_JS_URL` declaration is logged as a known nonfatal template warning; no JavaScript errors are allowed in the new standalone presentation. The new lesson does not fix that unrelated template issue. Tests establish software/data consistency, not epidemiologic validity, dataset completeness or causality. Original historical digitization remains unverified.
+
+Rebuild: `python scripts/build_cholera_lesson.py`; verify: append `--check`. To intentionally refresh only this notebook's saved outputs, use `python scripts/validate_notebooks.py --execute --save-outputs --keys 21`, then `python scripts/build_learning_media.py`. CI executes all allowed bundled-data labs and tests the current built Lite runtime. New live data are never silently substituted for these attributed source files.
+
 ## prose
 
 | Pass | Original text / location | Revised text | Changes |

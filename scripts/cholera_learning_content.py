@@ -1,0 +1,46 @@
+"""Authored novice guides for the historical cholera GeoAI lesson."""
+
+
+def extend(lessons, profiles, step, profile):
+    lessons['21'] = [
+        step('Prepare a small browser experiment', 'import sys',
+             '`import` loads tools. In Pyodide, `await loadPackage` waits for compiled scientific packages; micropip adds notebook controls. This cell does not fetch outbreak data or contact an AI service.',
+             'Python, plots, widgets and the bundled lesson helper are ready.',
+             'Run this cell before the presentation; a first package download needs internet access.'),
+        step('Map the evidence before fitting a model', 'deaths, pumps = load_records()',
+             '`load_records` reads two bundled CSVs. `len` counts locations; `sum` totals the DEATHS column. The point map uses equal-size symbols, one per recorded location, not one per person.',
+             '250 locations, 489 recorded deaths and eight pumps; only the death locations are drawn so far.',
+             'Describe a pattern you see without claiming what caused it.'),
+        step('Fit the geographic clustering model', 'labels = DBSCAN(',
+             '`np.radians` converts latitude/longitude for the haversine distance. `eps` expresses a chosen meter radius as an angle. `min_samples=5` includes the point itself. `fit_predict` computes group membership from locations, without pump coordinates or DEATHS weights.',
+             'At 50 meters, one group has 243 locations; seven are unassigned. Group numbers are labels, not risk scores.',
+             'Why is a 50-meter neighbor distance not a 50-meter maximum cluster diameter?'),
+        step('Reveal context without retraining', 'reveal_figure =',
+             'The same `labels` are plotted with pumps added as context. Pump names are read from the source table. No model-fitting call occurs in this cell.',
+             'Pump markers P1–P8 beside the existing groups; no predicted source of infection.',
+             'What interviews or water-use evidence would you seek before drawing a conclusion?'),
+        step('Change one assumption', 'radius_control =',
+             'The slider has three distance choices. Its callback reruns DBSCAN and replaces the plot. The checkbox only shows or hides pumps. Matplotlib draws the live analytical view; it does not require map tiles.',
+             'At 25, 50 and 100 meters, respectively: 12, 1 and 1 groups, with 42, 7 and 0 unassigned locations.',
+             'Switch to 100 meters. Is a group containing every location useful for prioritizing an investigation?'),
+        step('Explore the result in GeoLibre', 'SHOW_GEOLIBRE =',
+             'This optional cell builds a GeoLibre project from the currently selected distance and pump toggle. It saves an inspectable JSON recipe locally and displays the hosted viewer. Changing the earlier controls requires rerunning this cell to update this separate map.',
+             'A GeoLibre layer per group plus optional pumps. If packages or the viewer are unavailable, retain the analytical plots and Book presentation.',
+             'Inspect a point and compare its source FID, group and recorded deaths with the CSV. No operational risk estimate is produced.'),
+    ]
+    profiles['21'] = profile(
+        'From John Snow’s map to GeoAI',
+        'Can a model find nearby groups before we reveal the pumps?',
+        'Unsupervised DBSCAN fits geographic location groups; mapping and pump overlays are separate steps. This is not causal inference.',
+        'Pyodide computes with bundled historical data. Plots need no tiles; optional GeoLibre viewing uses its hosted application and basemap.',
+        'A small experiment makes inputs, model choices, map context and limits visible to a first-time audience.',
+        [('Map', 'load_records()', 'Inspect 250 historical locations before fitting any model.'),
+         ('Group', 'DBSCAN(...).fit_predict(...)', 'Find location groups using a geographic distance and a chosen neighborhood size.'),
+         ('Reveal', 'plot_locations(..., pumps=pumps)', 'Add pumps as context after fitting; they were not model inputs.'),
+         ('Question', 'radius_control', 'Change the distance and ask what additional evidence an investigation needs.')],
+        ['Did the model prove which pump caused the outbreak?',
+         'It grouped locations. We have not measured water use.',
+         'Then the pattern is a lead, not the final answer.'],
+        'Which part learned from data, and which part only changed the display?',
+        'DBSCAN fitted group membership from locations. Revealing pumps changed only the display. Neither establishes exposure, risk or causation.',
+        'footprints')

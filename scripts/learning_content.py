@@ -688,3 +688,5 @@ PROFILES = {
 
 from ollama_learning_content import extend as _extend_ollama
 _extend_ollama(LESSONS, PROFILES, step, profile, SETUP)
+from cholera_learning_content import extend as _extend_cholera
+_extend_cholera(LESSONS, PROFILES, step, profile)

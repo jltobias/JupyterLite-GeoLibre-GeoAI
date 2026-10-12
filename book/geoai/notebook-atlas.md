@@ -1,8 +1,8 @@
-# What do all 21 notebooks actually demonstrate?
+# What do all 22 notebooks actually demonstrate?
 
 Use this atlas to connect a program question to a method, then read the notebook's code guides. **The potential health uses below are transfer exercises, not health analyses already performed by these notebooks.** Adding disease names to a map does not validate a health application.
 
-![Four learning stages place all 21 notebooks into orientation, pattern learning, assumption testing and accountable interpretation.](../assets/geoai/notebook-atlas.svg)
+![Four learning stages place all 22 notebooks into orientation, pattern learning, assumption testing and accountable interpretation.](../assets/geoai/notebook-atlas.svg)
 
 **Read the picture:** this is a learning sequence, not a ranking of sophistication. A transparent route calculation can be more useful than an unsuitable AI model. The model-fitting labs use small browser-compatible methods; the optional external-model path is separate.
 
@@ -18,6 +18,8 @@ Use this atlas to connect a program question to a method, then read the notebook
 
 ## Models that learn patterns in the browser
 
+**First presentation?** Start with [the five-minute cholera walkthrough](../presentations/cholera-five-minutes.md): map locations, fit groups, reveal context, then question the result.
+
 | Notebook | What actually runs | Possible health transfer; missing evidence |
 |---|---|---|
 | [02 · Census counties](../notebooks/02_census_geoai_counties.ipynb) | Derived/scaled county features and K-Means | Compare area profiles; clusters are not deprivation diagnoses or causal explanations |
@@ -27,6 +29,7 @@ Use this atlas to connect a program question to a method, then read the notebook
 | [09 · Demo recommender](../notebooks/09_geolibre_demo_recommender.ipynb) | TF-IDF, text clustering, cosine similarity and a 2D projection | Retrieve relevant workflow examples; similarity is not correctness, and plot coordinates are not geography |
 | [10 · Sister Cities](../notebooks/10_sister_cities_graph_geoai.ipynb) | Graph features, clustering and anomaly detection on partnership links | Learn network roles; real referral networks require new data, and partnerships are not contact or mobility records |
 | [11 · Wildfire triage](../notebooks/11_wildfire_stac_triage.ipynb) | Perimeter-feature anomalies, STAC discovery, a hand-weighted ranking and acquisition grouping | Practice event/imagery review; not a validated burn-severity or health-impact model |
+| [21 · Cholera first steps](../notebooks/21_cholera_geoai_first_steps.ipynb) | Actual DBSCAN on bundled historical location coordinates; distance sensitivity, offline point maps and optional GeoLibre | Distinguish mapping from fitted patterns and causal investigation; pumps are context, not inputs; no risk rates or contaminated-pump inference |
 
 ## Synthetic experiments and interpretation
 
@@ -52,6 +55,8 @@ Labs 12–15 also support optional exported model requests through a separate fu
 Use the [advanced chapter](../advanced/ollama-assistant.md) for the full native GeoLibre assistant. The bounded notebook planner does not expose the native assistant's wider tool set.
 
 ## Choose a small learning route
+
+- **First encounter with GeoAI:** five-minute walkthrough → 21 → 00. See a small fitted model first, then explore mapping tools.
 
 - **PEPFAR, HIV or TB:** 01 → 02 → 15 → 17. Understand denominators, compare profiles, test access, discuss action. Read [HIV/TB use cases](hiv-tb.md).
 - **Polio, malaria or outbreak operations:** 07 → 08 → 05 → 15. Discover evidence, inspect metadata, learn anomaly triage and routes. Read [outbreak use cases](outbreaks.md).

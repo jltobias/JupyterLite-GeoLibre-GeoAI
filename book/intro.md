@@ -4,6 +4,8 @@ This book is a set of **live, browser-native geospatial labs**. Each notebook ch
 
 **Launch the lab:** [https://jltobias.github.io/JupyterLite-GeoLibre-GeoAI/lite/lab/index.html](https://jltobias.github.io/JupyterLite-GeoLibre-GeoAI/lite/lab/index.html)
 
+**Presenting to beginners?** Start with [five minutes: from John Snow’s map to GeoAI](presentations/cholera-five-minutes.md). Map historical locations, fit geographic groups, reveal pumps and ask what evidence is missing. The chapter has presentation controls and static backups; [notebook 21](notebooks/21_cholera_geoai_first_steps.ipynb) performs the actual browser-based learning step.
+
 ## Start with the three ideas
 
 | Your question | Plain-language answer | Illustrated introduction |
@@ -24,7 +26,7 @@ The two platform introductions use **seven graphics from James L. Tobias's July 
 |---|---|
 | How is GeoAI related to AI and GIS? | [What is GeoAI?](geoai/primer.md) |
 | How do maps become model inputs and trustworthy results? | [How GeoAI works](geoai/how-it-works.md) |
-| Which notebooks actually fit models? | [All 21 notebooks: method and interpretation atlas](geoai/notebook-atlas.md) |
+| Which notebooks actually fit models? | [All 22 notebooks: method and interpretation atlas](geoai/notebook-atlas.md) |
 | How could PEPFAR, HIV and TB programs benefit? | [Service continuity, denominators and referral networks](geoai/hiv-tb.md) |
 | What about polio, malaria, Ebola and emergencies? | [Disease programs and response operations](geoai/outbreaks.md) |
 | How do heat, floods, food, water and air connect to health? | [Climate–health pathways](geoai/climate-health.md) |
@@ -46,7 +48,7 @@ Two presentation-informed chapters connect the lessons to [digital twins and age
 
 ## Choose a notebook or visual
 
-The [visual resource guide](visual-library.md) pairs **Read / Run / Watch / Infographic / Cartoon** links for all 21 notebooks. It also indexes 2D maps, 3D terrain, scenario animation, time-series charts and story-led interpretation, with clear evidence limits.
+The [visual resource guide](visual-library.md) pairs **Read / Run / Watch / Infographic / Cartoon** links for all 22 notebooks. It also indexes 2D maps, 3D terrain, scenario animation, time-series charts and story-led interpretation, with clear evidence limits.
 
 Start with **00 → 01 → 02** for maps and clustering; **03 → 13** for imagery; **14** for terrain; **12 → 15** for synthetic experiments with optional Astra assistance; **16** for report interpretation; and **17** for a facilitated discussion.
 

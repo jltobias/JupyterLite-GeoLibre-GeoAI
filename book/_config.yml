@@ -2,6 +2,7 @@ title: "GeoLibre + GeoAI in JupyterLite"
 author: "James L. Tobias"
 copyright: "2026"
 logo: ""
+exclude_patterns: ["_build", "**/.ipynb_checkpoints", "notebooks/data/**"]
 sphinx:
   config:
     html_static_path: ["_static"]
