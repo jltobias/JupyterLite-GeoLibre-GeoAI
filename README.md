@@ -27,6 +27,8 @@ The 24 original diagrams are accessible, locally bundled SVGs with plain-languag
 
 Start with [Esri's two GeoAI diagrams](https://jltobias.github.io/JupyterLite-GeoLibre-GeoAI/geoai/primer.html#esri-geoai-diagrams): the AI/spatial-analysis overlap and the AI/ML/deep-learning categories alongside spatial methods. Both are reproduced unchanged from Esri's ArcGIS Pro 3.6 documentation, separately credited to Esri, with accessible descriptions, reading guides, original-image links and a [reference entry](https://jltobias.github.io/JupyterLite-GeoLibre-GeoAI/references.html#esri-geoai-diagram-reference). They are not included in the count of original repository diagrams.
 
+[Notebook 00](https://jltobias.github.io/JupyterLite-GeoLibre-GeoAI/lite/lab/index.html?path=00_geolibre_quickstart.ipynb) now opens with a **What is GeoAI? starter**, including both Esri diagrams and plain-language reading guides before the existing GeoLibre quickstart. Images are bundled locally; no code needs to run to read the introduction. It distinguishes this notebook's mapping foundation from the fitted clustering model in notebook 21. [Read notebook 00 in the Book](https://jltobias.github.io/JupyterLite-GeoLibre-GeoAI/notebooks/00_geolibre_quickstart.html).
+
 The primer also includes [AWS's perspective on GeoAI](https://jltobias.github.io/JupyterLite-GeoLibre-GeoAI/geoai/primer.html#aws-geoai-perspective), alongside the existing Esri discussion, with citations and links to concrete notebook examples. It separates industry definitions from this book's interpretations and explains why browser GeoAI does not require an AWS account or cloud-based model execution.
 
 ## Advanced: local AI-assisted mapping

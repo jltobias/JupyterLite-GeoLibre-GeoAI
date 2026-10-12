@@ -5,6 +5,8 @@
   "source_page": "https://pro.arcgis.com/en/pro-app/3.6/help/analysis/ai/geoai.htm",
   "related_overview": "https://www.esri.com/en-us/capabilities/geoai/overview",
   "accessed": "2026-10-12",
+  "locations": ["book/assets/esri/", "book/notebooks/assets/esri/"],
+  "usage": ["book/geoai/primer.md", "book/notebooks/00_geolibre_quickstart.ipynb"],
   "context": "The user supplied both diagrams and requested their inclusion with Esri attribution. Matching PNGs were retrieved from the official documentation.",
   "transformation": "None; original PNG bytes retained unchanged, with display size adapted by the page layout.",
   "rights": "Copyright remains with Esri. These images are not original repository artwork and are not relicensed under the project's software license. No affiliation or endorsement is implied.",

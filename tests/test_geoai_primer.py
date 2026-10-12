@@ -110,6 +110,39 @@ class GeoAIPrimer(unittest.TestCase):
         self.assertIn("<esri-geoai-diagram-reference>",section)
         self.assertLess(primer.index("(esri-geoai-diagrams)="),primer.index("## Is GeoAI different"))
 
+    def test_notebook_00_geoai_starter_and_bundled_esri_copies(self):
+        directory=ROOT/"book/notebooks"
+        notebook=json.loads((directory/"00_geolibre_quickstart.ipynb").read_text(encoding="utf-8"))
+        starter=notebook["cells"][0]
+        self.assertEqual(starter["cell_type"],"markdown")
+        self.assertFalse(starter.get("metadata",{}).get("learning_guide"))
+        text="".join(starter["source"])
+        self.assertTrue(text.startswith("# 00 — GeoLibre quickstart in JupyterLite\n"))
+        self.assertIn("## What is GeoAI? — start here",text)
+        self.assertIn("Notebook 00 is the mapping foundation, not a fitted AI model",text)
+        self.assertIn("GeoAI does not always require deep learning",text)
+        self.assertIn("not an Esri evaluation",text)
+        self.assertIn("### Continue with the GeoLibre quickstart",text)
+        self.assertEqual(notebook["cells"][1]["id"],"learn-00-intro")
+        assets=ROOT/"book/assets/esri"
+        bundled=directory/"assets/esri"
+        self.assertEqual((assets/"provenance.json").read_bytes(),(bundled/"provenance.json").read_bytes())
+        metadata=json.loads((bundled/"provenance.json").read_text(encoding="utf-8"))
+        self.assertEqual(text.count("**Image credit: Esri.**"),2)
+        for item in metadata["images"]:
+            self.assertEqual((assets/item["file"]).read_bytes(),(bundled/item["file"]).read_bytes())
+            self.assertIn(f'](assets/esri/{item["file"]})',text)
+            self.assertIn(item["source_url"],text)
+        self.assertIn(metadata["source_page"],text)
+        self.assertIn(metadata["related_overview"],text)
+        # Notebook links stay inside the distributed notebook directory (no Book-only paths).
+        for _,target in re.findall(r"\[([^\]]*)\]\(([^)]+)\)",text):
+            if target.startswith(("https://","http://","#")):
+                continue
+            path=(directory/target.split("#")[0]).resolve()
+            self.assertTrue(path.is_relative_to(directory),target)
+            self.assertTrue(path.is_file(),target)
+
     def test_aws_attribution_and_browser_teaching_boundaries(self):
         url="https://aws.amazon.com/what-is/geospatial-artificial-intelligence/"
         primer=(ROOT/"book/geoai/primer.md").read_text(encoding="utf-8")

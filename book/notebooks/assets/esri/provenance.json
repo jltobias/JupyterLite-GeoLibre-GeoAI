@@ -1,0 +1,31 @@
+{
+  "creator": "Esri",
+  "credit": "Copyright Esri",
+  "source_title": "GeoAI - ArcGIS Pro 3.6 documentation, Key concepts",
+  "source_page": "https://pro.arcgis.com/en/pro-app/3.6/help/analysis/ai/geoai.htm",
+  "related_overview": "https://www.esri.com/en-us/capabilities/geoai/overview",
+  "accessed": "2026-10-12",
+  "locations": ["book/assets/esri/", "book/notebooks/assets/esri/"],
+  "usage": ["book/geoai/primer.md", "book/notebooks/00_geolibre_quickstart.ipynb"],
+  "context": "The user supplied both diagrams and requested their inclusion with Esri attribution. Matching PNGs were retrieved from the official documentation.",
+  "transformation": "None; original PNG bytes retained unchanged, with display size adapted by the page layout.",
+  "rights": "Copyright remains with Esri. These images are not original repository artwork and are not relicensed under the project's software license. No affiliation or endorsement is implied.",
+  "images": [
+    {
+      "file": "esri-geoai-overlap.png",
+      "description": "Venn diagram of artificial intelligence and spatial analysis, with GeoAI in their overlap",
+      "source_url": "https://pro.arcgis.com/en/pro-app/3.6/help/analysis/ai/GUID-CCB3D3D4-4101-4D26-9404-C91B2F3D6BF5-web.png",
+      "width": 401,
+      "height": 271,
+      "sha256": "b6c07eb9429bb7ae258cadb8ce26d47dc73f68c3d512e10dbb7bc93042620f5e"
+    },
+    {
+      "file": "esri-ai-spatial-analysis.png",
+      "description": "Nested AI, machine-learning and deep-learning categories beside a circle of spatial-analysis methods",
+      "source_url": "https://pro.arcgis.com/en/pro-app/3.6/help/analysis/ai/GUID-1428ADD5-61AC-48B5-A6DD-3F6353705DE1-web.png",
+      "width": 600,
+      "height": 272,
+      "sha256": "fa3ed1742ad99894849f65324a6557954848fbcbf20de0790a758ea81152ed9e"
+    }
+  ]
+}
