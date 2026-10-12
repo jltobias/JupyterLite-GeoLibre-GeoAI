@@ -6,6 +6,8 @@ python scripts/build_learning_media.py --check     # verify committed copy match
 
 Existing code, execution counts and outputs are preserved. Only cells marked
 learning_guide are replaced. Content anchors fail closed if code cells change.
+Contiguous Markdown cells tagged learning_preamble after the title stay ahead
+of the generated lesson introduction.
 All generated illustrations are schematic; they never claim to be model outputs.
 """
 import argparse
@@ -308,6 +310,15 @@ def lesson_cell(key,number,lesson,code):
 
 def transform(nb,key,filename):
     cells=[c for c in nb["cells"] if not c.get("metadata",{}).get("learning_guide")]
+    intro_after=0
+    for i,cell in enumerate(cells[1:],1):
+        if not cell.get("metadata",{}).get("learning_preamble"):
+            break
+        if cell["cell_type"]!="markdown":
+            raise ValueError(f"{filename}: learning_preamble must be Markdown")
+        intro_after=i
+    if any(c.get("metadata",{}).get("learning_preamble") for c in cells[intro_after+1:]):
+        raise ValueError(f"{filename}: learning_preamble must immediately follow the title")
     code_cells=[c for c in cells if c["cell_type"]=="code"]
     if len(code_cells)!=len(LESSONS[key]):
         raise ValueError(f"{filename}: {len(code_cells)} code cells but {len(LESSONS[key])} guides")
@@ -323,7 +334,7 @@ def transform(nb,key,filename):
             result.append(lesson_cell(key,number+1,LESSONS[key][number],"".join(cell["source"])))
             number+=1
         result.append(cell)
-        if i==0:
+        if i==intro_after:
             result.append(md_cell(intro(key,PROFILES[key],filename),f"learn-{key}-intro"))
     p=PROFILES[key]
     result.append(md_cell(

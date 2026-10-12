@@ -59,6 +59,28 @@ class LearningContent(unittest.TestCase):
         rebuilt=transform(nb,"16",path.name)
         self.assertEqual(next(c for c in rebuilt["cells"] if c["cell_type"]=="code"),expected)
 
+    def test_markdown_preamble_is_preserved_before_generated_intro(self):
+        path = ROOT / "book/notebooks/00_geolibre_quickstart.ipynb"
+        nb = json.loads(path.read_text(encoding="utf-8"))
+        nb["cells"][1]["metadata"]["user_note"] = "Keep this introduction"
+        expected = copy.deepcopy(nb["cells"][:7])
+        rebuilt = transform(nb,"00",path.name)
+        self.assertEqual(rebuilt["cells"][:7],expected)
+        self.assertEqual(rebuilt["cells"][7]["id"],"learn-00-intro")
+        self.assertEqual(transform(copy.deepcopy(rebuilt),"00",path.name),rebuilt)
+
+    def test_preamble_rejects_code_and_misplaced_cells(self):
+        path = ROOT / "book/notebooks/00_geolibre_quickstart.ipynb"
+        nb = json.loads(path.read_text(encoding="utf-8"))
+        invalid = copy.deepcopy(nb)
+        invalid["cells"][1]["cell_type"] = "code"
+        with self.assertRaisesRegex(ValueError,"must be Markdown"):
+            transform(invalid,"00",path.name)
+        invalid = copy.deepcopy(nb)
+        invalid["cells"][1]["metadata"].pop("learning_preamble")
+        with self.assertRaisesRegex(ValueError,"must immediately follow the title"):
+            transform(invalid,"00",path.name)
+
     def test_accessible_media_and_local_links_exist_for_every_lesson(self):
         for key,p in PROFILES.items():
             directory=ASSETS/key

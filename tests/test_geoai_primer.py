@@ -113,17 +113,27 @@ class GeoAIPrimer(unittest.TestCase):
     def test_notebook_00_geoai_starter_and_bundled_esri_copies(self):
         directory=ROOT/"book/notebooks"
         notebook=json.loads((directory/"00_geolibre_quickstart.ipynb").read_text(encoding="utf-8"))
-        starter=notebook["cells"][0]
-        self.assertEqual(starter["cell_type"],"markdown")
-        self.assertFalse(starter.get("metadata",{}).get("learning_guide"))
-        text="".join(starter["source"])
+        preamble=notebook["cells"][:7]
+        self.assertEqual([cell["id"] for cell in preamble],[
+            "5f75e596", "geoai-00-introduction", "geoai-00-overlap", "geoai-00-methods",
+            "geoai-00-notebook-context", "geoai-00-sources", "geoai-00-continue"])
+        for cell in preamble:
+            self.assertEqual(cell["cell_type"],"markdown")
+            self.assertFalse(cell.get("metadata",{}).get("learning_guide"))
+        self.assertTrue(all(c["metadata"].get("learning_preamble") for c in preamble[1:]))
+        text="\n".join("".join(c["source"]) for c in preamble)
         self.assertTrue(text.startswith("# 00 — GeoLibre quickstart in JupyterLite\n"))
-        self.assertIn("## What is GeoAI? — start here",text)
+        self.assertTrue("".join(preamble[1]["source"]).startswith("## What is GeoAI?\n"))
+        for cell in preamble[2:4]:
+            self.assertEqual("".join(cell["source"]).count("![Esri"),1)
+            self.assertIn("**Image credit: Esri.**","".join(cell["source"]))
+        self.assertIn("**ESRI:**", "".join(preamble[5]["source"]))
+        self.assertIn("**ESRI part 2:**", "".join(preamble[5]["source"]))
         self.assertIn("Notebook 00 is the mapping foundation, not a fitted AI model",text)
         self.assertIn("GeoAI does not always require deep learning",text)
         self.assertIn("not an Esri evaluation",text)
-        self.assertIn("### Continue with the GeoLibre quickstart",text)
-        self.assertEqual(notebook["cells"][1]["id"],"learn-00-intro")
+        self.assertIn("## Continue with the GeoLibre quickstart",text)
+        self.assertEqual(notebook["cells"][7]["id"],"learn-00-intro")
         assets=ROOT/"book/assets/esri"
         bundled=directory/"assets/esri"
         self.assertEqual((assets/"provenance.json").read_bytes(),(bundled/"provenance.json").read_bytes())
