@@ -66,11 +66,11 @@ Amazon Web Services (AWS) describes GeoAI as combining geographically referenced
 
 **For a beginner:** ask both “What information describes this place?” and “What does the model actually learn from it?” This is **this book's teaching interpretation**, not an AWS evaluation of the notebooks:
 
-| Start with | Try in this book | Keep the distinction clear |
-|---|---|---|
-| Locations | [Cholera lab 21](../notebooks/21_cholera_geoai_first_steps.ipynb) fits DBSCAN groups using geographic distance, then reveals pumps | Fitting groups is the learning step; displaying pumps adds context, not evidence of causation |
-| Images | [Earth-observation lab 03](../notebooks/03_earth_observation_geoai.ipynb) groups RGB pixels from a small image | Color groups are not automatically verified land-cover classes; interpretation needs additional evidence |
-| Access | [Network lab 15](../notebooks/15_astra_network_accessibility.ipynb) compares routes in an invented network | This is a deterministic spatial calculation, not a fitted AI model; a useful geographic decision does not always need AI |
+| Browser example | What it demonstrates |
+|---|---|
+| **Locations:** [cholera lab 21](../notebooks/21_cholera_geoai_first_steps.ipynb) groups recorded death locations using DBSCAN | Coordinates and geographic distance enter the model. Revealing pumps adds context, not evidence of causation |
+| **Images:** [Earth-observation lab 03](../notebooks/03_earth_observation_geoai.ipynb) groups RGB pixels from a small image | The model finds similar colors, not verified land-cover classes; interpretation needs additional evidence |
+| **Access:** [network lab 15](../notebooks/15_astra_network_accessibility.ipynb) compares routes in an invented network | This is deterministic spatial analysis, not fitted AI. A useful geographic decision does not always need AI |
 
 **Methods are not deployment platforms.** Deep learning is one family of machine-learning methods, not a requirement for every GeoAI task. Cloud computing can support larger workloads, but **GeoAI does not require AWS or cloud execution**. Lab 21 demonstrates a small, non-neural-network model fitted in the browser. Loading the site and packages, or opening an optional hosted map, still involves network services; see the runtime diagram below.
 
