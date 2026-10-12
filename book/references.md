@@ -13,10 +13,11 @@ The [asset provenance manifest](assets/platforms/provenance.json) records slide 
 
 ## Illustrated GeoAI and global-health guide
 
-The seven [visual field-guide chapters](geoai/primer.md) cite sources next to the claims they support. Sources were consulted on **11 October 2026**; dates within historical reports remain their original dates. Potential health applications are the book's teaching proposals, not claims that these organizations have validated the notebooks.
+The seven [visual field-guide chapters](geoai/primer.md) cite sources next to the claims they support. Initial sources were consulted on **11 October 2026**; additions carry their own access dates below. Dates within historical reports remain their original dates. Potential health applications are the book's teaching proposals, not claims that these organizations have validated the notebooks.
 
 - **GeoAI definition and research:** [USGS GeoAI for topographic mapping](https://www.usgs.gov/publications/geoai-us-geological-survey-topographic-mapping).
 - **Industry perspective:** Esri. (n.d.). *[What is GeoAI?](https://www.esri.com/en-us/capabilities/geoai/overview)* Accessed 11 October 2026. The primer paraphrases selected ideas; its notebook comparisons and proposed evaluation question are this book's interpretation, not Esri findings or endorsement. No Esri media or text passages are reproduced.
+- **Additional industry perspective:** Amazon Web Services. (n.d.). *[What Is Geospatial Artificial Intelligence?](https://aws.amazon.com/what-is/geospatial-artificial-intelligence/)* Accessed 12 October 2026. The {ref}`AWS perspective in the primer <aws-geoai-perspective>` is a brief attributed paraphrase. Notebook mappings, the browser comparison and the proposed health-program question are this book's interpretation, not AWS findings or endorsement. No AWS media or text passages are reproduced.
 - **Health geography and governance:** [WHO GIS Centre](https://www.who.int/data/gis); [WHO ethics and governance of AI for health](https://www.who.int/publications/i/item/9789240029200).
 - **Validation:** [scikit-learn cross-validation](https://scikit-learn.org/stable/modules/cross_validation.html); [spatial cross-validation research](https://arxiv.org/abs/2303.07334).
 - **HIV and TB evidence:** [CDC PEPFAR analysis, 2004–2022](https://www.cdc.gov/mmwr/volumes/72/wr/mm7212e1.htm); [UNAIDS data repository](https://adr.unaids.org/); [WHO TB data](https://www.who.int/teams/global-tuberculosis-programme/data).

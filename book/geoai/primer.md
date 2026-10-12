@@ -59,6 +59,25 @@ For a proposed health-program pilot, ask whether a workflow reduces review time 
 
 **Attribution:** ideas above are paraphrased from **Esri's GeoAI overview**, accessed **11 October 2026**; the [reference register](../references.md) provides the citation. No Esri graphics, videos or text passages are reproduced. This independent book is not affiliated with or endorsed by Esri, and the comparison does not add ArcGIS software or an Esri model to the notebooks.
 
+(aws-geoai-perspective)=
+## What AWS's overview adds
+
+Amazon Web Services (AWS) describes GeoAI as combining geographically referenced information—such as coordinates, satellite imagery and demographic data—with AI methods to find patterns and support predictions. Its explanation emphasizes **location as context**, with applications in environmental monitoring, land planning, disaster response and infrastructure management. It places GIS, connected sensors (IoT), computer vision, machine learning and cloud computing within a wider technology ecosystem. [Source: AWS, *What Is Geospatial Artificial Intelligence?*](https://aws.amazon.com/what-is/geospatial-artificial-intelligence/).
+
+**For a beginner:** ask both “What information describes this place?” and “What does the model actually learn from it?” This is **this book's teaching interpretation**, not an AWS evaluation of the notebooks:
+
+| Start with | Try in this book | Keep the distinction clear |
+|---|---|---|
+| Locations | [Cholera lab 21](../notebooks/21_cholera_geoai_first_steps.ipynb) fits DBSCAN groups using geographic distance, then reveals pumps | Fitting groups is the learning step; displaying pumps adds context, not evidence of causation |
+| Images | [Earth-observation lab 03](../notebooks/03_earth_observation_geoai.ipynb) groups RGB pixels from a small image | Color groups are not automatically verified land-cover classes; interpretation needs additional evidence |
+| Access | [Network lab 15](../notebooks/15_astra_network_accessibility.ipynb) compares routes in an invented network | This is a deterministic spatial calculation, not a fitted AI model; a useful geographic decision does not always need AI |
+
+**Methods are not deployment platforms.** Deep learning is one family of machine-learning methods, not a requirement for every GeoAI task. Cloud computing can support larger workloads, but **GeoAI does not require AWS or cloud execution**. Lab 21 demonstrates a small, non-neural-network model fitted in the browser. Loading the site and packages, or opening an optional hosted map, still involves network services; see the runtime diagram below.
+
+**A global-health question to explore:** could geographic evidence help a team investigate disrupted access to services after a flood? This is our proposed teaching application, not a result reported by AWS or demonstrated by these notebooks. An operational pilot would need current hazard, population, road and service data, local review, privacy safeguards and validation against an existing planning approach. See [how GeoAI works](how-it-works.md) and [climate–health pathways](climate-health.md).
+
+**Attribution:** the opening paragraph paraphrases **Amazon Web Services' overview**, accessed **12 October 2026**; see the [reference register](../references.md). No AWS graphics, videos or text passages are reproduced. This book is **not affiliated with or endorsed by AWS**. The notebook comparisons are ours; no AWS account, SDK or service dependency is added.
+
 ## Why demonstrate this in a browser?
 
 ![A three-part runtime diagram separates local browser computation, external data and map services, and optional server or GPU work.](../assets/geoai/browser-boundary.svg)

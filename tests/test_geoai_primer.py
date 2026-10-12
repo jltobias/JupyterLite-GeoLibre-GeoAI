@@ -71,6 +71,28 @@ class GeoAIPrimer(unittest.TestCase):
         self.assertNotIn("![",section)
         self.assertNotIn("<iframe",section)
 
+    def test_aws_attribution_and_browser_teaching_boundaries(self):
+        url="https://aws.amazon.com/what-is/geospatial-artificial-intelligence/"
+        primer=(ROOT/"book/geoai/primer.md").read_text(encoding="utf-8")
+        references=(ROOT/"book/references.md").read_text(encoding="utf-8")
+        register=(ROOT/"DATA_SOURCES.md").read_text(encoding="utf-8")
+        for source in (primer,references,register):
+            self.assertIn(url,source)
+        self.assertIn("(aws-geoai-perspective)=",primer)
+        section=primer.split("## What AWS's overview adds\n",1)[1].split("\n## ",1)[0]
+        for boundary in ("this book's teaching interpretation", "not affiliated with or endorsed by AWS",
+                         "No AWS graphics, videos or text passages are reproduced",
+                         "GeoAI does not require AWS or cloud execution",
+                         "no AWS account, SDK or service dependency is added",
+                         "not a result reported by AWS", "12 October 2026"):
+            self.assertIn(boundary,section)
+        for notebook in ("21_cholera_geoai_first_steps", "03_earth_observation_geoai", "15_astra_network_accessibility"):
+            self.assertIn(f"../notebooks/{notebook}.ipynb",section)
+        self.assertIn("Amazon Web Services. (n.d.).",references)
+        self.assertIn("{ref}`AWS perspective in the primer <aws-geoai-perspective>`",references)
+        self.assertNotIn("![",section)
+        self.assertNotIn("<iframe",section)
+
     def test_explanatory_arithmetic(self):
         # Protect the explicitly invented cohort illustration from misleading ratios.
         self.assertEqual(6000/8000,0.75)

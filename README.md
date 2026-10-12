@@ -25,6 +25,8 @@ New: the [GeoAI visual field guide](https://jltobias.github.io/JupyterLite-GeoLi
 
 The diagrams are accessible, locally bundled SVGs with plain-language reading guides. They complement the existing notebook videos and cartoons, preserve the supplied Six Thinking Hats artwork, and cite authoritative sources. Rebuild with `python scripts/build_geoai_primer.py`; check the committed assets with `python scripts/build_geoai_primer.py --check`. No image service or external package is needed to regenerate them.
 
+The primer also includes [AWS's perspective on GeoAI](https://jltobias.github.io/JupyterLite-GeoLibre-GeoAI/geoai/primer.html#aws-geoai-perspective), alongside the existing Esri discussion, with citations and links to concrete notebook examples. It separates industry definitions from this book's interpretations and explains why browser GeoAI does not require an AWS account or cloud-based model execution.
+
 ## Advanced: local AI-assisted mapping
 
 [Read the Ollama + GeoLibre chapter](https://jltobias.github.io/JupyterLite-GeoLibre-GeoAI/advanced/ollama-assistant.html), then run **18 → 19 → 20** in the notebook directory below. These lessons distinguish **GeoLibre's native AI Assistant** from a smaller notebook-side planner, with local inference, typed map plans, dry runs, explicit approval and evidence checks. They include three captioned videos, infographics and cartoons. Defaults are authored synthetic fixtures; live mode requires a local model and browser permissions. [Validation scope](OLLAMA_VALIDATION.md).
