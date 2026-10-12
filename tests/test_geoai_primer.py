@@ -142,6 +142,12 @@ class GeoAIPrimer(unittest.TestCase):
         self.assertEqual(data[:8],b"\x89PNG\r\n\x1a\n")
         self.assertEqual(struct.unpack(">II",data[16:24]),(metadata["width"],metadata["height"]))
         self.assertIn(metadata["source_revision"],primer)
+        references=(ROOT/"book/references.md").read_text(encoding="utf-8")
+        self.assertIn("**Artwork source project:**",primer)
+        self.assertIn(f'[**JupyterLite-Rewiring-Global-Health**]({metadata["source_repository"]})',primer)
+        self.assertIn("{ref}`full repository reference <rewiring-repository-reference>`",primer)
+        self.assertIn("(rewiring-repository-reference)=",references)
+        self.assertIn(f'[JupyterLite-Rewiring-Global-Health]({metadata["source_repository"]})',references)
         hats=ROOT/"book/notebooks/assets/six-thinking-hats-global-health.png"
         self.assertEqual(hashlib.sha256(hats.read_bytes()).hexdigest(),
                          "979853bfd774236a6a807d00a826e0cc6fccfc982e21f9fc3b8aa6c2a09a33bf")

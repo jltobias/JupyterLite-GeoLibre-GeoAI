@@ -49,6 +49,11 @@ The book is the conceptual reference for the {ref}`Six Thinking Hats infographic
 
 The {ref}`Rewiring Global Health infographic discussion <rewiring-global-health-infographic>` connects the book's themes to questions about whose knowledge enters a GeoAI workflow. That application is our interpretation, not a method or result reported by Zuckerman. The wording attributed to him inside the supplied artwork **has not been verified as a verbatim quotation**; readers should use the attributed paraphrase and bibliographic reference instead.
 
+(rewiring-repository-reference)=
+### Companion repository and supplied artwork
+
+**Tobias, J. L., and contributors. (n.d.). *[JupyterLite-Rewiring-Global-Health](https://github.com/jltobias/JupyterLite-Rewiring-Global-Health)* [GitHub repository].** Accessed **12 October 2026**. The companion project provides a Jupyter Book and browser-based geospatial learning materials. It is the source project for the supplied {ref}`Rewiring Global Health infographic in the GeoAI primer <rewiring-global-health-infographic>`, not the publisher of Zuckerman's *Rewire*. [Read the companion Jupyter Book](https://jltobias.github.io/JupyterLite-Rewiring-Global-Health/).
+
 **Rewiring infographic provenance:** James L. Tobias supplied the composite project artwork. It is copied unchanged from the [companion repository at revision 84bf945](https://github.com/jltobias/JupyterLite-Rewiring-Global-Health/blob/84bf945de91ad5ae3c8b2f67e9bd3e4781cf88b9/assets/rewiring-global-health.png); the [asset record](assets/rewiring/provenance.json) records its hash and rights caveats. It is not analytical data or evidence of measured health outcomes. Third-party elements retain their respective rights; neither the repository's software license nor this citation establishes a blanket media license.
 
 ## Presentation-informed future directions

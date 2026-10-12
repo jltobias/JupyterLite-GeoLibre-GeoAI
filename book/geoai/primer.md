@@ -137,7 +137,9 @@ These are **thinking modes, not fixed personality types**. In de Bono's group me
 
 ![User-supplied Rewiring Global Health infographic connects browser notebooks, geographic data, climate information, AI, privacy and collaboration; its eight illustrated lab themes and health-outcome goals describe the companion project rather than measured results here.](../assets/rewiring/rewiring-global-health.png)
 
-*Supplied project artwork: Rewiring Global Health for the Age of AI.* <a href="../_images/rewiring-global-health.png" target="_blank" rel="noopener">Open the full-resolution graphic</a>. Its pictured buttons are part of a static image, not working controls. Explore the [companion Jupyter Book](https://jltobias.github.io/JupyterLite-Rewiring-Global-Health/) or [its source repository](https://github.com/jltobias/JupyterLite-Rewiring-Global-Health) using these live links.
+*Supplied project artwork: Rewiring Global Health for the Age of AI.* <a href="../_images/rewiring-global-health.png" target="_blank" rel="noopener">Open the full-resolution graphic</a>. Its pictured buttons are part of a static image, not working controls.
+
+**Artwork source project:** [**JupyterLite-Rewiring-Global-Health**](https://github.com/jltobias/JupyterLite-Rewiring-Global-Health), by **James L. Tobias and contributors**. This infographic introduces that companion project's Jupyter Book and browser-based learning materials; it is included here as related learning context. [Read the companion Jupyter Book](https://jltobias.github.io/JupyterLite-Rewiring-Global-Health/) or see the {ref}`full repository reference <rewiring-repository-reference>`. The repository is distinct from Ethan Zuckerman's book cited below.
 
 **Read the picture:** follow three connections:
 
