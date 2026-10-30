@@ -95,6 +95,17 @@ The [STAC discovery chapter](platforms/stac-discovery.md) connects the [JupyterL
 - **GPT-6 Astra** — [model documentation](https://developers.openai.com/api/docs/models/gpt-6-astra), [structured outputs](https://developers.openai.com/api/docs/guides/structured-outputs), [image inputs](https://developers.openai.com/api/docs/guides/images-vision), [function calling](https://developers.openai.com/api/docs/guides/function-calling). Examples checked 2026-10-02; API access is optional.
 - **Matplotlib / Plotly** — https://matplotlib.org/stable/ and https://plotly.com/python/. Static charts and interactive 3D surfaces complement native GeoLibre maps.
 
+## RustGIS and companion course
+
+Wu, Q., Rincón Albarracín, J. G., Filho, E., Hofbauer, D., Fitzgerald, M., & Strebel, D. (2026). *RustGIS: A fast, free and open-source GIS in pure Rust for mapping, analyzing and sharing geospatial data*. Zenodo. [doi:10.5281/zenodo.23633281](https://doi.org/10.5281/zenodo.23633281). Author names and citation follow the upstream [CITATION.cff](https://github.com/opengeos/RustGIS/blob/8b322b290448e468c8972df9b1f601d3a72f7d53/CITATION.cff): Qiusheng Wu, José Gregorio Rincón Albarracín, Elpidio Filho, Daniel Hofbauer, Mavrick Fitzgerald and Dominik Strebel. Apache-2.0. Documentation reviewed at commit `8b322b290448e468c8972df9b1f601d3a72f7d53` on 30 October 2026. The software DOI is not a pin for the live web app.
+
+- [RustGIS website](https://rustgis.app/) and [Web application](https://web.rustgis.app/).
+- [Installation and browser URL parameters](https://github.com/opengeos/RustGIS/blob/8b322b290448e468c8972df9b1f601d3a72f7d53/docs/installation.md).
+- [Native Python bindings and requirements](https://github.com/opengeos/RustGIS/blob/8b322b290448e468c8972df9b1f601d3a72f7d53/docs/python.md). These are separate from Pyodide.
+- Tobias, James L. *JupyterLite-RustGIS*. [Companion repository](https://github.com/jltobias/JupyterLite-RustGIS/tree/64ee4e32222c07006ab28a634b759d985a002bda), reviewed 30 October 2026. Its course informed the linked learning route; no companion code, artwork or dataset is reproduced in notebook 22.
+
+[What is RustGIS?](platforms/rustgis.md) and [notebook 22](notebooks/22_rustgis_geoai_bridge.ipynb) connect these sources to a new synthetic exercise. Its geographic groups are computed with [scikit-learn DBSCAN](https://scikit-learn.org/stable/modules/generated/sklearn.cluster.DBSCAN.html); the example is not a health-risk analysis. GeoLibre's citation and the data/basemap credits remain applicable when using the optional comparison viewer.
+
 ## Data
 
 **Historical cholera demonstration:** PHI-Case-Studies contributors, [*Jupyterlite-1854-Cholera-Basic*, revision 476f6dd](https://github.com/PHI-Case-Studies/Jupyterlite-1854-Cholera-Basic/tree/476f6dd5a8430e6eb823e79614fda1d7e12a78fb). Unchanged CSVs, upstream GPL-3.0 notice and checksum manifest accompany notebook 21. The [five-minute walkthrough](presentations/cholera-five-minutes.md) is a new extension, not a reproduction of upstream notebook code or of Snow's reasoning. Method: [scikit-learn DBSCAN](https://scikit-learn.org/stable/modules/generated/sklearn.cluster.DBSCAN.html). Historical context: CDC (2004), [*150th Anniversary of John Snow and the Pump Handle*](https://www.cdc.gov/Mmwr/preview/mmwrhtml/mm5334a1.htm). Sources accessed 11 October 2026. Newly generated maps show exploratory recorded-location groups, not disease risk or causal attribution.

@@ -1,0 +1,365 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "id": "demo-01",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.143,
+          51.498
+        ]
+      },
+      "properties": {
+        "name": "Invented site 01",
+        "synthetic": true,
+        "group": 0,
+        "neighbor_radius_m": 350,
+        "method": "DBSCAN; haversine; min_samples=3"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "demo-02",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.143,
+          51.5
+        ]
+      },
+      "properties": {
+        "name": "Invented site 02",
+        "synthetic": true,
+        "group": 0,
+        "neighbor_radius_m": 350,
+        "method": "DBSCAN; haversine; min_samples=3"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "demo-03",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.143,
+          51.502
+        ]
+      },
+      "properties": {
+        "name": "Invented site 03",
+        "synthetic": true,
+        "group": 0,
+        "neighbor_radius_m": 350,
+        "method": "DBSCAN; haversine; min_samples=3"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "demo-04",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.14,
+          51.498
+        ]
+      },
+      "properties": {
+        "name": "Invented site 04",
+        "synthetic": true,
+        "group": 0,
+        "neighbor_radius_m": 350,
+        "method": "DBSCAN; haversine; min_samples=3"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "demo-05",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.14,
+          51.5
+        ]
+      },
+      "properties": {
+        "name": "Invented site 05",
+        "synthetic": true,
+        "group": 0,
+        "neighbor_radius_m": 350,
+        "method": "DBSCAN; haversine; min_samples=3"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "demo-06",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.14,
+          51.502
+        ]
+      },
+      "properties": {
+        "name": "Invented site 06",
+        "synthetic": true,
+        "group": 0,
+        "neighbor_radius_m": 350,
+        "method": "DBSCAN; haversine; min_samples=3"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "demo-07",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.137,
+          51.498
+        ]
+      },
+      "properties": {
+        "name": "Invented site 07",
+        "synthetic": true,
+        "group": 0,
+        "neighbor_radius_m": 350,
+        "method": "DBSCAN; haversine; min_samples=3"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "demo-08",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.137,
+          51.5
+        ]
+      },
+      "properties": {
+        "name": "Invented site 08",
+        "synthetic": true,
+        "group": 0,
+        "neighbor_radius_m": 350,
+        "method": "DBSCAN; haversine; min_samples=3"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "demo-09",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.137,
+          51.502
+        ]
+      },
+      "properties": {
+        "name": "Invented site 09",
+        "synthetic": true,
+        "group": 0,
+        "neighbor_radius_m": 350,
+        "method": "DBSCAN; haversine; min_samples=3"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "demo-10",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.083,
+          51.508
+        ]
+      },
+      "properties": {
+        "name": "Invented site 10",
+        "synthetic": true,
+        "group": 1,
+        "neighbor_radius_m": 350,
+        "method": "DBSCAN; haversine; min_samples=3"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "demo-11",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.083,
+          51.51
+        ]
+      },
+      "properties": {
+        "name": "Invented site 11",
+        "synthetic": true,
+        "group": 1,
+        "neighbor_radius_m": 350,
+        "method": "DBSCAN; haversine; min_samples=3"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "demo-12",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.083,
+          51.512
+        ]
+      },
+      "properties": {
+        "name": "Invented site 12",
+        "synthetic": true,
+        "group": 1,
+        "neighbor_radius_m": 350,
+        "method": "DBSCAN; haversine; min_samples=3"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "demo-13",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.08,
+          51.508
+        ]
+      },
+      "properties": {
+        "name": "Invented site 13",
+        "synthetic": true,
+        "group": 1,
+        "neighbor_radius_m": 350,
+        "method": "DBSCAN; haversine; min_samples=3"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "demo-14",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.08,
+          51.51
+        ]
+      },
+      "properties": {
+        "name": "Invented site 14",
+        "synthetic": true,
+        "group": 1,
+        "neighbor_radius_m": 350,
+        "method": "DBSCAN; haversine; min_samples=3"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "demo-15",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.08,
+          51.512
+        ]
+      },
+      "properties": {
+        "name": "Invented site 15",
+        "synthetic": true,
+        "group": 1,
+        "neighbor_radius_m": 350,
+        "method": "DBSCAN; haversine; min_samples=3"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "demo-16",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.077,
+          51.508
+        ]
+      },
+      "properties": {
+        "name": "Invented site 16",
+        "synthetic": true,
+        "group": 1,
+        "neighbor_radius_m": 350,
+        "method": "DBSCAN; haversine; min_samples=3"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "demo-17",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.077,
+          51.51
+        ]
+      },
+      "properties": {
+        "name": "Invented site 17",
+        "synthetic": true,
+        "group": 1,
+        "neighbor_radius_m": 350,
+        "method": "DBSCAN; haversine; min_samples=3"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "demo-18",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.077,
+          51.512
+        ]
+      },
+      "properties": {
+        "name": "Invented site 18",
+        "synthetic": true,
+        "group": 1,
+        "neighbor_radius_m": 350,
+        "method": "DBSCAN; haversine; min_samples=3"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "demo-19",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.2,
+          51.53
+        ]
+      },
+      "properties": {
+        "name": "Invented site 19",
+        "synthetic": true,
+        "group": -1,
+        "neighbor_radius_m": 350,
+        "method": "DBSCAN; haversine; min_samples=3"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "demo-20",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.02,
+          51.48
+        ]
+      },
+      "properties": {
+        "name": "Invented site 20",
+        "synthetic": true,
+        "group": -1,
+        "neighbor_radius_m": 350,
+        "method": "DBSCAN; haversine; min_samples=3"
+      }
+    }
+  ]
+}

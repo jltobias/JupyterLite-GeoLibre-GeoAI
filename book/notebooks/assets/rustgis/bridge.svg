@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="690" viewBox="0 0 1200 690" role="img" aria-labelledby="title desc">
+<title id="title">One GeoAI result, two mapping tools</title>
+<desc id="desc">JupyterLite runs Python to inspect invented points and fit geographic groups. GeoJSON and a provenance card carry the computed result to separate GeoLibre and RustGIS web apps. A map or globe changes the view, not the evidence. Native RustGIS Python belongs in ordinary CPython, outside this browser notebook.</desc>
+<rect width="1200" height="690" rx="18" fill="#f1f5f9"/>
+<g font-family="Arial, sans-serif" fill="#14283f">
+<text x="44" y="60" font-size="34" font-weight="700">One GeoAI result, two mapping tools</text>
+<text x="44" y="99" font-size="23">Model fitting changes labels. A different map changes the view.</text>
+<rect x="40" y="145" width="330" height="235" rx="18" fill="#dbeafe"/>
+<text x="63" y="188" font-size="28" font-weight="700">1. JupyterLite</text>
+<text x="63" y="227" font-size="22">Python runs in Pyodide</text>
+<text x="63" y="270" font-size="22">Inspect invented points</text>
+<text x="63" y="306" font-size="22">Fit DBSCAN groups</text>
+<text x="63" y="342" font-size="22">Test the distance setting</text>
+<path d="M380 260h32m-12-12 12 12-12 12" stroke="#2563eb" stroke-width="4" fill="none"/>
+<rect x="425" y="175" width="320" height="175" rx="18" fill="#dcfce7"/>
+<text x="448" y="219" font-size="28" font-weight="700">2. GeoJSON</text>
+<text x="448" y="261" font-size="22">Coordinates + properties</text>
+<text x="448" y="300" font-size="22">Keep a method card too</text>
+<path d="M755 260h22v-55h22m-22 55v69h22" stroke="#0f766e" stroke-width="4" fill="none"/>
+<rect x="810" y="145" width="350" height="112" rx="18" fill="#ede9fe"/>
+<text x="833" y="188" font-size="28" font-weight="700">3a. GeoLibre Web</text>
+<text x="833" y="228" font-size="22">Inspect the current result</text>
+<rect x="810" y="275" width="350" height="112" rx="18" fill="#ffedd5"/>
+<text x="833" y="318" font-size="28" font-weight="700">3b. RustGIS Web</text>
+<text x="833" y="357" font-size="22">Import and explore layers</text>
+<rect x="40" y="420" width="1120" height="100" rx="14" fill="#fff"/>
+<text x="63" y="458" font-size="24" font-weight="700">Keep the result inspectable</text>
+<text x="63" y="494" font-size="22">Same feature IDs and groups; separate styling, cameras and project formats.</text>
+<rect x="40" y="543" width="1120" height="105" rx="14" fill="#14283f"/>
+<text x="63" y="583" font-size="23" fill="#fff">RustGIS Web uses Rust / WebAssembly in its own browser app.</text>
+<text x="63" y="620" font-size="22" fill="#fff">Native Python rustgis requires ordinary CPython, not the JupyterLite kernel.</text>
+</g></svg>

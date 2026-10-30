@@ -1,0 +1,17 @@
+WEBVTT
+
+1
+00:00:00.000 --> 00:00:08.000
+Inspect. Read 20 invented locations and their longitude/latitude coordinates.
+
+2
+00:00:08.000 --> 00:00:16.000
+Fit. Group nearby locations, then test a different distance.
+
+3
+00:00:16.000 --> 00:00:24.000
+Export. Save GeoJSON and a provenance card before opening another app.
+
+4
+00:00:24.000 --> 00:00:32.000
+Compare. Inspect the published example in RustGIS; import your export for changed results.

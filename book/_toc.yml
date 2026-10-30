@@ -3,6 +3,7 @@ root: intro
 chapters:
   - file: platforms/jupyterlite
   - file: platforms/geolibre
+  - file: platforms/rustgis
   - file: geoai/primer
     sections:
       - file: geoai/how-it-works
@@ -40,4 +41,5 @@ chapters:
   - file: notebooks/19_ollama_chat_to_map
   - file: notebooks/20_ollama_evidence_review
   - file: notebooks/21_cholera_geoai_first_steps
+  - file: notebooks/22_rustgis_geoai_bridge
   - file: references

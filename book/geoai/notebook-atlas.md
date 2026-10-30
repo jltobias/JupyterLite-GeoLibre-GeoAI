@@ -1,8 +1,8 @@
-# What do all 22 notebooks actually demonstrate?
+# What do all 23 notebooks actually demonstrate?
 
 Use this atlas to connect a program question to a method, then read the notebook's code guides. **The potential health uses below are transfer exercises, not health analyses already performed by these notebooks.** Adding disease names to a map does not validate a health application.
 
-![Four learning stages place all 22 notebooks into orientation, pattern learning, assumption testing and accountable interpretation.](../assets/geoai/notebook-atlas.svg)
+![Four learning stages place all 23 notebooks into orientation, pattern learning, assumption testing and accountable interpretation.](../assets/geoai/notebook-atlas.svg)
 
 **Read the picture:** this is a learning sequence, not a ranking of sophistication. A transparent route calculation can be more useful than an unsuitable AI model. The model-fitting labs use small browser-compatible methods; the optional external-model path is separate.
 
@@ -53,6 +53,14 @@ Labs 12–15 also support optional exported model requests through a separate fu
 | [20 · Evidence review](../notebooks/20_ollama_evidence_review.ipynb) | Optional local follow-up, deterministic comparisons, negative tests and a human-review card | Preserve evidence, uncertainty and dissent; no learned world model or autonomous clinical decision |
 
 Use the [advanced chapter](../advanced/ollama-assistant.md) for the full native GeoLibre assistant. The bounded notebook planner does not expose the native assistant's wider tool set.
+
+## Transfer a fitted result between GIS tools
+
+| Notebook | What actually runs | Possible health transfer; missing evidence |
+|---|---|---|
+| [22 · RustGIS / GeoLibre bridge](../notebooks/22_rustgis_geoai_bridge.ipynb) | DBSCAN on 20 invented points, distance sensitivity, GeoJSON export and optional GeoLibre view; documented RustGIS Web handoff | Preserve coordinates, group labels and provenance across tools. Invented location density is not disease risk, travel time or a clinic-placement recommendation |
+
+Read [What is RustGIS?](../platforms/rustgis.md) to distinguish RustGIS Web from its native Python bindings. Changing the map renderer or projection does not refit the model.
 
 ## Choose a small learning route
 

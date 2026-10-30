@@ -52,7 +52,7 @@ class GeoAIPrimer(unittest.TestCase):
     def test_atlas_accounts_for_every_notebook(self):
         atlas=(ROOT/"book/geoai/notebook-atlas.md").read_text(encoding="utf-8")
         notebooks=sorted((ROOT/"book/notebooks").glob("*.ipynb"))
-        self.assertEqual(len(notebooks),22)
+        self.assertEqual(len(notebooks),23)
         for notebook in notebooks:
             self.assertIn(f"../notebooks/{notebook.name}",atlas)
 

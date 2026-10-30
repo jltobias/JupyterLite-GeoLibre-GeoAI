@@ -41,6 +41,7 @@ jobs:
           python scripts/build_stac_discovery.py --check
           python scripts/build_ollama_lessons.py --check
           python scripts/build_cholera_lesson.py --check
+          python scripts/build_rustgis_lesson.py --check
           python scripts/build_assistant_visuals.py --check
           python scripts/build_geoai_primer.py --check
           python scripts/extract_platform_graphics.py --check
@@ -75,6 +76,7 @@ jobs:
           trap 'kill "$SERVER_PID"' EXIT
           python scripts/check_ollama_pyodide.py --base-url http://127.0.0.1:8765
           python scripts/check_cholera_browser.py --base-url http://127.0.0.1:8765 --pyodide
+          python scripts/check_rustgis_browser.py --base-url http://127.0.0.1:8765 --pyodide
           python scripts/check_visual_browser.py --base-url http://127.0.0.1:8765 --offline-js
           python scripts/check_learning_browser.py --base-url http://127.0.0.1:8765
 
