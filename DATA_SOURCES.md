@@ -235,6 +235,12 @@ Method: [scikit-learn DBSCAN](https://scikit-learn.org/stable/modules/generated/
 - Companion context: James L. Tobias, [JupyterLite-RustGIS, revision 64ee4e3](https://github.com/jltobias/JupyterLite-RustGIS/tree/64ee4e32222c07006ab28a634b759d985a002bda). Only links and attributed descriptions are used. The companion 2D/extruded maps use MapLibre GL JS and its scene uses Three.js; they are not labeled RustGIS renders. Its WorldPop STAC footprints and C3S-derived tables have their own source terms; none are redistributed by this lesson.
 - Native `rustgis` is not installed in Pyodide. The web launch uses a public GeoJSON URL; changed local files must be downloaded and imported. No new Ollama origin, local service, credential or external AI call is configured.
 
+## Repository splash artwork (2026-11-16)
+
+The README and the first Markdown cell of every notebook use the same [Geospatial Intelligence in Your Browser banner](book/notebooks/assets/splash/geospatial-intelligence.png). This original conceptual illustration was generated for the repository with OpenAI's built-in image-generation tool. It introduces JupyterLite, GeoLibre, RustGIS and GeoAI through a globe, notebook, map layers, terrain and geographic patterns. The depicted layers and symbols are illustrative, not source data, software screenshots or analytical results; the software names do not imply endorsement.
+
+The 1920 × 819 PNG is stored unchanged from the generated output. Its [provenance record](book/notebooks/assets/splash/provenance.json) records the dimensions, generation method and SHA-256 checksum; the [full generation prompt](book/notebooks/assets/splash/generation-prompt.txt) is retained beside it. `scripts/build_learning_media.py` maintains one splash block below the title inside each existing first cell. The image is bundled with JupyterLite and copied into the Book by its normal build.
+
 ## Additional high-value sources considered for future labs
 
 ### Copernicus C3S / Interactive Climate Atlas

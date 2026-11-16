@@ -1,0 +1,14 @@
+{
+  "asset": "geospatial-intelligence.png",
+  "title": "Geospatial Intelligence in Your Browser",
+  "created": "2026-11-16",
+  "method": "OpenAI built-in image-generation tool; original conceptual artwork generated for this repository",
+  "prompt": "generation-prompt.txt",
+  "dimensions_px": [
+    1920,
+    819
+  ],
+  "sha256": "2ee79dd39e9075adf05ffb06fd435114d7d0afadc1042468bba1e9528ee48840",
+  "bytes": 2308490,
+  "interpretation": "Illustrative globe, notebook, GIS layers and geographic patterns; not a screenshot, observed dataset or model result. Tool names identify the learning ecosystem, not endorsement."
+}

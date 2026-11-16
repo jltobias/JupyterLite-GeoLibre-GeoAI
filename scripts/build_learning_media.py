@@ -4,8 +4,9 @@ python scripts/build_learning_media.py             # SVG/HTML/Markdown, no extra
 python scripts/build_learning_media.py --videos    # also PNG/MP4; see requirements-media.txt
 python scripts/build_learning_media.py --check     # verify committed copy matches source
 
-Existing code, execution counts and outputs are preserved. Only cells marked
-learning_guide are replaced. Content anchors fail closed if code cells change.
+Existing code, execution counts and outputs are preserved. Cells marked
+learning_guide are replaced; the first Markdown cell receives the shared splash.
+Content anchors fail closed if code cells change.
 Contiguous Markdown cells tagged learning_preamble after the title stay ahead
 of the generated lesson introduction.
 All generated illustrations are schematic; they never claim to be model outputs.
@@ -26,6 +27,12 @@ ROOT = Path(__file__).resolve().parents[1]
 NOTEBOOKS = ROOT / "book/notebooks"
 ASSETS = NOTEBOOKS / "assets/learning"
 PUBLISHED = "https://jltobias.github.io/JupyterLite-GeoLibre-GeoAI"
+SPLASH_START = "<!-- BEGIN REPOSITORY SPLASH -->"
+SPLASH_END = "<!-- END REPOSITORY SPLASH -->"
+SPLASH = (SPLASH_START + "\n"
+    "![Geospatial Intelligence in Your Browser: JupyterLite, GeoLibre, RustGIS and GeoAI. "
+    "A conceptual globe, notebook, map layers and geographic patterns introduce the learning collection.]"
+    "(assets/splash/geospatial-intelligence.png)\n" + SPLASH_END + "\n\n")
 INK, MUTED, BLUE, TEAL, GOLD = "#14283f", "#45576c", "#2459b8", "#087f78", "#a96112"
 COLORS = [BLUE, TEAL, "#7545b3", GOLD]
 
@@ -310,6 +317,16 @@ def lesson_cell(key,number,lesson,code):
 
 def transform(nb,key,filename):
     cells=[c for c in nb["cells"] if not c.get("metadata",{}).get("learning_guide")]
+    if not cells or cells[0]["cell_type"] != "markdown":
+        raise ValueError(f"{filename}: the opening splash requires a Markdown title cell")
+    opening = "".join(cells[0]["source"])
+    if SPLASH_START in opening:
+        before, existing = opening.split(SPLASH_START, 1)
+        if SPLASH_END not in existing:
+            raise ValueError(f"{filename}: incomplete repository splash block")
+        opening = before + existing.split(SPLASH_END, 1)[1].lstrip("\n")
+    title, _, body = opening.partition("\n")
+    cells[0] = {**cells[0], "source": (title + "\n\n" + SPLASH + body.lstrip("\n")).splitlines(True)}
     intro_after=0
     for i,cell in enumerate(cells[1:],1):
         if not cell.get("metadata",{}).get("learning_preamble"):

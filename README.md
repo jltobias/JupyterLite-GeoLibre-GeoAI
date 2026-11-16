@@ -1,5 +1,7 @@
 # JupyterLite + GeoLibre + RustGIS + GeoAI
 
+![Geospatial Intelligence in Your Browser: JupyterLite, GeoLibre, RustGIS and GeoAI. A conceptual globe, notebook, map layers and geographic patterns introduce the learning collection.](book/notebooks/assets/splash/geospatial-intelligence.png)
+
 Browser-native geospatial notebooks that combine **[GeoLibre](https://geolibre.app/)**, **[RustGIS Web](https://web.rustgis.app/)**, open geospatial data, and **GeoAI workflows** in **JupyterLite**.
 
 [![Deploy Jupyter Book and JupyterLite](https://github.com/jltobias/JupyterLite-GeoLibre-GeoAI/actions/workflows/pages.yml/badge.svg)](https://github.com/jltobias/JupyterLite-GeoLibre-GeoAI/actions/workflows/pages.yml)
